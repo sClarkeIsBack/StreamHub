@@ -20,11 +20,11 @@ s          = requests.session()
 net        = Net()
 ccurl      = 'http://cartooncrazy.me'
 xxxurl     ='http://www.xvideos.com'
-kidsurl    = base64.b64decode ('aHR0cDovL21rb2RpLmNvLnVrL21lZGlhaHViL2xpc3RzL0tpZHMva2lkc2Nvcm5lci54bWw=')
+kidsurl    = base64.b64decode ('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3NDbGFya2VJc0JhY2svU3RyZWFtSHViL21hc3Rlci9MaW5rcy9LaWRzL2tpZHNjb3JuZXIueG1s')
 docurl     = 'http://documentaryheaven.com'
 mov2       = 'http://zmovies.to'
 wwe        = 'http://watchwrestling.in'
-tv         = base64.b64decode ('aHR0cDovL21rb2RpLmNvLnVrL3N0cmVhbWh1Yi9saXN0cy8yNDcvMjQ3dHYueG1s')
+tv         = base64.b64decode ('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3NDbGFya2VJc0JhY2svU3RyZWFtSHViL21hc3Rlci9MaW5rcy8yNDcvMjQ3dHYueG1s')
 proxy      = 'http://www.justproxy.co.uk/index.php?q='
 
 def CAT():
@@ -309,7 +309,7 @@ def passpopup(url):
        text = str(text).replace('saucy','/tags')
        return (str(xxxurl+text)).replace('%3a','').replace('%2f','')
     else:
-        Msg="                                   Incorrect Password\n\n                            Password is available from\n                                [COLOR red]http://mkodi.co.uk/xxx[/COLOR]"
+        Msg="                                   Incorrect Password\n\n                            Password is available from\n                                [COLOR red]http://facebook.com/groups/streamhub[/COLOR]"
         dialog = xbmcgui.Dialog()
         ok = dialog.ok('Attention', Msg)
         return False
