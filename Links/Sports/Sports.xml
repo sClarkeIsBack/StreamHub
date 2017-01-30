@@ -1,0 +1,499 @@
+<item>
+<title>WizHD</title>
+<link>$doregex[makelist]</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[makelist.param1]</title>
+<link>$doregex[geturl]</link>
+<thumbnail>https://i.imgsafe.org/3b505a313d.png</thumbnail>
+<fanart>http://shushi168.com/data/out/212/36360821-sports.jpg|Referer=http://shushi168.com/sports.html</fanart>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = ''):
+    from resources.lib.modules import client
+    import re,urllib,urlparse
+
+    u = []
+    r = client.request('http://wizhdsports.to/')
+    r = re.sub(r'[^\x00-\x7F]+', ' ', r)
+    r = client.parseDOM(r, 'div', attrs = {'class': 'card'})
+
+    for i in r:
+        try:
+            s = client.parseDOM(i, 'div', attrs = {'class': 'card.+?'})[-1]
+            i = client.parseDOM(i, 'li', attrs = {'class': 'sports'})[0]
+
+            l = client.parseDOM(i, 'font', attrs = {'color': '.+?'})[-1]
+            l = l.strip().split()[0].lower()
+            if not 'live' in l: raise Exception()
+
+            n = client.parseDOM(i, 'div', attrs = {'class': 'col-md-6'})[0].strip()
+            ns = n.split(' ', 1)
+            if ' vs ' in n and len(ns) > 1: n = '%s | [B]%s[/B]' % (ns[0], ns[1])
+            else: n = '[B]%s[/B]' % n
+
+            c = client.parseDOM(i, 'div', attrs = {'class': 'col-md-2'})
+            c = [x for x in c if not '</' in x][0].strip()
+
+            s = zip(client.parseDOM(s, 'a'), client.parseDOM(s, 'a', ret='href'))
+            s = [(client.parseDOM(x[0], 'div'), x[1]) for x in s]
+            s = [(x[0][0], x[1]) for x in s if x[0]]
+
+            if not s: raise Exception()
+
+            s = urllib.quote_plus(str(s))
+            u.append((c, n, s))
+        except:
+            pass
+
+    r = sorted(u, key=lambda x: x[0].lower())
+    c = [x[0] for x in r]
+    if 'Am Football' in c: c = ['Am Football'] + c
+    if 'Hockey' in c: c = ['Hockey'] + c
+    if 'Volleyball' in c: c = ['Volleyball'] + c
+    if 'Basketball' in c: c = ['Basketball'] + c
+    if 'Football' in c: c = ['Football'] + c
+    c = [x for y,x in enumerate(c) if x not in c[:y]]
+
+    u = []
+
+    for i in c:
+        s = [(x[1], x[2]) for x in r if x[0] == i]
+        if s: u += [('[COLOR orange][B]%s[/B][/COLOR]' % i, '')] + s
+
+    try:
+        r = client.request('http://wizhdsports.to/webmaster.php')
+        r = re.sub(r'[^\x00-\x7F]+', ' ', r)
+
+        r = re.findall('(<h2>.+?</iframe>)', r)
+        r = [(client.parseDOM(i, 'p'), client.parseDOM(i, 'iframe', ret='src')) for i in r]
+        r = [(i[0][-1], i[1][0]) for i in r if i[0] and i[1]]
+        r = [(i[0].split('- ')[-1].strip().title(), i[1]) for i in r]
+        r = sorted(r, key=lambda x: x[0].lower())
+        s = [(i[0], urllib.quote_plus(str([i]))) for i in r]
+
+        if not s: raise Exception()
+
+        u.append(('[COLOR orange][B]24/7[/B][/COLOR]', ''))
+        for x in s: u.append(x)
+    except:
+        pass
+
+    return u
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>geturl</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m,url = '[makelist.param2]'):
+    from resources.lib.modules import client,control
+    import re,urllib
+
+    u = None
+
+    r = eval(urllib.unquote_plus(url))
+    r = [('Link %s %s' % (str(r.index(i)+1), i[0]), i[1]) for i in r]
+    r = [(i[0].strip(), i[1]) for i in r]
+    r0 = [i[0] for i in r] ; r1 = [i[1] for i in r]
+
+    if len(r1) == 0: 
+        control.infoDialog('No broadcast available', 'Phoenix')
+        return
+    elif len(r1) > 1:
+        label = control.infoLabel('listitem.label')
+        select = control.dialog.select(label.upper(), r0)
+        if select == -1: return
+        refs = r1[select:]
+    else:
+        refs = r1
+
+    livestreamer = control.cdnImport('http://phoenixtv.offshorepastebin.com/tv/livestreamer.xml', 'livestreamer')
+    livestreamer = livestreamer.streamer()
+
+    for ref in refs:
+        try:
+            url, ref = livestreamer.redirect(ref)
+            u = livestreamer.resolve(url, ref)
+            if not u == None: break
+        except:
+            pass
+
+    if u == None:
+        control.infoDialog('No broadcast available', 'Phoenix')
+    return u
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+<plugin>
+<name>UniTV sports</name>
+<link>plugin://plugin.video.ZemTV-shani/?mode=53&name=UniTV%20sports&url=sss</link>
+<thumbnail></thumbnail>
+</plugin>
+
+<plugin>
+<name>Pi sports</name>
+<link>plugin://plugin.video.ZemTV-shani/?mode=71&name=Pi%20sports&url=sss</link>
+<thumbnail></thumbnail>
+</plugin>
+
+<plugin>
+<name>Sport365.live</name>
+<link>plugin://plugin.video.ZemTV-shani/?mode=56&name=Sport365.live%20%5BGeoBlocked%5D&url=sss</link>
+<thumbnail></thumbnail>
+</plugin>
+
+<plugin>
+<name>UKTVNow</name>
+<link>plugin://plugin.video.ZemTV-shani/?mode=57&name=UKTVNow%20%5BLimited%20Channels%5D&url=sss&</link>
+<thumbnail></thumbnail>
+</plugin>
+
+<plugin>
+<name>PV2 Sports</name>
+<link>plugin://plugin.video.ZemTV-shani/?mode=36&name=PV2%20Sports&url=zemsports</link>
+<thumbnail></thumbnail>
+</plugin>
+
+<plugin>
+<name>StreamHD</name>
+<link>plugin://plugin.video.ZemTV-shani/?mode=75&name=StreamHD&url=sss</link>
+<thumbnail></thumbnail>
+</plugin>
+
+<plugin>
+<name>HDfree</name>
+<link>plugin://plugin.video.ZemTV-shani/?mode=77&name=HDfree&url=sss</link>
+<thumbnail></thumbnail>
+</plugin>
+
+<plugin>
+<name>Mama HD</name>
+<link>plugin://plugin.video.ZemTV-shani/?mode=79&name=Mama%20HD&url=http%3A%2F%2Fmamahd.com%2F&</link>
+<thumbnail></thumbnail>
+</plugin>
+
+<item>
+<name>[COLOR white][/COLOR]</name>
+<link>http://wizhdsports.to/watch/Tigres_vs_Club_America_Mexico/stream7</link>
+<thumbnail>https://s17.postimg.org/kgsn8t69b/movies.png</thumbnail>
+</item>
+
+
+
+<item>
+<name>[COLOR white][/COLOR]</name>
+<link>http://cdn33.crichd.in/sky-sports-1-live-streaming</link>
+<thumbnail>https://s17.postimg.org/kgsn8t69b/movies.png</thumbnail>
+</item>
+
+<item>
+<name>[COLOR grey]Click it Again if it Don't Load The First Time[/COLOR]</name>
+<link>http://movreel.com/7c4ehwh</link>
+<thumbnail>https://s17.postimg.org/kgsn8t69b/movies.png</thumbnail>
+</item>
+
+<item>
+<name>[COLOR grey]Turn Off Video Acceleration in Video Settings[/COLOR]</name>
+<link>http://movreel.com/7c4ehwha8puz</link>
+<thumbnail>https://s17.postimg.org/kgsn8t69b/movies.png</thumbnail>
+</item>
+
+
+<plugin>
+<name>[COLOR white][/COLOR]</name>
+<link>http://movreel.com/7c4ehwha8puz</link>
+<thumbnail>https://s17.postimg.org/kgsn8t69b/movies.png</thumbnail>
+</plugin>
+
+<dir>
+<name>[COLOR red][B]Live Events[/COLOR][/B]</name>
+<link>http://mkodi.co.uk/mediahub/lists/LiveEvents/LiveEvents.XML</link>
+<thumbnail>https://s17.postimg.org/kgsn8t69b/movies.png</thumbnail>
+</dir>
+
+<plugin>
+<name>[COLOR red][B]Replays[/COLOR][/B]</name>
+<link>plugin://plugin.video.footballreplays/?url=url&mode=3&name=Full+Matches&iconimage=&page=1</link>
+<thumbnail>https://s17.postimg.org/kgsn8t69b/movies.png</thumbnail>
+</plugin>
+
+<plugin>
+<name>[COLOR blue][/COLOR]</name>
+<link>http://movreel.com/7c4ehwha8puz</link>
+<thumbnail>https://s17.postimg.org/kgsn8t69b/movies.png</thumbnail>
+</plugin>
+
+<item>
+<title>Sky Sports 1</title>
+<link>http://mamahd.com/sky-sports-1-live-free-stream-1.html</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports1.png</thumbnail>
+</item>
+
+<item>
+<title>Sky Sports 1</title>
+<link>
+<sublink>http://www.liveonlinetv247.info/embed/skysports1.php</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports1-2.php</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports1-3.php</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports1.png</thumbnail>
+</item>
+
+<item>
+<title>Sky Sports 1</title>
+<link>http://bigsports.me/watch/2/sky-sports-1-hd-live-stream.html</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports1.png</thumbnail>
+</item>
+
+
+
+<item>
+<title>Sky Sports 2</title>
+<link>http://bigsports.me/watch/3/sky-sports-2-hd-live-stream.html</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports2.png</thumbnail>
+</item>
+
+<item>
+<title>Sky Sports 2</title>
+<link>
+<sublink>http://www.liveonlinetv247.info/embed/skysports2.php</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports2-2.php</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports2-3.php</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports2.png</thumbnail>
+</item>
+
+<item>
+<title>Sky Sports 3</title>
+<link>http://mamahd.com/sky-sports-3-live-stream-1.html</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports3.png</thumbnail>
+</item>
+<item>
+<title>Sky Sports 3</title>
+<link>
+<sublink>http://www.liveonlinetv247.info/embed/skysports3.php</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports3-2.php</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports3-3.php</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports3.png</thumbnail>
+</item>
+
+<item>
+<title>Sky Sports 3</title>
+<link>http://bigsports.me/watch/4/sky-sports-3-hd-live-stream.html</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports3.png</thumbnail>
+</item>
+
+<item>
+<title>Sky Sports 4</title>
+<link>http://mamahd.com/sky-sports-4-live-stream-1.html</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports4.png</thumbnail>
+</item>
+
+<item>
+<title>Sky Sports 4</title>
+<link>
+<sublink>http://www.liveonlinetv247.info/embed/skysports4.php</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports4-2.php</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports4-3.php</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports4.png</thumbnail>
+</item>
+
+<item>
+<title>Sky Sports 4</title>
+<link>http://bigsports.me/watch/5/sky-sports-4-hd-live-stream.html</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports4.png</thumbnail>
+</item>
+
+
+
+<item>
+<title>Sky Sports 5</title>
+<link>http://mamahd.com/sky-sports-5-live-stream-1.html</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports5.png</thumbnail>
+</item>
+
+<item>
+<title>Sky Sports 5</title>
+<link>
+<sublink>http://www.liveonlinetv247.info/embed/skysports5.php</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports5-2.php</sublink>
+<sublink>http://www.liveonlinetv247.info/embed/skysports5-3.php</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports5.png</thumbnail>
+</item>
+<item>
+<title>Sky Sports 5</title>
+<link>http://bigsports.me/watch/6/sky-sports-5-hd-live-stream.html</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysports5.png</thumbnail>
+</item>
+<item>
+<title>Sky Sports F1</title>
+<link>http://bigsports.me/watch/7/sky-sports-f1-hd-live-stream.html</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysportsf1.png</thumbnail>
+</item>
+
+<item>
+<title>Sky Sports F1</title>
+<link>http://www.liveonlinetv247.info/embed/skysportf1.php</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysportf1.png</thumbnail>
+</item>
+
+<item>
+<title>BT Sport 1</title>
+<link>http://mamahd.com/bt-sport-1-live-stream1-1.html</link>
+<thumbnail>http://www.liveonlinetv247.info/images/btsport1.png</thumbnail>
+</item>
+
+<item>
+<title>BT Sport 1</title>
+<link>http://www.liveonlinetv247.info/embed/btsport1.php</link>
+<thumbnail>http://www.liveonlinetv247.info/images/btsport1.png</thumbnail>
+</item>
+<item>
+<title>BT Sport 1</title>
+<link>http://bigsports.me/watch/8/bt-sport-1-hd-live-stream.html</link>
+<thumbnail>http://www.liveonlinetv247.info/images/btsport1.png</thumbnail>
+</item>
+
+<item>
+<title>BT Sport 2</title>
+<link>http://mamahd.com/bt-sport-2-live-stream-1.html</link>
+<thumbnail>http://www.liveonlinetv247.info/images/btsport2.png</thumbnail>
+</item>
+<item>
+<title>BT Sport 2</title>
+<link>http://bigsports.me/watch/9/bt-sport-2-hd-live-stream.html</link>
+<thumbnail>http://www.liveonlinetv247.info/images/btsport2.png</thumbnail>
+</item>
+<item>
+<title>BT Sport 2</title>
+<link>http://www.liveonlinetv247.info/embed/btsport2.php</link>
+<thumbnail>http://www.liveonlinetv247.info/images/btsport2.png</thumbnail>
+</item>
+
+
+<item>
+<title>BT Sport 3</title>
+<link>http://mamahd.com/bt-sport-3-live-stream-1.html</link>
+<thumbnail>http://www.liveonlinetv247.info/images/btsport2.png</thumbnail>
+</item>
+
+<item>
+<title>BT Sport 3</title>
+<link>http://bigsports.me/watch/32/bt-sport-europe-live-stream.html</link>
+<thumbnail>http://www.liveonlinetv247.info/images/btsport2.png</thumbnail>
+</item>
+
+
+<item>
+<title>BT Sport 3</title>
+<link>http://www.liveonlinetv247.info/embed/btsporteurope.php</link>
+<thumbnail>http://www.liveonlinetv247.info/images/btsporteurope.png</thumbnail>
+</item>
+
+<item>
+<title>BT Sport ESPN</title>
+<link>http://www.liveonlinetv247.info/embed/btsportespn.php</link>
+<thumbnail>http://www.liveonlinetv247.info/images/btsportespn.png</thumbnail>
+</item>
+
+<item>
+<title>BT Sport ESPN</title>
+<link>http://bigsports.me/watch-espn-live-stream.html</link>
+<thumbnail>http://www.liveonlinetv247.info/images/btsportespn.png</thumbnail>
+</item>
+
+<item>
+<title>NBCSN</title>
+<link>http://bigsports.me/watch/46/nbcsn-live-stream.html</link>
+<thumbnail>http://www.liveonlinetv247.info/images/btsportespn.png</thumbnail>
+</item>
+
+<item>
+<title>Pac Mountain 1080P</title>
+<link>http://xrxs.net/video/live-p12moun-4728.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>PAC National 720P</title>
+<link>http://xrxs.net/video/live-p12netw-2328.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>PAC-12 (Arizona) 720P</title>
+<link>http://xrxs.net/video/live-p12ariz-2328.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>PAC-12 (Arizona) 1080P</title>
+<link>http://xrxs.net/video/live-p12ariz-4728.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>PAC-12 (Bay Area) 720P</title>
+<link>http://xrxs.net/video/live-p12baya-2328.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>PAC-12 (Bay Area) 1080P</title>
+<link>http://xrxs.net/video/live-p12baya-4728.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>PAC-12 (Los Angeles) 720P</title>
+<link>http://xrxs.net/video/live-p12losa-2328.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>PAC-12 (Oregon) 720P</title>
+<link>http://xrxs.net/video/live-p12oreg-2328.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>PAC-12 (Oregon) 1080P</title>
+<link>http://xrxs.net/video/live-p12oreg-4728.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>PAC-12 (Washington) 720P</title>
+<link>http://xrxs.net/video/live-p12wash-2328.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>PAC-12 (Washington) 1080P</title>
+<link>http://xrxs.net/video/live-p12wash-4728.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>NFL Now</title>
+<link>https://svglive3-event.level3.nfl.com/nflent3/live/now/NFLNOW_1200k.m3u8</link>
+<thumbnail>https://image.roku.com/blog/wp-content/uploads/2014/08/nfl-now.jpg</thumbnail>
+</item>
+
+<item>
+<title>NFL Network</title>
+<link>http://bigsports.me/watch/58/nfl-network-live-stream.html</link>
+<thumbnail>http://bigsports.me/images/nfl.jpg</thumbnail>
+</item>
+
+
+

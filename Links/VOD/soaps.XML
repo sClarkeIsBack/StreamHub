@@ -1,0 +1,31 @@
+<plugin>
+<title>Casualty</title>
+<link>plugin://plugin.video.iplayerwww/?url=b006m8wd&mode=121&name=Casualty&iconimage=DefaultFolder.png&description=&subtitles_url=&logged_in</link>
+<thumbnail>https://s17.postimg.org/kgsn8t69b/movies.png</thumbnail></plugin>
+</plugin>
+
+<plugin>
+<title>Coronation Street</title>
+<link>plugin://plugin.video.itv/?iconimage=http%3a%2f%2fmercury.itv.com%2fbrowser%2fproduction%2fimage%3fq%3d55%26format%3djpg%26w%3d608%26h%3d348%26productionId%3d1%252F0694%252F9067%2523001&mode=2&name=Coronation%20Street%20&url=http%3a%2f%2fwww.itv.com%2fhub%2fcoronation-street%2f1a0694</link>
+<thumbnail>https://s17.postimg.org/kgsn8t69b/movies.png</thumbnail></plugin>
+</plugin>
+
+<plugin>
+<title>Eastenders</title>
+<link>plugin://plugin.video.iplayerwww/?url=b006m86d&mode=121&name=EastEnders&iconimage=DefaultFolder.png&description=&subtitles_url=&logged_in</link>
+<thumbnail>https://s17.postimg.org/kgsn8t69b/movies.png</thumbnail></plugin>
+</plugin>
+
+<plugin>
+<title>Emmerdale</title>
+<link>plugin://plugin.video.itv/?iconimage=http%3a%2f%2fmercury.itv.com%2fbrowser%2fproduction%2fimage%3fq%3d55%26format%3djpg%26w%3d608%26h%3d348%26productionId%3d1%252F8694%252F7710%2523001&mode=2&name=Emmerdale%20&url=http%3a%2f%2fwww.itv.com%2fhub%2femmerdale%2fYa0524
+</link>
+<thumbnail>https://s17.postimg.org/kgsn8t69b/movies.png</thumbnail></plugin>
+</plugin>
+
+<plugin>
+<title>The Jeremy Kyle Show</title>
+<link>plugin://plugin.video.itv/?iconimage=http%3a%2f%2fmercury.itv.com%2fbrowser%2fproduction%2fimage%3fq%3d55%26format%3djpg%26w%3d608%26h%3d348%26productionId%3d1%252F5163%252F2468%2523001&mode=2&name=The%20Jeremy%20Kyle%20Show%20&url=http%3a%2f%2fwww.itv.com%2fhub%2fthe-jeremy-kyle-show%2f1a5163
+</link>
+<thumbnail>https://s17.postimg.org/kgsn8t69b/movies.png</thumbnail></plugin>
+</plugin>

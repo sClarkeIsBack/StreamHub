@@ -1,0 +1,705 @@
+<plugin>
+<title>[COLOR red]		UK VPN REQUIRED FOR MOST CHANNELS[/COLOR]</title>
+<link>http</link>
+<thumbnail>http://</thumbnail>
+</plugin>
+
+<plugin>
+<title>[COLOR white][/COLOR]</title>
+<link>http://</link>
+<thumbnail>http://</thumbnail>
+</plugin>
+<item>
+<title>[COLOR white]     BBC One[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://www.filmon.com/channel/bbc-one</sublink>
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_one.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     BBC One[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_hd.m3u8</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_one.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     BBC One[/COLOR][COLOR lime]   HD[/COLOR][COLOR white]   Backup[/COLOR]</title>
+<link>http://tvplayer.com/watch/bbcone</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_one.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     BBC One Wales[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/bbc-1-wales</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_one.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     BBC One Wales[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_wales_hd.m3u8</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_one.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     BBC One North Ireland[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/bbc-1-north-ireland</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_one.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     BBC One North Ireland[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_northern_ireland_hd.m3u8</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_one.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     BBC One Scotland[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/bbc-1-scotland</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_one.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     BBC One Scotland[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_scotland_hd.m3u8</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_one.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     BBC Two[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://www.filmon.com/channel/bbc-two</sublink>
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_two_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     BBC Two[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_two_hd.m3u8</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_two_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     BBC Two[/COLOR][COLOR lime]   HD[/COLOR][COLOR white]   Backup[/COLOR]</title>
+<link>http://tvplayer.com/watch/bbctwo</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_two_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV 1[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://www.filmon.com/channel/itv1</sublink>
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV 1[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://itv1liveios-i.akamaihd.net/hls/live/203437/itvlive/ITV1MN/master_Main1800.m3u8</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Channel 4[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://www.filmon.com/channel/channel-4</sublink>
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/channel4_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Channel 4[COLOR lime]   HD[/COLOR]</title>
+<link>http://tvplayer.com/watch/channel4</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/channel4_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Channel 5[COLOR lime]   HD[/COLOR]</title>
+<link>
+<sublink>http://tvplayer.com/watch/channel5</sublink>
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/channel_5_uk.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     ITV 2[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://www.filmon.com/channel/itv2<sublink>
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv2.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     ITV 2[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://itv2liveios-i.akamaihd.net/hls/live/203495/itvlive/ITV2MN/master_Main1800.m3u8
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv2.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     Dave[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://tvplayer.com/watch/dave</link>
+<thumbnail>https://assets.tvplayer.com/tvos/images/channels/300.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     ITV 3[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://www.filmon.com/channel/itv3</sublink>
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv3.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV 3[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://itv3liveios-i.akamaihd.net/hls/live/207262/itvlive/ITV3MN/master_Main1800.m3u8</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv3.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV 4[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://www.filmon.com/channel/itv4</sublink>
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv4.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV 4[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://itv4liveios-i.akamaihd.net/hls/live/207266/itvlive/ITV4MN/master_Main1800.m3u8</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv4.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV Be[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/itvbe</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk_be.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV Be[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://itvbeliveios-i.akamaihd.net/hls/live/219078/itvlive/ITVBE/master_Main1800.m3u8</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk_be.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV +1[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/itv-plus-1</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk_plus1.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV 2 +1[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/itv2-plus-1</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv2_plus1.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV 3 +1[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/itv3-plus-1</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv3_plus1.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV 4 +1[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/itv4-plus-1</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv4_plus1.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Dave[COLOR red]   SD[/COLOR]</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=TSDOWNLOADER&amp;url=http://royal-iptv.noip.me:2052/live/R7x59xfSg2/LdNmfhdIrj/5275.ts</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/dd/dave_uktv.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     BBC Three[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/bbc-three</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_three.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     BBC Four[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/bbc-four</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_four_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     BBC Four[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_four_hd.m3u8</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_four_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     UK Gold[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://grandiptv.myftp.org:8000/live/5grandiptv915/67863345/1521.ts</sublink>
+</link>
+<thumbnail>https://up.metropol247.co.uk/u/t/t_1242458145_1118731828.png</thumbnail>
+</item>
+
+
+
+<item>
+<title>[COLOR white]     E4[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/e4</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ee/e4_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     More4[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/more4</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/channel4_more4_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     CBS Reality[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/cbs-reality</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/cbs_reality_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     CBS Reality +1[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/cbs-reality1</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/cbs_reality_uk_plus1.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     CBS Action[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/cbs-action</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/cbs_action_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     CBS Drama[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/cbs-drama</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/cbs_drama_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Drama[COLOR red]   HD[/COLOR]</title>
+<link>http://tvplayer.com/watch/drama</link>
+<thumbnail>https://assets.tvplayer.com/tvos/images/channels/346.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Home[COLOR red]   HD[/COLOR]</title>
+<link>http://tvplayer.com/watch/home</link>
+<thumbnail>https://assets.tvplayer.com/tvos/images/channels/512.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     Quest[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/quest</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/qq/quest_us.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Quest[COLOR lime]   HD[/COLOR]</title>
+<link>http://tvplayer.com/watch/quest</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/qq/quest_us.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Pick[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/pick-tv</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/pp/pick_tv_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Really[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/really</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/rr/really_uktv.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Really[COLOR lime]   HD[/COLOR]</title>
+<link>http://tvplayer.com/watch/really</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/rr/really_uktv.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     5 USA[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/5usa</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/channel_5_uk_usa.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     5 Star[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/5-star</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/channel_5_uk_star.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Comedy Central[COLOR lime]   HD[/COLOR]</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLS&amp;url=http://167.114.102.27/live/Gi1f2UaimINiO41ZsOIbdA/1485377658/1ed9b2bf325e5bba7f3c577c3a86d0ef.m3u8</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/channel_5_uk_star.png</thumbnail>
+</item>
+<item>
+<title>[COLOR white]     London Live[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://bcoveliveios-i.akamaihd.net/hls/live/217434/3083279840001/master_900.m3u8</sublink>
+</link>
+<thumbnail>http://thecamdenstudio.com/wp-content/uploads/2014/04/0_0_618_http-offlinehbpl.hbpl_.co_.uk-News-OMC-LondonLiveWeb-20131023010320820.jpg</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Tru TV[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/tru-tv</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/tt/tru_tv_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Tru TV[COLOR red]   HD[/COLOR]</title>
+<link>http://tvplayer.com/watch/trutv</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/tt/tru_tv_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Travel Channel[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/travel-channel1</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/tt/travel_channel_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Travel Channel[COLOR lime]   HD[/COLOR]</title>
+<link>http://tvplayer.com/watch/travelchannel</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/tt/travel_channel_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Food Network[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/food-network</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ff/food_network_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Food Network[COLOR lime]   HD[/COLOR]</title>
+<link>http://tvplayer.com/watch/foodnetwork</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ff/food_network_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Food Network +1[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/food-network-plus-1</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ff/food_network_uk_plus1.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Fashion TV[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/fashion-tv</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ff/fashion_tv_fr.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Yesterday[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/yesterday</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/yy/yesterday_uktv.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Yesterday[COLOR lime]   HD[/COLOR]</title>
+<link>tvplyaer:yesterday</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/yy/yesterday_uktv.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Yesterday + 1[COLOR lime]   HD[/COLOR]</title>
+<link>tvplyaer:yesterdayplus1</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/yy/yesterday_uktv.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     QVC[COLOR red]   SD[/COLOR]</title>
+<link>http://llnw.live.qvc.simplestream.com/hera/remote/qvcuk_primary_sdi5/3/prog_index.m3u8</link>
+<thumbnail>https://lh3.googleusercontent.com/Yt9fYDv05H0p12Y-DgZXF85KVlEBwrQ0MmELx34WXZhrHZxs08Ia7KsthzkDzz7RIQ=w300</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     QVC[COLOR lime]   HD[/COLOR]</title>
+<link>http://llnw.live.qvc.simplestream.com/hera/remote/qvcuk_primary_sdi5/3/prog_index.m3u8</link>
+<thumbnail>https://assets.tvplayer.com/common/logos/150/Inverted/247.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     QVC Style[COLOR red]   SD[/COLOR]</title>
+<link>http://llnw.live.qvc.simplestream.com/hera/remote/qvcuk_primary_sdi8/3/prog_index.m3u8</link>
+<thumbnail>http://blogs.qvcuk.com/wp-content/uploads/2015/07/QVC-STYLE-LOGO-648x430.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     QVC Extra[COLOR red]   SD[/COLOR]</title>
+<link>http://llnw.live.qvc.simplestream.com/hera/remote/qvcuk_primary_sdi5/1/prog_index.m3u8</link>
+<thumbnail>http://logowow.net/logos/thumb-xAY9sV0jX.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     QVC Plus[COLOR red]   SD[/COLOR]</title>
+<link>http://llnw.live.qvc.simplestream.com/hera/remote/qvcuk_primary_sdi1/3/prog_index.m3u8</link>
+<thumbnail>https://upload.wikimedia.org/wikipedia/commons/6/6b/QVC_PLUS_HD.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     QVC Beauty[COLOR red]   SD[/COLOR]</title>
+<link>http://llnw.live.qvc.simplestream.com/hera/remote/qvcuk_primary_sdi6/3/prog_index.m3u8</link>
+<thumbnail>https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/QVC_Beauty.svg/2000px-QVC_Beauty.svg.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     S4C[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://vs-hls-uk-live.edgesuite.net/pool_9/live/s4cpbs/s4cpbs.isml/s4cpbs-pa3%3d96000-video%3d1604000.norewind.m3u8</sublink>
+</link>
+<thumbnail>https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/S4C_logo_2014.svg/2000px-S4C_logo_2014.svg.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     The Jewlery Channel[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>https://d2hee8qk5g0egz.cloudfront.net/live/tjc_sdi1/bitrate1.isml/bitrate1-audio_track=64000-video=1800000.m3u8</sublink>
+</link>
+<thumbnail>https://lh6.googleusercontent.com/-D4crHSSOKPc/AAAAAAAAAAI/AAAAAAAAClg/t1OE19doZ1E/s0-c-k-no-ns/photo.jpg</thumbnail>
+</item>
+
+<plugin>
+<title>[COLOR white][/COLOR]</title>
+<link>
+plugin://
+</link>
+<thumbnail>lh6.googleusercontent.com/-D4crHSSOKPc/AAAAAAAAAAI/AAAAAAAAClg/t1OE19doZ1E/s0-c-k-no-ns/photo.jpg</thumbnail>
+</plugin>
+
+<plugin>
+<title>[COLOR red]     KIDS[/COLOR]</title>
+<link>
+plugin://
+</link>
+<thumbnail>lh6.googleusercontent.com/-D4crHSSOKPc/AAAAAAAAAAI/AAAAAAAAClg/t1OE19doZ1E/s0-c-k-no-ns/photo.jpg</thumbnail>
+</plugin>
+
+<item>
+<title>[COLOR white]     [COLOR red][/COLOR]</title>
+<link></link>
+<thumbnail></thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     CBBC[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/cbbc</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_cbbc.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     CBBC[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>
+<sublink>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/cbbc_hd.m3u8</sublink>
+<sublink></sublink>
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_cbbc.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     CBeebies[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/cbeebies</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_cbeebies_uk.png</thumbnail>
+</item>
+
+
+
+<item>
+<title>[COLOR white]     CBeebies[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>
+<sublink>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/cbeebies_hd.m3u8</sublink>
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_cbeebies_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     CITV[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://citvliveios-i.akamaihd.net/hls/live/207267/itvlive/CITVMN/master_Main1800.m3u8</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_cbeebies_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Pop[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/pop</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/pp/pop_uk.png</thumbnail>
+</item>
+
+
+
+
+<item>
+<title>[COLOR white]     Tiny Pop[COLOR red]   SD[/COLOR]</title>
+<link>http://www.filmon.com/channel/tiny-pop</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/tt/tiny_pop.png</thumbnail>
+</item>
+
+
+
+<item>
+<title>[COLOR white]     [COLOR red][/COLOR]</title>
+<link></link>
+<thumbnail></thumbnail>
+</item>
+
+
+<item>
+<title>[B][COLOR red]MUSIC TV[/COLOR][/B]</title>
+<link></link>
+</item>
+
+
+<item>
+<title>[COLOR white]     [COLOR red][/COLOR]</title>
+<link></link>
+<thumbnail></thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     4 Music[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://llnw.live.btv.simplestream.com/coder9/coder.channels.channel6/hls/4/playlist.m3u8</link>
+<thumbnail>https://lh4.googleusercontent.com/-s8sP7AWGx5M/AAAAAAAAAAI/AAAAAAAAABc/iypkiR0Kte8/s0-c-k-no-ns/photo.jpg</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     The Box[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://llnw.live.btv.simplestream.com/coder9/coder.channels.channel12/hls/4/playlist.m3u8</sublink>
+</link>
+<thumbnail>http://igrewupinthe90s.com/wp-content/uploads/2015/05/the-box.jpg</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Box Hits[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://llnw.live.btv.simplestream.com/coder9/coder.channels.channel2/hls/4/playlist.m3u8</link>
+<thumbnail>https://pbs.twimg.com/profile_images/744501160028012544/36yv0LOY.jpg</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Box Upfront[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://llnw.live.btv.simplestream.com/coder9/coder.channels.channel8/hls/4/playlist.m3u8</sublink>
+</link>
+<thumbnail>https://d24j9r7lck9cin.cloudfront.net/l/f/1/1518.1464128304.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     Capital TV[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://ooyalahd2-f.akamaihd.net/i/globalradio01_delivery@156521/index_656_av-p.m3u8?sd=10&rebase=on</sublink>
+</link>
+<thumbnail>https://images-eu.ssl-images-amazon.com/images/I/41Bdy18PRuL.png</thumbnail>
+</item>
+
+
+
+
+<item>
+<title>[COLOR white]     Channel AKA[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://rrr.sz.xlcdn.com/?account=AATW&file=akanew&type=live&service=wowza&protocol=http&output=playlist.m3u8</sublink>
+</link>
+<thumbnail>https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Channel_AKA_2009_logo.png/220px-Channel_AKA_2009_logo.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     Heart TV[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://ooyalahd2-f.akamaihd.net/i/globalradio02_delivery@156522/master.m3u8</sublink>
+</link>
+<thumbnail>http://radiotoday.co.uk/wp-content/uploads/2015/02/6heartv.jpg</thumbnail>
+</item>
+
+
+
+
+<item>
+<title>[COLOR white]     Kerrang TV[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://llnw.live.btv.simplestream.com/coder11/coder.channels.channel4/hls/4/playlist.m3u8</sublink>
+</link>
+<thumbnail>http://www.userlogos.org/files/logos/Carlos182/kerrang.png</thumbnail>
+</item>
+
+
+
+
+<item>
+<title>[COLOR white]     Kiss TV[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://llnw.live.btv.simplestream.com/coder9/coder.channels.channel14/hls/4/playlist.m3u8</sublink>
+</link>
+<thumbnail>http://static1.squarespace.com/static/5617dc44e4b0577603d6b96f/5617e049e4b0df1370a7d984/5617e062e4b08bd3cec01036/1444405348097/kiss-logo.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     Magic TV[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://llnw.live.btv.simplestream.com/coder11/coder.channels.channel2/hls/4/playlist.m3u8</sublink>
+</link>
+<thumbnail>http://radiotoday.co.uk/wp-content/uploads/2012/10/magic2012.jpg</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Now Music[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://rrr.sz.xlcdn.com/?account=AATW&file=nowmusic&type=live&service=wowza&protocol=http&output=playlist.m3u8</sublink>
+</link>
+<thumbnail>http://thelatest.co.uk/files/2013/05/NOW-MUSIC-LOGO.jpg</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     [COLOR red][/COLOR]</title>
+<link></link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>[B][COLOR red]NEWS[/COLOR][/B]</title>
+<link></link>
+</item>
+
+
+
+<item>
+<title>[COLOR white]     [COLOR red][/COLOR]</title>
+<link>http://watch.ustvnow.com/69ab90a9-c125-4d1a-b60d-a59e5dbef6f7</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     BBC News[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>
+<sublink>http://vs-hls-uk-live.edgesuite.net/pool_34/live/bbc_news_channel_hd/bbc_news_channel_hd.isml/bbc_news_channel_hd-pa4%3d128000-video%3d5070000.m3u8</sublink>
+</link>
+<thumbnail>http://www.userlogos.org/files/logos/macleod.mac/bbcnews.1.o.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Sky News[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>https://www.youtube.com/watch?v=y60wDzZt8yg</link>
+<thumbnail>http://www.felicitygerry.com/wp-content/uploads/2014/11/sky-news-logo.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Fox News[COLOR lime]   HD[/COLOR]</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLS&amp;url=http://167.114.102.27/live/5rDHW4lZHqCScm4iUrI4cg/1485451484/877e1fd192b3a58577e4387971c215a7.m3u8</link>
+<thumbnail>https://lh4.googleusercontent.com/-hWfA4bcw9-0/AAAAAAAAAAI/AAAAAAAATJM/d0meLGVtrWM/s0-c-k-no-ns/photo.jpg</thumbnail>
+<fanart>http://s21.postimorg/6ngdod4uv/fanart.jpg</fanart></item>

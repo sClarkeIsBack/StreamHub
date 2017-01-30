@@ -1,0 +1,76 @@
+<dir>
+<name>Catchup TV (Soaps)</name>
+<link>http://mkodi.co.uk/streamhub/lists/VOD/soaps.XML</link>
+<thumbnail>https://upload.wikimedia.org/wikipedia/en/a/ac/EastEnders_Title.png</thumbnail>
+</dir>
+<plugin>
+<name>Orange is The New Black</name>
+<link>plugin://plugin.video.streamhub/?action=seasons&imdb=tt2372162&tvdb=264586&tvshowtitle=Orange%20Is%20the%20New%20Black&year=2013</link>
+<thumbnail>http://www.gstatic.com/tv/thumb/tvbanners/9960168/p9960168_b_v8_ad.jpg</thumbnail>
+</plugin>
+
+<plugin>
+<name>Sex and The City</name>
+<link>plugin://plugin.video.streamhub/?action=seasons&imdb=tt0159206&tvdb=76648&tvshowtitle=Sex%20and%20the%20City&year=1998</link>
+<thumbnail>http://www.tvposter.net/posters/sex_and_the_city_1998_1572_poster.jpg</thumbnail>
+</plugin>
+
+plugin://plugin.video.streamhub/?action=seasons&imdb=tt0159206&tvdb=76648&tvshowtitle=Sex%20and%20the%20City&year=1998
+
+<plugin>
+<name>Romance Movies</name>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=19&name=ROMANCE%20MOVIES&url=http%3a%2f%2fafdah.org%2fromance_movies</link>
+<thumbnail>http://combiboilersleeds.com/image.php?pic=/images/heart/heart-2.jpg</thumbnail>
+</plugin>
+
+<plugin>
+<title>Romance Movies 2</title>
+<link>plugin://plugin.video.streamhub/?action=movies&url=http%3a%2f%2fwww.imdb.com%2fsearch%2ftitle%3ftitle_type%3dfeature%2ctv_movie%26languages%3den%26num_votes%3d100%2c%26release_date%3ddate%5b730%5d%2cdate%5b30%5d%26genres%3dromance%26sort%3dmoviemeter%2casc%26count%3d40%26start%3d1</link>
+<thumbnail>http://combiboilersleeds.com/image.php?pic=/images/heart/heart-2.jpg</thumbnail>
+</plugin>
+
+<plugin>
+<name> Musical Movies</name>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=19&name=ROMANCE%20MOVIES&url=http%3a%2f%2fafdah.org%2fromance_movies</link>
+<thumbnail>http://previews.123rf.com/images/rompikapo/rompikapo1308/rompikapo130800002/21494435-Musical-text-with-bulbs-such-as-neon-signs-of-Broadway-theaters-Stock-Vector.jpg</thumbnail>
+</plugin>
+
+
+<plugin>
+<title>3 Day Flexibility Challenge</title>
+<link>plugin://plugin.video.youtube/playlist/PL5lPziO_t_Vh5STfuk9ubcHHC-fqPlvZ2/</link>
+<thumbnail>http://www.lephysique.com/wp-content/uploads/2013/08/flexibility_lg.jpg</thumbnail>
+</plugin>
+
+<plugin>
+<title>Must Try Recipies</title>
+<link>plugin://plugin.video.youtube/playlist/PL5vtqDuUM1Dk2Wv-d6zyD21drTmq7PRK0/</link>
+<thumbnail>http://d1in1towyr636m.cloudfront.net/wp-content/uploads/2016/09/must-try.png</thumbnail>
+</plugin>
+
+
+<plugin>
+<title>Gordon Ramsay's Cookery Course</title>
+<link>plugin://plugin.video.youtube/playlist/PLTzMGnJjrsSw3SCQFxF4FE97r2qPLsFi-/</link>
+<thumbnail>https://lh6.googleusercontent.com/-pfajpq6xCW8/AAAAAAAAAAI/AAAAAAAAACM/3_YGH7aHIcg/s0-c-k-no-ns/photo.jpg</thumbnail>
+</plugin>
+
+<plugin>
+<title>Home Cooked Favourites</title>
+<link>plugin://plugin.video.youtube/playlist/PLC84DD48D6B804D81/</link>
+<thumbnail>http://www.mentoradvisers.com/wp-content/uploads/2013/07/Aroma-Home-Cooked-Meals.jpg</thumbnail>
+</plugin>
+
+<item>
+<title>test</title>
+<link>https://www.dailymotion.com/embed/video/k41aDpOUjFBHcDlspev?syndication=0&autoplay=0</link>
+<thumbnail>http://www.mentoradvisers.com/wp-content/uploads/2013/07/Aroma-Home-Cooked-Meals.jpg</thumbnail>
+</item>
+
+
+
+
+
+
+
+

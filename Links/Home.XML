@@ -1,0 +1,91 @@
+<plugin>
+<name>[B][COLOR red]Stream Hub[/COLOR][/B]</name>
+<link>
+h
+</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/Untitled-1.png</thumbnail>
+</plugin>
+
+
+<plugin>
+<title>[COLOR white][B][/COLOR][/B]</title>
+<link>hh</link>
+<thumbnail>http://thumbnail>
+</plugin>
+
+
+<dir>
+<name>[COLOR red][B]M[/COLOR][COLOR white]ovies[/COLOR][/B]</name>
+<link>http://mkodi.co.uk/streamhub/lists/Movies/Movies.XML</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/MOVIES.png</thumbnail>
+</dir>
+
+
+<plugin>
+<name>[COLOR red][B]T[/COLOR][COLOR white]V Shows[/COLOR][/B]</name>
+<link>plugin://plugin.video.streamhub/?action=tvNavigator</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/TVShows.png</thumbnail>
+</plugin>
+
+<dir>
+<name>[COLOR red][B]L[/COLOR][COLOR white]ive Tv[/COLOR][/B]</name>
+<link>http://mkodi.co.uk/streamhub/lists/LiveTv/ukent.xml</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/LiveTV.png</thumbnail>
+</dir>
+
+<dir>
+<name>[COLOR red][B]K[/COLOR][COLOR white]ids Corner[/COLOR][/B]</name>
+<link>http://mkodi.co.uk/streamhub/lists/Kids/kidsshows.xml</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/kids.png</thumbnail>
+</dir>
+
+<dir>
+<name>[COLOR red][B]S[/COLOR][COLOR white]ports[/COLOR][/B]</name>
+<link>http://mkodi.co.uk/streamhub/lists/Sports/Sports.xml</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/Sport.png</thumbnail>
+</dir>
+
+<dir>
+<name>[COLOR red][B]F[/COLOR][COLOR white]or Him[/COLOR][/B]</name>
+<link>http://mkodi.co.uk/streamhub/lists/forhim/For%20Him.xml</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/Him.png</thumbnail>
+</dir>
+<dir>
+<name>[COLOR red][B]F[/COLOR][COLOR white]or Her[/COLOR][/B]</name>
+<link>http://mkodi.co.uk/streamhub/lists/forher/forher.xml</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/her.png</thumbnail>
+</dir>
+
+<dir>
+<name>[COLOR red][B]R[/COLOR][COLOR white]adio[/COLOR][/B]</name>
+<link>http://mkodi.co.uk/streamhub/lists/RADIO.xml</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/Radio.png</thumbnail>
+</dir>
+
+
+<plugin>
+<name>[COLOR red][B]D[/COLOR][COLOR white]ocumentary's[/COLOR][/B]</name>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=35&name=DOCS&url=http%3a%2f%2fdocumentaryheaven.com%2fwatch-online%2f</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/doc.png</thumbnail>
+</plugin>
+
+<plugin>
+<name>[COLOR red][B]24[/COLOR][COLOR white]/7 TV[/COLOR][/B]</name>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=48&name=24%2f7%20TV&url=http%3a%2f%2fmkodi.co.uk%2fstreamhub%2flists%2f247%2f247tv.xml</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/doc.png</thumbnail>
+</plugin>
+
+
+
+<plugin>
+<name>[COLOR red][B]A[/COLOR][COLOR white]nime[/COLOR][/B]</name>
+<link>plugin://plugin.video.streamhub/?action=cartoon</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/Anime.png</thumbnail>
+</plugin>
+
+<plugin>
+<title>[COLOR red][B]X[/COLOR][COLOR white]XX[/B][/COLOR]</title>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=99&name=%5bCOLOR%20orange%5dG%5b%2fCOLOR%5d%5bCOLOR%20white%5denre%27s%5b%2fCOLOR%5d&url=http%3a%2f%2fwww.xvideos.com%2fa</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/XXX.png</thumbnail>
+</plugin>
+

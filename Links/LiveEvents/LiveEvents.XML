@@ -1,0 +1,19 @@
+<plugin>
+<title>Sports Devil</title>
+<link>plugin://plugin.video.SportsDevil/?mode=1&item=title%3DLive%2BSports%26url%3Dlivesports.cfg%26definedIn%3DmainMenu.cfg%26director%3DSportsDevil%26genre%3DLive%2BSports%26type%3Drss</link>
+<thumbnail>https://s13.postimg.org/96mskc1hz/icon.png</thumbnail>
+</plugin>
+
+<plugin>
+<title>[COLOR red][/COLOR]</title>
+<link>Drss</link>
+<thumbnail></thumbnail>
+</plugin>
+
+---------------------------------------------------------------------------------------------
+
+<plugin>
+<title>[COLOR red]This Section is used for Main Live Events[/COLOR]</title>
+<link>%Drss</link>
+<thumbnail></thumbnail>
+</plugin>

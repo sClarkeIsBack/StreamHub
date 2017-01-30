@@ -1,0 +1,12 @@
+<plugin>
+<name>[COLOR red]M[/COLOR]ovies</name>
+<link>plugin://plugin.video.streamhub/?action=movieNavigator</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/MOVIES.png</thumbnail>
+</plugin>
+
+<plugin>
+<name>[COLOR red]M[/COLOR]ovies 2</name>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=37&name=MOVIES2&url=url</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/MOVIES.png</thumbnail>
+</plugin>
+

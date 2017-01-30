@@ -1,0 +1,82 @@
+<plugin>
+<title>The Grand Tour</title>
+<link>plugin://plugin.video.streamhub/?action=episodes&imdb=tt5712554&season=1&tvdb=314087&tvshowtitle=The%20Grand%20Tour&year=2016</link>
+<thumbnail>http://www.gstatic.com/tv/thumb/tvbanners/13420002/p13420002_b_v8_ab.jpg</thumbnail>
+</plugin>
+
+<plugin>
+<title>Arrow</title>
+<link>plugin://plugin.video.streamhub/?action=seasons&imdb=tt2193021&tvdb=257655&tvshowtitle=Arrow&year=2012</link>
+<thumbnail>http://www.gstatic.com/tv/thumb/tvbanners/13004264/p13004264_b_v8_aa.jpg</thumbnail>
+</plugin>
+
+
+
+<plugin>
+<title>Crime Movies</title>
+<link>
+plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=19&name=%5bB%5d%5bCOLOR%20white%5dafdah%5b%2fCOLOR%5d%5b%2fB%5d&url=http%3a%2f%2fafdah.org%2frecent_movies
+</link>
+<thumbnail>http://images.gr-assets.com/books/1327952120l/1974478.jpg</thumbnail>
+</plugin>
+
+<plugin>
+<name>Football Replay's</name>
+<link>plugin://plugin.video.footballreplays/?url=url&mode=3&name=Full+Matches&iconimage=&page=1</link>
+<thumbnail>http://blog.oxforddictionaries.com/wp-content/uploads/football-1.jpg</thumbnail>
+</plugin>
+
+
+<plugin>
+<title>War Movies</title>
+<link>
+plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=19&name=WAR%20MOVIES&url=http%3a%2f%2fafdah.org%2fwar_movies
+</link>
+<thumbnail>http://static.rogerebert.com/uploads/movie/movie_poster/platoon-1986/large_mzCTGi8s72xjLT40y7H8IyjOV3v.jpg</thumbnail>
+</plugin>
+
+<plugin>
+<title>Sport Movies</title>
+<link>
+plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=19&name=SPORT%20MOVIES&url=http%3a%2f%2fafdah.org%2fsport_movies
+</link>
+<thumbnail>https://upload.wikimedia.org/wikipedia/en/6/67/Rocky_Balboa_-_The_Best_of_Rocky_CD_cover.jpg</thumbnail>
+</plugin>
+
+<plugin>
+<title>Western Movies</title>
+<link>
+plugin://plugin.video.streamhub/?action=movies&url=http%3a%2f%2fwww.imdb.com%2fsearch%2ftitle%3ftitle_type%3dfeature%2ctv_movie%26languages%3den%26num_votes%3d100%2c%26release_date%3ddate%5b730%5d%2cdate%5b30%5d%26genres%3dwestern%26sort%3dmoviemeter%2casc%26count%3d40%26start%3d1
+</link>
+<thumbnail>http://t0.gstatic.com/images?q=tbn:ANd9GcS8u26AODM5QSDYFFA9PamibHiUMn0hGEwj9FzQG4ZtGkzRlSLQ</thumbnail>
+</plugin>
+
+<plugin>
+<title>MACHINE GUNS!!</title>
+<link>plugin://plugin.video.youtube/playlist/PLoagig7ANyXN3VvDRfv4yLABnb7-2HyOO/</link>
+<thumbnail>http://period7team1.weebly.com/uploads/4/3/7/1/43719557/957153_orig.jpg</thumbnail>
+</plugin>
+
+<plugin>
+<title>Firearm Facts</title>
+<link>plugin://plugin.video.youtube/playlist/PLoagig7ANyXMK_NsneVRI5MRh00Wg2Zgj</link>
+<thumbnail>https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/SIG_Pro_by_Augustas_Didzgalvis.jpg/300px-SIG_Pro_by_Augustas_Didzgalvis.jpg</thumbnail>
+</plugin>
+
+<plugin>
+<title>Workout Guide</title>
+<link>plugin://plugin.video.youtube/playlist/PLKKpjoA1Byw3bcZLm_HXZUVU3h6MvBmJE</link>
+<thumbnail>https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/workouts/bicep.jpg</thumbnail>
+</plugin>
+
+<plugin>
+<title>Top Romantic Meals</title>
+<link>plugin://plugin.video.youtube/playlist/PLA8NZSto-k4P1cneWRI_4-D4PaB3bI2lG</link>
+<thumbnail>http://youqueen.com/wp-content/uploads/2012/08/couple-on-romantic-dinner.jpg</thumbnail>
+</plugin>
+
+<item>
+<title>test</title>
+<link>http://167.114.102.27/live/VA9svB_Xnf6TzKXYtKttTQ/1485494601/523af537946b79c4f8369ed39ba78605.m3u8</link>
+</item>
+
