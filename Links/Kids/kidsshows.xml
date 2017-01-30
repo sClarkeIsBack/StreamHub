@@ -1,6 +1,6 @@
 <plugin>
 <name>Cartoons</name>
-<link>plugin://script.module.streamhub?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.video.md123movies%5cicon.png&mode=16&name=%5bB%5d%5bCOLOR%20white%5dtoons%5b%2fCOLOR%5d%5b%2fB%5d&url=http://mkodi.co.uk/streamhub/lists/Kids/kidscorner.xml</link>
+<link>plugin://script.module.streamhub?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.video.md123movies%5cicon.png&mode=16&name=%5bB%5d%5bCOLOR%20white%5dtoons%5b%2fCOLOR%5d%5b%2fB%5d&url=https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Kids/kidscorner.xml</link>
 <thumbnail>mkodi.co.uk/streamhub/icons/2/kids.png</thumbnail>
 </plugin>
 
@@ -12,5 +12,5 @@
 
 <dir>
 <title>Minecraft</title>
-<link>http://mkodi.co.uk/streamhub/lists/Kids/Minecraft.xml</link>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Kids/Minecraft.xml</link>
 </dir>

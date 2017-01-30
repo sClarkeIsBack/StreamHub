@@ -1,6 +1,6 @@
 <dir>
 <name>Catchup TV (Soaps)</name>
-<link>http://mkodi.co.uk/streamhub/lists/VOD/soaps.XML</link>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/VOD/soaps.XML</link>
 <thumbnail>https://upload.wikimedia.org/wikipedia/en/a/ac/EastEnders_Title.png</thumbnail>
 </dir>
 <plugin>

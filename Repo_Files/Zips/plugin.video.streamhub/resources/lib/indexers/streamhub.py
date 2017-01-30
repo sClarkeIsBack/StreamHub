@@ -59,7 +59,7 @@ class indexer:
     def root(self):
         try:
             regex.clear()
-            url = base64.b64decode ('aHR0cDovL21rb2RpLmNvLnVrL3N0cmVhbWh1Yi9saXN0cy9Ib21lLlhNTA==')
+            url = base64.b64decode ('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3NDbGFya2VJc0JhY2svU3RyZWFtSHViL21hc3Rlci9MaW5rcy9Ib21lLlhNTA==')
             self.list = self.streamhub_list(url)
             for i in self.list: i.update({'content': 'addons'})
             self.addDirectory(self.list)

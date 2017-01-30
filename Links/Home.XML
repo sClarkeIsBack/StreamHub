@@ -16,7 +16,7 @@ h
 
 <dir>
 <name>[COLOR red][B]M[/COLOR][COLOR white]ovies[/COLOR][/B]</name>
-<link>http://mkodi.co.uk/streamhub/lists/Movies/Movies.XML</link>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Movies/Movies.XML</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/MOVIES.png</thumbnail>
 </dir>
 
@@ -29,36 +29,36 @@ h
 
 <dir>
 <name>[COLOR red][B]L[/COLOR][COLOR white]ive Tv[/COLOR][/B]</name>
-<link>http://mkodi.co.uk/streamhub/lists/LiveTv/ukent.xml</link>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/LiveTv/ukent.xml</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/LiveTV.png</thumbnail>
 </dir>
 
 <dir>
 <name>[COLOR red][B]K[/COLOR][COLOR white]ids Corner[/COLOR][/B]</name>
-<link>http://mkodi.co.uk/streamhub/lists/Kids/kidsshows.xml</link>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Kids/kidsshows.xml</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/kids.png</thumbnail>
 </dir>
 
 <dir>
 <name>[COLOR red][B]S[/COLOR][COLOR white]ports[/COLOR][/B]</name>
-<link>http://mkodi.co.uk/streamhub/lists/Sports/Sports.xml</link>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Sports/Sports.xml</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/Sport.png</thumbnail>
 </dir>
 
 <dir>
 <name>[COLOR red][B]F[/COLOR][COLOR white]or Him[/COLOR][/B]</name>
-<link>http://mkodi.co.uk/streamhub/lists/forhim/For%20Him.xml</link>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/forhim/For%20Him.xml</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/Him.png</thumbnail>
 </dir>
 <dir>
 <name>[COLOR red][B]F[/COLOR][COLOR white]or Her[/COLOR][/B]</name>
-<link>http://mkodi.co.uk/streamhub/lists/forher/forher.xml</link>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/forher/forher.xml</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/her.png</thumbnail>
 </dir>
 
 <dir>
 <name>[COLOR red][B]R[/COLOR][COLOR white]adio[/COLOR][/B]</name>
-<link>http://mkodi.co.uk/streamhub/lists/RADIO.xml</link>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/RADIO.xml</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/Radio.png</thumbnail>
 </dir>
 

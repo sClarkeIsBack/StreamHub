@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="1.3" provider-name="sClarke">
+<addon id="plugin.video.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="1.4" provider-name="sClarke">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="plugin.video.youtube" version="5.2.1" optional="true" />
@@ -9,14 +9,14 @@
 		<import addon="script.video.F4mProxy" version="2.2.3"/>
         <import addon="script.streamhub.artwork" version="1.0.0" />
         <import addon="script.streamhub.metadata" version="1.0.0" />
-        <import addon="script.module.streamhub" versio="1.0.0"/>
+        <import addon="script.module.streamhub" version="1.0.0"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
 		<provides>video</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en"></summary>
-		<description lang="en">StreamHub - All Content feautured in this Addon is freely Available on the Internet - Making use of Already Written Code and Writing our Own - Credit to Exodus for Movies/TV Show Scrapers and Phoenix for the Addon's Base Code</description>
+		<description lang="en">StreamHub - All Content feautured in this Addon is freely Available on the Internet - Making use of Already Written Code and Writing our own. Credit to Phoenix for the Addon's Base Code</description>
 		<platform>all</platform>
 	</extension>
 </addon>
