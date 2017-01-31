@@ -63,7 +63,7 @@ plugin://plugin.video.streamhub/?action=seasons&imdb=tt0159206&tvdb=76648&tvshow
 
 <item>
 <title>test</title>
-<link>https://player.vimeo.com/video/68624504?title=0&byline=0&portrait=0</link>
+<link>plugin://plugin.video.youtube/?path=/root/video&action=play_all&playlist=PLAvplcED5uTopvzto4MAUZwInPA49od4A</link>
 <thumbnail>http://www.mentoradvisers.com/wp-content/uploads/2013/07/Aroma-Home-Cooked-Meals.jpg</thumbnail>
 </item>
 
