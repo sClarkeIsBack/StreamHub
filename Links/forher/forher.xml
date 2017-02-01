@@ -63,7 +63,7 @@ plugin://plugin.video.streamhub/?action=seasons&imdb=tt0159206&tvdb=76648&tvshow
 
 <dir>
 <title>testt</title>
-<link>http://exabytetv.info/USA.m3u</link>
+<link>https://raw.githubusercontent.com/Wilkhu90/BlogData/master/test.m3u</link>
 <thumbnail>http://www.mentoradvisers.com/wp-content/uploads/2013/07/Aroma-Home-Cooked-Meals.jpg</thumbnail>
 </dir>
 
