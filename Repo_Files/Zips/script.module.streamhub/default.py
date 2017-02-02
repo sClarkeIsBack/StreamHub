@@ -8,13 +8,10 @@ addon_id   = 'script.module.streamhub'
 selfAddon  = xbmcaddon.Addon(id=addon_id)
 addon      = Addon(addon_id, sys.argv)
 addon_name = selfAddon.getAddonInfo('name')
-art        = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-sslf       = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/'))
-ssl        = control.join(sslf,'test.ca-bundle')
 icon       = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png'))
 fanart     = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 User_Agent = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
-afdah      = 'http://afdah.org'
+putlockerhd      = 'http://putlockerhd.co'
 ccurl      = 'http://cartooncrazy.me'
 s          = requests.session()
 net        = Net()
@@ -36,15 +33,15 @@ def CAT():
 	addDir('24/7 TV',tv,48,icon,fanart,'')
 	
 def MovieCAT():
-	addDir('RECENT MOVIES',afdah+'/recent_movies',19,icon,fanart,'')
-	addDir('COMEDY MOVIES',afdah+'/comedy_movies',19,icon,fanart,'')
-	addDir('CRIME MOVIES',afdah+'/crime_movies',19,icon,fanart,'')
-	addDir('WAR MOVIES',afdah+'/war_movies',19,icon,fanart,'')
-	addDir('ROMANCE MOVIES',afdah+'/romance_movies',19,icon,fanart,'')
-	addDir('MUSICAL MOVIES',afdah+'/musical_movies',19,icon,fanart,'')
-	addDir('SPORT MOVIES',afdah+'/sport_movies',19,icon,fanart,'')
-	addDir('KIDS MOVIES',afdah+'/family_movies',19,icon,fanart,'')
-	addDir('DOCUMENTARY MOVIES',afdah+'/documentary_movies',19,icon,fanart,'')
+	addDir('RECENT MOVIES',putlockerhd+'/recent_movies',19,icon,fanart,'')
+	addDir('COMEDY MOVIES',putlockerhd+'/comedy_movies',19,icon,fanart,'')
+	addDir('CRIME MOVIES',putlockerhd+'/crime_movies',19,icon,fanart,'')
+	addDir('WAR MOVIES',putlockerhd+'/war_movies',19,icon,fanart,'')
+	addDir('ROMANCE MOVIES',putlockerhd+'/romance_movies',19,icon,fanart,'')
+	addDir('MUSICAL MOVIES',putlockerhd+'/musical_movies',19,icon,fanart,'')
+	addDir('SPORT MOVIES',putlockerhd+'/sport_movies',19,icon,fanart,'')
+	addDir('KIDS MOVIES',putlockerhd+'/family_movies',19,icon,fanart,'')
+	addDir('DOCUMENTARY MOVIES',putlockerhd+'/documentary_movies',19,icon,fanart,'')
 	
 def MOV2CAT():
 	addDir('[COLOR red]R[/COLOR]ecently Added',mov2,38,icon,fanart,'')
@@ -148,29 +145,48 @@ def toon_get(url):
     np = re.compile('<a href="(.+?)">(.+?)</a>',re.DOTALL).findall(OPEN)
     for url,name in np:
             if 'Next' in name:
-                    addDir('[B][COLOR yellow]More >[/COLOR][/B]',url,2,iconimage,fanart,'')
+                    addDir('[B][COLOR red]More >[/COLOR][/B]',url,2,iconimage,fanart,'')
     xbmc.executebuiltin('Container.SetViewMode(50)')
     xbmcplugin.endOfDirectory
 	
 def resolvetoons(name,url,iconimage,description):
     OPEN = Open_Url(url)
-    dialog = xbmcgui.Dialog()
-    servers = dialog.yesno('[B][COLOR red]Stream Hub[/COLOR]', 'Please Select A Link', yeslabel='Link 1', nolabel='Link 2')
-    if servers:
-            url = re.compile('Playlist 1</span>.+?<iframe src="(.+?)"',re.DOTALL).findall(OPEN)[0]
-            play=urlresolver.HostedMediaFile(url).resolve()
-
-    else:
-            url = re.compile('Playlist 2</span>.+?<iframe src="(.+?)"',re.DOTALL).findall(OPEN)[0]
-            play=urlresolver.HostedMediaFile(url).resolve()
-
-    try: 
-            liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=iconimage)
-            liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': description})
-            liz.setProperty('IsPlayable','true')
-            liz.setPath(str(play))
-            xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
-    except: pass
+    url1=regex_from_to(OPEN,'Playlist 1</span></div><div><iframe src="','"')
+    url2=regex_from_to(OPEN,'Playlist 2</span></div><div><iframe src="','"')
+    url3=regex_from_to(OPEN,'Playlist 3</span></div><div><iframe src="','"')
+    url4=regex_from_to(OPEN,'Playlist 4</span></div><div><iframe src="','"')
+    try:
+        play=urlresolver.HostedMediaFile(url1).resolve()
+        liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=iconimage)
+        liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': description})
+        liz.setProperty('IsPlayable','true')
+        liz.setPath(str(play))
+        xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+    except:pass
+    try:
+        play=urlresolver.HostedMediaFile(url2).resolve()
+        liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=iconimage)
+        liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': description})
+        liz.setProperty('IsPlayable','true')
+        liz.setPath(str(play))
+        xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+    except:pass
+    try:
+        play=urlresolver.HostedMediaFile(url3).resolve()
+        liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=iconimage)
+        liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': description})
+        liz.setProperty('IsPlayable','true')
+        liz.setPath(str(play))
+        xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+    except:pass
+    try:
+        play=urlresolver.HostedMediaFile(url4).resolve()
+        liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=iconimage)
+        liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': description})
+        liz.setProperty('IsPlayable','true')
+        liz.setPath(str(play))
+        xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+    except:pass
 	
 def Open_Url(url):
     req = urllib2.Request(url)
@@ -181,14 +197,14 @@ def Open_Url(url):
     return link
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 	
-def OPEN_URLafdah(url):
+def OPEN_URLputlockerhd(url):
         headers = {}
         headers['User-Agent'] = User_Agent
         link = requests.get(url, headers=headers, allow_redirects=False).text
         link = link.encode('ascii', 'ignore').decode('ascii')
         return link
 		
-def addDirafdah(name,url,mode,iconimage,fanart,description):
+def addDirputlockerhd(name,url,mode,iconimage,fanart,description):
         u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)+"&iconimage="+urllib.quote_plus(iconimage)+"&description="+urllib.quote_plus(description)
         ok=True
         liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
@@ -201,9 +217,9 @@ def addDirafdah(name,url,mode,iconimage,fanart,description):
             ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
         return ok
 	
-def afdahread(url):
+def putlockerhdread(url):
         url = url.replace('https','http')
-        link = OPEN_URLafdah(url)
+        link = OPEN_URLputlockerhd(url)
         all_videos = regex_get_all(link, 'cell_container', '<div><b>')
         items = len(all_videos)
         for a in all_videos:
@@ -211,22 +227,22 @@ def afdahread(url):
                 name = addon.unescape(name)
                 url = regex_from_to(a, 'href="', '"').replace("&amp;","&")
                 thumb = regex_from_to(a, 'src="', '"')
-                addDirafdah(name,afdah+url,15,'http://'+thumb,fanart,'')
+                addDirputlockerhd(name,putlockerhd+url,15,'http://'+thumb,fanart,'')
         try:
                 match = re.compile('<a href="(.*?)\?page\=(.*?)">').findall(link)
                 for url, pn in match:
-                        url = afdah+url+'?page='+pn
-                        addDirafdah('[I][B][COLOR red]Page %s [/COLOR][/B][/I]' %pn,url,19,icon,fanart,'')
+                        url = putlockerhd+url+'?page='+pn
+                        addDir('[I][B][COLOR red]Page %s [/COLOR][/B][/I]' %pn,url,19,icon,fanart,'')
         except: pass
         setView('movies', 'movie-view')
 		
-def afdahplay(url):
+def putlockerhdplay(url):
     try:
         url = re.split(r'#', url, re.I)[0]
-        request_url = afdah+'/video_info/iframe'
-        link = OPEN_URLafdah(url)
+        request_url = putlockerhd+'/video_info/iframe'
+        link = OPEN_URLputlockerhd(url)
         form_data={'v': re.search(r'v\=(.*?)$',url,re.I).group(1)}
-        headers = {'origin':'https://afdah.org', 'referer': url,
+        headers = {'origin':'http://putlockerhd.co', 'referer': url,
                    'user-agent':User_Agent,'x-requested-with':'XMLHttpRequest'}
         r = requests.post(request_url, data=form_data, headers=headers, allow_redirects=False)
         try:
@@ -368,7 +384,7 @@ def CartooncrazysubList(url):
 		addDir(name,url,26,icon,fanart,'') 
     xbmc.executebuiltin('Container.SetViewMode(50)')'''
 def documentary(url):
-	addDir('DOCUMENTARY MOVIES',afdah+'/documentary_movies',19,icon,fanart,'')
+	addDir('DOCUMENTARY MOVIES',putlockerhd+'/documentary_movies',19,icon,fanart,'')
 	OPEN = OPEN_URL(url)
 	regex = regex_get_all(OPEN,'<h2><a href','alt="')
 	for a in regex:
@@ -400,7 +416,7 @@ def resolvedoc(url):
 	liz.setPath(str(link))
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
 	
-def openmov2(url):
+'''def openmov2(url):
 	link = OPEN_URL(url)
 	link = link.encode('ascii', 'ignore').decode('ascii')
 	nexp=regex_from_to(link,'<link rel="next" href="','"')
@@ -475,7 +491,7 @@ def playmov2(url):
 			xbmc.log('******************')
 			xbmc.log(str(url))
 			qual = regex_from_to(page,'"label":"','"')
-			addDir(qual,url,39,icon,fanart,'')
+			addDir(qual,url,39,icon,fanart,'')'''
 
 	
 def opentwentyfourseven(url):
@@ -644,10 +660,10 @@ elif mode==13:
 	resolve(name,url,iconimage,description)
 	
 elif mode==19:
-	afdahread(url)
+	putlockerhdread(url)
 	
 elif mode==15:
-	afdahplay(url)
+	putlockerhdplay(url)
 	
 elif mode==16:
 	toonlist(url)
@@ -693,21 +709,6 @@ elif mode==35:
 	
 elif mode==36:
 	resolvedoc(url)
-	
-elif mode==37:
-	MOV2CAT()
-	
-elif mode==38:
-	openmov2(url)
-	
-elif mode==39:
-	playmov2(url)
-	
-elif mode==40:
-	SEARCHmov2(type)
-	
-elif mode==41:
-	GENREmov2(url)
 	
 elif mode==43:
 	wweopen(url)

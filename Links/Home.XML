@@ -14,11 +14,11 @@ h
 </plugin>
 
 
-<dir>
+<plugin>
 <name>[COLOR red][B]M[/COLOR][COLOR white]ovies[/COLOR][/B]</name>
-<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Movies/Movies.XML</link>
+<link>plugin://plugin.video.streamhub/?action=movieNavigator</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/MOVIES.png</thumbnail>
-</dir>
+</plugin>
 
 
 <plugin>

@@ -21,7 +21,7 @@
 	</extension>
 </addon>
 
-<addon id="script.module.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="1.5" provider-name="sClarke">
+<addon id="script.module.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="1.6" provider-name="sClarke">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.addon.common" />
