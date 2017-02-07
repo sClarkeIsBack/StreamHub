@@ -2,7 +2,7 @@
 
 id="plugin.program.AntonysWizard"
 version="1.0"
-zip="http://mkodi.co.uk/ant/NOTTHIS/plugin.program.AntonysWizard.zip"
+zip="https://github.com/sClarkeIsBack/StreamHub/raw/master/Links/ant/plugin.program.AntonysWizard.zip"
 
 #################################################################################
 
