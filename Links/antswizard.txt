@@ -1,0 +1,107 @@
+#################################################################################
+
+id="plugin.program.AntonysWizard"
+version="1.0"
+zip="http://mkodi.co.uk/ant/NOTTHIS/plugin.program.AntonysWizard.zip"
+
+#################################################################################
+
+name="- Alans Build" #name of build
+version="1.0" #version of build - change this when you update and users will auto get the latest update.
+url="https://archive.org/download/alansimplekodi/alansimplekodi.zip" #url of build
+gui="http://"
+kodi="16.1"
+theme="http://"
+icon="http://mkodi.co.uk/ant/NOTTHIS/icons/Red_Wizard_Hat.png" #build icon
+fanart="http://mkodi.co.uk/ant/NOTTHIS/icons/16315848404_a2ce6e1cb4_o.png" # build fanart
+
+
+name="- Batman Build" #name of build
+version="1.0" #version of build - change this when you update and users will auto get the latest update.
+url="https://archive.org/download/bat65/bat65.zip" #url of build
+gui="http://"
+kodi="16.1"
+theme="http://"
+icon="http://mkodi.co.uk/ant/NOTTHIS/icons/Red_Wizard_Hat.png" #build icon
+fanart="http://mkodi.co.uk/ant/NOTTHIS/icons/16315848404_a2ce6e1cb4_o.png" # build fanart
+
+
+name="- Ferrari Build" #name of build
+version="1.0" #version of build - change this when you update and users will auto get the latest update.
+url="https://archive.org/download/ferrari123/ferrari123.zip" #url of build
+gui="http://"
+kodi="16.1"
+theme="http://"
+icon="http://mkodi.co.uk/ant/NOTTHIS/icons/Red_Wizard_Hat.png" #build icon
+fanart="http://mkodi.co.uk/ant/NOTTHIS/icons/16315848404_a2ce6e1cb4_o.png" # build fanart
+
+
+
+name="- kodi4ios" #name of build
+version="1.0" #version of build - change this when you update and users will auto get the latest update.
+url="https://archive.org/download/iosbuild4kodi/iosbuild4kodi.zip" #url of build
+gui="http://"
+kodi="16.1"
+theme="http://"
+icon="http://mkodi.co.uk/ant/NOTTHIS/icons/Red_Wizard_Hat.png" #build icon
+fanart="http://mkodi.co.uk/ant/NOTTHIS/icons/16315848404_a2ce6e1cb4_o.png" # build fanart
+
+
+
+name="- kodi4android" #name of build
+version="1.0" #version of build - change this when you update and users will auto get the latest update.
+url="https://archive.org/download/android4kodi/android4kodi.zip" #url of build
+gui="http://"
+kodi="16.1"
+theme="http://"
+icon="http://mkodi.co.uk/ant/NOTTHIS/icons/Red_Wizard_Hat.png" #build icon
+fanart="http://mkodi.co.uk/ant/NOTTHIS/icons/16315848404_a2ce6e1cb4_o.png" # build fanart
+
+
+name="- Skull Build" #name of build
+version="1.1" #version of build - change this when you update and users will auto get the latest update.
+url="https://archive.org/download/skullupdate/skullupdate.zip" #url of build
+gui="http://"
+kodi="16.1"
+theme="http://"
+icon="http://mkodi.co.uk/ant/NOTTHIS/icons/Red_Wizard_Hat.png" #build icon
+fanart="http://mkodi.co.uk/ant/NOTTHIS/icons/16315848404_a2ce6e1cb4_o.png" # build fanart
+
+
+
+name="- Simplekodi Build" #name of build
+version="1.1" #version of build - change this when you update and users will auto get the latest update.
+url="https://archive.org/download/simplekodibuild_20170118/simplekodibuild.zip" #url of build
+gui="http://"
+kodi="16.1"
+theme="http://"
+icon="http://mkodi.co.uk/ant/NOTTHIS/icons/Red_Wizard_Hat.png" #build icon
+fanart="http://mkodi.co.uk/ant/NOTTHIS/icons/16315848404_a2ce6e1cb4_o.png" # build fanart
+
+
+
+
+name="- Simplekodi on-tapp Build" #name of build
+version="1.1" #version of build - change this when you update and users will auto get the latest update.
+url="https://archive.org/download/simplekodiupdate1/simplekodiupdate1.zip" #url of build
+gui="http://"
+kodi="16.1"
+theme="http://"
+icon="http://mkodi.co.uk/ant/NOTTHIS/icons/Red_Wizard_Hat.png" #build icon
+fanart="http://mkodi.co.uk/ant/NOTTHIS/icons/16315848404_a2ce6e1cb4_o.png" # build fanart
+
+
+
+
+name="- Simplekodi On-tapp Flawless Build" #name of build
+version="1.1" #version of build - change this when you update and users will auto get the latest update.
+url="https://archive.org/download/simplekodiflawlessontapp/simplekodiflawlessontapp.zip" #url of build
+gui="http://"
+kodi="16.1"
+theme="http://"
+icon="http://mkodi.co.uk/ant/NOTTHIS/icons/Red_Wizard_Hat.png" #build icon
+fanart="http://mkodi.co.uk/ant/NOTTHIS/icons/16315848404_a2ce6e1cb4_o.png" # build fanart
+
+
+
+
