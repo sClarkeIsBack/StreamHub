@@ -1,7 +1,7 @@
 #################################################################################
 
 id="plugin.program.AntonysWizard"
-version="1.0"
+version="1.1"
 zip="https://github.com/sClarkeIsBack/StreamHub/raw/master/Links/ant/plugin.program.AntonysWizard.zip"
 
 #################################################################################
@@ -12,8 +12,8 @@ url="https://archive.org/download/alansimplekodi/alansimplekodi.zip" #url of bui
 gui="http://"
 kodi="16.1"
 theme="http://"
-icon="http://mkodi.co.uk/ant/NOTTHIS/icons/Red_Wizard_Hat.png" #build icon
-fanart="http://mkodi.co.uk/ant/NOTTHIS/icons/16315848404_a2ce6e1cb4_o.png" # build fanart
+icon="http://vignette4.wikia.nocookie.net/helmet-heroes/images/f/f9/Red_Wizard_Hat.png/revision/latest?cb=20131008025650" #build icon
+fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
 
 name="- Batman Build" #name of build
@@ -22,8 +22,8 @@ url="https://archive.org/download/bat65/bat65.zip" #url of build
 gui="http://"
 kodi="16.1"
 theme="http://"
-icon="http://mkodi.co.uk/ant/NOTTHIS/icons/Red_Wizard_Hat.png" #build icon
-fanart="http://mkodi.co.uk/ant/NOTTHIS/icons/16315848404_a2ce6e1cb4_o.png" # build fanart
+icon="http://vignette4.wikia.nocookie.net/helmet-heroes/images/f/f9/Red_Wizard_Hat.png/revision/latest?cb=20131008025650" #build icon
+fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
 
 name="- Ferrari Build" #name of build
@@ -32,8 +32,8 @@ url="https://archive.org/download/ferrari123/ferrari123.zip" #url of build
 gui="http://"
 kodi="16.1"
 theme="http://"
-icon="http://mkodi.co.uk/ant/NOTTHIS/icons/Red_Wizard_Hat.png" #build icon
-fanart="http://mkodi.co.uk/ant/NOTTHIS/icons/16315848404_a2ce6e1cb4_o.png" # build fanart
+icon="http://vignette4.wikia.nocookie.net/helmet-heroes/images/f/f9/Red_Wizard_Hat.png/revision/latest?cb=20131008025650" #build icon
+fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
 
 
@@ -43,8 +43,8 @@ url="https://archive.org/download/iosbuild4kodi/iosbuild4kodi.zip" #url of build
 gui="http://"
 kodi="16.1"
 theme="http://"
-icon="http://mkodi.co.uk/ant/NOTTHIS/icons/Red_Wizard_Hat.png" #build icon
-fanart="http://mkodi.co.uk/ant/NOTTHIS/icons/16315848404_a2ce6e1cb4_o.png" # build fanart
+icon="http://vignette4.wikia.nocookie.net/helmet-heroes/images/f/f9/Red_Wizard_Hat.png/revision/latest?cb=20131008025650" #build icon
+fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
 
 
@@ -54,8 +54,8 @@ url="https://archive.org/download/android4kodi/android4kodi.zip" #url of build
 gui="http://"
 kodi="16.1"
 theme="http://"
-icon="http://mkodi.co.uk/ant/NOTTHIS/icons/Red_Wizard_Hat.png" #build icon
-fanart="http://mkodi.co.uk/ant/NOTTHIS/icons/16315848404_a2ce6e1cb4_o.png" # build fanart
+icon="http://vignette4.wikia.nocookie.net/helmet-heroes/images/f/f9/Red_Wizard_Hat.png/revision/latest?cb=20131008025650" #build icon
+fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
 
 name="- Skull Build" #name of build
@@ -64,8 +64,8 @@ url="https://archive.org/download/skullupdate/skullupdate.zip" #url of build
 gui="http://"
 kodi="16.1"
 theme="http://"
-icon="http://mkodi.co.uk/ant/NOTTHIS/icons/Red_Wizard_Hat.png" #build icon
-fanart="http://mkodi.co.uk/ant/NOTTHIS/icons/16315848404_a2ce6e1cb4_o.png" # build fanart
+icon="http://vignette4.wikia.nocookie.net/helmet-heroes/images/f/f9/Red_Wizard_Hat.png/revision/latest?cb=20131008025650" #build icon
+fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
 
 
@@ -75,8 +75,8 @@ url="https://archive.org/download/simplekodibuild_20170118/simplekodibuild.zip" 
 gui="http://"
 kodi="16.1"
 theme="http://"
-icon="http://mkodi.co.uk/ant/NOTTHIS/icons/Red_Wizard_Hat.png" #build icon
-fanart="http://mkodi.co.uk/ant/NOTTHIS/icons/16315848404_a2ce6e1cb4_o.png" # build fanart
+icon="http://vignette4.wikia.nocookie.net/helmet-heroes/images/f/f9/Red_Wizard_Hat.png/revision/latest?cb=20131008025650" #build icon
+fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
 
 
@@ -87,8 +87,8 @@ url="https://archive.org/download/simplekodiupdate1/simplekodiupdate1.zip" #url 
 gui="http://"
 kodi="16.1"
 theme="http://"
-icon="http://mkodi.co.uk/ant/NOTTHIS/icons/Red_Wizard_Hat.png" #build icon
-fanart="http://mkodi.co.uk/ant/NOTTHIS/icons/16315848404_a2ce6e1cb4_o.png" # build fanart
+icon="http://vignette4.wikia.nocookie.net/helmet-heroes/images/f/f9/Red_Wizard_Hat.png/revision/latest?cb=20131008025650" #build icon
+fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
 
 
@@ -99,8 +99,8 @@ url="https://archive.org/download/simplekodiflawlessontapp/simplekodiflawlessont
 gui="http://"
 kodi="16.1"
 theme="http://"
-icon="http://mkodi.co.uk/ant/NOTTHIS/icons/Red_Wizard_Hat.png" #build icon
-fanart="http://mkodi.co.uk/ant/NOTTHIS/icons/16315848404_a2ce6e1cb4_o.png" # build fanart
+icon="http://vignette4.wikia.nocookie.net/helmet-heroes/images/f/f9/Red_Wizard_Hat.png/revision/latest?cb=20131008025650" #build icon
+fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
 
 
