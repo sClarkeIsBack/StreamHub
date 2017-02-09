@@ -1,0 +1,11 @@
+#EXTM3U
+#EXTINF:-1 tvg-ID="BBC One HD" tvg-name="BBC One HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/1a/BBC_One_2002.png" group-title="UK: Entertainment",BBC One HD
+http://vs-hls-uk-live.akamaized.net/pool_30/live/bbc_one_hd/bbc_one_hd.isml/bbc_one_hd-pa4%3d128000-video%3d5070016.m3u8
+#EXTINF:-1 tvg-ID="BBC Two HD" tvg-name="BBC Two HD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/BBC_Two_HD.svg/1280px-BBC_Two_HD.svg.png" group-title="UK: Entertainment",BBC Two HD
+http://vs-hls-uk-live.akamaized.net/pool_31/live/bbc_two_hd/bbc_two_hd.isml/bbc_two_hd-pa4%3d128000-video%3d5070016.m3u8
+#EXTINF:-1 tvg-ID="ITV 1 HD" tvg-name="ITV 1 HD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/ITV_HD_2013.svg/200px-ITV_HD_2013.svg.png" group-title="UK: Entertainment",ITV 1 HD
+http://itv1liveios-i.akamaihd.net/hls/live/203437/itvlive/ITV1MN/master_Main1800.m3u8
+#EXTINF:-1 tvg-ID="ITV 1 HD" tvg-name="ITV 1 HD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/ITV_HD_2013.svg/200px-ITV_HD_2013.svg.png" group-title="UK: Entertainment",ITV 1 HD
+http://itv1liveios-i.akamaihd.net/hls/live/203437/itvlive/ITV1MN/master_Main1800.m3u8
+#EXTINF:-1 tvg-ID="ITV 1 HD" tvg-name="ITV 1 HD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/ITV_HD_2013.svg/200px-ITV_HD_2013.svg.png" group-title="UK: Entertainment",ITV 1 HD
+http://itv1liveios-i.akamaihd.net/hls/live/203437/itvlive/ITV1MN/master_Main1800.m3u8
