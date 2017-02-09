@@ -8,6 +8,11 @@
 <link>plugin://plugin.video.streamhub/?action=seasons&imdb=tt2372162&tvdb=264586&tvshowtitle=Orange%20Is%20the%20New%20Black&year=2013</link>
 <thumbnail>http://www.gstatic.com/tv/thumb/tvbanners/9960168/p9960168_b_v8_ad.jpg</thumbnail>
 </plugin>
+<plugin>
+<name>Wentworth</name>
+<link>plugin://plugin.video.streamhub/?action=seasons&imdb=tt2433738&tvdb=264234&tvshowtitle=Wentworth&year=2013</link>
+<thumbnail>http://cdn-static.sidereel.com/tv_shows/54461/giant_2x/264234-4.jpg</thumbnail>
+</plugin>
 
 <plugin>
 <name>Sex and The City</name>
