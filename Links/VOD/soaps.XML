@@ -1,31 +1,31 @@
 <plugin>
 <title>Casualty</title>
 <link>plugin://plugin.video.iplayerwww/?url=b006m8wd&mode=121&name=Casualty&iconimage=DefaultFolder.png&description=&subtitles_url=&logged_in</link>
-<thumbnail>https://s17.postimg.org/kgsn8t69b/movies.png</thumbnail></plugin>
+<thumbnail>http://images.radiotimes.com/namedimage/Meet_the_cast_of_Casualty.jpg?quality=85&mode=crop&width=620&height=374&404=tv&url=/uploads/images/original/82622.jpg</thumbnail></plugin>
 </plugin>
 
 <plugin>
 <title>Coronation Street</title>
 <link>plugin://plugin.video.itv/?iconimage=http%3a%2f%2fmercury.itv.com%2fbrowser%2fproduction%2fimage%3fq%3d55%26format%3djpg%26w%3d608%26h%3d348%26productionId%3d1%252F0694%252F9067%2523001&mode=2&name=Coronation%20Street%20&url=http%3a%2f%2fwww.itv.com%2fhub%2fcoronation-street%2f1a0694</link>
-<thumbnail>https://s17.postimg.org/kgsn8t69b/movies.png</thumbnail></plugin>
+<thumbnail>http://img.huffingtonpost.com/asset/2000_1000/5778d3e0190000240021922d.jpeg?cache=9whqrpdhyi</thumbnail></plugin>
 </plugin>
 
 <plugin>
 <title>Eastenders</title>
 <link>plugin://plugin.video.iplayerwww/?url=b006m86d&mode=121&name=EastEnders&iconimage=DefaultFolder.png&description=&subtitles_url=&logged_in</link>
-<thumbnail>https://s17.postimg.org/kgsn8t69b/movies.png</thumbnail></plugin>
+<thumbnail>https://upload.wikimedia.org/wikipedia/en/a/ac/EastEnders_Title.png</thumbnail></plugin>
 </plugin>
 
 <plugin>
 <title>Emmerdale</title>
 <link>plugin://plugin.video.itv/?iconimage=http%3a%2f%2fmercury.itv.com%2fbrowser%2fproduction%2fimage%3fq%3d55%26format%3djpg%26w%3d608%26h%3d348%26productionId%3d1%252F8694%252F7710%2523001&mode=2&name=Emmerdale%20&url=http%3a%2f%2fwww.itv.com%2fhub%2femmerdale%2fYa0524
 </link>
-<thumbnail>https://s17.postimg.org/kgsn8t69b/movies.png</thumbnail></plugin>
+<thumbnail>https://upload.wikimedia.org/wikipedia/en/b/b9/Emmerdale_titles.png</thumbnail></plugin>
 </plugin>
 
 <plugin>
 <title>The Jeremy Kyle Show</title>
 <link>plugin://plugin.video.itv/?iconimage=http%3a%2f%2fmercury.itv.com%2fbrowser%2fproduction%2fimage%3fq%3d55%26format%3djpg%26w%3d608%26h%3d348%26productionId%3d1%252F5163%252F2468%2523001&mode=2&name=The%20Jeremy%20Kyle%20Show%20&url=http%3a%2f%2fwww.itv.com%2fhub%2fthe-jeremy-kyle-show%2f1a5163
 </link>
-<thumbnail>https://s17.postimg.org/kgsn8t69b/movies.png</thumbnail></plugin>
+<thumbnail>https://cdn.itv.com/uploads/show_player_tout/image/4573/medium_ZIaNnmAW7NZ4g22G6K_j-x14PJii5LJAt5c-YeqGT8s.jpg</thumbnail></plugin>
 </plugin>
