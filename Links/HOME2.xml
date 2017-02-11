@@ -16,14 +16,14 @@ h
 
 <plugin>
 <name>[COLOR red][B]M[/COLOR][COLOR white]ovies[/COLOR][/B]</name>
-<link>plugin://plugin.video.streamhub/?action=movieNavigator</link>
+<link>plugin://plugin.video.wargames/?action=movieNavigator</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/MOVIES.png</thumbnail>
 </plugin>
 
 
 <plugin>
 <name>[COLOR red][B]T[/COLOR][COLOR white]V Shows[/COLOR][/B]</name>
-<link>plugin://plugin.video.streamhub/?action=tvNavigator</link>
+<link>plugin://plugin.video.wargames/?action=tvNavigator</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/TVShows.png</thumbnail>
 </plugin>
 
