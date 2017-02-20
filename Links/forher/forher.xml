@@ -66,11 +66,11 @@ plugin://plugin.video.streamhub/?action=seasons&imdb=tt0159206&tvdb=76648&tvshow
 <thumbnail>http://www.mentoradvisers.com/wp-content/uploads/2013/07/Aroma-Home-Cooked-Meals.jpg</thumbnail>
 </plugin>
 
-<item>
+<plugin>
 <title>test</title>
-<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=http://cricbox.net/embed/skynews.php</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&item=catcher%3dstreams%26url=http://cricbox.net/embed/skynews.php</link>
 <thumbnail>http://www.mentoradvisers.com/wp-content/uploads/2013/07/Aroma-Home-Cooked-Meals.jpg</thumbnail>
-</item>
+</plugin>
 
 <item>
 <title>test2</title>
