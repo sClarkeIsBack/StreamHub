@@ -352,7 +352,7 @@ def GetLSProData(page_data,Cookie_Jar,m,url = '[makelist.param2]'):
 </plugin>
 <plugin>
 <title>Sky Sports News</title>
-<link>plugin://plugin.video.SportsDevil/?mode=1&item=catcher%3dstreams%26url=http://www.stream2watch.cc/live-television/united-kingdom/sky-sports-news-live-stream</link>
+<link>plugin://plugin.video.SportsDevil/?mode=1&item=catcher%3dstreams%26url=http://sports4u.live/embed/Sky-sports-news.php</link>
 <thumbnail>http://www.liveonlinetv247.info/images/skysportsnews.png</thumbnail>
 </plugin>
 <item>
