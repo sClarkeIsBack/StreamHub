@@ -345,7 +345,16 @@ def GetLSProData(page_data,Cookie_Jar,m,url = '[makelist.param2]'):
 <link>http://www.liveonlinetv247.info/embed/skysportf1.php</link>
 <thumbnail>http://www.liveonlinetv247.info/images/skysportf1.png</thumbnail>
 </item>
-
+<plugin>
+<title>Sky Sports News</title>
+<link>plugin://plugin.video.SportsDevil/?mode=1&item=catcher%3dstreams%26url=http://cricbox.net/embed/skynews.php</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysportsnews.png</thumbnail>
+</plugin>
+<plugin>
+<title>Sky Sports News</title>
+<link>plugin://plugin.video.SportsDevil/?mode=1&item=catcher%3dstreams%26url=http://www.stream2watch.cc/live-television/united-kingdom/sky-sports-news-live-stream</link>
+<thumbnail>http://www.liveonlinetv247.info/images/skysportsnews.png</thumbnail>
+</plugin>
 <item>
 <title>BT Sport 1</title>
 <link>http://mamahd.com/bt-sport-1-live-stream1-1.html</link>
