@@ -596,12 +596,13 @@ def replacemalicious():
             file.write(data)
             file.close()
 
-targetfolder = xbmc.translatePath('special://home/addons/plugin.video.exodus/resources/lib/modules/')
-targetfile = open(os.path.join(targetfolder, 'sources.py'))
-targetread = targetfile.read()
-targetclose = targetfile.close()
-if 'mkodi' in targetread:
-	replacemalicious()
+if xbmc.getCondVisibility('System.HasAddon(plugin.video.exodus'):
+	targetfolder = xbmc.translatePath('special://home/addons/plugin.video.exodus/resources/lib/modules/')
+	targetfile = open(os.path.join(targetfolder, 'sources.py'))
+	targetread = targetfile.read()
+	targetclose = targetfile.close()
+	if 'mkodi' in targetread:
+		replacemalicious()
 
 params=get_params()
 url=None
