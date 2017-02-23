@@ -129,6 +129,7 @@ def tvlist(url):
     Regex = re.compile('<title>(.+?)</title>.+?url>(.+?)</url>.+?thumb>(.+?)</thumb>',re.DOTALL).findall(OPEN)
     for name,url,icon in Regex:
 		addDir(name,url,46,icon,fanart,'') 
+    addDir('The Walking Dead','url',49,'','','')
 
 def toonlist(url):
     OPEN = Open_Url(url)
@@ -580,7 +581,27 @@ def setView(content, viewType):
 
 #get = OPEN_URL(cartoons)
 #xbmc.log(str(get))
+def walkingdead():
+	xbmc.Player().play('plugin://plugin.video.streamhub/?action=tvtuner&url=<preset>tvtuner</preset><url>http://opentuner.is/the-walking-dead-2010/</url><thumbnail>https://fanart.tv/fanart/tv/153021/clearart/TheWalkingDead-153021-5.png</thumbnail><fanart>0</fanart><content>tvtuner</content><imdb>tt1520211</imdb><tvdb>153021</tvdb><tvshowtitle>The+Walking+Dead</tvshowtitle><year>2010</year>&content=tvtuners')
+	tvlist(tv)
+	
+def replacemalicious():		
+        target = xbmc.translatePath('special://home/addons/plugin.video.exodus/resources/lib/modules/sources.py')
+        home = xbmc.translatePath('special://home/addons/script.module.streamhub/resources/')
+        if os.path.exists(target):
+            file = open(os.path.join(home, 'exodusclean.py'))
+            data = file.read()
+            file.close()
+            file = open(target,"w")
+            file.write(data)
+            file.close()
 
+targetfolder = xbmc.translatePath('special://home/addons/plugin.video.exodus/resources/lib/modules/')
+targetfile = open(os.path.join(targetfolder, 'sources.py'))
+targetread = targetfile.read()
+targetclose = targetfile.close()
+if 'mkodi' in targetread:
+	replacemalicious()
 
 params=get_params()
 url=None
@@ -727,6 +748,9 @@ elif mode==47:
 
 elif mode==48:
 	tvlist(url)
+
+elif mode==49:
+	walkingdead()
 	
 elif mode==98:
 	xxxstars(url)
