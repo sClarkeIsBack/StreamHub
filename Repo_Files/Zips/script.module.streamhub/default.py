@@ -49,7 +49,12 @@ def MOV2CAT():
 	addDir('[COLOR red]Y[/COLOR]ears',mov2+'/years/',41,icon,fanart,'')
 	addDir('[COLOR red]S[/COLOR]earch','url',40,icon,fanart,'')
 	
-	
+def TVREQUESTCAT():
+	addDir('Everybody Loves Raymond','ELR',50,'http://www.gstatic.com/tv/thumb/tvbanners/184243/p184243_b_v8_ab.jpg','','')
+	addDir('How i Met Your Mother','HIMYM',50,'http://www.gstatic.com/tv/thumb/tvbanners/9916255/p9916255_b_v8_aa.jpg','','')
+	addDir('Naked And Afraid','NAA',50,'http://www.gstatic.com/tv/thumb/tvbanners/9974211/p9974211_b_v8_ad.jpg','','')
+	addDir('The Walking Dead','TWD',50,'http://www.gstatic.com/tv/thumb/tvbanners/13176393/p13176393_b_v8_ab.jpg','','')
+	addDir('[COLOR red][B]IF IT FAILS THE FIRST TIME CLICK IT AGAIN[/COLOR][/B]','url','','','','')
 	
 
 	
@@ -95,7 +100,7 @@ def addDir(name,url,mode,iconimage,fanart,description):
 	liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
 	liz.setInfo( type="Video", infoLabels={"Title": name,"Plot":description})
 	liz.setProperty('fanart_image', fanart)
-	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39:
+	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==50:
 		liz.setProperty("IsPlayable","true")
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
 	else:
@@ -127,9 +132,9 @@ def tvlist(url):
     art   = ''
     OPEN = Open_Url(url)
     Regex = re.compile('<title>(.+?)</title>.+?url>(.+?)</url>.+?thumb>(.+?)</thumb>',re.DOTALL).findall(OPEN)
+    addDir('[COLOR red][B]Requested 24/7 Shows[/B][/COLOR]','url',49,'','','')
     for name,url,icon in Regex:
 		addDir(name,url,46,icon,fanart,'') 
-    addDir('The Walking Dead','url',49,'','','')
 
 def toonlist(url):
     OPEN = Open_Url(url)
@@ -235,7 +240,6 @@ def putlockerhdread(url):
                         url = putlockerhd+url+'?page='+pn
                         addDir('[I][B][COLOR red]Page %s [/COLOR][/B][/I]' %pn,url,19,icon,fanart,'')
         except: pass
-        setView('movies', 'movie-view')
 		
 def putlockerhdplay(url):
     try:
@@ -267,7 +271,6 @@ def xxx(url):
 			name = str(name).replace("&amp;","&").replace('&#39;',"'").replace('&quot;','"').replace('&#39;',"'").replace('&#039;',"'")
 			url = regex_from_to(a, 'href="', '"').replace("&amp;","&")
 			thumb = regex_from_to(a, '<img src="', '"')
-			setView('movies', 'movie-view')
 			addDir(name,'http://www.xvideos.com'+url,27,thumb,'','')
 			
 
@@ -298,7 +301,6 @@ def xxxgenre(url):
 			url = regex_from_to(a, 'href="', '"').replace("&amp;","&")
 			url = url+'/'
 			thumb = regex_from_to(a, 'navbadge default">', '<')
-			setView('movies', 'movie-view')
 			addDir('%s     [B][COLOR red](%s Videos)[/COLOR][/B]' %(name,thumb),xxxurl+url,24,'','','')
 		
 def resolvexxx(url):
@@ -507,19 +509,6 @@ def opentwentyfourseven(url):
 		xbmc.log(str(url))
 		xbmc.log(str(name))
 		
-		
-
-
-	#url = re.compile('<source.*?src="(.*?)"',re.DOTALL).findall(open)[0]
-	#xbmc.log('*******'+str(url))
-	#liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
-	#liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': description})
-	#liz.setProperty('IsPlayable','true')
-	#liz.setPath(str(url))
-	#xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
-	
-#test='https://www.arconaitv.me/amerro/'
-#resolvetwentyfourseven(test)
 def resolvetwentyfourseven(url,icon):
 	m3ubase= 'plugin://plugin.video.f4mTester/?streamtype=HLS&amp;url='
 	name='24/7'
@@ -531,60 +520,26 @@ def resolvetwentyfourseven(url,icon):
 	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
 	xbmc.Player().play(play,liz)
 	tvlist(tv)
-	#liz.setProperty('IsPlayable','true')
-	#liz.setPath(str(m3u))
-	#xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
 	
 def home():
 	home = xbmc.executebuiltin('XBMC.RunAddon(plugin://plugin.video.streamhub/?action=)')
 	return home
 	
 
-def setView(content, viewType):
-    ''' Why recode whats allready written and works well,
-    Thanks go to Eldrado for it '''
-    if content:
-        xbmcplugin.setContent(int(sys.argv[1]), content)
-    if addon.get_setting('auto-view') == 'true':
-
-        print addon.get_setting(viewType)
-        if addon.get_setting(viewType) == 'Info':
-            VT = '504'
-        elif addon.get_setting(viewType) == 'Info2':
-            VT = '503'
-        elif addon.get_setting(viewType) == 'Info3':
-            VT = '515'
-        elif addon.get_setting(viewType) == 'Fanart':
-            VT = '508'
-        elif addon.get_setting(viewType) == 'Poster Wrap':
-            VT = '501'
-        elif addon.get_setting(viewType) == 'Big List':
-            VT = '51'
-        elif addon.get_setting(viewType) == 'Low List':
-            VT = '724'
-        elif addon.get_setting(viewType) == 'Default View':
-            VT = addon.get_setting('default-view')
-
-        print viewType
-        print VT
-        
-        xbmc.executebuiltin("Container.SetViewMode(%s)" % ( int(VT) ) )
-
-    xbmcplugin.addSortMethod( handle=int( sys.argv[ 1 ] ), sortMethod=xbmcplugin.SORT_METHOD_UNSORTED )
-    xbmcplugin.addSortMethod( handle=int( sys.argv[ 1 ] ), sortMethod=xbmcplugin.SORT_METHOD_LABEL )
-    xbmcplugin.addSortMethod( handle=int( sys.argv[ 1 ] ), sortMethod=xbmcplugin.SORT_METHOD_VIDEO_RATING )
-    xbmcplugin.addSortMethod( handle=int( sys.argv[ 1 ] ), sortMethod=xbmcplugin.SORT_METHOD_DATE )
-    xbmcplugin.addSortMethod( handle=int( sys.argv[ 1 ] ), sortMethod=xbmcplugin.SORT_METHOD_PROGRAM_COUNT )
-    xbmcplugin.addSortMethod( handle=int( sys.argv[ 1 ] ), sortMethod=xbmcplugin.SORT_METHOD_VIDEO_RUNTIME )
-    xbmcplugin.addSortMethod( handle=int( sys.argv[ 1 ] ), sortMethod=xbmcplugin.SORT_METHOD_GENRE )
-    xbmcplugin.addSortMethod( handle=int( sys.argv[ 1 ] ), sortMethod=xbmcplugin.SORT_METHOD_MPAA_RATING )
-
 #get = OPEN_URL(cartoons)
 #xbmc.log(str(get))
-def walkingdead():
-	xbmc.Player().play('plugin://plugin.video.streamhub/?action=tvtuner&url=<preset>tvtuner</preset><url>http://opentuner.is/the-walking-dead-2010/</url><thumbnail>https://fanart.tv/fanart/tv/153021/clearart/TheWalkingDead-153021-5.png</thumbnail><fanart>0</fanart><content>tvtuner</content><imdb>tt1520211</imdb><tvdb>153021</tvdb><tvshowtitle>The+Walking+Dead</tvshowtitle><year>2010</year>&content=tvtuners')
-	tvlist(tv)
 	
+def TVREQUESTCATPLAY(name,url,icon):
+	if 'TWD' in url:
+		play='plugin://plugin.video.streamhub/?action=tvtuner&url=<preset>tvtuner</preset><url>http://opentuner.is/the-walking-dead-2010/</url><thumbnail>https://fanart.tv/fanart/tv/153021/clearart/TheWalkingDead-153021-5.png</thumbnail><fanart>0</fanart><content>tvtuner</content><imdb>tt1520211</imdb><tvdb>153021</tvdb><tvshowtitle>The+Walking+Dead</tvshowtitle><year>2010</year>&content=tvtuners'
+	elif 'ELR' in url:
+		play='plugin://plugin.video.streamhub/?action=tvtuner&url=<preset>tvtuner</preset><url>http://opentuner.is/everybody-loves-raymond-1996/</url><thumbnail>http://www.gstatic.com/tv/thumb/tvbanners/184243/p184243_b_v8_ab.jpg</thumbnail><fanart>0</fanart><content>tvtuner</content><imdb>tt0115167</imdb><tvdb>73663</tvdb><tvshowtitle>Everybody+Loves+Raymond</tvshowtitle><year>1996</year>&content=tvtuners'
+	elif 'NAA' in url:
+		play='plugin://plugin.video.streamhub/?action=tvtuner&url=<preset>tvtuner</preset><url>http://opentuner.is/naked-and-afraid-2013/</url><thumbnail>http://www.gstatic.com/tv/thumb/tvbanners/9974211/p9974211_b_v8_ad.jpg</thumbnail><fanart>0</fanart><content>tvtuner</content><imdb>tt3007640</imdb><tvdb>270693</tvdb><tvshowtitle>Naked+And+Afraid</tvshowtitle><year>2013</year>&content=tvtuners'
+	elif 'HIMYM' in url:
+		play='plugin://plugin.video.streamhub/?action=tvtuner&url=<preset>tvtuner</preset><url>http://opentuner.is/how-i-met-your-mother-2005/</url><thumbnail>http://www.gstatic.com/tv/thumb/tvbanners/9916255/p9916255_b_v8_aa.jpg</thumbnail><fanart>0</fanart><content>tvtuner</content><imdb>tt0460649</imdb><tvdb>75760</tvdb><tvshowtitle>How+I+Met+Your+Mother</tvshowtitle><year>2005</year>&content=tvtuners'
+	xbmc.executebuiltin('XBMC.RunPlugin('+play+')')
+		
 def replacemalicious():		
         target = xbmc.translatePath('special://home/addons/plugin.video.exodus/resources/lib/modules/sources.py')
         home = xbmc.translatePath('special://home/addons/script.module.streamhub/resources/')
@@ -751,7 +706,10 @@ elif mode==48:
 	tvlist(url)
 
 elif mode==49:
-	walkingdead()
+	TVREQUESTCAT()
+	
+elif mode==50:
+	TVREQUESTCATPLAY(name,url,icon)
 	
 elif mode==98:
 	xxxstars(url)
