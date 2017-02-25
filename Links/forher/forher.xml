@@ -68,7 +68,10 @@ plugin://plugin.video.streamhub/?action=seasons&imdb=tt0159206&tvdb=76648&tvshow
 
 <item>
 <title>test2</title>
-<link>http://opentuner.is/the-walking-dead-2010/</link>
+<link>
+  <sublink>http://movpod.in/kh9amt3poj6d</sublink>
+  <sublink>http://gorillavid.in/ekplnz9x7ybz</sublink>
+  </link>
 </item>
 
 
