@@ -1,5 +1,5 @@
 <addons>
-<addon id="plugin.video.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="1.5" provider-name="sClarke">
+<addon id="plugin.video.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="1.6" provider-name="sClarke">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="plugin.video.youtube" version="5.2.1" optional="true" />
@@ -7,9 +7,9 @@
 		<import addon="script.module.urlresolver" version="3.0.0"/>
 		<import addon="script.module.liveresolver" version="0.1.24"/>
 		<import addon="script.video.F4mProxy" version="2.2.3"/>
-        <import addon="script.streamhub.artwork" version="1.0.0" />
-        <import addon="script.streamhub.metadata" version="1.0.0" />
-        <import addon="script.module.streamhub" version="1.0.0"/>
+        <import addon="script.streamhub.artwork"/>
+        <import addon="script.streamhub.metadata"/>
+        <import addon="script.module.streamhub"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
 		<provides>video</provides>
