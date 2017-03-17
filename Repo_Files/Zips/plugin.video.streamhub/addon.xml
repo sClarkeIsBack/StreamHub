@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="1.6" provider-name="sClarke">
+<addon id="plugin.video.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="1.7" provider-name="sClarke">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="plugin.video.youtube" version="5.2.1" optional="true" />
@@ -16,7 +16,7 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en"></summary>
-		<description lang="en">StreamHub - All Content feautured in this Addon is freely Available on the Internet - Making use of Already Written Code and Writing our own. Credit to Lambda/Exodus For Movies and TV Shows. Credit to Phoenix for the Addon's Base Code</description>
+		<description lang="en">StreamHub - All Content feautured in this Addon is freely Available on the Internet - Making use of Already Written Code and Writing our own. Make sure you Join our facebook page for News and Support. http://facebook.com/groups/streamh  - Credit to Lambda/Exodus For Movies and TV Shows. Credit to Phoenix for the Addon's Base Code</description>
 		<platform>all</platform>
 	</extension>
 </addon>
