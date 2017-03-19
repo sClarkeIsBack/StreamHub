@@ -1,0 +1,31 @@
+<plugin>
+<name>Cartoons</name>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=51&name=Family%20Cartoons&url=https%3a%2f%2fraw.githubusercontent.com%2fsClarkeIsBack%2fStreamHub%2fmaster%2fLinks%2fKids%2fkidscorner.xml</link>
+</plugin>
+
+<plugin>
+<name>Comedy Movies</name>
+<link>plugin://plugin.video.streamhub/?action=movies&url=http%3a%2f%2fwww.imdb.com%2fsearch%2ftitle%3ftitle_type%3dfeature%2ctv_movie%26languages%3den%26num_votes%3d100%2c%26release_date%3ddate%5b730%5d%2cdate%5b30%5d%26genres%3dcomedy%26sort%3dmoviemeter%2casc%26count%3d40%26start%3d1</link>
+</plugin>
+
+<plugin>
+<name>Family Movies</name>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=54&name=Family%20Movies&url=http%3a%2f%2fpubfilmonline.net%2fgenre%2ffamily%2f</link>
+</plugin>
+
+
+<plugin>
+<name>Musical Movies</name>
+<link>plugin://plugin.video.streamhub/?action=movies&url=http%3a%2f%2fwww.imdb.com%2fsearch%2ftitle%3ftitle_type%3dfeature%2ctv_movie%26languages%3den%26num_votes%3d100%2c%26release_date%3ddate%5b730%5d%2cdate%5b30%5d%26genres%3dmusical%26sort%3dmoviemeter%2casc%26count%3d40%26start%3d1</link>
+</plugin>
+
+<plugin>
+<name>PG Rated Movies</name>
+<link>plugin://plugin.video.streamhub/?action=movies&url=http%3a%2f%2fwww.imdb.com%2fsearch%2ftitle%3ftitle_type%3dfeature%2ctv_movie%26languages%3den%26num_votes%3d100%2c%26production_status%3dreleased%26certificates%3dus%3apg%26sort%3dmoviemeter%2casc%26count%3d40%26start%3d1</link>
+</plugin>
+
+<dir>
+<name>The Soaps</name>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/VOD/soaps.XML</link>
+<thumbnail>https://upload.wikimedia.org/wikipedia/en/a/ac/EastEnders_Title.png</thumbnail>
+</dir>
