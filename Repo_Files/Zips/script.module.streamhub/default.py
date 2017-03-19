@@ -27,7 +27,7 @@ proxy      = 'http://www.justproxy.co.uk/index.php?q='
 def CAT():
 	addDir('MOVIES','url',100,icon,fanart,'')
 	addDir('MOVIES2','url',37,icon,fanart,'')
-	addDir('KIDS SECTION',kidsurl,16,icon,fanart,'')
+	addDir('FAMILY SECTION',kidsurl,56,icon,fanart,'')
 	addDir('XXX SECTION','URL',31,icon,fanart,'')
 	addDir('DOCS',docurl+'/watch-online/',35,icon,fanart,'')
 	addDir('24/7 TV',tv,48,icon,fanart,'')
@@ -56,8 +56,10 @@ def TVREQUESTCAT():
 	addDir('The Walking Dead','TWD',50,'http://www.gstatic.com/tv/thumb/tvbanners/13176393/p13176393_b_v8_ab.jpg','','')
 	addDir('[COLOR red][B]IF IT FAILS THE FIRST TIME CLICK IT AGAIN[/COLOR][/B]','url','','','','')
 	
-
-	
+def FAMILYCAT():
+	addDir('Disney Movies','url',58,icon,fanart,'')
+	addDir('Family Cartoons',kidsurl,51,icon,fanart,'')
+	addDir('Family Movies','http://pubfilmonline.net/genre/family/',54,icon,fanart,'')
 def xxxCAT():
 	addDir("[COLOR orange]G[/COLOR][COLOR white]enre's[/COLOR]",xxxurl+'/a',99,icon,fanart,'')
 
@@ -100,7 +102,7 @@ def addDir(name,url,mode,iconimage,fanart,description):
 	liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
 	liz.setInfo( type="Video", infoLabels={"Title": name,"Plot":description})
 	liz.setProperty('fanart_image', fanart)
-	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==50:
+	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==50 or mode==53 or mode==55 or mode==57:
 		liz.setProperty("IsPlayable","true")
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
 	else:
@@ -136,64 +138,7 @@ def tvlist(url):
     for name,url,icon in Regex:
 		addDir(name,url,46,icon,fanart,'') 
 
-def toonlist(url):
-    OPEN = Open_Url(url)
-    Regex = re.compile('<title>(.+?)</title>.+?url>(.+?)</url>.+?thumb>(.+?)</thumb>.+?art>(.+?)</art>',re.DOTALL).findall(OPEN)
-    for name,url,icon,fanart in Regex:
-		addDir(name,url,18,icon,fanart,'')
-	
-def toon_get(url):
-    OPEN = Open_Url(url)
-    Regex = re.compile('&nbsp;&nbsp;<a href="(.+?)">(.+?)</a>',re.DOTALL).findall(OPEN)
-    for url,name in Regex:
-            name = name.replace('&#8217;','')
-            addDir(name,url,17,iconimage,fanart,'')
-    np = re.compile('<a href="(.+?)">(.+?)</a>',re.DOTALL).findall(OPEN)
-    for url,name in np:
-            if 'Next' in name:
-                    addDir('[B][COLOR red]More >[/COLOR][/B]',url,2,iconimage,fanart,'')
-    xbmc.executebuiltin('Container.SetViewMode(50)')
-    xbmcplugin.endOfDirectory
-	
-def resolvetoons(name,url,iconimage,description):
-    OPEN = Open_Url(url)
-    url1=regex_from_to(OPEN,'Playlist 1</span></div><div><iframe src="','"')
-    url2=regex_from_to(OPEN,'Playlist 2</span></div><div><iframe src="','"')
-    url3=regex_from_to(OPEN,'Playlist 3</span></div><div><iframe src="','"')
-    url4=regex_from_to(OPEN,'Playlist 4</span></div><div><iframe src="','"')
-    try:
-        play=urlresolver.HostedMediaFile(url1).resolve()
-        liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=iconimage)
-        liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': description})
-        liz.setProperty('IsPlayable','true')
-        liz.setPath(str(play))
-        xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
-    except:pass
-    try:
-        play=urlresolver.HostedMediaFile(url2).resolve()
-        liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=iconimage)
-        liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': description})
-        liz.setProperty('IsPlayable','true')
-        liz.setPath(str(play))
-        xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
-    except:pass
-    try:
-        play=urlresolver.HostedMediaFile(url3).resolve()
-        liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=iconimage)
-        liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': description})
-        liz.setProperty('IsPlayable','true')
-        liz.setPath(str(play))
-        xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
-    except:pass
-    try:
-        play=urlresolver.HostedMediaFile(url4).resolve()
-        liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=iconimage)
-        liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': description})
-        liz.setProperty('IsPlayable','true')
-        liz.setPath(str(play))
-        xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
-    except:pass
-	
+
 def Open_Url(url):
     req = urllib2.Request(url)
     req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
@@ -540,6 +485,115 @@ def TVREQUESTCATPLAY(name,url,icon):
 		play='plugin://plugin.video.streamhub/?action=tvtuner&url=<preset>tvtuner</preset><url>http://opentuner.is/how-i-met-your-mother-2005/</url><thumbnail>http://www.gstatic.com/tv/thumb/tvbanners/9916255/p9916255_b_v8_aa.jpg</thumbnail><fanart>0</fanart><content>tvtuner</content><imdb>tt0460649</imdb><tvdb>75760</tvdb><tvshowtitle>How+I+Met+Your+Mother</tvshowtitle><year>2005</year>&content=tvtuners'
 	xbmc.executebuiltin('XBMC.RunPlugin('+play+')')
 		
+		
+		
+def toongetlist(url):
+	open = OPEN_URL(url)
+	all  = regex_get_all(open,'<td>','</td>')
+	for a in all:
+		url = regex_from_to(a,'href="','"')
+		name= regex_from_to(a,'">','<')
+		addDir(name,url,52,icon,fanart,'')
+		
+def toongeteps(url):
+		open = OPEN_URL(url)
+		all  = regex_get_all(open,'&nbsp;&nbsp;','<span')
+		for a in all:
+			url = regex_from_to(a,'href="','"')
+			name = regex_from_to(a,'">','<')
+			addDir(name,url,53,icon,fanart,'')
+			
+def toongetresolve(name,url):
+    OPEN = OPEN_URL(url)
+    url1=regex_from_to(OPEN,'Playlist 1</span></div><div><iframe src="','"')
+    url2=regex_from_to(OPEN,'Playlist 2</span></div><div><iframe src="','"')
+    url3=regex_from_to(OPEN,'Playlist 3</span></div><div><iframe src="','"')
+    url4=regex_from_to(OPEN,'Playlist 4</span></div><div><iframe src="','"')
+    try:
+        play=urlresolver.HostedMediaFile(url1).resolve()
+        liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
+        liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
+        liz.setProperty('IsPlayable','true')
+        liz.setPath(str(play))
+        xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+    except:pass
+    try:
+        play=urlresolver.HostedMediaFile(url2).resolve()
+        liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
+        liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
+        liz.setProperty('IsPlayable','true')
+        liz.setPath(str(play))
+        xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+    except:pass
+    try:
+        play=urlresolver.HostedMediaFile(url3).resolve()
+        liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
+        liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
+        liz.setProperty('IsPlayable','true')
+        liz.setPath(str(play))
+        xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+    except:pass
+    try:
+        play=urlresolver.HostedMediaFile(url4).resolve()
+        liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
+        liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
+        liz.setProperty('IsPlayable','true')
+        liz.setPath(str(play))
+        xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+    except:pass
+	
+	
+def openloadmovieslist(url):
+	open =OPEN_URL(url)
+	xbmc.log(str(open))
+	all  = regex_get_all(open,'<article id','</article>')
+	for a in all:
+		name = regex_from_to(a,'alt="','"')
+		url  = regex_from_to(a,'<a href="','"')
+		thumb= regex_from_to(a,'<img src="','"')
+		addDir(str(name).replace('#038;','').replace('&#8217;',"'"),url,55,thumb,fanart,'')
+	try:
+		np = re.compile(">[0-9]</span><a href='(.*?)'",re.DOTALL).findall(open)
+		addDir('[COLOR red]NEXT PAGE>[/COLOR]',str(np).replace("['","").replace("']",""),54,icon,fanart,'')
+	except:
+		pass
+		
+def openloadmoviesresolve(url):
+	open = OPEN_URL(url)
+	url  = regex_from_to(open,'"file":"','"')
+	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
+	liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
+	liz.setProperty('IsPlayable','true')
+	liz.setPath(str(url).replace('\/','/'))
+	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+	
+		
+def disneymovies(url):
+	open = OPEN_URL(url)
+	a    = regex_from_to(open,'<br /></div>','<center>')
+	all  = regex_get_all(a,'<a href','</div>')
+	for a in all:
+		url = regex_from_to(a,'="','"')
+		name= regex_from_to(a,'<b>','</b>')
+		addDir(str(name).replace('#038;','').replace('&#8217;',"'"),url,57,icon,fanart,'')
+		
+def disneymoviesresolve(url):
+	open = OPEN_URL(url)
+	url1 = re.compile('<iframe allowfullscreen="true".*?src="(.*?)"',re.DOTALL).findall(open)
+	url2 = re.compile('<iframe allowfullscreen="".*?src="(.*?)"',re.DOTALL).findall(open)
+	url1 = str(url1).replace("['","").replace("']","")
+	url2 = str(url2).replace("['","").replace("']","")
+	play=urlresolver.HostedMediaFile(url1).resolve()
+	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
+	liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
+	liz.setProperty('IsPlayable','true')
+	liz.setPath(str(play))
+	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+
+		
+
+		
+
 def replacemalicious():		
         target = xbmc.translatePath('special://home/addons/plugin.video.exodus/resources/lib/modules/sources.py')
         home = xbmc.translatePath('special://home/addons/script.module.streamhub/resources/')
@@ -645,15 +699,6 @@ elif mode==19:
 elif mode==15:
 	putlockerhdplay(url)
 	
-elif mode==16:
-	toonlist(url)
-	
-elif mode==17:
-	resolvetoons(name,url,iconimage,description)
-	
-elif mode==18:
-	toon_get(url)
-	
 elif mode==24:
 	xxx(url)
 	
@@ -713,6 +758,33 @@ elif mode==49:
 	
 elif mode==50:
 	TVREQUESTCATPLAY(name,url,icon)
+
+elif mode==51:
+	toongetlist('http://www.toonget.net/cartoon')
+	
+elif mode==52:
+	toongeteps(url)
+	
+elif mode==53:
+	toongetresolve(name,url)
+	
+elif mode==54:
+	openloadmovieslist(url)
+	
+elif mode==55:
+	openloadmoviesresolve(url)
+
+elif mode==56:
+	FAMILYCAT()
+
+elif mode==57:
+	disneymoviesresolve(url)
+	
+elif mode==58:
+	disneymovies('http://www.freecartoonszone.info/p/list-of-disney-movies-z.html')
+	
+elif mode==59:
+	playresolved(url)
 	
 elif mode==98:
 	xxxstars(url)
