@@ -32,7 +32,7 @@
 
 
 <plugin>
-<name>test</name>
+<name>testt</name>
 <link>plugin://plugin.video.streamhub/?action=playscrape&title=Tell+It+to+the+Frogs&year=2010&imdb=tt1520211&tvdb=153021&season=1&episode=3&tvshowtitle=The+Walking+Dead&premiered=2010-11-14&meta=7&t=2</link>
 <thumbnail>https://upload.wikimedia.org/wikipedia/en/a/ac/EastEnders_Title.png</thumbnail>
 </plugin>
