@@ -33,7 +33,7 @@
 
 <plugin>
 <name>test</name>
-<link>plugin://plugin.video.streamhub/?action=playscrape&title=In+Extremis&year=2014&imdb=tt3314228&tvdb=278447&season=1&episode=10&tvshowtitle=The+Lottery&premiered=2014-09-28&meta=7&t=2</link>
+<link>plugin://plugin.video.streamhub/?action=playscrape&title=Tell+It+to+the+Frogs&year=2010&imdb=tt1520211&tvdb=153021&season=1&episode=3&tvshowtitle=The+Walking+Dead&premiered=2010-11-14&meta=7&t=2</link>
 <thumbnail>https://upload.wikimedia.org/wikipedia/en/a/ac/EastEnders_Title.png</thumbnail>
 </plugin>
 
