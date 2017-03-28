@@ -78,3 +78,9 @@ h
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/XXX.png</thumbnail>
 </plugin>
 
+<dir>
+<title>[COLOR red][B]s[/COLOR][COLOR white]Clarke Addon's[/B][/COLOR]</title>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/sClarkeAddons.xml</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/png</thumbnail>
+</dir>
+
