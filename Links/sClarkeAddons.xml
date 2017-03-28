@@ -1,6 +1,6 @@
 <plugin>
 <title>Kohi</title>
-<plugin>plugin://plugin.video.kohi</plugin>
+<link>plugin://plugin.video.kohi</link>
 <thumbnail>https://s7.postimg.org/574oq7n3r/icon.png</thumbnail>
 <fanart>https://s7.postimg.org/oay06jzxz/fanart.jpg</fanart>
 </plugin>
