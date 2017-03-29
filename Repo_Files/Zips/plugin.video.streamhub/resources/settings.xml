@@ -85,6 +85,7 @@
 		<setting id="provider.pmovies" type="bool" label="PMOVIES" default="true" />
 		<setting id="provider.primewire" type="bool" label="PRIMEWIRE" default="true" />
 		<setting id="provider.pubfilm" type="bool" label="PUBFILM" default="true" />
+		<setting id="provider.pubfilmonline" type="bool" label="PUBFILMONLINE" default="true" />
 		<setting id="provider.putlocker" type="bool" label="PUTLOCKER" default="true" />
 		<setting id="provider.putlockerz" type="bool" label="PUTLOCKERZ" default="true" />
 		<setting id="provider.releasebb" type="bool" label="RELEASEBB" default="true" />
@@ -107,6 +108,7 @@
 		<setting id="provider.wrzcraft" type="bool" label="WRZCRAFT" default="true" />
 		<setting id="provider.xmovies" type="bool" label="XMOVIES" default="true" />
 		<setting id="provider.ymovies" type="bool" label="YMOVIES" default="true" />
+		<setting id="provider.zmovies" type="bool" label="ZMOVIES" default="true" />
 		<setting label="German" type="lsep" />
 		<setting id="provider.1kino" type="bool" label="1KINO" default="true" />
 		<setting id="provider.bs" type="bool" label="BS" default="true" />

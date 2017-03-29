@@ -1,6 +1,6 @@
 <addons>
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="1.7" provider-name="sClarke">
+<addon id="plugin.video.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="1.8" provider-name="sClarke">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="plugin.video.youtube" version="5.2.1" optional="true" />
@@ -21,6 +21,7 @@
 		<platform>all</platform>
 	</extension>
 </addon>
+
 
 <addon id="plugin.video.kohi" name="[B]Kohi[/B]" version="1.0" provider-name="sClarke">
   <requires>
