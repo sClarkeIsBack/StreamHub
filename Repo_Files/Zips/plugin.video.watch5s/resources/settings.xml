@@ -1,0 +1,6 @@
+<settings>
+	<category label="Settings">
+		<setting id="autoplay" type="bool" label="Enable AutoPlay" default="true"/>
+		<setting id="meta" type="bool" label="Enable Meta" default="true"/>
+	</category>
+</settings>
