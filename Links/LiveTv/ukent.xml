@@ -116,9 +116,9 @@
 </item>
 
 <item>
-<title>[COLOR white]     Channel 5[COLOR lime]   HD[/COLOR]</title>
+<title>[COLOR white]     Channel 5[COLOR red]   SD[/COLOR]</title>
 <link>
-<sublink>http://tvplayer.com/watch/channel5</sublink>
+<sublink>http://streams.yo.tv/srv1/ngrp:4.stream_all/playlist.m3u8?DVR</sublink>
 </link>
 <thumbnail>http://www.lyngsat-logo.com/hires/cc/channel_5_uk.png</thumbnail>
 </item>
@@ -423,12 +423,6 @@
 </item>
 
 <item>
-<title>[COLOR white]     QVC[COLOR lime]   HD[/COLOR]</title>
-<link>http://llnw.live.qvc.simplestream.com/hera/remote/qvcuk_primary_sdi5/3/prog_index.m3u8</link>
-<thumbnail>https://assets.tvplayer.com/common/logos/150/Inverted/247.png</thumbnail>
-</item>
-
-<item>
 <title>[COLOR white]     QVC Style[COLOR red]   SD[/COLOR]</title>
 <link>http://llnw.live.qvc.simplestream.com/hera/remote/qvcuk_primary_sdi8/3/prog_index.m3u8</link>
 <thumbnail>http://blogs.qvcuk.com/wp-content/uploads/2015/07/QVC-STYLE-LOGO-648x430.png</thumbnail>
@@ -468,22 +462,6 @@
 </link>
 <thumbnail>https://lh6.googleusercontent.com/-D4crHSSOKPc/AAAAAAAAAAI/AAAAAAAAClg/t1OE19doZ1E/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
-
-<plugin>
-<title>[COLOR white][/COLOR]</title>
-<link>
-plugin://
-</link>
-<thumbnail>lh6.googleusercontent.com/-D4crHSSOKPc/AAAAAAAAAAI/AAAAAAAAClg/t1OE19doZ1E/s0-c-k-no-ns/photo.jpg</thumbnail>
-</plugin>
-
-<plugin>
-<title>[COLOR red]     KIDS[/COLOR]</title>
-<link>
-plugin://
-</link>
-<thumbnail>lh6.googleusercontent.com/-D4crHSSOKPc/AAAAAAAAAAI/AAAAAAAAClg/t1OE19doZ1E/s0-c-k-no-ns/photo.jpg</thumbnail>
-</plugin>
 
 <item>
 <title>[COLOR white]     [COLOR red][/COLOR]</title>
