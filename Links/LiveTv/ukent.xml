@@ -531,12 +531,55 @@
 <thumbnail></thumbnail>
 </item>
 
-
 <item>
-<title>[B][COLOR red]MUSIC TV[/COLOR][/B]</title>
-<link></link>
+<title>[COLOR white]     Sky Movies Action[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://www.liveonlinetv247.info/embed/skymoviesaction.php?width=650&height=480</link>
+<thumbnail>https://lh4.googleuserconten.com/-s8sP7AWGx5M/AAAAAAAAAAI/AAAAAAAAABc/iypkiR0Kte8/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
 
+
+<item>
+<title>[COLOR white]     Sky Movies Comedy[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://www.liveonlinetv247.info/embed/skymoviescomedy.php?width=650&height=480</link>
+<thumbnail>https://lh4.googleusercontent.com/-s8sP7AGx5M/AAAAAAAAAAI/AAAAAAAAABc/iypkiR0Kte8/s0-c-k-no-ns/photo.jpg</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Sky Movies Crime[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://www.liveonlinetv247.info/embed/skymoviescrime.php?width=650&height=480</link>
+<thumbnail>https://lh4.googleusercontent.com/-s8sP7AGx5M/AAAAAAAAAAI/AAAAAAAAABc/iypkiR0Kte8/s0-c-k-no-ns/photo.jpg</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Sky Movies Disney[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://www.liveonlinetv247.info/embed/skymoviesdisney.php?width=650&height=480</link>
+<thumbnail>https://lh4.googleusercontent.com/-s8sP7AGx5M/AAAAAAAAAAI/AAAAAAAAABc/iypkiR0Kte8/s0-c-k-no-ns/photo.jpg</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Sky Movies Family[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://www.liveonlinetv247.info/embed/skymoviesfamily.php?width=650&height=480</link>
+<thumbnail>https://lh4.googleusercontent.com/-s8sP7AWG5M/AAAAAAAAAAI/AAAAAAAAABc/iypkiR0Kte8/s0-c-k-no-ns/photo.jpg</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     Sky Movies Premiere[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://www.liveonlinetv247.info/embed/skymoviespremiere.php?width=650&height=480</link>
+<thumbnail>https://lh4.googleusercontent.com/-s8sP7WGx5M/AAAAAAAAAAI/AAAAAAAAABc/iypkiR0Kte8/s0-c-k-no-ns/photo.jpg</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Sky Movies Select[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://www.liveonlinetv247.info/embed/skymoviesselect.php?width=650&height=480</link>
+<thumbnail>https://lh4.googleusercontent.com/-s8sPAWGx5M/AAAAAAAAAAI/AAAAAAAAABc/iypkiR0Kte8/s0-c-k-no-ns/photo.jpg</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Sky Movies Showcase[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://www.liveonlinetv247.info/embed/skymoviesshowcase.php?width=650&height=480</link>
+<thumbnail>https://lh4.googleusercontent.com/-s8s7AWGx5M/AAAAAAAAAAI/AAAAAAAAABc/iypkiR0Kte8/s0-c-k-no-ns/photo.jpg</thumbnail>
+</item>
 
 <item>
 <title>[COLOR white]     [COLOR red][/COLOR]</title>
@@ -649,18 +692,6 @@
 <thumbnail></thumbnail>
 </item>
 
-<item>
-<title>[B][COLOR red]NEWS[/COLOR][/B]</title>
-<link></link>
-</item>
-
-
-
-<item>
-<title>[COLOR white]     [COLOR red][/COLOR]</title>
-<link>http://watch.ustvnow.com/69ab90a9-c125-4d1a-b60d-a59e5dbef6f7</link>
-<thumbnail></thumbnail>
-</item>
 
 <item>
 <title>[COLOR white]     BBC News[/COLOR][COLOR lime]   HD[/COLOR]</title>
