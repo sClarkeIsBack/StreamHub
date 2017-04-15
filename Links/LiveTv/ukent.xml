@@ -702,13 +702,13 @@
 </item>
 
 <plugin>
-<title>[COLOR white]     Sky News[/COLOR][COLOR lime]   -HD[/COLOR]</title>
-<link>plugin://plugin.video.youtube/play/?video_id=aTMTXsbzwdk</link>
+<title>[COLOR white]     Sky News[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>https://www.youtube.com/watch?v=y60wDzZt8yg</link>
 <thumbnail>http://www.felicitygerry.com/wp-content/uploads/2014/11/sky-news-logo.png</thumbnail>
 </plugin>
 
 <item>
 <title>[COLOR white]     Fox News[COLOR lime]   HD[/COLOR]</title>
-<link>https://www.youtube.com/watch?v=y60wDzZt8yg</link>
+<link>https://www.youtube.com/watch?v=aTMTXsbzwdk</link>
 <thumbnail>https://lh4.googleusercontent.com/-hWfA4bcw9-0/AAAAAAAAAAI/AAAAAAAATJM/d0meLGVtrWM/s0-c-k-no-ns/photo.jpg</thumbnail>
 <fanart>http://s21.postimorg/6ngdod4uv/fanart.jpg</fanart></item>
