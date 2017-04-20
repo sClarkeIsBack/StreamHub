@@ -29,7 +29,7 @@ h
 
 <plugin>
 <name>[COLOR red][B]L[/COLOR][COLOR white]ive Tv[/COLOR][/B]</name>
-<link>plugin://script.module.streamhub/?url=url&amp;mode=73&amp;name=TV+GUIDE&amp;iconimage=C%3A%5CUsers%5Cmedia%5CAppData%5CRoaming%5CKodi%5Caddons%5Cscript.module.streamhub%5Cicon.png&amp;description=</link>
+<link>plugin://script.module.streamhub/?url=url&mode=73&name=TV+GUIDE&iconimage=C%3A%5CUsers%5Cmedia%5CAppData%5CRoaming%5CKodi%5Caddons%5Cscript.module.streamhub%5Cicon.png&description=</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/LiveTV.png</thumbnail>
 </plugin>
 
@@ -41,7 +41,7 @@ h
 
 <plugin>
 <name>[COLOR red][B]M[/COLOR][COLOR white]usic[/COLOR][/B]</name>
-<link>plugin://script.module.streamhub/?description&amp;iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&amp;mode=64&amp;name=MUSIC&amp;url=https%3a%2f%2fraw.githubusercontent.com%2fsClarkeIsBack%2fStreamHub%2fmaster%2fLinks%2f247%2f247tv.xml</link>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=64&name=MUSIC&url=https%3a%2f%2fraw.githubusercontent.com%2fsClarkeIsBack%2fStreamHub%2fmaster%2fLinks%2f247%2f247tv.xml</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/Radio.png</thumbnail>
 </plugin>
 
