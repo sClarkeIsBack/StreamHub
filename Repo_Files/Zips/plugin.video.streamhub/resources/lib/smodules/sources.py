@@ -351,10 +351,11 @@ class sources:
                 except:
                     pass
                 try:
-                    string4 = string1 % str(timerange)
-                    if len(info) > 5: string5 = string3 % str(len(info))
-                    else: string5 = string3 % str(info).translate(None, "[]'")
-                    progressDialog.update(int((100 / float(len(threads))) * len([x for x in threads if x.is_alive() == False])), str(string4), str(string5))
+                    if len(info) > 3: string5 = str(len(info))
+                    else: string5 = str(info).translate(None, "[]'")
+                    string6 = "We are searching various websites and gathering multiple links for: [COLOR red]%s (%s)[/COLOR] - Time Elapsed: [COLOR red]%s Seconds[/COLOR]" % (title,year,str(timerange))
+                    string7 = "Remaining Providers: [COLOR red]%s[/COLOR]"%str(string5)
+                    progressDialog.update(int((100 / float(len(threads))) * len([x for x in threads if x.is_alive() == False])), str(string6), str(string7))
                 except:
                     pass
 

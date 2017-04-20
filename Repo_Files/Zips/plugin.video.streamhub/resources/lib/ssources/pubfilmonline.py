@@ -23,7 +23,7 @@ import re,urllib,urlparse,requests
 
 from resources.lib.smodules import cleantitle
 from resources.lib.smodules import client
-from resources.lib.smodules import debrid
+from resources.lib.smodules import tools
 from resources.lib import cfscrape
 
 scraper = cfscrape.create_scraper()
@@ -57,22 +57,22 @@ class source:
             data = dict([(i, data[i][0]) if data[i] else (i, '') for i in data])
 
             title = data['tvshowtitle'] if 'tvshowtitle' in data else data['title']
+            title = str(title).replace(' ','+').replace(':','').lower()
+            year  = data['year']
 			
-            open  = scraper.get(self.search_link+title).content
+            open  = scraper.get('http://pubfilmonline.net/?s='+title).content
 			
             match = regex_from_to(open,'<article>','</article>')
             movie = regex_from_to(match,'<a href="','"')
             open  = scraper.get(movie).content
-            qual  = regex_from_to(open,'<span class="qualityx">','<')
-            if '1080' in qual:
-				qual = '1080p'
-            elif '720' in qual:
-				qual = 'HD'
-            elif 'cam' or 'CAM' or 'ts' in qual:
-				qual = 'CAM'
-            url   = regex_from_to(open,'"file":"','"').replace('\/','/')
-            sources.append({'source': 'gvideo', 'quality': qual, 'language': 'en', 'url': url, 'direct': False, 'debridonly': False})
-            return sources
+
+            all   = regex_get_all(open,'{"file','}')
+            for a in all:
+				url = regex_from_to(a,'":"','"').replace('\/','/')
+				sources.append({'source': 'gvideo', 'quality': tools.googletag(url) , 'language': 'en', 'url': str(url).replace('\/','/'), 'direct': False, 'debridonly': False})
+				
+            if year in movie:
+				return sources
 
 
     def resolve(self, url):
