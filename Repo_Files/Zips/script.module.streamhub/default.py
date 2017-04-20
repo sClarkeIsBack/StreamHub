@@ -1,11 +1,8 @@
-import base64,hashlib,os,random,re,requests,shutil,string,sys,urllib,urllib2,json,urlresolver,ssl,liveresolver,zipfile
+import base64,hashlib,os,random,re,requests,shutil,string,sys,urllib,urllib2,json,urlresolver,ssl
 import xbmc,xbmcaddon,xbmcgui,xbmcplugin,xbmcvfs
 from addon.common.addon import Addon
 from addon.common.net import Net
-from resources import control,tvplayer
-
-
-
+from resources import control
 
 addon_id   = 'script.module.streamhub'
 selfAddon  = xbmcaddon.Addon(id=addon_id)
@@ -14,7 +11,7 @@ addon_name = selfAddon.getAddonInfo('name')
 icon       = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png'))
 fanart     = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 User_Agent = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
-putlockerhd  = 'http://putlockerhd.co'
+putlockerhd      = 'http://putlockerhd.co'
 ccurl      = 'http://cartooncrazy.me'
 s          = requests.session()
 net        = Net()
@@ -26,7 +23,6 @@ mov2       = 'http://zmovies.to'
 wwe        = 'http://watchwrestling.in'
 tv         = base64.b64decode ('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3NDbGFya2VJc0JhY2svU3RyZWFtSHViL21hc3Rlci9MaW5rcy8yNDcvMjQ3dHYueG1s')
 proxy      = 'http://www.justproxy.co.uk/index.php?q='
-music      = 'http://woodmp3.com/search/'
 
 def CAT():
 	addDir('MOVIES','url',100,icon,fanart,'')
@@ -35,8 +31,7 @@ def CAT():
 	addDir('XXX SECTION','URL',31,icon,fanart,'')
 	addDir('DOCS',docurl+'/watch-online/',35,icon,fanart,'')
 	addDir('24/7 TV',tv,48,icon,fanart,'')
-	addDir('MUSIC',tv,64,icon,fanart,'')
-	addDir('TV GUIDE','url',73,icon,fanart,'')
+	
 def MovieCAT():
 	addDir('RECENT MOVIES',putlockerhd+'/recent_movies',19,icon,fanart,'')
 	addDir('COMEDY MOVIES',putlockerhd+'/comedy_movies',19,icon,fanart,'')
@@ -65,30 +60,9 @@ def FAMILYCAT():
 	addDir('Disney Movies','url',58,icon,fanart,'')
 	addDir('Family Cartoons',kidsurl,51,icon,fanart,'')
 	addDir('Family Movies','http://pubfilmonline.net/genre/family/',54,icon,fanart,'')
-
-def MUSICCAT():
-	addDir('Top Music','http://',68,icon,fanart,'')
-	addDir('Collections','url',72,icon,fanart,'')
-	addDir('Radio','http://',69,icon,fanart,'')
-	addDir('Search','search',63,icon,fanart,'')
-	
-def TOPMUSICAT():
-	addDir('UK | The Offical Top 40 Singles','http://www.bbc.co.uk/radio1/chart/singles',67,icon,fanart,'')
-	addDir('UK | The Offical Top 40 Dance Singles','http://www.bbc.co.uk/radio1/chart/dancesingles',67,icon,fanart,'')
-	addDir('UK | The Offical Top 40 Rock Singles','http://www.bbc.co.uk/radio1/chart/rocksingles',67,icon,fanart,'')
-	addDir('UK | The Offical Top 40 R&B Singles','http://www.bbc.co.uk/radio1/chart/rnbsingles',67,icon,fanart,'')
-	addDir('UK | The Offical Top 30 Indie Singles','http://www.bbc.co.uk/radio1/chart/indiesingles',67,icon,fanart,'')
-	
-def MUSICCOL():
-	addDir('BBC Radio 1 Live Lounge Collection','https://www.discogs.com/label/804379-Radio-1s-Live-Lounge',70,icon,fanart,'')
-	addDir('Now Thats What I Call Music Collection','NOW',70,icon,fanart,'')
-	
 def xxxCAT():
-	addDir("[COLOR orange]G[/COLOR][COLOR white]enre's[/COLOR]",xxxurl+'/tags',99,icon,fanart,'')
+	addDir("[COLOR orange]G[/COLOR][COLOR white]enre's[/COLOR]",xxxurl+'/a',99,icon,fanart,'')
 
-	
-
-		
 def regex_from_to(text, from_string, to_string, excluding=True):
 	if excluding:
 		try: r = re.search("(?i)" + from_string + "([\S\s]+?)" + to_string, text).group(1)
@@ -128,10 +102,8 @@ def addDir(name,url,mode,iconimage,fanart,description):
 	liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
 	liz.setInfo( type="Video", infoLabels={"Title": name,"Plot":description})
 	liz.setProperty('fanart_image', fanart)
-	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==62 or mode==999:
+	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==50 or mode==53 or mode==55 or mode==57:
 		liz.setProperty("IsPlayable","true")
-		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
-	elif mode==73:
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
 	else:
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
@@ -234,24 +206,6 @@ def putlockerhdplay(url):
         liz.setPath(str(url))
         xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
     except:pass
-	
-def setxxxpass():
-	d = xbmcgui.Dialog().yesno('[COLOR red]StreamHub[/COLOR]','Would You Like To Set a Password for the XXX Section?')
-	if d:
-		kb = xbmc.Keyboard ('', 'Please Enter a Password', False)
-		kb.doModal()
-		if (kb.isConfirmed()):
-			pw = kb.getText()
-			if pw =="":
-				xbmcaddon.Addon().setSetting('xxxpass',"")
-				xbmcaddon.Addon().setSetting('enablexxxpass','false')
-				xbmcgui.Dialog().notification('[COLOR red]Password Cannot Be Blank[/COLOR]','StreamHub')
-			else:
-				xbmcaddon.Addon().setSetting('xxxpass',pw)
-				xbmcaddon.Addon().setSetting('enablexxxpass','true')
-				xbmcgui.Dialog().ok('[COLOR red]StreamHub[/COLOR]','')
-			
-#setxxxpass()
 		
 def xxx(url):
         link = OPEN_URL(url)
@@ -281,20 +235,19 @@ def xxxadd_next_button(link):
 					addDir('[B][COLOR red]Next Page[/COLOR][/B]',xxxurl+nextp,24,'','','')
 			except: pass
 			return
-		
+			
 def xxxgenre(url):
-		#link = passpopup(url)
-		link = OPEN_URL(url)
-		main = regex_from_to(link,'<strong>All tags</strong>','mobile-hide')
-		all_videos = regex_get_all(main, '<li>', '</li>')
-		for a in all_videos:
+        link = passpopup(url)
+        link = OPEN_URL(link)
+        main = regex_from_to(link,'<strong>All tags</strong>','mobile-hide')
+        all_videos = regex_get_all(main, '<li>', '</li>')
+        for a in all_videos:
 			name = regex_from_to(a, '"><b>', '</b><span').replace("&amp;","&")
 			url = regex_from_to(a, 'href="', '"').replace("&amp;","&")
 			url = url+'/'
 			thumb = regex_from_to(a, 'navbadge default">', '<')
 			addDir('%s     [B][COLOR red](%s Videos)[/COLOR][/B]' %(name,thumb),xxxurl+url,24,'','','')
-			
-
+		
 def resolvexxx(url):
 	base = 'http://www.xvideos.com'
 	page  = OPEN_URL(url)
@@ -308,7 +261,7 @@ def resolvexxx(url):
         liz.setPath(str(url))
         xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
 	
-
+		
 def passpopup(url):
  kb =xbmc.Keyboard ('', 'heading', True)
  kb.setHeading('Enter 18+ Password') # optional
@@ -316,11 +269,14 @@ def passpopup(url):
  kb.doModal()
  if (kb.isConfirmed()):
     text = kb.getText()
-    if text == str(xbmcaddon.Addon().getSetting('xxxpass')):
-		url = str(url).replace('****','/tags')
-		return url
+    if 'saucy' in text:
+       text = str(text).replace('saucy','/tags')
+       return (str(xxxurl+text)).replace('%3a','').replace('%2f','')
     else:
-        xbmcgui.Dialog().ok('Attention', "Incorrect Password, You would of set this on first use of this Addon.")
+        Msg="                                   Incorrect Password\n\n                            Password is available from\n                                [COLOR red]http://facebook.com/groups/streamhub[/COLOR]"
+        dialog = xbmcgui.Dialog()
+        ok = dialog.ok('Attention', Msg)
+        return False
 
 '''def resolvecartooncrazy(url,icon):
 	bypass  = cloudflare.create_scraper()
@@ -633,227 +589,9 @@ def disneymoviesresolve(url):
 	liz.setProperty('IsPlayable','true')
 	liz.setPath(str(play))
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
-	
-	
-def tvguidepick(name):
-	if name =='BBC1':
-		a = xbmcgui.Dialog().select('Select a link',['SD','HD','HD Backup'])
-		if a ==0:
-			url = 'http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/hls_tablet/ak/bbc_one_west_midlands.m3u8'
-		elif a ==1:
-			url = 'http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_hd.m3u8'
-		else:
-			url = 'http://tvplayer.com/watch/bbcone'
-	elif name =='BBC2':
-		a = xbmcgui.Dialog().select('Select a link',['HD','HD Backup','HD Backup 2'])
-		if a ==0:
-			url = 'http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_two_england.m3u8'
-		elif a ==1:
-			url = 'http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_two_hd.m3u8'
-		else:
-			url = 'http://tvplayer.com/watch/bbctwo'
-	elif name =='ITV1':
-		a = xbmcgui.Dialog().select('Select a link',['SD','HD'])
-		if a ==0:
-			url = 'http://www.filmon.com/channel/itv1'
-		elif a ==1:
-			url = 'http://itv1liveios-i.akamaihd.net/hls/live/203437/itvlive/ITV1MN/master_Main1800.m3u8'
-			
-	elif name =='CHAN4':
-		a = xbmcgui.Dialog().select('Select a link',['SD','HD'])
-		if a ==0:
-			url = 'http://www.filmon.com/channel/channel-4'
-		else:
-			url = 'http://tvplayer.com/watch/channel4'
-	elif name =='CHAN5':
-			url = 'http://tvplayer.com/watch/channel5'
-	elif name =='ITV2':
-		a = xbmcgui.Dialog().select('Select a link',['SD','HD'])
-		if a ==0:
-			url = 'http://www.filmon.com/channel/itv2'
-		else:
-			url = 'http://itv2liveios-i.akamaihd.net/hls/live/203495/itvlive/ITV2MN/master_Main1800.m3u8'
-	elif name =='DAVE':
-			url = 'http://tvplayer.com/watch/dave'
-	elif name =='ITV3':
-		a = xbmcgui.Dialog().select('Select a link',['SD','HD'])
-		if a ==0:
-			url = 'http://www.filmon.com/channel/itv3'
-		else:
-			url = 'http://itv3liveios-i.akamaihd.net/hls/live/207262/itvlive/ITV3MN/master_Main1800.m3u8'
-	elif name =='ITV4':
-		a = xbmcgui.Dialog().select('Select a link',['SD','HD'])
-		if a ==0:
-			url = 'http://www.filmon.com/channel/itv4'
-		else:
-			url = 'http://itv4liveios-i.akamaihd.net/hls/live/207266/itvlive/ITV4MN/master_Main1800.m3u8'
-	elif name =='ITVBE':
-		a = xbmcgui.Dialog().select('Select a link',['SD','HD'])
-		if a ==0:
-			url = 'http://www.filmon.com/channel/itvbe'
-		else:
-			url = 'http://itvbeliveios-i.akamaihd.net/hls/live/219078/itvlive/ITVBE/master_Main1800.m3u8'
-	elif name =='ITV11':
-			url = 'http://www.filmon.com/channel/itv-plus-1'
-	elif name =='ITV21':
-			url = 'http://www.filmon.com/channel/itv2-plus-1'
-	elif name =='ITV31':
-			url = 'http://www.filmon.com/channel/itv3-plus-1'
-	elif name =='ITV41':
-			url = 'http://www.filmon.com/channel/itv4-plus-1'
-	elif name =='BBC4':
-			url = 'http://www.filmon.com/channel/cbeebiesbbc-four'
-	elif name =='CBSR':
-			url = 'http://www.filmon.com/channel/cbs-reality'
-	elif name =='CBSR1':
-			url = 'http://www.filmon.com/channel/cbs-reality1'
-	elif name =='CBSA':
-			url = 'http://www.filmon.com/channel/cbs-action'
-	elif name =='5USA':
-			url = 'http://www.filmon.com/channel/5usa'
-	elif name =='DRAMA':
-			url = 'http://tvplayer.com/watch/drama'
-	elif name =='HOME':
-			url = 'http://tvplayer.com/watch/home'
-	elif name =='E4':
-			url = 'http://www.filmon.com/channel/e4'
-	elif name =='MORE4':
-			url = 'http://www.filmon.com/channel/more4'
-	elif name =='QUEST':
-		a = xbmcgui.Dialog().select('Select a link',['SD','HD'])
-		if a ==0:
-			url = 'http://www.filmon.com/channel/quest'
-		else:
-			url = 'http://tvplayer.com/watch/quest'
-	elif name =='REALLY':
-		a = xbmcgui.Dialog().select('Select a link',['SD','HD'])
-		if a ==0:
-			url = 'http://www.filmon.com/channel/really'
-		else:
-			url = 'http://tvplayer.com/watch/really'
-	elif name =='TRUTV':
-		a = xbmcgui.Dialog().select('Select a link',['SD','HD'])
-		if a ==0:
-			url = 'http://www.filmon.com/channel/tru-tv'
-		else:
-			url = 'http://tvplayer.com/watch/trutv'
-	elif name =='TRAVCHANNEL':
-		a = xbmcgui.Dialog().select('Select a link',['SD','HD'])
-		if a ==0:
-			url = 'http://www.filmon.com/channel/travel-channel1'
-		else:
-			url = 'http://tvplayer.com/watch/travelchannel'
-	elif name =='FOODNET':
-		a = xbmcgui.Dialog().select('Select a link',['SD','HD'])
-		if a ==0:
-			url = 'http://www.filmon.com/channel/food-network'
-		else:
-			url = 'http://tvplayer.com/watch/foodnetwork'
-	elif name =='FOODNET1':
-			url = 'http://www.filmon.com/channel/food-network-plus-1'
-	elif name =='FASHTV':
-			url = 'http://www.filmon.com/channel/fashion-tv'
-	elif name =='YESTERDAY':
-		a = xbmcgui.Dialog().select('Select a link',['SD','HD'])
-		if a ==0:
-			url = 'http://www.filmon.com/channel/yesterday'
-		else:
-			url = 'http://tvplayer.com/watch/yesterday'
-	elif name =='YESTERDAY1':
-			url = 'http://tvplayer.com/watch/yesterday1'
-	elif name =='QVC':
-			url = 'http://llnw.live.qvc.simplestream.com/hera/remote/qvcuk_primary_sdi5/3/prog_index.m3u8'
-	elif name =='QVCS':
-			url = 'http://llnw.live.qvc.simplestream.com/hera/remote/qvcuk_primary_sdi8/3/prog_index.m3u8'	
-	elif name =='QVCE':
-			url = 'http://llnw.live.qvc.simplestream.com/hera/remote/qvcuk_primary_sdi5/1/prog_index.m3u8'
-	elif name =='QVCP':
-			url = 'http://llnw.live.qvc.simplestream.com/hera/remote/qvcuk_primary_sdi1/3/prog_index.m3u8'
-	elif name =='QVCB':
-			url = 'http://llnw.live.qvc.simplestream.com/hera/remote/qvcuk_primary_sdi6/3/prog_index.m3u8'	
-	elif name =='JEWL':
-			url = 'https://d2hee8qk5g0egz.cloudfront.net/live/tjc_sdi1/bitrate1.isml/bitrate1-audio_track=64000-video=1800000.m3u8'
-	elif name =='CBBC':
-			url = 'http://www.filmon.com/channel/cbbc'
-	elif name =='CBEEB':
-		a = xbmcgui.Dialog().select('Select a link',['SD','HD'])
-		if a ==0:
-			url = 'http://www.filmon.com/channel/cbeebies'
-		else:
-			url = 'http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/cbeebies_hd.m3u8'
-	elif name =='CITV':
-			url = 'http://citvliveios-i.akamaihd.net/hls/live/207267/itvlive/CITVMN/master_Main1800.m3u8'
-	elif name =='POP':
-			url = 'http://www.filmon.com/channel/pop'
-	elif name =='TPOP':
-			url = 'http://www.filmon.com/channel/tiny-pop'
-	elif name =='SNEWS':
-			url = 'plugin://plugin.video.youtube/play/?video_id=y60wDzZt8yg'
-	elif name =='BNEWS':
-			url = 'http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_news24.m3u8'
-	elif name =='FILM4':
-			url = 'http://www.filmon.com/channel/film-4'
-	elif name =='ALBA':
-			url = 'http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/hls_tablet/ak/bbc_alba.m3u8'
-	elif name =='S4C':
-			url = 'http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/hls_tablet/ak/s4cpbs.m3u8'
-	else:
-		    url = 'url'
-	
-	
-	if 'filmon' in url:
-		url = liveresolver.resolve(url)
-	elif 'tvplayer' in url:
-		url = tvplayer.resolve_tvplayer(url)
-	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
-	liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
-	liz.setProperty('IsPlayable','true')
-	liz.setPath(str(url))
-	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+
 		
-def musicsearch(url):
-		if url == 'search':
-			kb = xbmc.Keyboard ('', 'Enter Your Favourite Song or Artist', False)
-			kb.doModal()
-			if (kb.isConfirmed()):
-				query = kb.getText()
-				query = (query.translate(None, '\/:*?"\'<>|!,')).replace(' ', '-').replace('--', '-').lower()
-				open  = OPEN_URL(music+query)
-				all   = regex_get_all(open,'<li><div class="song-list"','</li>')
-				for a in all:
-					name = regex_from_to(a,'title="','"').replace('Free','').replace('mp3','')
-					icon = regex_from_to(a,'data-original="','"')
-					url  = regex_from_to(a,'http://woodmp3.com/download/','/')
-					addDir(name,url,62,icon,fanart,'')
-		else:
-				xbmc.log(str(url))
-				open  = OPEN_URL(url)
-				all   = regex_get_all(open,'<li><div class="song-list"','</li>')
-				for a in all:
-					name = regex_from_to(a,'title="','"').replace('Free','').replace('mp3','')
-					icon = regex_from_to(a,'data-original="','"')
-					url  = regex_from_to(a,'http://woodmp3.com/download/','/')
-					addDir(name,url,62,icon,fanart,'')
-			
-def musicindex(url):
-	open  = OPEN_URL(url)
-	all   = regex_get_all(open,'<div class="song-list"','<i class="fa fa-download">')
-	for a in all:
-		name = regex_from_to(a,'title="','"').replace('Free','').replace('mp3','')
-		icon = regex_from_to(a,' src="','"')
-		url  = regex_from_to(a,'none;"><a href="','"')
-		addDir(name,url,63,icon,fanart,'')			
-def musicresolve(url):
-	url  = 'http://www.youtubeinmp3.com/widget/button/?video=https://www.youtube.com/watch?v=%s&color=008000'%url
-	open = OPEN_URL(url)
-	mp3  = regex_from_to(open,'downloadButton" href="','"')
-	xbmc.log(str(mp3))
-	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
-	liz.setInfo(type='Music', infoLabels={'Title': name, 'Plot': ''})
-	liz.setProperty('IsPlayable','true')
-	liz.setPath(str('http://www.youtubeinmp3.com'+mp3))
-	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
-	
+
 		
 
 def replacemalicious():		
@@ -866,85 +604,6 @@ def replacemalicious():
             file = open(target,"w")
             file.write(data)
             file.close()
-			
-def bbcmusicindex(url):
-	open = OPEN_URL(url)
-	all = regex_get_all(open,'<div class="cht-entry-wrapper">','<div class="cht-entry-status">')
-	if 'singles' in url:
-		for a in all:
-			num  = regex_from_to(a,'<div class="cht-entry-position">','<').strip()
-			name = regex_from_to(a,'data-title="','"').replace('||','-').replace('&amp;','')
-			name = '[COLOR red]%s[/COLOR] | %s'%(num,name)
-			icon = regex_from_to(a,'         src="','"')
-			url  = 'http://woodmp3.com/search/'+(name.translate(None, '\/:*?"\'<>|!,')).replace(' ', '-').replace('--', '-').lower()
-			url  = regex_from_to(url,']-','$').replace('(','ABCD')
-			url  = re.sub(r'ABCD(.*?)$','',url)
-			addDir(name,'http://woodmp3.com/search/'+re.sub('-$','',url),63,icon,fanart,'')
-			
-			
-def top40(url):
-	open = OPEN_URL(url)
-	part  = regex_from_to(open,'<table align=center','<BR><BR>')
-	all   = regex_get_all(part,'big>&nbsp;&nbsp;&nbsp;','font class=small>')
-	for a in all:
-		name = regex_from_to(a,'hspace=5 border=0>','<')
-		addDir(name,'url',4,icon,fanart,'')
-		
-def radio():
-	open =OPEN_URL('https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/RADIO.xml')
-	all = regex_get_all(open,'<item>','</item>')
-	for a in all:
-		name = regex_from_to(a,'<title>','</title>')
-		url  = regex_from_to(a,'<link>','</link>')
-		icon = regex_from_to(a,'<thumbnail>','</thumbnail>')
-		addDir(name,url,999,icon,fanart,'')
-
-def UKNowMusic(url):
-	if 'Live-Lounge' in url:
-		desc = 'BBCL'
-	else:
-		desc = 'url'
-	if url == 'NOW':
-		d    = xbmcgui.Dialog().select('Choose a Country', ['UK Version', 'US Version'])
-		if d==0:
-			url = 'https://www.discogs.com/label/266040-Now-Thats-What-I-Call-Music!-UK'
-		elif d==1:
-			url = 'https://www.discogs.com/label/266110-Now-Thats-What-I-Call-Music!-US'
-		else:
-			return
-	
-	
-	if '-US' in url:
-		country = 'USA'
-	else:
-		country = 'UK'
-	open = OPEN_URL(url)
-	all  = regex_get_all(open,'td class="artist">','<td class="actions">')
-	for a in all:
-		url   = regex_from_to(a,' <a href="','"')
-		title = regex_from_to(a,'[0-9]">','<').replace('&#39;',"'")
-		year  = regex_from_to(a,'Year: ">','<')
-		if not 'DVD' in title:
-			xbmc.log(str(url))
-			addDir('[COLOR red]%s[/COLOR] | [COLOR red]%s[/COLOR]'%(country,year)+' | '+title,url,71,icon,fanart,desc)
-			
-def UKNowMusic2(url,description):
-	open = OPEN_URL('https://www.discogs.com'+url)
-	all = regex_get_all(open,'<td class="tracklist_track_artists">','<tr class=" tracklist_track track"')
-	for a in all:
-		artist = re.compile('a href=".*?">(.*?)<',re.DOTALL).findall(a)
-		artist = str(artist).replace("['","").replace("']","").replace('&#39;',"'").replace("'","").replace('"','')
-		
-		track  = regex_from_to(a,'itemprop="name">','<')
-		track  = str(track).replace("['","").replace("']","").replace('&#39;',"'").replace("'","").replace('"','')
-		if 'BBCL' in description:
-			url = 'bbc+radio+1+live+lounge %s %s'%(artist,track)
-		else:
-			url    = '%s %s'%(artist,track)
-		url    = str(url).replace(' ','-').replace(':','').lower()
-		addDir('%s - %s'%(artist,track),'http://woodmp3.com/search/'+url,63,icon,fanart,'')
-		
-	
 
 if xbmc.getCondVisibility('System.HasAddon(plugin.video.exodus'):
 	try:
@@ -1005,6 +664,9 @@ elif mode==2:
 
 elif mode==3:
 	LINKS(url)
+
+elif mode==4:
+	TV()
 
 elif mode==6:
 	EPIS(url)
@@ -1124,48 +786,6 @@ elif mode==58:
 elif mode==59:
 	playresolved(url)
 	
-elif mode==60:
-	tvguidepick(name)
-
-elif mode==61:
-	setxxxpass()
-	
-elif mode==62:
-	musicresolve(url)
-	
-elif mode==63:
-	musicsearch(url)
-	
-elif mode==64:
-	MUSICCAT()
-	
-elif mode==65:
-	musicindex(url)
-	
-elif mode==66:
-	bbcmusicresolve(name)
-	
-elif mode==67:
-	bbcmusicindex(url)
-	
-elif mode==68:
-	TOPMUSICAT()
-	
-elif mode==69:
-	radio()
-	
-elif mode==70:
-	UKNowMusic(url)
-	
-elif mode==71:
-	UKNowMusic2(url,description)
-	
-elif mode==72:
-	MUSICCOL()
-	
-elif mode==73:
-	xbmc.executebuiltin('XBMC.RunScript(script.streamhub.tvguide)')
-
 elif mode==98:
 	xxxstars(url)
 	
@@ -1173,11 +793,7 @@ elif mode==100:
 	MovieCAT()
 	
 elif mode==999:
-	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
-	liz.setInfo(type='Music', infoLabels={'Title': name, 'Plot': ''})
-	liz.setProperty('IsPlayable','true')
-	liz.setPath(url)
-	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+	home()
 
 
 

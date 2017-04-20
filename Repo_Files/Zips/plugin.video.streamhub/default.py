@@ -17,24 +17,8 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-from resources.lib.smodules import client
-import json,xbmc,re
+
 import urlparse,sys,re
-
-import os,xbmcgui,xbmc,zipfile
-
-
-userdatadb = xbmc.translatePath(os.path.join('special://home/userdata/addon_data/script.streamhub.tvguide','source.db'))
-if not os.path.isfile(userdatadb):
-
-	target = xbmc.translatePath('special://home/userdata/addon_data/script.streamhub.tvguide')
-	zip   = xbmc.translatePath(os.path.join('special://home/addons/script.streamhub.tvguide','source.zip'))
-	if not os.path.exists(target):
-		os.makedirs(target)
-		
-	zip_ref = zipfile.ZipFile(zip, 'r')
-	zip_ref.extractall(target)
-	zip_ref.close()
 
 params = dict(urlparse.parse_qsl(sys.argv[2].replace('?','')))
 
