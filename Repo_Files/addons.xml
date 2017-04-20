@@ -11,6 +11,7 @@
         <import addon="script.streamhub.artwork"/>
         <import addon="script.streamhub.metadata"/>
         <import addon="script.module.streamhub"/>
+		<import addon="script.streamhub.tvguide"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
 		<provides>video</provides>
