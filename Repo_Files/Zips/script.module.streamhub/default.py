@@ -130,7 +130,7 @@ def addDir(name,url,mode,iconimage,fanart,description):
 	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==62 or mode==999:
 		liz.setProperty("IsPlayable","true")
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
-	elif mode==73 or mode==101 or mode==102:
+	elif mode==73:
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
 	else:
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
@@ -1189,6 +1189,7 @@ elif mode==100:
 	MovieCAT()
 	
 elif mode==101:
+	xbmc.executebuiltin( "Dialog.Close(busydialog)" )
 	if xbmcaddon.Addon('plugin.video.streamhub').getSetting('livetv')=='TV Guide':
 		try:
 			w = gui.TVGuide()
