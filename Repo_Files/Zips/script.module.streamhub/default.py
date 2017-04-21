@@ -2,9 +2,8 @@ import base64,hashlib,os,random,re,requests,shutil,string,sys,urllib,urllib2,jso
 import xbmc,xbmcaddon,xbmcgui,xbmcplugin,xbmcvfs
 from addon.common.addon import Addon
 from addon.common.net import Net
-from resources import control,tvplayer
-
-
+from resources.modules import control,tvplayer
+from resources.tvguide import gui
 
 addon_id   = 'script.module.streamhub'
 selfAddon  = xbmcaddon.Addon(id=addon_id)
@@ -35,7 +34,8 @@ def CAT():
 	addDir('DOCS',docurl+'/watch-online/',35,icon,fanart,'')
 	addDir('24/7 TV',tv,48,icon,fanart,'')
 	addDir('MUSIC',tv,64,icon,fanart,'')
-	addDir('TV GUIDE','url',73,icon,fanart,'')
+	addDir('TV GUIDE','url',101,icon,fanart,'')
+	addDir('TV GUIDE','url',102,icon,fanart,'')
 def MovieCAT():
 	addDir('RECENT MOVIES',putlockerhd+'/recent_movies',19,icon,fanart,'')
 	addDir('COMEDY MOVIES',putlockerhd+'/comedy_movies',19,icon,fanart,'')
@@ -130,7 +130,7 @@ def addDir(name,url,mode,iconimage,fanart,description):
 	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==62 or mode==999:
 		liz.setProperty("IsPlayable","true")
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
-	elif mode==73:
+	elif mode==73 or mode==101 or mode==102:
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
 	else:
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
@@ -1180,13 +1180,25 @@ elif mode==72:
 	MUSICCOL()
 	
 elif mode==73:
-	xbmc.executebuiltin('XBMC.RunScript(script.streamhub.tvguide)')
+	xbmc.executebuiltin('XBMC.RunScript(script.module.streamhub)')
 
 elif mode==98:
 	xxxstars(url)
 	
 elif mode==100:
 	MovieCAT()
+	
+elif mode==101:
+	if xbmcaddon.Addon('plugin.video.streamhub').getSetting('livetv')=='TV Guide':
+		try:
+			w = gui.TVGuide()
+			w.doModal()
+			del w
+
+		except Exception:
+			xbmc.log('oops')
+	else:
+		xbmc.executebuiltin('ActivateWindow(10025,plugin://plugin.video.streamhub/?action=directory&content=addons&url=https%3a%2f%2fraw.githubusercontent.com%2fsClarkeIsBack%2fStreamHub%2fmaster%2fLinks%2fLiveTv%2fukent.xml)')
 	
 elif mode==999:
 	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)

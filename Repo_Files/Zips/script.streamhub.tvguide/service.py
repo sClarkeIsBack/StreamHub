@@ -22,6 +22,20 @@ import notification
 import xbmc,os
 import source
 	
+import os,xbmcgui,xbmc,zipfile
+
+
+userdatadb = xbmc.translatePath(os.path.join('special://home/userdata/addon_data/script.module.streamhub','source.db'))
+if not os.path.isfile(userdatadb):
+
+	target = xbmc.translatePath('special://home/userdata/addon_data/script.module.streamhub')
+	zip   = xbmc.translatePath(os.path.join('special://home/addons/script.module.streamhub','source.zip'))
+	if not os.path.exists(target):
+		os.makedirs(target)
+		
+	zip_ref = zipfile.ZipFile(zip, 'r')
+	zip_ref.extractall(target)
+	zip_ref.close()
 
 class Service(object):
     def __init__(self):
@@ -43,10 +57,10 @@ class Service(object):
         self.database.close(None)
 
 try:
-    ADDON = xbmcaddon.Addon(id = 'script.streamhub.tvguide')
+    ADDON = xbmcaddon.Addon(id = 'script.module.streamhub')
     if ADDON.getSetting('cache.data.on.xbmc.startup') == 'true':
         Service()
 except source.SourceNotConfiguredException:
     pass  # ignore
 except Exception, ex:
-    xbmc.log('[script.streamhub.tvguide] Uncaugt exception in service.py: %s' % str(ex) , xbmc.LOGDEBUG)
+    xbmc.log('[script.module.streamhub] Uncaugt exception in service.py: %s' % str(ex) , xbmc.LOGDEBUG)
