@@ -68,7 +68,7 @@ h
 
 <plugin>
 <title>[COLOR red][B]X[/COLOR][COLOR white]XX[/B][/COLOR]</title>
-<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=99&name=%5bCOLOR%20orange%5dG%5b%2fCOLOR%5d%5bCOLOR%20white%5denre%27s%5b%2fCOLOR%5d&url=http%3a%2f%2fwww.xvideos.com%2fa</link>
+<link>plugin://script.module.streamhub/?description&amp;iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&amp;mode=99&amp;name=%5bCOLOR%20orange%5dG%5b%2fCOLOR%5d%5bCOLOR%20white%5denre%27s%5b%2fCOLOR%5d&amp;url=http%3a%2f%2fwww.xvideos.com%2ftags</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/XXX.png</thumbnail>
 </plugin>
 
