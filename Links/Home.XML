@@ -27,11 +27,11 @@ h
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/TVShows.png</thumbnail>
 </plugin>
 
-<dir>
+<plugin>
 <name>[COLOR red][B]L[/COLOR][COLOR white]ive Tv[/COLOR][/B]</name>
-<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/LiveTv/ukent.xml</link>
+<link>plugin://script.module.streamhub/?url=url&mode=101&name=TV+GUIDE&iconimage=C%3A%5CUsers%5Cmedia%5CAppData%5CRoaming%5CKodi%5Caddons%5Cscript.module.streamhub%5Cicon.png&description=</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/LiveTV.png</thumbnail>
-</dir>
+</plugin>
 
 <dir>
 <name>[COLOR red][B]F[/COLOR][COLOR white]amily Corner[/COLOR][/B]</name>
