@@ -18,7 +18,7 @@
 '''
 
 
-import urlparse,sys,re
+import urlparse,sys,re,xbmc,xbmcgui,xbmcaddon
 
 params = dict(urlparse.parse_qsl(sys.argv[2].replace('?','')))
 
@@ -57,6 +57,30 @@ select = params.get('select')
 query = params.get('query')
 
 source = params.get('source')
+
+
+
+
+def setxxxpass():
+	d = xbmcgui.Dialog().yesno('[COLOR red]StreamHub[/COLOR]','Would You Like To Set a Password for the XXX Section?')
+	if d:
+		kb = xbmc.Keyboard ('', 'Please Enter a Password', False)
+		kb.doModal()
+		if (kb.isConfirmed()):
+			pw = kb.getText()
+			if pw =="":
+				xbmcaddon.Addon('script.module.streamhub').setSetting('xxxpass',"")
+				xbmcaddon.Addon('script.module.streamhub').setSetting('enablexxxpass','false')
+				xbmcgui.Dialog().notification('[COLOR red]Password Cannot Be Blank[/COLOR]','StreamHub')
+			else:
+				xbmcaddon.Addon('script.module.streamhub').setSetting('xxxpass',pw)
+				xbmcaddon.Addon('script.module.streamhub').setSetting('enablexxxpass','true')
+				xbmcgui.Dialog().ok('[COLOR red]StreamHub[/COLOR]','Password Has Been Set (There Is No Reset Button, So Dont Forget Your Password)')
+				
+if xbmcaddon.Addon('script.module.streamhub').getSetting('freshstart')=='true':
+	xbmcaddon.Addon('script.module.streamhub').setSetting('freshstart','false')
+	setxxxpass()
+				
 
 
 if action == None:
