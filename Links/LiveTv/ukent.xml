@@ -12,58 +12,58 @@
 <item>
 <title>[COLOR white]     BBC One[COLOR red]   SD[/COLOR]</title>
 <link>
-<sublink>LIVETVXML:http://www.filmon.com/channel/bbc-one</sublink>
+<sublink>http://www.filmon.com/channel/bbc-one</sublink>
 </link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     BBC One[/COLOR][COLOR lime]   HD[/COLOR]</title>
-<link>LIVETVXML:http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_hd.m3u8</link>
+<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_hd.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     BBC One[/COLOR][COLOR lime]   HD[/COLOR][COLOR white]   Backup[/COLOR]</title>
-<link>LIVETVXML:http://tvplayer.com/watch/bbcone</link>
+<link>http://tvplayer.com/watch/bbcone</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     BBC One Wales[COLOR red]   SD[/COLOR]</title>
-<link>LIVETVXML:http://dl.funsaber.net/movie/Cardboard.Boxer.2016.1080p.5.1CH.Ganool.mkv</link>
+<link>http://dl.funsaber.net/movie/Cardboard.Boxer.2016.1080p.5.1CH.Ganool.mkv</link>
 <link>http://www.filmon.com/channel/bbc-1-wales</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     BBC One Wales[/COLOR][COLOR lime]   HD[/COLOR]</title>
-<link>LIVETVXML:http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_wales_hd.m3u8</link>
+<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_wales_hd.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     BBC One North Ireland[COLOR red]   SD[/COLOR]</title>
-<link>LIVETVXML:http://www.filmon.com/channel/bbc-1-north-ireland</link>
+<link>http://www.filmon.com/channel/bbc-1-north-ireland</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     BBC One North Ireland[/COLOR][COLOR lime]   HD[/COLOR]</title>
-<link>LIVETVXML:http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_northern_ireland_hd.m3u8</link>
+<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_northern_ireland_hd.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
 
 <item>
 <title>[COLOR white]     BBC One Scotland[COLOR red]   SD[/COLOR]</title>
-<link>LIVETVXML:http://www.filmon.com/channel/bbc-1-scotland</link>
+<link>http://www.filmon.com/channel/bbc-1-scotland</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     BBC One Scotland[/COLOR][COLOR lime]   HD[/COLOR]</title>
-<link>LIVETVXML:http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_scotland_hd.m3u8</link>
+<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_scotland_hd.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
@@ -71,55 +71,55 @@
 <item>
 <title>[COLOR white]     BBC Two[COLOR red]   SD[/COLOR]</title>
 <link>
-<sublink>LIVETVXML:http://www.filmon.com/channel/bbc-two</sublink>
+<sublink>http://www.filmon.com/channel/bbc-two</sublink>
 </link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbctwo.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     BBC Two[/COLOR][COLOR lime]   HD[/COLOR]</title>
-<link>LIVETVXML:http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_two_hd.m3u8</link>
+<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_two_hd.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbctwo.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     BBC Two[/COLOR][COLOR lime]   HD[/COLOR][COLOR white]   Backup[/COLOR]</title>
-<link>LIVETVXML:http://tvplayer.com/watch/bbctwo</link>
+<link>http://tvplayer.com/watch/bbctwo</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbctwo.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     ITV 1[COLOR red]   SD[/COLOR]</title>
 <link>
-<sublink>LIVETVXML:http://www.filmon.com/channel/itv1</sublink>
+<sublink>http://www.filmon.com/channel/itv1</sublink>
 </link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     ITV 1[/COLOR][COLOR lime]   HD[/COLOR]</title>
-<link>LIVETVXML:http://itv1liveios-i.akamaihd.net/hls/live/203437/itvlive/ITV1MN/master_Main1800.m3u8</link>
+<link>http://itv1liveios-i.akamaihd.net/hls/live/203437/itvlive/ITV1MN/master_Main1800.m3u8</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     Channel 4[COLOR red]   SD[/COLOR]</title>
 <link>
-<sublink>LIVETVXML:http://www.filmon.com/channel/channel-4</sublink>
+<sublink>http://www.filmon.com/channel/channel-4</sublink>
 </link>
 <thumbnail>http://www.lyngsat-logo.com/hires/cc/channel4_uk.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     Channel 4[COLOR lime]   HD[/COLOR]</title>
-<link>LIVETVXML:http://tvplayer.com/watch/channel4</link>
+<link>http://tvplayer.com/watch/channel4</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/cc/channel4_uk.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     Channel 5[COLOR red]   SD[/COLOR]</title>
 <link>
-<sublink>LIVETVXML:http://streams.yo.tv/srv1/ngrp:4.stream_all/playlist.m3u8?DVR</sublink>
+<sublink>http://streams.yo.tv/srv1/ngrp:4.stream_all/playlist.m3u8?DVR</sublink>
 </link>
 <thumbnail>http://www.lyngsat-logo.com/hires/cc/channel_5_uk.png</thumbnail>
 </item>
@@ -128,7 +128,7 @@
 <item>
 <title>[COLOR white]     ITV 2[COLOR red]   SD[/COLOR]</title>
 <link>
-<sublink>LIVETVXML:http://www.filmon.com/channel/itv2<sublink>
+<sublink>http://www.filmon.com/channel/itv2<sublink>
 </link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv2.png</thumbnail>
 </item>
@@ -136,7 +136,7 @@
 
 <item>
 <title>[COLOR white]     ITV 2[/COLOR][COLOR lime]   HD[/COLOR]</title>
-<link>LIVETVXML:http://itv2liveios-i.akamaihd.net/hls/live/203495/itvlive/ITV2MN/master_Main1800.m3u8
+<link>http://itv2liveios-i.akamaihd.net/hls/live/203495/itvlive/ITV2MN/master_Main1800.m3u8
 </link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv2.png</thumbnail>
 </item>
@@ -144,7 +144,7 @@
 
 <item>
 <title>[COLOR white]     Dave[/COLOR][COLOR lime]   HD[/COLOR]</title>
-<link>LIVETVXML:http://tvplayer.com/watch/dave</link>
+<link>http://tvplayer.com/watch/dave</link>
 <thumbnail>https://assets.tvplayer.com/tvos/images/channels/300.png</thumbnail>
 </item>
 
@@ -152,58 +152,58 @@
 <item>
 <title>[COLOR white]     ITV 3[COLOR red]   SD[/COLOR]</title>
 <link>
-<sublink>LIVETVXML:http://www.filmon.com/channel/itv3</sublink>
+<sublink>http://www.filmon.com/channel/itv3</sublink>
 </link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv3.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     ITV 3[/COLOR][COLOR lime]   HD[/COLOR]</title>
-<link>LIVETVXML:http://itv3liveios-i.akamaihd.net/hls/live/207262/itvlive/ITV3MN/master_Main1800.m3u8</link>
+<link>http://itv3liveios-i.akamaihd.net/hls/live/207262/itvlive/ITV3MN/master_Main1800.m3u8</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv3.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     ITV 4[COLOR red]   SD[/COLOR]</title>
 <link>
-<sublink>LIVETVXML:http://www.filmon.com/channel/itv4</sublink>
+<sublink>http://www.filmon.com/channel/itv4</sublink>
 </link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv4.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     ITV 4[/COLOR][COLOR lime]   HD[/COLOR]</title>
-<link>LIVETVXML:http://itv4liveios-i.akamaihd.net/hls/live/207266/itvlive/ITV4MN/master_Main1800.m3u8</link>
+<link>http://itv4liveios-i.akamaihd.net/hls/live/207266/itvlive/ITV4MN/master_Main1800.m3u8</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv4.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     ITV Be[COLOR red]   SD[/COLOR]</title>
-<link>LIVETVXML:http://www.filmon.com/channel/itvbe</link>
+<link>http://www.filmon.com/channel/itvbe</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk_be.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     ITV Be[/COLOR][COLOR lime]   HD[/COLOR]</title>
-<link>LIVETVXML:http://itvbeliveios-i.akamaihd.net/hls/live/219078/itvlive/ITVBE/master_Main1800.m3u8</link>
+<link>http://itvbeliveios-i.akamaihd.net/hls/live/219078/itvlive/ITVBE/master_Main1800.m3u8</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk_be.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     ITV +1[COLOR red]   SD[/COLOR]</title>
-<link>LIVETVXML:http://www.filmon.com/channel/itv-plus-1</link>
+<link>http://www.filmon.com/channel/itv-plus-1</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk_plus1.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     ITV 2 +1[COLOR red]   SD[/COLOR]</title>
-<link>LIVETVXML:http://www.filmon.com/channel/itv2-plus-1</link>
+<link>http://www.filmon.com/channel/itv2-plus-1</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv2_plus1.png</thumbnail>
 </item>
 
 <item>
 <title>[COLOR white]     ITV 3 +1[COLOR red]   SD[/COLOR]</title>
-<link>LIVETVXML:http://www.filmon.com/channel/itv3-plus-1</link>
+<link>http://www.filmon.com/channel/itv3-plus-1</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv3_plus1.png</thumbnail>
 </item>
 
