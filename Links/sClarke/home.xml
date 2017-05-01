@@ -4,4 +4,26 @@
 <thumbnail>http://media.livenationinternational.com/lincsmedia/Media/p/l/v/f07d8dc5-982d-414d-a44b-fad368a77b97.jpg</thumbnail>
 </plugin>
 
+<plugin>
+<title>i Prevail</title>
+<link>plugin://plugin.video.youtube/channel/UCH9AZnGOJebPl3RiVGgpkKA/</link>
+<thumbnail>https://truetimbre.files.wordpress.com/2016/06/i-prevail-16.jpg</thumbnail>
+</plugin>
+
+<plugin>
+<title>The Blacklist</title>
+<link>plugin://plugin.video.streamhub/?action=seasons&imdb=tt2741602&tvdb=266189&tvshowtitle=The%20Blacklist&year=2013</link>
+<thumbnail>https://s3.amazonaws.com/seat42faws1/wp-content/uploads/2015/08/11083728/The-Blacklist-Season-3-Poster.jpg</thumbnail>
+</plugin>
+
+<plugin>
+<title>Prison Break</title>
+<link>plugin://plugin.video.streamhub/?action=seasons&imdb=tt0455275&tvdb=75340&tvshowtitle=Prison%20Break&year=2005</link>
+<thumbnail>http://www.gstatic.com/tv/thumb/tvbanners/12900907/p12900907_b_v8_aa.jpg</thumbnail>
+</plugin>
+
+
+
+
+
 
