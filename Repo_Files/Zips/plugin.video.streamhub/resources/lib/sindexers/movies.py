@@ -30,7 +30,7 @@ from resources.lib.smodules import playcount
 from resources.lib.smodules import workers
 from resources.lib.smodules import views
 
-import os,sys,re,json,urllib,urlparse,datetime
+import os,sys,re,json,urllib,urlparse,datetime,xbmc
 
 params = dict(urlparse.parse_qsl(sys.argv[2].replace('?','')))
 
@@ -77,6 +77,33 @@ class movies:
         self.oscars_link = 'http://www.imdb.com/search/title?title_type=feature,tv_movie&languages=en&production_status=released&groups=oscar_best_picture_winners&sort=year,desc&count=40&start=1'
         self.theaters_link = 'http://www.imdb.com/search/title?title_type=feature&languages=en&num_votes=1000,&release_date=date[365],date[0]&sort=release_date_us,desc&count=40&start=1'
         self.trending_link = 'http://api-v2launch.trakt.tv/movies/trending?limit=40&page=1'
+        self.disney_link  = 'http://www.imdb.com/list/ls000013316/'
+		
+        self.amazon_popular_link = 'http://www.imdb.com/search/title?adult=include&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie'
+        self.amazon_voted_link = 'http://www.imdb.com/search/title?languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=num_votes,desc'
+        self.amazon_rated_link = 'http://www.imdb.com/search/title?languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&sort=user_rating,desc&title_type=feature,tv_movie'
+        self.amazon_all_link = 'http://www.imdb.com/search/title?adult=include&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=alpha,asc'
+	   
+        self.amazon_action_link = 'http://www.imdb.com/search/title?genres=action&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_adventure_link = 'http://www.imdb.com/search/title?genres=adventure&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_animation_link = 'http://www.imdb.com/search/title?genres=animation&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_biography_link = 'http://www.imdb.com/search/title?genres=biography&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_comedy_link = 'http://www.imdb.com/search/title?genres=comedy&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_crime_link = 'http://www.imdb.com/search/title?genres=crime&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_documentary_link = 'http://www.imdb.com/search/title?genres=documentary&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_drama_link = 'http://www.imdb.com/search/title?genres=drama&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_family_link = 'http://www.imdb.com/search/title?genres=family&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_fantasy_link = 'http://www.imdb.com/search/title?genres=fantasy&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_horror_link = 'http://www.imdb.com/search/title?genres=horror&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_music_link = 'http://www.imdb.com/search/title?genres=music&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_mystery_link = 'http://www.imdb.com/search/title?genres=mystery&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_news_link = 'http://www.imdb.com/search/title?genres=news&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_romance_link = 'http://www.imdb.com/search/title?genres=romance&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_scifi_link = 'http://www.imdb.com/search/title?genres=sci-fi&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_sport_link = 'http://www.imdb.com/search/title?genres=sport&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_thriller_link = 'http://www.imdb.com/search/title?genres=thriller&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_war_link = 'http://www.imdb.com/search/title?genres=war&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
+        self.amazon_western_link = 'http://www.imdb.com/search/title?genres=western&languages=en&online_availability=GB/today/Amazon/paid,GB/today/Amazon/subs,GB/today/Amazon/subs&title_type=feature,tv_movie&sort=user_rating,desc'
 
         self.traktlists_link = 'http://api-v2launch.trakt.tv/users/me/lists'
         self.traktlikedlists_link = 'http://api-v2launch.trakt.tv/users/likes/lists?limit=1000000'
@@ -213,7 +240,50 @@ class movies:
         for i in genres: self.list.append({'name': cleangenre.lang(i[0], self.lang), 'url': self.genre_link % i[1], 'image': 'genres.png', 'action': 'movies'})
         self.addDirectory(self.list)
         return self.list
+		
+    def amazon(self):
+        import xbmc
+        genres = [
+        ('All Prime Movies', 'amazon_all'),
+        ('Highest Rated Prime Movies', 'amazon_rated'),
+        ('Most Popular Prime Movies', 'amazon_popular'),
+        ('Most Voted For Prime Movies', 'amazon_voted'),
+        ('Genres', 'GENRES')
+        ]
+		
+        for i in genres:
+			action = 'movies'
+			if 'GENRES' in i[1]:action = 'movieAmazonGenre'
+			self.list.append({'name': cleangenre.lang(i[0], self.lang), 'url': i[1], 'image': 'http://static.apkupdate.com/images/cover/com.amazon.aiv.us.png', 'action': action})
+			xbmc.log(str(self.list))
+        self.addDirectory(self.list)
+        return self.list
 
+    def amazongenres(self):
+        genres = [
+        ('Action', 'amazon_action'),
+        ('Adventure', 'amazon_adventure'),
+        ('Animation', 'amazon_animation'),
+        ('Biography', 'amazon_biography'),
+        ('Comedy', 'amazon_comedy'),
+        ('Crime', 'amazon_crime'),
+        ('Drama', 'amazon_drama'),
+        ('Family', 'amazon_family'),
+        ('Fantasy', 'amazon_fantasy'),
+        ('Horror', 'amazon_horror'),
+        ('Music ', 'amazon_music'),
+        ('Mystery', 'amazon_mystery'),
+        ('Romance', 'amazon_romance'),
+        ('Science Fiction', 'amazon_scifi'),
+        ('Sport', 'amazon_sport'),
+        ('Thriller', 'amazon_thriller'),
+        ('War', 'amazon_war'),
+        ('Western', 'amazon_western')
+        ]
+
+        for i in genres: self.list.append({'name': cleangenre.lang(i[0], self.lang), 'url': i[1], 'image': 'genres.png', 'action': 'movies'})
+        self.addDirectory(self.list)
+        return self.list
 
     def languages(self):
         languages = [
@@ -974,7 +1044,7 @@ class movies:
                 item.addContextMenuItems(cm)
                 item.setProperty('IsPlayable', isPlayable)
                 item.setInfo(type='Video', infoLabels = meta)
-
+                xbmc.log(str(art))
                 control.addItem(handle=syshandle, url=url, listitem=item, isFolder=False)
             except:
                 pass

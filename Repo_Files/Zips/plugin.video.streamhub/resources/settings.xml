@@ -1,20 +1,9 @@
 <settings>
-	<category label="30715">
-		<setting type="lsep" label="TV Guide" />
-		<setting id="livetv" type="select" label="Prefered Live TV View" values="TV Guide|List" default="TV Guide" />
-		<setting type="lsep" label="32504" />
-		<setting label="32505" type="action" option="close" action="RunPlugin(plugin://plugin.video.streamhub/?action=urlresolverSettings)" />
-		<setting type="lsep" label="30718" />
-		<setting label="30719" type="action" action="RunPlugin(plugin://plugin.video.streamhub/?action=clearCache)" />
-	</category>
-
-	<category label="30727">
-		<setting type="lsep" label="USTVnow.com" />
-		<setting id="ustvnow_email" type="text" visible="true" label="30729" default=""/>
-		<setting id="ustvnow_pass" type="text" visible="true" option="hidden" label="30730" default=""/>
-		<setting type="lsep" label="Streamlive.to" />
-		<setting id="streamlive_user" type="text" visible="true" label="30728" default=""/>
-		<setting id="streamlive_pass" type="text" visible="true" option="hidden" label="30730" default=""/>
+	<category label="Clean">
+		<setting type="lsep" label="Clear Addon Cache" />
+		<setting label="Click Here" type="action" action="RunPlugin(plugin://plugin.video.streamhub/?action=clearCache)" />
+		<setting type="lsep" label="Clear Sources Cache" />
+		<setting label="Click Here" type="action" action="RunPlugin(plugin://plugin.video.streamhub/?action=clearSources)" />
 	</category>
 	<category label="32310">
 		<setting id="appearance.alt" type="action" label="32311" default="-" option="close" action="RunPlugin(plugin://plugin.video.streamhub/?action=artwork)" visible="!System.HasAddon(script.streamhub.artwork)" />
@@ -32,6 +21,8 @@
 		<setting id="tv.widget.alt" type="enum" label="32325" lvalues="32302|32326|32327|32328" default="2" visible="!eq(-9,)+eq(-8,1)" />
 		<setting id="tv.widget" type="enum" label="32325" lvalues="32302|32326" default="1" visible="eq(-10,)|eq(-9,0)" />
 		<setting id="lists.widget" type="enum" label="32329" lvalues="32302|32301" default="1" />
+		<setting type="lsep" label="32504" />
+		<setting label="32505" type="action" option="close" action="RunPlugin(plugin://plugin.video.streamhub/?action=urlresolverSettings)" />
 	</category>
 	<category label="32330">
 		<setting id="hosts.mode" type="enum" label="32331" lvalues="32332|32333|32334" default="1" />

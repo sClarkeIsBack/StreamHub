@@ -122,6 +122,25 @@ def googletag(url):
         return [{'quality': 'SD', 'url': url}]
     else:
         return []
+		
+def googletag2(url):
+    quality = re.compile('itag=(\d*)').findall(url)
+    quality += re.compile('=m(\d*)$').findall(url)
+    try: quality = quality[0]
+    except: return []
+
+    if quality in ['37', '137', '299', '96', '248', '303', '46']:
+        return '1080p'
+    elif quality in ['22', '84', '136', '298', '120', '95', '247', '302', '45', '102']:
+        return 'HD'
+    elif quality in ['35', '44', '135', '244', '94']:
+        return 'SD'
+    elif quality in ['18', '34', '43', '82', '100', '101', '134', '243', '93']:
+        return 'SD'
+    elif quality in ['5', '6', '36', '83', '133', '242', '92', '132']:
+        return 'SD'
+    else:
+        return []
 
 
 def googlepass(url):

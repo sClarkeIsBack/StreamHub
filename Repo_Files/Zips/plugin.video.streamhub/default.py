@@ -76,10 +76,12 @@ def setxxxpass():
 				xbmcaddon.Addon('script.module.streamhub').setSetting('xxxpass',pw)
 				xbmcaddon.Addon('script.module.streamhub').setSetting('enablexxxpass','true')
 				xbmcgui.Dialog().ok('[COLOR red]StreamHub[/COLOR]','Password Has Been Set (There Is No Reset Button, So Dont Forget Your Password)')
-				
-if xbmcaddon.Addon('script.module.streamhub').getSetting('freshstart')=='true':
-	xbmcaddon.Addon('script.module.streamhub').setSetting('freshstart','false')
-	setxxxpass()
+try:
+	if xbmcaddon.Addon('script.module.streamhub').getSetting('freshstart')=='true':
+		xbmcaddon.Addon('script.module.streamhub').setSetting('freshstart','false')
+		setxxxpass()
+except:
+	pass
 				
 
 
@@ -322,6 +324,14 @@ elif action == 'moviePerson':
 elif action == 'movieGenres':
     from resources.lib.sindexers import movies
     movies.movies().genres()
+	
+elif action == 'movieAmazon':
+	from resources.lib.sindexers import movies
+	movies.movies().amazon()
+	
+elif action == 'movieAmazonGenre':
+	from resources.lib.sindexers import movies
+	movies.movies().amazongenres()
 
 elif action == 'movieLanguages':
     from resources.lib.sindexers import movies
