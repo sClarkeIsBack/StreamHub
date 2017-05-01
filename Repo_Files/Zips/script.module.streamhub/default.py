@@ -3,7 +3,7 @@ import xbmc,xbmcaddon,xbmcgui,xbmcplugin,xbmcvfs
 from addon.common.addon import Addon
 from addon.common.net import Net
 from resources.modules import control,tvplayer
-from resources.tvguide import gui
+
 
 addon_id   = 'script.module.streamhub'
 selfAddon  = xbmcaddon.Addon(id=addon_id)
@@ -34,8 +34,6 @@ def CAT():
 	addDir('DOCS',docurl+'/watch-online/',35,icon,fanart,'')
 	addDir('24/7 TV',tv,48,icon,fanart,'')
 	addDir('MUSIC',tv,64,icon,fanart,'')
-	addDir('TV GUIDE','url',101,icon,fanart,'')
-	addDir('TV GUIDE','url',102,icon,fanart,'')
 def MovieCAT():
 	addDir('RECENT MOVIES',putlockerhd+'/recent_movies',19,icon,fanart,'')
 	addDir('COMEDY MOVIES',putlockerhd+'/comedy_movies',19,icon,fanart,'')
@@ -63,7 +61,12 @@ def TVREQUESTCAT():
 def FAMILYCAT():
 	addDir('Disney Movies','url',58,icon,fanart,'')
 	addDir('Family Cartoons',kidsurl,51,icon,fanart,'')
-	addDir('Family Movies','http://pubfilmonline.net/genre/family/',54,icon,fanart,'')
+	addDir('Family Movies','http://kisscartoon.so/cartoon-movies/',77,icon,fanart,'')
+	
+def FAMILYMOVIESCAT():
+	addDir('All','http://kisscartoon.so/cartoon-movies/',74,icon,fanart,'')
+	addDir('By Year','http://kisscartoon.so/cartoon-movies/',78,icon,fanart,'')
+	addDir('By Genre','http://kisscartoon.so/cartoon-movies/',76,icon,fanart,'')
 
 def MUSICCAT():
 	addDir('Top Music','http://',68,icon,fanart,'')
@@ -127,7 +130,7 @@ def addDir(name,url,mode,iconimage,fanart,description):
 	liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
 	liz.setInfo( type="Video", infoLabels={"Title": name,"Plot":description})
 	liz.setProperty('fanart_image', fanart)
-	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==62 or mode==999:
+	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==62 or mode ==75 or mode==999:
 		liz.setProperty("IsPlayable","true")
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
 	elif mode==73:
@@ -597,32 +600,6 @@ def toongetresolve(name,url):
         xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
     except:pass
 	
-	
-def openloadmovieslist(url):
-	open =OPEN_URL(url)
-	xbmc.log(str(open))
-	all  = regex_get_all(open,'<article id','</article>')
-	for a in all:
-		name = regex_from_to(a,'alt="','"')
-		url  = regex_from_to(a,'<a href="','"')
-		thumb= regex_from_to(a,'<img src="','"')
-		addDir(str(name).replace('#038;','').replace('&#8217;',"'"),url,55,thumb,fanart,'')
-	try:
-		np = re.compile(">[0-9]</span><a href='(.*?)'",re.DOTALL).findall(open)
-		addDir('[COLOR red]NEXT PAGE>[/COLOR]',str(np).replace("['","").replace("']",""),54,icon,fanart,'')
-	except:
-		pass
-		
-def openloadmoviesresolve(url):
-	open = OPEN_URL(url)
-	url  = regex_from_to(open,'"file":"','"')
-	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
-	liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
-	liz.setProperty('IsPlayable','true')
-	liz.setPath(str(url).replace('\/','/'))
-	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
-	
-		
 def disneymovies(url):
 	open = OPEN_URL(url)
 	a    = regex_from_to(open,'<br /></div>','<center>')
@@ -958,20 +935,89 @@ def UKNowMusic2(url,description):
 		
 		
 		
+def kisscartoonindex(url):
+	open = OPEN_URL(url)
+	all  = regex_get_all(open,'<article id="post','</article>')
+	for a in all:
+		name = regex_from_to(a,'class="dt-movies"></i>','<').replace('&#8217;',"'")
+		url  = regex_from_to(a,'a href="','"')
+		xbmc.log(str(url))
+		icon = regex_from_to(a,'img src="','"')
+		qual = regex_from_to(a,'quality">','<')
+		rat  = regex_from_to(a,'span class="icon-star2"></span>','<')
+		addDir('%s  [COLOR red]%s[/COLOR]'%(name,qual),url,75,icon,fanart,'')
 		
-		
-		
-
-if xbmc.getCondVisibility('System.HasAddon(plugin.video.exodus'):
 	try:
-		targetfolder = xbmc.translatePath('special://home/addons/plugin.video.exodus/resources/lib/modules/')
-		targetfile = open(os.path.join(targetfolder, 'sources.py'))
-		targetread = targetfile.read()
-		targetclose = targetfile.close()
-		if 'mkodi' in targetread:
-			replacemalicious()
+		np = regex_from_to(open,'<link rel="next" href="','"')
+		addDir('[COLOR red]NEXT PAGE>[/COLOR]',np,74,icon,fanart,'')
 	except:
 		pass
+		
+def kisscartoongenre(url):
+	open = OPEN_URL(url)
+	part  = regex_from_to(open,'<h2>Genres</h2>','</i></li></ul>')
+	all   = regex_get_all(part,'<li class="','</i></li>')
+	for a in all:
+		url  = regex_from_to(a,'href="','"')
+		name = regex_from_to(a,'/">','<').replace('&amp;','&')
+		vids = regex_from_to(a,'<i>','<')
+		if not vids == '0':
+			addDir(name + '    [COLOR red](%s Videos)[/COLOR]'%vids,url,74,icon,fanart,'')
+			
+def kisscartoonyear(url):
+	open = OPEN_URL(url)
+	xbmc.log(str(open))
+	part  = regex_from_to(open,'<h2>Release Year</h2>','</ul></div></div></div>')
+	xbmc.log(str(part))
+	all   = regex_get_all(part,'<li><a','</li>')
+	for a in all:
+		url  = regex_from_to(a,'href="','"')
+		name = regex_from_to(a,'/">','<')
+		if not '20082010' in name:
+			addDir(name,url,74,icon,fanart,'')
+
+		
+def kisscartoonresolve(url):
+	open   = OPEN_URL(url)
+	iframe = regex_from_to(open,'metaframe rptss" src="','"')
+	#xbmc.log(str(iframe))
+	open   = OPEN_URL(iframe)
+	all    = regex_get_all(open,'data-src','</span>')
+	stream_url = []
+	res_server = []
+	for a in all:
+		url  = regex_from_to(a,'="','&movie_img')
+		if url == "":
+			url = regex_from_to(a,'="','"')
+		server= regex_from_to(a,'<span>','</span>')
+		res_server.append(server)
+		stream_url.append(url)
+		xbmc.log(str(stream_url))
+	if len(all) >1:
+		ret = xbmcgui.Dialog().select('Select a Server',res_server)
+		if ret == -1:
+			return
+		elif ret > -1:
+			url = stream_url[ret]
+	
+	if not 'openload' in url:
+		open = OPEN_URL(url)
+		url  = regex_from_to(open,'file":"','"').replace('\/','/')
+	else:
+		url = urlresolver.HostedMediaFile(url).resolve()
+		
+	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=iconimage)
+	liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
+	liz.setProperty('IsPlayable','true')
+	liz.setPath(str(url))
+	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+	
+
+				
+	#	if not 'openload' in url:
+		#	open = OPEN_URL(url)
+	#		url  = regex_from_to(open,'file":"','"')
+		
 
 params=get_params()
 url=None
@@ -1121,12 +1167,6 @@ elif mode==52:
 	
 elif mode==53:
 	toongetresolve(name,url)
-	
-elif mode==54:
-	openloadmovieslist(url)
-	
-elif mode==55:
-	openloadmoviesresolve(url)
 
 elif mode==56:
 	FAMILYCAT()
@@ -1181,25 +1221,27 @@ elif mode==72:
 	
 elif mode==73:
 	xbmc.executebuiltin('XBMC.RunScript(script.module.streamhub)')
+	
+elif mode==74:
+	kisscartoonindex(url)
+	
+elif mode==75:
+	kisscartoonresolve(url)
 
+elif mode==76:
+	kisscartoongenre(url)
+	
+elif mode==77:
+	FAMILYMOVIESCAT()
+	
+elif mode==78:
+	kisscartoonyear(url)
+	 
 elif mode==98:
 	xxxstars(url)
 	
 elif mode==100:
 	MovieCAT()
-	
-elif mode==101:
-	xbmc.executebuiltin( "Dialog.Close(busydialog)" )
-	if xbmcaddon.Addon('plugin.video.streamhub').getSetting('livetv')=='TV Guide':
-		try:
-			w = gui.TVGuide()
-			w.doModal()
-			del w
-
-		except Exception:
-			xbmc.log('oops')
-	else:
-		xbmc.executebuiltin('ActivateWindow(10025,plugin://plugin.video.streamhub/?action=directory&content=addons&url=https%3a%2f%2fraw.githubusercontent.com%2fsClarkeIsBack%2fStreamHub%2fmaster%2fLinks%2fLiveTv%2fukent.xml)')
 	
 elif mode==999:
 	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
