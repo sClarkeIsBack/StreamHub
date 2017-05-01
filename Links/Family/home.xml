@@ -28,3 +28,8 @@
 <link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/VOD/soaps.XML</link>
 <thumbnail>https://upload.wikimedia.org/wikipedia/en/a/ac/EastEnders_Title.png</thumbnail>
 </dir>
+
+<plugin>
+<name>PG Rated Movies</name>
+<link>plugin://plugin.video.streamhub/?action=movieAmazon</link>
+</plugin>
