@@ -5,7 +5,7 @@
 
 <plugin>
 <name>Cartoon Movies</name>
-<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=77&name=Family%20Movies&url=http%3a%2f%2fkisscartoon.so%2fcartoon-movies%2f</link>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=74&name=All&url=http%3a%2f%2fkisscartoon.so%2fcartoon-movies%2f</link>
 </plugin>
 
 <plugin>
