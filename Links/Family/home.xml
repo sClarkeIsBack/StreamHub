@@ -4,6 +4,11 @@
 </plugin>
 
 <plugin>
+<name>Cartoon Movies</name>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=77&name=Family%20Movies&url=http%3a%2f%2fkisscartoon.so%2fcartoon-movies%2f</link>
+</plugin>
+
+<plugin>
 <name>Comedy Movies</name>
 <link>plugin://plugin.video.streamhub/?action=movies&url=http%3a%2f%2fwww.imdb.com%2fsearch%2ftitle%3ftitle_type%3dfeature%2ctv_movie%26languages%3den%26num_votes%3d100%2c%26release_date%3ddate%5b730%5d%2cdate%5b30%5d%26genres%3dcomedy%26sort%3dmoviemeter%2casc%26count%3d40%26start%3d1</link>
 </plugin>
