@@ -71,9 +71,9 @@
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/XXX.png</thumbnail>
 </plugin>
 
-<dir>
+<plugin>
 <title>[COLOR red][B]Created by sClarke[/B][/COLOR]</title>
-<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/sClarkeAddons.xml</link>
+<link>plugin://</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/png</thumbnail>
-</dir>
+</plugin>
 
