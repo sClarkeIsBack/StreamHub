@@ -16,14 +16,15 @@
 <thumbnail>https://s3.amazonaws.com/seat42faws1/wp-content/uploads/2015/08/11083728/The-Blacklist-Season-3-Poster.jpg</thumbnail>
 </plugin>
 
+
+<plugin>
+<title>The 100</title>
+<link>plugin://plugin.video.streamhub/?action=seasons&imdb=tt2661044&tvdb=268592&tvshowtitle=The%20100&year=2014</link>
+<thumbnail>http://www.thefandom.net/wp-content/uploads/2017/01/rs_683x1024-170122161628-1024x683.the-100-poster-season-4-lp.12217.jpg</thumbnail>
+</plugin>
+
 <plugin>
 <title>Prison Break</title>
 <link>plugin://plugin.video.streamhub/?action=seasons&imdb=tt0455275&tvdb=75340&tvshowtitle=Prison%20Break&year=2005</link>
 <thumbnail>http://www.gstatic.com/tv/thumb/tvbanners/12900907/p12900907_b_v8_aa.jpg</thumbnail>
 </plugin>
-
-
-
-
-
-
