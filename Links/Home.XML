@@ -83,3 +83,21 @@
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/png</thumbnail>
 </plugin>
 
+  
+<item>
+<title>Prison Break Live!</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLS&url=http://144.217.68.106/live/Hdl2CwyEXzNs8nboFb3nSw/1494388626/c2f52b70c2324ba134b2cba2962bedae.m3u8</link>
+<thumbnail>ttps:/images-na.ssl-images-amazon.com/images/M/MV5BMjMxODI2NDM5Nl5BMl5BanBnXkFtZTgwNjgzOTk1MTI@._V1_SY1000_CR0,0,631,1000_AL_.jpg</thumbnail>
+</item>
+
+<item>
+<title>Prison Break Live!</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLS&url=http://144.217.68.106/live/Hdl2CwyEXzNs8nboFb3nSw/1494388626/c2f52b70c2324ba134b2cba2962bedae.m3u8</link>
+<thumbnail>ttps:/images-na.ssl-images-amazon.com/images/M/MV5BMjMxODI2NDM5Nl5BMl5BanBnXkFtZTgwNjgzOTk1MTI@._V1_SY1000_CR0,0,631,1000_AL_.jpg</thumbnail>
+</item>
+
+<plugin>
+<title>Prison Break Live!</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLS&url=http://144.217.68.106/live/Hdl2CwyEXzNs8nboFb3nSw/1494388626/c2f52b70c2324ba134b2cba2962bedae.m3u8</link>
+<thumbnail>ttps:/images-na.ssl-images-amazon.com/images/M/MV5BMjMxODI2NDM5Nl5BMl5BanBnXkFtZTgwNjgzOTk1MTI@._V1_SY1000_CR0,0,631,1000_AL_.jpg</thumbnail>
+</plugin>
