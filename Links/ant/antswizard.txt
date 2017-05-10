@@ -35,5 +35,12 @@ theme="http://"
 icon="http://vignette4.wikia.nocookie.net/helmet-heroes/images/f/f9/Red_Wizard_Hat.png/revision/latest?cb=20131008025650" #build icon
 fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
-
+name="- LIMITLESSIPTV1.0" #name of build
+version="1.0" #version of build - change this when you update and users will auto get the latest update.
+url="https://archive.org/download/limitlessbuildv1.0/limitlessbuildv1.0.zip" #url of build
+gui="http://"
+kodi="16.1"
+theme="http://"
+icon="http://vignette4.wikia.nocookie.net/helmet-heroes/images/f/f9/Red_Wizard_Hat.png/revision/latest?cb=20131008025650" #build icon
+fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
