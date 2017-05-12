@@ -4,4 +4,409 @@
 <thumbnail>https://assets.tvplayer.com/tvos/images/csng</thumbnail>
 </plugin>
 
+<item>
+<title>[COLOR white]     BBC One[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://uktv.robssatellitetv.com/watch-uk-tv-online/bbcone</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     BBC One[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>https://tvcatchup.com/watch/bbcone</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     BBC One[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://vs-hls-uk-live.akamaized.net/pool_30/live/bbc_one_hd/bbc_one_hd.isml/bbc_one_hd-pa4%3d128000-video%3d5070016.m3u8</link>
+<thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     BBC One Wales[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_wales_hd.m3u8</link>
+<thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     BBC One North Ireland[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_northern_ireland_hd.m3u8</link>
+<thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     BBC One Scotland[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_scotland_hd.m3u8</link>
+<thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
+</item>
+
+
+
+<item>
+<title>[COLOR white]     BBC Two[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://uktv.robssatellitetv.com/watch-uk-tv-online/bbctwo</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/bbctwo.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     BBC Two[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>https://tvcatchup.com/watch/bbctwo</sublink>
+</link>
+<thumbnail>http://www.liveonlinetv247.info/images/bbctwo.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     BBC Two[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_two_hd.m3u8</link>
+<thumbnail>http://www.liveonlinetv247.info/images/bbctwo.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     ITV 1[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://uktv.robssatellitetv.com/watch-uk-tv-online/itv</sublink>
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV 1[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>https://tvcatchup.com/watch/itv</sublink>
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV 1[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://itv1liveios-i.akamaihd.net/hls/live/203437/itvlive/ITV1MN/master_Main1800.m3u8</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Channel 4[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://uktv.robssatellitetv.com/watch-uk-tv-online/channel4</sublink>
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/channel4_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Channel 4[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>https://tvcatchup.com/watch/channel4</sublink>
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/channel4_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Channel 4[COLOR lime]   HD[/COLOR]</title>
+<link>http://tvplayer.com/watch/channel4</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/channel4_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Channel 4 + 1[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://uktv.robssatellitetv.com/watch-uk-tv-online/channel4plus1</sublink>
+</link>
+<thumbnail>http://uktv.robssatellitetv.com/images/channels/channel4plus1.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Channel 5[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://uktv.robssatellitetv.com/watch-uk-tv-online/channel5</sublink>
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/channel_5_uk.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     Channel 5[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://streams.yo.tv/srv1/ngrp:4.stream_all/playlist.m3u8?DVR</sublink>
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/channel_5_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Channel 5[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>https://tvcatchup.com/watch/five</sublink>
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/channel_5_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Channel 5 + 1[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://uktv.robssatellitetv.com/images/channels/channel5plus1.png</sublink>
+</link>
+<thumbnail>http://uktv.robssatellitetv.com/images/channels/channel5plus1.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Blaze[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/blaze</link>
+<thumbnail>http://my.tvguide.co.uk/channel_logos/1013.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     Challenge[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/challenge</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk_be.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     CBS Action[COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/cbsaction</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/cbs_action_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     CBS Drama[COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/cbsdrama</link>
+<thumbnail>http://uktv.robssatellitetv.com/images/channels/cbsdrama.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     CBS Reality[COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/cbsreality</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/cc/cbs_reality_uk.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     Dave[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://tvplayer.com/watch/dave</link>
+<thumbnail>https://assets.tvplayer.com/tvos/images/channels/300.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Drama[COLOR lime]   HD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/drama</link>
+<thumbnail>https://assets.tvplayer.com/tvos/images/channels/346.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     E4[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/e4</link>
+<thumbnail>http://my.tvguide.co.uk/channel_logos/139.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     E4 + 1[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/images/channels/e4plus1.png</link>
+<thumbnail>http://my.tvguide.co.uk/channel_logos/139.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     Film 4[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/film4</link>
+<thumbnail>http://my.tvguide.co.uk/channel_logos/145.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     Food Network[COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/foodnetwork</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ff/food_network_uk.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     Home[COLOR lime]   HD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/home</link>
+<thumbnail>https://assets.tvplayer.com/tvos/images/channels/512.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Home + 1[COLOR lime]   HD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/homeplus1</link>
+<thumbnail>https://assets.tvplayer.com/tvos/images/channels/512.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Horror Channel[COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/horrorchannel</link>
+<thumbnail>http://my.tvguide.co.uk/channel_logos/425.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV 2[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/itv2
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv2.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV 2[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://itv2liveios-i.akamaihd.net/hls/live/203495/itvlive/ITV2MN/master_Main1800.m3u8
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv2.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV 2 + 1[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/itv2plus1
+</link>
+<thumbnail>http://uktv.robssatellitetv.com/images/channels/itv2plus1.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     ITV 3[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/itv3</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv3.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     ITV 3[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://itv3liveios-i.akamaihd.net/hls/live/207262/itvlive/ITV3MN/master_Main1800.m3u8</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv3.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV 3 + 1[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/itv3plus1</link>
+<thumbnail>http://uktv.robssatellitetv.com/images/channels/itv3plus1.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     ITV 4[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/itv4</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv4.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV 4[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://itv4liveios-i.akamaihd.net/hls/live/207266/itvlive/ITV4MN/master_Main1800.m3u8</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv4.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV 4 + 1[/COLOR][COLOR red]   HD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/itv4plus1</link>
+<thumbnail>http://uktv.robssatellitetv.com/images/channels/itv4plus1.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     ITV Be[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://itvbeliveios-i.akamaihd.net/hls/live/219078/itvlive/ITVBE/master_Main1800.m3u8</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk_be.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     London Live[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>http://bcoveliveios-i.akamaihd.net/hls/live/217434/3083279840001/master_900.m3u8</sublink>
+</link>
+<thumbnail>http://thecamdenstudio.com/wp-content/uploads/2014/04/0_0_618_http-offlinehbpl.hbpl_.co_.uk-News-OMC-LondonLiveWeb-20131023010320820.jpg</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]     More 4[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/more4</link>
+<thumbnail>http://my.tvguide.co.uk/channel_logos/361.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     More 4 + 1[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/more4plus1</link>
+<thumbnail>http://uktv.robssatellitetv.com/images/channels/more4plus1.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     My 5[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/my5</link>
+<thumbnail>http://my.tvguide.co.uk/channel_logos/752.png</thumbnail>
+</item>
+
+
+
+<item>
+<title>[COLOR white]     Pick[COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/pick</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/pp/pick_tv_uk.png</thumbnail>
+</item>
+
+
+
+<item>
+<title>[COLOR white]     Really[COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/really</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/rr/really_uktv.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Sony Movie Channel[COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/sonymoviechannel</link>
+<thumbnail>http://my.tvguide.co.uk/channel_logos/742.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Spike[COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/spike</link>
+<thumbnail>https://lh6.googleusercontent.com/-O2_E5wwCbPk/AAAAAAAAAAI/AAAAAAAAAIM/q9xqG6yaOlw/photo.jpg</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Travel Channel[COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/travelchannelplus1</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/tt/travel_channel_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Tru TV[COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/trutv</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/tt/tru_tv_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Yesterday[COLOR lime]   HD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/yesterday</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/yy/yesterday_uktv.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Yesterday + 1[COLOR lime]   HD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/yesterdayplus1</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/yy/yesterday_uktv.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Your Tv[COLOR lime]   HD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/yourtv</link>
+<thumbnail>http://my.tvguide.co.uk/channel_logos/991.png</thumbnail>
+</item>
+
+
+
+
+<item>
+<title>[COLOR white]     4 Seven[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/4seven</link>
+<thumbnail>http://my.tvguide.co.uk/channel_logos/752.png</thumbnail>
+</item>
+
+
+
+
 
