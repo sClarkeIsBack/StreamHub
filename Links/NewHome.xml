@@ -1,0 +1,53 @@
+
+<plugin>
+<title>[COLOR red][B]StreamHub[/COLOR][/B]</title>
+<link>hh</link>
+<thumbnail>http://thumbnail>
+</plugin>
+
+
+<plugin>
+<title>[COLOR white][B][/COLOR][/B]</title>
+<link>hh</link>
+<thumbnail>http://thumbnail>
+</plugin>
+
+
+<dir>
+<name>[COLOR red][B]L[/COLOR][COLOR white]ive Tv[/COLOR][/B]</name>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/LiveTv/ukent.xml</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/LiveTV.png</thumbnail>
+</dir>
+
+<dir>
+<name>[COLOR red][B]F[/COLOR][COLOR white]amily Corner[/COLOR][/B]</name>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Family/home.xml</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/kid.png</thumbnail>
+</dir>
+
+<plugin>
+<name>[COLOR red][B]M[/COLOR][COLOR white]usic[/COLOR][/B]</name>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=64&name=MUSIC&url=https%3a%2f%2fraw.githubusercontent.com%2fsClarkeIsBack%2fStreamHub%2fmaster%2fLinks%2f247%2f247tv.xml</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/Radio.png</thumbnail>
+</plugin>
+
+
+<plugin>
+<name>[COLOR red][B]D[/COLOR][COLOR white]ocumentary's[/COLOR][/B]</name>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=35&name=DOCS&url=http%3a%2f%2fdocumentaryheaven.com%2fwatch-online%2f</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/doc.png</thumbnail>
+</plugin>
+
+<plugin>
+<name>[COLOR red][B]24[/COLOR][COLOR white]/7 TV[/COLOR][/B]</name>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=48&name=24%2f7%20TV&url=https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/247/247tv.xml</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/doc.png</thumbnail>
+</plugin>
+
+
+<plugin>
+<title>[COLOR red][B]X[/COLOR][COLOR white]XX[/B][/COLOR]</title>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=99&name=%5bCOLOR%20orange%5dG%5b%2fCOLOR%5d%5bCOLOR%20white%5denre%27s%5b%2fCOLOR%5d&url=http%3a%2f%2fwww.xvideos.com%2ftags</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/XXX.png</thumbnail>
+</plugin>
+
