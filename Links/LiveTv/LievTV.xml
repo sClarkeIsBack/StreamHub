@@ -5,6 +5,12 @@
 </plugin>
 
 <item>
+  <title>hello</title>
+  <link>hello</link>
+  <thumbnail>ggr</thumbnail>
+</item>
+
+<item>
 <title>     BBC One   SD</title>
 <link>
 <sublink>http://uktv.robssatellitetv.com/watch-uk-tv-online/bbcone</sublink>
