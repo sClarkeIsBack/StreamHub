@@ -13,11 +13,11 @@
 </plugin>
 
 
-<item>
+<dir>
 <name>[COLOR red][B]L[/COLOR][COLOR white]ive Tv[/COLOR][/B]</name>
 <link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/LiveTv/LievTV.xml</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/LiveTV.png</thumbnail>
-</item>
+</dir>
 
 <dir>
 <name>[COLOR red][B]F[/COLOR][COLOR white]amily Corner[/COLOR][/B]</name>
