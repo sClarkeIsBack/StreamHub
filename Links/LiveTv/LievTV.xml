@@ -1,12 +1,7 @@
-<dir>
-<title>UK Geo Locked</title>
-<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/LiveTv/ukent.xml</link>
-<thumbnail>https://assets.tvplayer.com/tvos/images/cs/300.png</thumbnail>
-</dir>
+<plugin>
+<title>Channels Marked With [COLOR blue]I[/COLOR][COLOR red]P[/COLOR] Require a UK IP Address</title>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/Streamster/Links/LiveTv/ukent.xml</link>
+<thumbnail>https://assets.tvplayer.com/tvos/images/csng</thumbnail>
+</plugin>
 
 
-<dir>
-<title>None Geo Locked</title>
-<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/LiveTv/NoneUKGEO.xml</link>
-<thumbnail>http://www.lyngsat-logo.com/hires/iv2.png</thumbnail>
-</dir>
