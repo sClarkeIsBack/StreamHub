@@ -3,6 +3,20 @@
   <icon>ada</icon>
 </plugin>
 
+<item>
+<title>American Dad</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0397306</imdb>
+<tvdb>73141</tvdb>
+<tvshowtitle>American Dad</tvshowtitle>
+<year>2005</year>
+</meta>
+<link>http://opentuner.is/american-dad-2005/</link>
+<thumbnail>https://fanart.tv/fanart/tv/73141/clearart/A_73141%20(1).png</thumbnail>
+</item>
+
+
 
 <item>
 <name>[COLOR white]     BBC One   SD[/COLOR]</name>
