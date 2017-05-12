@@ -19,27 +19,27 @@
 </item>
 
 <item>
-<title>[COLOR white]     BBC One[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<title>[COLOR white]     BBC One[/COLOR][COLOR lime]   HD[/COLOR]  [COLOR blue]I[/COLOR][COLOR red]P[/COLOR]</title>
 <link>http://vs-hls-uk-live.akamaized.net/pool_30/live/bbc_one_hd/bbc_one_hd.isml/bbc_one_hd-pa4%3d128000-video%3d5070016.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     BBC One Wales[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<title>[COLOR white]     BBC One Wales[/COLOR][COLOR lime]   HD[/COLOR]  [COLOR blue]I[/COLOR][COLOR red]P[/COLOR]</title>
 <link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_wales_hd.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
 
 <item>
-<title>[COLOR white]     BBC One North Ireland[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<title>[COLOR white]     BBC One North Ireland[/COLOR][COLOR lime]   HD[/COLOR]  [COLOR blue]I[/COLOR][COLOR red]P[/COLOR]</title>
 <link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_northern_ireland_hd.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
 
 <item>
-<title>[COLOR white]     BBC One Scotland[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<title>[COLOR white]     BBC One Scotland[/COLOR][COLOR lime]   HD[/COLOR]  [COLOR blue]I[/COLOR][COLOR red]P[/COLOR]</title>
 <link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_scotland_hd.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
@@ -63,7 +63,7 @@
 </item>
 
 <item>
-<title>[COLOR white]     BBC Two[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<title>[COLOR white]     BBC Two[/COLOR][COLOR lime]   HD[/COLOR]  [COLOR blue]I[/COLOR][COLOR red]P[/COLOR]</title>
 <link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_two_hd.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbctwo.png</thumbnail>
 </item>
@@ -86,7 +86,7 @@
 </item>
 
 <item>
-<title>[COLOR white]     ITV 1[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<title>[COLOR white]     ITV 1[/COLOR][COLOR lime]   HD[/COLOR]  [COLOR blue]I[/COLOR][COLOR red]P[/COLOR]</title>
 <link>http://itv1liveios-i.akamaihd.net/hls/live/203437/itvlive/ITV1MN/master_Main1800.m3u8</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk.png</thumbnail>
 </item>
@@ -108,7 +108,7 @@
 </item>
 
 <item>
-<title>[COLOR white]     Channel 4[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<title>[COLOR white]     Channel 4[/COLOR][COLOR lime]   HD[/COLOR]  [COLOR blue]I[/COLOR][COLOR red]P[/COLOR]</title>
 <link>http://tvplayer.com/watch/channel4</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/cc/channel4_uk.png</thumbnail>
 </item>
@@ -171,7 +171,7 @@
 
 
 <item>
-<title>[COLOR white]     Dave[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<title>[COLOR white]     Dave[/COLOR][COLOR lime]   HD[/COLOR]  [COLOR blue]I[/COLOR][COLOR red]P[/COLOR]</title>
 <link>http://tvplayer.com/watch/dave</link>
 <thumbnail>https://assets.tvplayer.com/tvos/images/channels/300.png</thumbnail>
 </item>
@@ -235,7 +235,7 @@
 </item>
 
 <item>
-<title>[COLOR white]     ITV 2[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<title>[COLOR white]     ITV 2[/COLOR][COLOR lime]   HD[/COLOR]  [COLOR blue]I[/COLOR][COLOR red]P[/COLOR]</title>
 <link>http://itv2liveios-i.akamaihd.net/hls/live/203495/itvlive/ITV2MN/master_Main1800.m3u8
 </link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv2.png</thumbnail>
@@ -257,7 +257,7 @@
 
 
 <item>
-<title>[COLOR white]     ITV 3[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<title>[COLOR white]     ITV 3[/COLOR][COLOR lime]   HD[/COLOR]  [COLOR blue]I[/COLOR][COLOR red]P[/COLOR]</title>
 <link>http://itv3liveios-i.akamaihd.net/hls/live/207262/itvlive/ITV3MN/master_Main1800.m3u8</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv3.png</thumbnail>
 </item>
@@ -276,7 +276,7 @@
 </item>
 
 <item>
-<title>[COLOR white]     ITV 4[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<title>[COLOR white]     ITV 4[/COLOR][COLOR lime]   HD[/COLOR]  [COLOR blue]I[/COLOR][COLOR red]P[/COLOR]</title>
 <link>http://itv4liveios-i.akamaihd.net/hls/live/207266/itvlive/ITV4MN/master_Main1800.m3u8</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv4.png</thumbnail>
 </item>
@@ -288,7 +288,7 @@
 </item>
 
 <item>
-<title>[COLOR white]     ITV Be[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<title>[COLOR white]     ITV Be[/COLOR][COLOR lime]   HD[/COLOR]  [COLOR blue]I[/COLOR][COLOR red]P[/COLOR]</title>
 <link>http://itvbeliveios-i.akamaihd.net/hls/live/219078/itvlive/ITVBE/master_Main1800.m3u8</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk_be.png</thumbnail>
 </item>
