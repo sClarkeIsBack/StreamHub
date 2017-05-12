@@ -51,3 +51,9 @@
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/XXX.png</thumbnail>
 </plugin>
 
+
+<plugin>
+<name>[COLOR red][B]D[/COLOR][COLOR white]ocumentary's[/COLOR][/B]</name>
+<link>plugin://plugin.video.streamhub/?action=movies</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/doc.png</thumbnail>
+</plugin>
