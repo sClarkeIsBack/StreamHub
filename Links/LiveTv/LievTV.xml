@@ -1,5 +1,5 @@
 <plugin>
-  <title>[B]Channels Marked[/B] [COLOR blue]IP[/COLOR][B] Require a UK IP Address[/B]</title>
+  <title>[COLOR white][B]Channels Marked[/B][/COLOR] [COLOR blue]IP[/COLOR][COLOR white][B] Require a UK IP Address[/B][/COLOR]</title>
   <icon>ada</icon>
 </plugin>
 
@@ -19,7 +19,7 @@
 </item>
 
 <item>
-<title>     [COLOR blue]IP[/COLOR] | [COLOR white]BBC One   HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]   | [COLOR white]BBC One   HD[/COLOR]</title>
 <link>http://vs-hls-uk-live.akamaized.net/pool_30/live/bbc_one_hd/bbc_one_hd.isml/bbc_one_hd-pa4%3d128000-video%3d5070016.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
