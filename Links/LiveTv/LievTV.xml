@@ -1,15 +1,6 @@
-
-<item>
-  <title>hello</title>
-  <link>hello</link>
-  <thumbnail>ggr</thumbnail>
-</item>
-
 <item>
 <title>     BBC One   SD</title>
-<link>
-<sublink>http://uktv.robssatellitetv.com/watch-uk-tv-online/bbcone</sublink>
-</link>
+<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/bbcone</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
