@@ -1,9 +1,6 @@
 <item>
 <name>     BBC One   SD</name>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/bbcone</link>
-<regex>
-  <name>dir</name>
-</regex>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
