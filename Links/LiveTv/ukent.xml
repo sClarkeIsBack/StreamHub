@@ -10,9 +10,9 @@
 <thumbnail>http://</thumbnail>
 </plugin>
 <item>
-<title>[COLOR white]     BBC One[COLOR red]   SD[/COLOR]</title>
+<title>[COLOR white]     BBC One[COLOR red]   SD TEST[/COLOR]</title>
 <link>
-<sublink>http://www.filmon.com/channel/bbc-one</sublink>
+<sublink>https://tvcatchup.com/watch/bbcone</sublink>
 </link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
