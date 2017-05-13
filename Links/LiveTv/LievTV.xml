@@ -348,6 +348,18 @@
 <thumbnail>http://my.tvguide.co.uk/channel_logos/752.png</thumbnail>
 </item>
 
+<item>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Alba   [/COLOR][COLOR red]SD[/COLOR]</title>
+<link>http://vs-hls-uk-live.akamaized.net/pool_1/live/bbc_alba/bbc_alba.isml/bbc_alba-pa3=96000-video=1604032.norewind.m3u8</link>
+<thumbnail>https://upload.wikimedia.org/wikipedia/en/thumb/a/a5/BBC_Alba.svg/1280px-BBC_Alba.svg.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]S4C   [/COLOR][COLOR red]SD[/COLOR]</title>
+<link>http://vs-hls-uk-live.akamaized.net/pool_9/live/s4cpbs/s4cpbs.isml/s4cpbs-pa3=96000-video=1604032.norewind.m3u8</link>
+<thumbnail>https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/S4C_logo_2014.svg/200px-S4C_logo_2014.svg.png</thumbnail>
+</item>
+
 
 
 
@@ -646,6 +658,16 @@ https://tvplayer.com/watch/nowthatswhaticallmusic
 </link>
 <thumbnail>http://www.userlogos.org/files/logos/macleod.mac/bbcnews.1.o.png</thumbnail>
 </item>
+
+<item>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]BBC Parlimant[/COLOR][COLOR lime]   [/COLOR][COLOR red]SD[/COLOR]</title>
+<link>
+<sublink>http://vs-hls-uk-live.akamaized.net/pool_1/live/bbc_parliament/bbc_parliament.isml/bbc_parliament-pa3=96000-video=1604032.norewind.m3u8</sublink>
+</link>
+<thumbnail>http://www.userlogos.org/files/logos/macleod.mac/bbcnews.1.o.png</thumbnail>
+</item>
+
+
 
 <item>
 <title>[COLOR white]     Sky News[/COLOR][COLOR lime]   [/COLOR][COLOR lime]HD[/COLOR]</title>
