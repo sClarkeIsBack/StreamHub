@@ -5,5 +5,5 @@
 
 <plugin>
   <title>Disney Movies</title>
-  <link>plugin://script.module.streamhub/?mode=58</link>
+  <link>plugin://script.module.streamhub/?mode=58&url=http://www.freecartoonszone.info/p/list-of-disney-movies-z.html</link>
 </plugin>
