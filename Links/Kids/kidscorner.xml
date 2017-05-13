@@ -13,3 +13,10 @@
   <title>Disney Movies</title>
   <link>plugin://script.module.streamhub/?mode=58&url=http://www.freecartoonszone.info/p/list-of-disney-movies-z.html</link>
 </plugin>
+
+<dir>
+  <title>Youtube Gaming</title>
+  <link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Kids/Minecraft.xml</link>
+</dir>
+
+
