@@ -1,31 +1,31 @@
 <dir>
-  <title>Most Popular Kids Shows</title>
+  <title>[COLOR white]Most Popular Kids Shows[/COLOR]</title>
   <link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Kids/kispopular.xml</link>
 </dir>
 
 <plugin>
-  <title>The Big Cartoon List</title>
+  <title>[COLOR white]The Big Cartoon List[/COLOR]</title>
   <link>plugin://script.module.streamhub/?mode=51&url=http://www.toonget.net/cartoon</link>
 </plugin>
 
 
 <plugin>
-  <title>Animation Movies</title>
+  <title>[COLOR white]Animation Movies[/COLOR]</title>
   <link>plugin://plugin.video.torba/?description&iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.video.torba%5cicon.png&mode=3&name=%5bB%5d%5bCOLOR%20white%5dAnimation%5b%2fCOLOR%5d%5b%2fB%5d&url=https%3a%2f%2ftorba.se%2fsearch%3forder%3dviews%26genre%3dAnimation</link>
 </plugin>
 
 <plugin>
-  <title>Disney Movies</title>
+  <title>[COLOR white]Disney Movies[/COLOR]</title>
   <link>plugin://script.module.streamhub/?mode=58&url=http://www.freecartoonszone.info/p/list-of-disney-movies-z.html</link>
 </plugin>
 
 <plugin>
-  <title>Family Movies</title>
+  <title>[COLOR white]Family Movies[/COLOR]</title>
   <link>plugin://plugin.video.torba/?description&iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.video.torba%5cicon.png&mode=3&name=%5bB%5d%5bCOLOR%20white%5dFamily%5b%2fCOLOR%5d%5b%2fB%5d&url=https%3a%2f%2ftorba.se%2fsearch%3forder%3dviews%26genre%3dFamily</link>
 </plugin>
 
 <dir>
-  <title>Youtube Gaming</title>
+  <title>[COLOR white]Youtube Gaming[/COLOR]</title>
   <link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Kids/Minecraft.xml</link>
 </dir>
 
