@@ -1,21 +1,18 @@
-import base64,hashlib,os,random,re,requests,shutil,string,sys,urllib,urllib2,json,urlresolver,ssl,liveresolver,zipfile
+import base64,hashlib,os,random,re,requests,shutil,string,sys,urllib,urllib2,json,urlresolver,ssl,liveresolver,zipfile,urlparse
 import xbmc,xbmcaddon,xbmcgui,xbmcplugin,xbmcvfs
-from addon.common.addon import Addon
-from addon.common.net import Net
-from resources.modules import control,tvplayer
+from resources.modules import control,tvplayer,cloudflare
 
 
 addon_id   = 'script.module.streamhub'
-selfAddon  = xbmcaddon.Addon(id=addon_id)
-addon      = Addon(addon_id, sys.argv)
-addon_name = selfAddon.getAddonInfo('name')
+
 icon       = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png'))
 fanart     = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 User_Agent = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
 putlockerhd  = 'http://putlockerhd.co'
 ccurl      = 'http://cartooncrazy.me'
 s          = requests.session()
-net        = Net()
+bypass     = cloudflare.create_scraper()
+
 ccurl      = 'http://cartooncrazy.me'
 xxxurl     ='http://www.xvideos.com'
 kidsurl    = base64.b64decode ('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3NDbGFya2VJc0JhY2svU3RyZWFtSHViL21hc3Rlci9MaW5rcy9LaWRzL2tpZHNjb3JuZXIueG1s')
@@ -25,26 +22,17 @@ wwe        = 'http://watchwrestling.in'
 tv         = base64.b64decode ('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3NDbGFya2VJc0JhY2svU3RyZWFtSHViL21hc3Rlci9MaW5rcy8yNDcvMjQ3dHYueG1s')
 proxy      = 'http://www.justproxy.co.uk/index.php?q='
 music      = 'http://woodmp3.com/search/'
-
+movies_url = 'https://torba.se'
 def CAT():
-	addDir('MOVIES','url',100,icon,fanart,'')
+	addDir('MOVIES','url',88,icon,fanart,'')
 	addDir('MOVIES2','url',37,icon,fanart,'')
 	addDir('FAMILY SECTION',kidsurl,56,icon,fanart,'')
 	addDir('XXX SECTION','URL',31,icon,fanart,'')
 	addDir('DOCS',docurl+'/watch-online/',35,icon,fanart,'')
 	addDir('24/7 TV',tv,48,icon,fanart,'')
 	addDir('MUSIC',tv,64,icon,fanart,'')
-def MovieCAT():
-	addDir('RECENT MOVIES',putlockerhd+'/recent_movies',19,icon,fanart,'')
-	addDir('COMEDY MOVIES',putlockerhd+'/comedy_movies',19,icon,fanart,'')
-	addDir('CRIME MOVIES',putlockerhd+'/crime_movies',19,icon,fanart,'')
-	addDir('WAR MOVIES',putlockerhd+'/war_movies',19,icon,fanart,'')
-	addDir('ROMANCE MOVIES',putlockerhd+'/romance_movies',19,icon,fanart,'')
-	addDir('MUSICAL MOVIES',putlockerhd+'/musical_movies',19,icon,fanart,'')
-	addDir('SPORT MOVIES',putlockerhd+'/sport_movies',19,icon,fanart,'')
-	addDir('KIDS MOVIES',putlockerhd+'/family_movies',19,icon,fanart,'')
-	addDir('DOCUMENTARY MOVIES',putlockerhd+'/documentary_movies',19,icon,fanart,'')
-	
+	addDir('WWE',tv,79,icon,fanart,'')
+
 def MOV2CAT():
 	addDir('[COLOR red]R[/COLOR]ecently Added',mov2,38,icon,fanart,'')
 	addDir('[COLOR red]G[/COLOR]enres',mov2+'/genres/',41,icon,fanart,'')
@@ -85,10 +73,83 @@ def MUSICCOL():
 	addDir('BBC Radio 1 Live Lounge Collection','https://www.discogs.com/label/804379-Radio-1s-Live-Lounge',70,icon,fanart,'')
 	addDir('Now Thats What I Call Music Collection','NOW',70,icon,fanart,'')
 	
-def xxxCAT():
-	addDir("[COLOR orange]G[/COLOR][COLOR white]enre's[/COLOR]",xxxurl+'/tags',99,icon,fanart,'')
 
+def WWEINDEX(url):
+	open = OPEN_URL(url)
+	all  = regex_get_all(open,'<li class="item-post">','</li>')
+	for a in all:
+		name = regex_from_to(a,'title="','"')
+		url  = regex_from_to(a,'href="','"')
+		icon = regex_from_to(a,'icon src="','"')
+		addDir(name,url,81,icon,fanart,url)
+		
+def WWELINKS(url,description):
+	open = OPEN_URL(url)
+	all  = regex_get_all(open,'<p style="text-align: center; ','</a>')
+	xbmc.log(str(all))
+	if not 'part1' in all:
+		for a in all:
+			name = regex_from_to(a,'">','<')
+			url  = regex_from_to(a,'href="','"')
+			if not url.startswith('http'): url = 'http://educadegree.com/cgi-bin/'+url
+			xbmc.log(str(url))
+			addDir(name,url,82,icon,fanart,description)
+			
+def WWERESOLVE(url,description):
+	if 'Protect' in url:
+		headers = {}
+		headers['Referer'] = description
+		u  = requests.get(url,headers=headers)
+		url= regex_from_to(u,"src='","'")
+		
+	link = urlresolver.HostedMediaFile(url).resolve()
+	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=iconimage)
+	liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': description})
+	liz.setProperty('IsPlayable','true')
+	liz.setPath(str(link))
+	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
 	
+def xxxCAT():
+	if control.setting('freshstart')=='true':
+		setxxxpass()
+		xbmcaddon.Addon().setSetting('freshstart','false')
+	if control.setting('enablexxxpass')=='true':
+		kb = xbmc.Keyboard ('', 'Enter Your Password', False)
+		kb.doModal()
+		if (kb.isConfirmed()):
+			pw = kb.getText()
+			if pw == control.setting('xxxpass'):
+				addDir("The Best Videos",xxxurl+'/best',24,icon,fanart,'')
+				addDir("Latest Videos",xxxurl,24,icon,fanart,'')
+				addDir("Real Videos",xxxurl+'/c/Amateur-17',24,icon,fanart,'')
+				addDir("All Videos",xxxurl+'/tags',99,icon,fanart,'')
+				addDir("Search",'search',24,icon,fanart,'')
+			else:
+				xbmcgui.Dialog().ok('[COLOR red][B]StreamHub[/B][/COLOR]','Incorrect Password, Please Try Again')
+				return
+	else:
+		addDir("The Best Videos",xxxurl+'/best',24,icon,fanart,'')
+		addDir("Latest Videos",xxxurl,24,icon,fanart,'')
+		addDir("Real Videos",xxxurl+'/c/Amateur-17',24,icon,fanart,'')
+		addDir("All Videos",xxxurl+'/tags',99,icon,fanart,'')
+		addDir("Search",'search',24,icon,fanart,'')
+	
+
+def setxxxpass():
+	d = xbmcgui.Dialog().yesno('[COLOR red]StreamHub[/COLOR]','Would You Like To Set a Password for the XXX Section?')
+	if d:
+		kb = xbmc.Keyboard ('', 'Please Enter a Password', False)
+		kb.doModal()
+		if (kb.isConfirmed()):
+			pw = kb.getText()
+			if pw =="":
+				xbmcgui.Dialog().notification('[COLOR red]Password Cannot Be Blank[/COLOR]','StreamHub')
+				setxxxpass()
+			else:
+				xbmcaddon.Addon().setSetting('xxxpass',pw)
+				xbmcaddon.Addon().setSetting('enablexxxpass','true')
+				xbmcgui.Dialog().ok('[COLOR red]StreamHub[/COLOR]','Password has been set')
+			
 
 		
 def regex_from_to(text, from_string, to_string, excluding=True):
@@ -130,7 +191,7 @@ def addDir(name,url,mode,iconimage,fanart,description):
 	liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
 	liz.setInfo( type="Video", infoLabels={"Title": name,"Plot":description})
 	liz.setProperty('fanart_image', fanart)
-	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==62 or mode ==75 or mode==999:
+	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==62 or mode ==75 or mode==82 or mode==999:
 		liz.setProperty("IsPlayable","true")
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
 	elif mode==73:
@@ -159,14 +220,26 @@ def OPEN_URL(url):
 	link = link.encode('ascii', 'ignore')
 	return link
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 def tvlist(url):
     thumb = ''
     art   = ''
     OPEN = Open_Url(url)
     Regex = re.compile('<title>(.+?)</title>.+?url>(.+?)</url>.+?thumb>(.+?)</thumb>',re.DOTALL).findall(OPEN)
-    addDir('[COLOR red][B]Requested 24/7 Shows[/B][/COLOR]','url',49,'','','')
     for name,url,icon in Regex:
 		addDir(name,url,46,icon,fanart,'') 
+		
+		
+
 
 
 def Open_Url(url):
@@ -237,27 +310,20 @@ def putlockerhdplay(url):
         xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
     except:pass
 	
-def setxxxpass():
-	d = xbmcgui.Dialog().yesno('[COLOR red]StreamHub[/COLOR]','Would You Like To Set a Password for the XXX Section?')
-	if d:
-		kb = xbmc.Keyboard ('', 'Please Enter a Password', False)
-		kb.doModal()
-		if (kb.isConfirmed()):
-			pw = kb.getText()
-			if pw =="":
-				xbmcaddon.Addon().setSetting('xxxpass',"")
-				xbmcaddon.Addon().setSetting('enablexxxpass','false')
-				xbmcgui.Dialog().notification('[COLOR red]Password Cannot Be Blank[/COLOR]','StreamHub')
-			else:
-				xbmcaddon.Addon().setSetting('xxxpass',pw)
-				xbmcaddon.Addon().setSetting('enablexxxpass','true')
-				xbmcgui.Dialog().ok('[COLOR red]StreamHub[/COLOR]','Password has been set')
-			
 #setxxxpass()
 		
 def xxx(url):
+        if url=='search':
+			kb = xbmc.Keyboard ('', 'Enter a Search Query', False)
+			kb.doModal()
+			if (kb.isConfirmed()):
+				query = kb.getText()
+				query = str(query).replace(' ','+').lower()
+				url   = xxxurl+'/?k='+query
         link = OPEN_URL(url)
-        xxxadd_next_button(link)
+        try:
+			xxxadd_next_button(link)
+        except:pass
         all_videos = regex_get_all(link, 'class="thumb-block ">', '</a></p>')
         for a in all_videos:
 			name = regex_from_to(a, 'title="', '"')
@@ -279,7 +345,7 @@ def xxxadd_next_button(link):
 				if '/tags/' not in link:
 					link = str(link).replace('\n','').replace('\r','').replace('\t','').replace(' ','').replace('  ','')
 					nextp = regex_from_to(link,'<aclass="active"href="">.+?</a></li><li><ahref="','"')
-					xbmc.log(str(nextp))
+					if not nextp=='':return
 					addDir('[B][COLOR red]Next Page[/COLOR][/B]',xxxurl+nextp,24,'','','')
 			except: pass
 			return
@@ -390,7 +456,6 @@ def CartooncrazysubList(url):
 		addDir(name,url,26,icon,fanart,'') 
     xbmc.executebuiltin('Container.SetViewMode(50)')'''
 def documentary(url):
-	addDir('DOCUMENTARY MOVIES',putlockerhd+'/documentary_movies',19,icon,fanart,'')
 	OPEN = OPEN_URL(url)
 	regex = regex_get_all(OPEN,'<h2><a href','alt="')
 	for a in regex:
@@ -512,6 +577,7 @@ def opentwentyfourseven(url):
 		xbmc.log(str(url))
 		xbmc.log(str(name))
 		
+		
 def resolvetwentyfourseven(url,icon):
 	m3ubase= 'plugin://plugin.video.f4mTester/?streamtype=HLS&amp;url='
 	name='24/7'
@@ -551,7 +617,7 @@ def toongetlist(url):
 	for a in all:
 		url = regex_from_to(a,'href="','"')
 		name= regex_from_to(a,'">','<')
-		addDir(name,url,52,icon,fanart,'')
+		addDir('[COLOR white]%s[/COLOR]'%name,url,52,icon,fanart,'')
 		
 def toongeteps(url):
 		open = OPEN_URL(url)
@@ -559,7 +625,7 @@ def toongeteps(url):
 		for a in all:
 			url = regex_from_to(a,'href="','"')
 			name = regex_from_to(a,'">','<')
-			addDir(name,url,53,icon,fanart,'')
+			addDir('[COLOR white]%s[/COLOR]'%name,url,53,icon,fanart,'')
 			
 def toongetresolve(name,url):
     OPEN = OPEN_URL(url)
@@ -567,38 +633,50 @@ def toongetresolve(name,url):
     url2=regex_from_to(OPEN,'Playlist 2</span></div><div><iframe src="','"')
     url3=regex_from_to(OPEN,'Playlist 3</span></div><div><iframe src="','"')
     url4=regex_from_to(OPEN,'Playlist 4</span></div><div><iframe src="','"')
+    xbmc.log(str(url1))
+    xbmc.log(str(url2))
+    xbmc.log(str(url3))
+    xbmc.log(str(url4))
     try:
-        play=urlresolver.HostedMediaFile(url1).resolve()
-        liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
-        liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
-        liz.setProperty('IsPlayable','true')
-        liz.setPath(str(play))
-        xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+			u   = OPEN_URL(url1)
+			play= regex_from_to(u,'link":"','"').replace('\/','/')
+			liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
+			liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
+			liz.setProperty('IsPlayable','true')
+			liz.setPath(str(play))
+			xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
     except:pass
     try:
-        play=urlresolver.HostedMediaFile(url2).resolve()
-        liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
-        liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
-        liz.setProperty('IsPlayable','true')
-        liz.setPath(str(play))
-        xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+
+			u   = OPEN_URL(url2)
+			play= regex_from_to(u,'link":"','"').replace('\/','/')
+			liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
+			liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
+			liz.setProperty('IsPlayable','true')
+			liz.setPath(str(play))
+			xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
     except:pass
     try:
-        play=urlresolver.HostedMediaFile(url3).resolve()
-        liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
-        liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
-        liz.setProperty('IsPlayable','true')
-        liz.setPath(str(play))
-        xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+
+			u   = OPEN_URL(url3)
+			play= regex_from_to(u,'link":"','"').replace('\/','/')
+			liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
+			liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
+			liz.setProperty('IsPlayable','true')
+			liz.setPath(str(play))
+			xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
     except:pass
     try:
-        play=urlresolver.HostedMediaFile(url4).resolve()
-        liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
-        liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
-        liz.setProperty('IsPlayable','true')
-        liz.setPath(str(play))
-        xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
-    except:pass
+
+			u   = OPEN_URL(url4)
+			play= regex_from_to(u,'link":"','"').replace('\/','/')
+			liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
+			liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
+			liz.setProperty('IsPlayable','true')
+			liz.setPath(str(play))
+			xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+    except:
+		xbmcgui.Dialog().notification('[COLOR red][B]StreamHub[/B][/COLOR]','Oops, This Link Is Down!')
 	
 def disneymovies(url):
 	open = OPEN_URL(url)
@@ -606,15 +684,17 @@ def disneymovies(url):
 	all  = regex_get_all(a,'<a href','</div>')
 	for a in all:
 		url = regex_from_to(a,'="','"')
-		name= regex_from_to(a,'<b>','</b>')
-		addDir(str(name).replace('#038;','').replace('&#8217;',"'"),url,57,icon,fanart,'')
+		name= regex_from_to(a,'<b>','</b>').replace('#038;','').replace('&#8217;',"'")
+		addDir('[COLOR white]%s[/COLOR]'%name,url,57,icon,fanart,'')
 		
 def disneymoviesresolve(url):
 	open = OPEN_URL(url)
-	url1 = re.compile('<iframe allowfullscreen="true".*?src="(.*?)"',re.DOTALL).findall(open)
-	url2 = re.compile('<iframe allowfullscreen="".*?src="(.*?)"',re.DOTALL).findall(open)
-	url1 = str(url1).replace("['","").replace("']","")
-	url2 = str(url2).replace("['","").replace("']","")
+	try:
+		url1 = re.compile('scrolling="no" src="(.*?)"').findall(open)[0]
+	except:
+		url1 = re.compile('<iframe.+?src="(.*?)"').findall(open)[0]
+	if url1.startswith('https://href.li/?'):
+		url1 = str(url1).replace('https://href.li/?','')
 	play=urlresolver.HostedMediaFile(url1).resolve()
 	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
 	liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
@@ -932,92 +1012,8 @@ def UKNowMusic2(url,description):
 		url    = str(url).replace(' ','-').replace(':','').lower()
 		addDir('%s - %s'%(artist,track),'http://woodmp3.com/search/'+url,63,icon,fanart,'')
 		
-		
-		
-		
-def kisscartoonindex(url):
-	open = OPEN_URL(url)
-	all  = regex_get_all(open,'<article id="post','</article>')
-	for a in all:
-		name = regex_from_to(a,'class="dt-movies"></i>','<').replace('&#8217;',"'")
-		url  = regex_from_to(a,'a href="','"')
-		xbmc.log(str(url))
-		icon = regex_from_to(a,'img src="','"')
-		qual = regex_from_to(a,'quality">','<')
-		rat  = regex_from_to(a,'span class="icon-star2"></span>','<')
-		addDir('%s  [COLOR red]%s[/COLOR]'%(name,qual),url,75,icon,fanart,'')
-		
-	try:
-		np = regex_from_to(open,'<link rel="next" href="','"')
-		addDir('[COLOR red]NEXT PAGE>[/COLOR]',np,74,icon,fanart,'')
-	except:
-		pass
-		
-def kisscartoongenre(url):
-	open = OPEN_URL(url)
-	part  = regex_from_to(open,'<h2>Genres</h2>','</i></li></ul>')
-	all   = regex_get_all(part,'<li class="','</i></li>')
-	for a in all:
-		url  = regex_from_to(a,'href="','"')
-		name = regex_from_to(a,'/">','<').replace('&amp;','&')
-		vids = regex_from_to(a,'<i>','<')
-		if not vids == '0':
-			addDir(name + '    [COLOR red](%s Videos)[/COLOR]'%vids,url,74,icon,fanart,'')
-			
-def kisscartoonyear(url):
-	open = OPEN_URL(url)
-	xbmc.log(str(open))
-	part  = regex_from_to(open,'<h2>Release Year</h2>','</ul></div></div></div>')
-	xbmc.log(str(part))
-	all   = regex_get_all(part,'<li><a','</li>')
-	for a in all:
-		url  = regex_from_to(a,'href="','"')
-		name = regex_from_to(a,'/">','<')
-		if not '20082010' in name:
-			addDir(name,url,74,icon,fanart,'')
 
-		
-def kisscartoonresolve(url):
-	open   = OPEN_URL(url)
-	iframe = regex_from_to(open,'metaframe rptss" src="','"')
-	#xbmc.log(str(iframe))
-	open   = OPEN_URL(iframe)
-	all    = regex_get_all(open,'data-src','</span>')
-	stream_url = []
-	res_server = []
-	for a in all:
-		url  = regex_from_to(a,'="','&movie_img')
-		if url == "":
-			url = regex_from_to(a,'="','"')
-		server= regex_from_to(a,'<span>','</span>')
-		res_server.append(server)
-		stream_url.append(url)
-		xbmc.log(str(stream_url))
-	if len(all) >1:
-		ret = xbmcgui.Dialog().select('Select a Server',res_server)
-		if ret == -1:
-			return
-		elif ret > -1:
-			url = stream_url[ret]
 	
-	if not 'openload' in url:
-		open = OPEN_URL(url)
-		url  = regex_from_to(open,'file":"','"').replace('\/','/')
-	else:
-		url = urlresolver.HostedMediaFile(url).resolve()
-		
-	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=iconimage)
-	liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
-	liz.setProperty('IsPlayable','true')
-	liz.setPath(str(url))
-	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
-	
-
-				
-	#	if not 'openload' in url:
-		#	open = OPEN_URL(url)
-	#		url  = regex_from_to(open,'file":"','"')
-		
 
 params=get_params()
 url=None
@@ -1160,7 +1156,7 @@ elif mode==50:
 	TVREQUESTCATPLAY(name,url,icon)
 
 elif mode==51:
-	toongetlist('http://www.toonget.net/cartoon')
+	toongetlist(url)
 	
 elif mode==52:
 	toongeteps(url)
@@ -1175,7 +1171,7 @@ elif mode==57:
 	disneymoviesresolve(url)
 	
 elif mode==58:
-	disneymovies('http://www.freecartoonszone.info/p/list-of-disney-movies-z.html')
+	disneymovies(url)
 	
 elif mode==59:
 	playresolved(url)
@@ -1236,7 +1232,7 @@ elif mode==77:
 	
 elif mode==78:
 	kisscartoonyear(url)
-	 
+
 elif mode==98:
 	xxxstars(url)
 	

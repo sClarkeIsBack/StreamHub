@@ -1,5 +1,6 @@
 <settings>
 	<category label="Settings">
+		<setting label="Fresh Start" visible="false" type="bool" id="freshstart" default="true"/>
         <setting label="Enable XXX Pass" visible="false" type="bool" id="enablexxxpass" default="false"/>
         <setting label="XXX Pass:" type="text" visible="false"   id="xxxpass"  enable="!eq(-1,)" default=""/>
 		<setting label="fs" visible="false" type="bool" id="freshstart" default="true"/>

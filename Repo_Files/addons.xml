@@ -1,6 +1,6 @@
 <addons>
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="2.2" provider-name="sClarke">
+<addon id="plugin.video.streamhub" name="[COLOR red][B]StreamHub[/COLOR][/B]" version="2.3" provider-name="sClarke">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="plugin.video.youtube" version="5.2.1" optional="true" />
@@ -8,47 +8,51 @@
 		<import addon="script.module.urlresolver" version="3.0.0"/>
 		<import addon="script.module.liveresolver" version="0.1.24"/>
 		<import addon="script.video.F4mProxy" version="2.2.3"/>
-        <import addon="script.streamhub.artwork"/>
-        <import addon="script.streamhub.metadata"/>
-        <import addon="script.module.streamhub"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
 		<provides>video</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en"></summary>
-		<description lang="en">StreamHub - All Content feautured in this Addon is freely Available on the Internet - Making use of Already Written Code and Writing our own. Make sure you Join our facebook page for News and Support. http://facebook.com/groups/streamh  - Credit to Lambda/Exodus For Movies and TV Shows. Credit to Phoenix for the Addon's Base Code</description>
+		<summary lang="en">StreamHub</summary>
+		<description lang="en">Bringing Movies, TV shows, Kids Content and More!</description>
 		<platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+		</assets>
+		<news>New Premium Sports Section!</news>
 	</extension>
 </addon>
 
-
-<addon id="plugin.video.watch5s" name="[B]Watch [COLOR green]5s[/COLOR][/B]" version="1.0" provider-name="sClarke">
+<addon id="plugin.video.torba" name="[B][COLOR yellow]Torba[/COLOR][/B]" version="1.2" provider-name="sClarke">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.urlresolver" />
-	<import addon="script.module.metahandler"/>
+	<import addon="script.module.requests" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Watch 5s</summary>
-    <description lang="en">Watch 5s - All Content is found at https://watch5s.is - Links may go up and down, this is out of my control - Kodi 17 Required</description>
-	<disclaimer lang="en">Watch5s</disclaimer>
+    <summary lang="en">Torba.se</summary>
+    <description lang="en">All content is found at torba.se, we do not host or own any of the content.</description>
+	<disclaimer lang="en">Torba.se</disclaimer>
     <platform>all</platform>
   </extension>
 </addon>
 
 
-<addon id="script.module.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="2.9" provider-name="sClarke">
+
+<addon id="script.module.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="3.0" provider-name="sClarke">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.addon.common" />
 	<import addon="script.module.requests" />
 	<import addon="script.module.urlresolver" />
 	<import addon="script.module.liveresolver" version="0.1.24"/>
     <import addon="script.module.beautifulsoup4" />
+	<import addon="plugin.video.torba" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>all</provides>
@@ -101,21 +105,5 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.moviewatcher" name="[B]Movie Watcher[/B]" version="1.0" provider-name="sClarke">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.requests" />
-	<import addon="script.module.urlresolver" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Movie Watcher</summary>
-    <description lang="en">Movie Watcher - All Content is found at http://moviewatcher.io - Links may go up and down, this is out of my control.</description>
-	<disclaimer lang="en"></disclaimer>
-    <platform>all</platform>
-  </extension>
-</addon>
 
 </addons>
