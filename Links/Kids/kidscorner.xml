@@ -2,3 +2,8 @@
   <title>Most Popular Kids Shows</title>
   <link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Kids/kispopular.xml</link>
 </dir>
+
+<plugin>
+  <title>Disney Movies</title>
+  <link>plugin://script.module.streamhub/?mode=58</link>
+</plugin>
