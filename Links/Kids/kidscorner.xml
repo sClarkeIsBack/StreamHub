@@ -4,6 +4,12 @@
 </dir>
 
 <plugin>
+  <title>The Big Cartoon List</title>
+  <link>plugin://script.module.streamhub/?mode=51&url=http://www.toonget.net/cartoon</link>
+</plugin>
+
+
+<plugin>
   <title>Disney Movies</title>
   <link>plugin://script.module.streamhub/?mode=58&url=http://www.freecartoonszone.info/p/list-of-disney-movies-z.html</link>
 </plugin>
