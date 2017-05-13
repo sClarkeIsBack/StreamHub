@@ -51,6 +51,12 @@
 <link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=35&name=DOCS&url=http%3a%2f%2fdocumentaryheaven.com%2fwatch-online%2f</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/doc.png</thumbnail>
 </plugin>
+ 
+ <plugin>
+<name>[COLOR red][B]D[/COLOR][COLOR white]ocumentary's[/COLOR][/B]</name>
+<link>plugin://script.module.streamhub/?mode=51&url=http://www.toonget.net/dubbed-anime</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/doc.png</thumbnail>
+</plugin>
 
 <plugin>
 <name>[COLOR red][B]24[/COLOR][COLOR white]/7 TV[/COLOR][/B]</name>
