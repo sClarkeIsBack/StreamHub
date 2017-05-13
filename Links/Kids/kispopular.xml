@@ -1,3 +1,14 @@
+
+<plugin>
+<title>Fireman Sam</title>
+<link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/fireman-sam</link>
+</plugin>
+
+<plugin>
+<title>Jake And The Never Land Pirates</title>
+<link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/jake-and-the-never-land-pirates</link>
+</plugin>
+
 <plugin>
 <title>Paw Patrol</title>
 <link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/paw-patrol</link>
@@ -5,5 +16,37 @@
 
 <plugin>
 <title>Peppa Pig</title>
-<link>plugin://plugin.video.youtube/kodion/search/query/?q=peppa%20pig%20full%20episodes</link>
+<link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/peppa-pig</link>
+</plugin>
+
+<plugin>
+<title>Pinky And The Brain</title>
+<link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/pinky-and-the-brain</link>
+</plugin>
+
+<plugin>
+<title>Scooby Doo</title>
+<link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/scooby-doo-where-are-you</link>
+</plugin>
+
+
+<plugin>
+<title>Sofia The First</title>
+<link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/sofia-the-first</link>
+</plugin>
+
+<plugin>
+<title>SpongeBob</title>
+<link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/spongebob-squarepants</link>
+</plugin>
+
+
+<plugin>
+<title>The Simpsons</title>
+<link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/the-simpsons</link>
+</plugin>
+
+<plugin>
+<title>Thunderbirds</title>
+<link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/thunderbirds</link>
 </plugin>
