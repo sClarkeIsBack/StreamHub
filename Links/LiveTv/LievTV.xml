@@ -9,13 +9,13 @@
 </plugin>
 
 <item>
-<name>[COLOR white]     BBC One   SD[/COLOR]</name>
+<name>[COLOR white]     BBC One   [/COLOR][COLOR red]SD[/COLOR]</name>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/bbcone</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     BBC One   SD[/COLOR]</title>
+<title>[COLOR white]     BBC One   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>https://tvcatchup.com/watch/bbcone</sublink>
 </link>
@@ -23,27 +23,27 @@
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]BBC One   HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]BBC One   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://vs-hls-uk-live.akamaized.net/pool_30/live/bbc_one_hd/bbc_one_hd.isml/bbc_one_hd-pa4%3d128000-video%3d5070016.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]BBC One Wales   HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]BBC One Wales   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_wales_hd.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]BBC One North Ireland   HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]BBC One North Ireland   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_northern_ireland_hd.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]BBC One Scotland   HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]BBC One Scotland   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_scotland_hd.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
@@ -51,7 +51,7 @@
 
 
 <item>
-<title>[COLOR white]     BBC Two   SD[/COLOR]</title>
+<title>[COLOR white]     BBC Two   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>http://uktv.robssatellitetv.com/watch-uk-tv-online/bbctwo</sublink>
 </link>
@@ -59,7 +59,7 @@
 </item>
 
 <item>
-<title>[COLOR white]     BBC Two   SD[/COLOR]</title>
+<title>[COLOR white]     BBC Two   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>https://tvcatchup.com/watch/bbctwo</sublink>
 </link>
@@ -67,14 +67,14 @@
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]BBC Two   HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]BBC Two   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_two_hd.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbctwo.png</thumbnail>
 </item>
 
 
 <item>
-<title>[COLOR white]     ITV 1   SD[/COLOR]</title>
+<title>[COLOR white]     ITV 1   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>http://uktv.robssatellitetv.com/watch-uk-tv-online/itv</sublink>
 </link>
@@ -82,7 +82,7 @@
 </item>
 
 <item>
-<title>[COLOR white]     ITV 1   SD[/COLOR]</title>
+<title>[COLOR white]     ITV 1   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>https://tvcatchup.com/watch/itv</sublink>
 </link>
@@ -90,13 +90,13 @@
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV 1   HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV 1   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://itv1liveios-i.akamaihd.net/hls/live/203437/itvlive/ITV1MN/master_Main1800.m3u8</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     Channel 4   SD[/COLOR]</title>
+<title>[COLOR white]     Channel 4   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>http://uktv.robssatellitetv.com/watch-uk-tv-online/channel4</sublink>
 </link>
@@ -104,7 +104,7 @@
 </item>
 
 <item>
-<title>[COLOR white]     Channel 4   SD[/COLOR]</title>
+<title>[COLOR white]     Channel 4   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>https://tvcatchup.com/watch/channel4</sublink>
 </link>
@@ -112,13 +112,13 @@
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Channel 4   HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Channel 4   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://tvplayer.com/watch/channel4</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/cc/channel4_uk.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     Channel 5   SD[/COLOR]</title>
+<title>[COLOR white]     Channel 5   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>http://uktv.robssatellitetv.com/watch-uk-tv-online/channel5</sublink>
 </link>
@@ -143,103 +143,103 @@
 </item>
 
 <item>
-<title>[COLOR white]     Blaze   SD[/COLOR]</title>
+<title>[COLOR white]     Blaze   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/blaze</link>
 <thumbnail>http://my.tvguide.co.uk/channel_logos/1013.png</thumbnail>
 </item>
 
 
 <item>
-<title>[COLOR white]     Challenge   SD[/COLOR]</title>
+<title>[COLOR white]     Challenge   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/challenge</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk_be.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     CBS Action   SD[/COLOR]</title>
+<title>[COLOR white]     CBS Action   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/cbsaction</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/cc/cbs_action_uk.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     CBS SD[/COLOR]</title>
+<title>[COLOR white]     CBS [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/cbsdrama</link>
 <thumbnail>http://uktv.robssatellitetv.com/images/channels/cbsdrama.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     CBS Reality   SD[/COLOR]</title>
+<title>[COLOR white]     CBS Reality   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/cbsreality</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/cc/cbs_reality_uk.png</thumbnail>
 </item>
 
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Dave   HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Dave   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://tvplayer.com/watch/dave</link>
 <thumbnail>https://assets.tvplayer.com/tvos/images/channels/300.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     Drama   SD[/COLOR]</title>
+<title>[COLOR white]     Drama   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/drama</link>
 <thumbnail>https://assets.tvplayer.com/tvos/images/channels/346.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     E4   SD[/COLOR]</title>
+<title>[COLOR white]     E4   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/e4</link>
 <thumbnail>http://my.tvguide.co.uk/channel_logos/139.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     Film 4   SD[/COLOR]</title>
+<title>[COLOR white]     Film 4   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/film4</link>
 <thumbnail>http://my.tvguide.co.uk/channel_logos/145.png</thumbnail>
 </item>
 
 
 <item>
-<title>[COLOR white]     Food Network   SD[/COLOR]</title>
+<title>[COLOR white]     Food Network   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/foodnetwork</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ff/food_network_uk.png</thumbnail>
 </item>
 
 
 <item>
-<title>[COLOR white]     Home   HD[/COLOR]</title>
+<title>[COLOR white]     Home   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/home</link>
 <thumbnail>https://assets.tvplayer.com/tvos/images/channels/512.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     Home + 1   HD[/COLOR]</title>
+<title>[COLOR white]     Home + 1   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/homeplus1</link>
 <thumbnail>https://assets.tvplayer.com/tvos/images/channels/512.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     Horror Channel   SD[/COLOR]</title>
+<title>[COLOR white]     Horror Channel   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/horrorchannel</link>
 <thumbnail>http://my.tvguide.co.uk/channel_logos/425.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     ITV 2   SD[/COLOR]</title>
+<title>[COLOR white]     ITV 2   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/itv2
 </link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv2.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV 2   HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV 2   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://itv2liveios-i.akamaihd.net/hls/live/203495/itvlive/ITV2MN/master_Main1800.m3u8
 </link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv2.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     ITV 2 + 1   SD[/COLOR]</title>
+<title>[COLOR white]     ITV 2 + 1   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/itv2plus1
 </link>
 <thumbnail>http://uktv.robssatellitetv.com/images/channels/itv2plus1.png</thumbnail>
@@ -247,52 +247,52 @@
 
 
 <item>
-<title>[COLOR white]     ITV 3   SD[/COLOR]</title>
+<title>[COLOR white]     ITV 3   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/itv3</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv3.png</thumbnail>
 </item>
 
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV 3   HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV 3   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://itv3liveios-i.akamaihd.net/hls/live/207262/itvlive/ITV3MN/master_Main1800.m3u8</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv3.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     ITV 3 + 1   SD[/COLOR]</title>
+<title>[COLOR white]     ITV 3 + 1   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/itv3plus1</link>
 <thumbnail>http://uktv.robssatellitetv.com/images/channels/itv3plus1.png</thumbnail>
 </item>
 
 
 <item>
-<title>[COLOR white]     ITV 4   SD[/COLOR]</title>
+<title>[COLOR white]     ITV 4   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/itv4</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv4.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV 4   HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV 4   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://itv4liveios-i.akamaihd.net/hls/live/207266/itvlive/ITV4MN/master_Main1800.m3u8</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv4.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     ITV 4 + 1   HD[/COLOR]</title>
+<title>[COLOR white]     ITV 4 + 1   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/itv4plus1</link>
 <thumbnail>http://uktv.robssatellitetv.com/images/channels/itv4plus1.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV Be   HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV Be   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://itvbeliveios-i.akamaihd.net/hls/live/219078/itvlive/ITVBE/master_Main1800.m3u8</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk_be.png</thumbnail>
 </item>
 
 
 <item>
-<title>[COLOR white]     London Live   SD[/COLOR]</title>
+<title>[COLOR white]     London Live   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>http://bcoveliveios-i.akamaihd.net/hls/live/217434/3083279840001/master_900.m3u8</sublink>
 </link>
@@ -301,19 +301,19 @@
 
 
 <item>
-<title>[COLOR white]     More 4   SD[/COLOR]</title>
+<title>[COLOR white]     More 4   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/more4</link>
 <thumbnail>http://my.tvguide.co.uk/channel_logos/361.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     More 4 + 1   SD[/COLOR]</title>
+<title>[COLOR white]     More 4 + 1   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/more4plus1</link>
 <thumbnail>http://uktv.robssatellitetv.com/images/channels/more4plus1.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     My 5   SD[/COLOR]</title>
+<title>[COLOR white]     My 5   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/my5</link>
 <thumbnail>http://my.tvguide.co.uk/channel_logos/752.png</thumbnail>
 </item>
@@ -321,7 +321,7 @@
 
 
 <item>
-<title>[COLOR white]     Pick   SD[/COLOR]</title>
+<title>[COLOR white]     Pick   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/pick</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/pp/pick_tv_uk.png</thumbnail>
 </item>
@@ -329,55 +329,55 @@
 
 
 <item>
-<title>[COLOR white]     Really   SD[/COLOR]</title>
+<title>[COLOR white]     Really   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/really</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/rr/really_uktv.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     Sony Movie Channel   SD[/COLOR]</title>
+<title>[COLOR white]     Sony Movie Channel   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/sonymoviechannel</link>
 <thumbnail>http://my.tvguide.co.uk/channel_logos/742.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     Spike   SD[/COLOR]</title>
+<title>[COLOR white]     Spike   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/spike</link>
 <thumbnail>https://lh6.googleusercontent.com/-O2_E5wwCbPk/AAAAAAAAAAI/AAAAAAAAAIM/q9xqG6yaOlw/photo.jpg</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     Travel Channel   SD[/COLOR]</title>
+<title>[COLOR white]     Travel Channel   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/travelchannelplus1</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/tt/travel_channel_uk.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     Tru TV   SD[/COLOR]</title>
+<title>[COLOR white]     Tru TV   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/trutv</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/tt/tru_tv_uk.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     Yesterday   HD[/COLOR]</title>
+<title>[COLOR white]     Yesterday   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/yesterday</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/yy/yesterday_uktv.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     Yesterday + 1   HD[/COLOR]</title>
+<title>[COLOR white]     Yesterday + 1   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/yesterdayplus1</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/yy/yesterday_uktv.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     Your Tv   HD[/COLOR]</title>
+<title>[COLOR white]     Your Tv   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/yourtv</link>
 <thumbnail>http://my.tvguide.co.uk/channel_logos/991.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     4 Seven   SD[/COLOR]</title>
+<title>[COLOR white]     4 Seven   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/4seven</link>
 <thumbnail>http://my.tvguide.co.uk/channel_logos/752.png</thumbnail>
 </item>
@@ -386,7 +386,7 @@
 
 
 <item>
-<title>[COLOR white]     ABC   SD[/COLOR]</title>
+<title>[COLOR white]     ABC   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/abcde/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
@@ -394,7 +394,7 @@
 
 
 <item>
-<title>[COLOR white]     A&E   SD[/COLOR]</title>
+<title>[COLOR white]     A&E   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/aande/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
@@ -402,7 +402,7 @@
 
 
 <item>
-<title>[COLOR white]     AMC   SD[/COLOR]</title>
+<title>[COLOR white]     AMC   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/am/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
@@ -410,7 +410,7 @@
 
 
 <item>
-<title>[COLOR white]     Animal Planet   SD[/COLOR]</title>
+<title>[COLOR white]     Animal Planet   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/ap/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
@@ -418,7 +418,7 @@
 
 
 <item>
-<title>[COLOR white]     Bravo TV   SD[/COLOR]</title>
+<title>[COLOR white]     Bravo TV   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/braveotv/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
@@ -426,13 +426,13 @@
 
 
 <item>
-<title>[COLOR white]     CBS   SD[/COLOR]</title>
+<title>[COLOR white]     CBS   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/ceebees/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     Comedy Central   SD[/COLOR]</title>
+<title>[COLOR white]     Comedy Central   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/funnybone/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
@@ -440,7 +440,7 @@
 
 
 <item>
-<title>[COLOR white]     CNBC   SD[/COLOR]</title>
+<title>[COLOR white]     CNBC   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/seenbeesee/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
@@ -448,7 +448,7 @@
 
 
 <item>
-<title>[COLOR white]     Discovery Channel   SD[/COLOR]</title>
+<title>[COLOR white]     Discovery Channel   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/disco/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
@@ -456,7 +456,7 @@
 
 
 <item>
-<title>[COLOR white]     ESPN   SD[/COLOR]</title>
+<title>[COLOR white]     ESPN   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/sports/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
@@ -464,7 +464,7 @@
 
 
 <item>
-<title>[COLOR white]     Fox   SD[/COLOR]</title>
+<title>[COLOR white]     Fox   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/foxxy/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
@@ -472,20 +472,20 @@
 
 
 <item>
-<title>[COLOR white]     Fx   SD[/COLOR]</title>
+<title>[COLOR white]     Fx   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/fx/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
 
 
 <item>
-<title>[COLOR white]     History Channel   SD[/COLOR]</title>
+<title>[COLOR white]     History Channel   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/hc/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     Life Time   SD[/COLOR]</title>
+<title>[COLOR white]     Life Time   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/lt/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
@@ -493,7 +493,7 @@
 
 
 <item>
-<title>[COLOR white]     National Geographic   SD[/COLOR]</title>
+<title>[COLOR white]     National Geographic   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/ng/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
@@ -501,7 +501,7 @@
 
 
 <item>
-<title>[COLOR white]     NBC   SD[/COLOR]</title>
+<title>[COLOR white]     NBC   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/nnnbsee/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
@@ -509,7 +509,7 @@
 
 
 <item>
-<title>[COLOR white]     PBS   SD[/COLOR]</title>
+<title>[COLOR white]     PBS   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/ppp/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
@@ -517,7 +517,7 @@
 
 
 <item>
-<title>[COLOR white]     SyFy   SD[/COLOR]</title>
+<title>[COLOR white]     SyFy   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/sify/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
@@ -525,13 +525,13 @@
 
 
 <item>
-<title>[COLOR white]     The CW   SD[/COLOR]</title>
+<title>[COLOR white]     The CW   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/tcw/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     TBS   SD[/COLOR]</title>
+<title>[COLOR white]     TBS   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/teetimebs/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
@@ -539,7 +539,7 @@
 
 
 <item>
-<title>[COLOR white]     TNT   SD[/COLOR]</title>
+<title>[COLOR white]     TNT   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/teentee/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
@@ -547,19 +547,19 @@
 
 
 <item>
-<title>[COLOR white]     USA Network   SD[/COLOR]</title>
+<title>[COLOR white]     USA Network   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/usan/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]CITV[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]CITV[/COLOR][COLOR lime]   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>http://citvliveios-i.akamaihd.net/hls/live/207267/itvlive/CITVMN/master_Main1800.m3u8</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_cbeebies_uk.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]CBeebies[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]CBeebies[/COLOR][COLOR lime]   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>
 <sublink>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/cbeebies_hd.m3u8</sublink>
 </link>
@@ -567,13 +567,13 @@
 </item>
 
 <item>
-<title>[COLOR white]     Nickelodeon   SD[/COLOR]</title>
+<title>[COLOR white]     Nickelodeon   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://www.arconaitv.me/nickie/</link>
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]The Box[/COLOR][COLOR red]   SD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]The Box[/COLOR][COLOR red]   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>https://tvplayer.com/watch/thebox</sublink>
 </link>
@@ -581,13 +581,13 @@
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Box Hits[/COLOR][COLOR red]   SD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Box Hits[/COLOR][COLOR red]   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>https://tvplayer.com/watch/smashhits</link>
 <thumbnail>https://pbs.twimg.com/profile_images/744501160028012544/36yv0LOY.jpg</thumbnail>
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Box Upfront[/COLOR][COLOR red]   SD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Box Upfront[/COLOR][COLOR red]   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>https://tvplayer.com/watch/heat</sublink>
 </link>
@@ -596,7 +596,7 @@
 
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Capital TV[/COLOR][COLOR red]   SD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Capital TV[/COLOR][COLOR red]   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>https://tvplayer.com/watch/capitaltv</sublink>
 </link>
@@ -607,7 +607,7 @@
 
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Channel AKA[COLOR red]   SD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Channel AKA[COLOR red]   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>https://tvplayer.com/watch/channelaka</sublink>
 </link>
@@ -615,7 +615,7 @@
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Chilled[COLOR red]   SD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Chilled[COLOR red]   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>
 https://tvplayer.com/watch/nowthatswhaticallmusic
@@ -625,7 +625,7 @@ https://tvplayer.com/watch/nowthatswhaticallmusic
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Clubland[COLOR red]   SD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Clubland[COLOR red]   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>https://tvplayer.com/watch/clubland</sublink>
 </link>
@@ -635,7 +635,7 @@ https://tvplayer.com/watch/nowthatswhaticallmusic
 
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Heart TV[/COLOR][COLOR red]   SD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Heart TV[/COLOR][COLOR red]   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>https://tvplayer.com/watch/heart</sublink>
 </link>
@@ -646,7 +646,7 @@ https://tvplayer.com/watch/nowthatswhaticallmusic
 
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Kerrang TV[/COLOR][COLOR red]   SD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Kerrang TV[/COLOR][COLOR red]   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>https://tvplayer.com/watch/kerrang</sublink>
 </link>
@@ -657,7 +657,7 @@ https://tvplayer.com/watch/nowthatswhaticallmusic
 
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Kiss TV[COLOR red]   SD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Kiss TV[COLOR red]   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>https://tvplayer.com/watch/kiss</sublink>
 </link>
@@ -666,7 +666,7 @@ https://tvplayer.com/watch/nowthatswhaticallmusic
 
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Magic TV[COLOR red]   SD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Magic TV[COLOR red]   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>
 <sublink>https://tvplayer.com/watch/magic</sublink>
 </link>
@@ -674,7 +674,7 @@ https://tvplayer.com/watch/nowthatswhaticallmusic
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]BBC News[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]BBC News[/COLOR][COLOR lime]   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>
 <sublink>http://vs-hls-uk-live.edgesuite.net/pool_34/live/bbc_news_channel_hd/bbc_news_channel_hd.isml/bbc_news_channel_hd-pa4%3d128000-video%3d5070000.m3u8</sublink>
 </link>
@@ -682,14 +682,14 @@ https://tvplayer.com/watch/nowthatswhaticallmusic
 </item>
 
 <item>
-<title>[COLOR white]     Sky News[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<title>[COLOR white]     Sky News[/COLOR][COLOR lime]   [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>https://www.youtube.com/watch?v=y60wDzZt8yg</link>
 <thumbnail>http://www.felicitygerry.com/wp-content/uploads/2014/11/sky-news-logo.png</thumbnail>
 </item>
 
 
 <plugin>
-<title>[COLOR white]     Fox News HD[/COLOR]</title>
+<title>[COLOR white]     Fox News [/COLOR][COLOR lime]SD[/COLOR]</title>
 <link>plugin://plugin.video.youtube/kodion/search/query/?event_type=live&q=fox%20news&search_type=video</link>
 <thumbnail>http://my.tvguide.co.uk/channel_logos/752.png</thumbnail>
 </plugin>
