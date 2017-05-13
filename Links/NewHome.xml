@@ -15,7 +15,7 @@
  
 <plugin>
 <title>[COLOR red][B]M[/COLOR][COLOR white]ovies[/COLOR][/B]</title>
-<link> plugin://plugin.video.torba/?description&iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.video.torba%5cicon.png&mode=1&name=%5bCOLOR%20white%5d%5bB%5d%5bCAPITALIZE%5dMovies%5b%2fB%5d%5b%2fCAPITALIZE%5d%5b%2fCOLOR%5d&url=url</link>
+<link>plugin://plugin.video.torba/?description&iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.video.torba%5cicon.png&mode=1&name=%5bCOLOR%20white%5d%5bB%5d%5bCAPITALIZE%5dMovies%5b%2fB%5d%5b%2fCAPITALIZE%5d%5b%2fCOLOR%5d&url=url</link>
 <thumbnail>http://thumbnail>
 </plugin>
  
