@@ -572,17 +572,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
 <plugin>
-<title>[COLOR white]     Fox News[/COLOR]</title>
+<title>[COLOR white]     Fox News HD[/COLOR]</title>
 <link>plugin://plugin.video.youtube/kodion/search/query/?event_type=live&q=fox%20news&search_type=video</link>
 <thumbnail>http://my.tvguide.co.uk/channel_logos/752.png</thumbnail>
 </plugin>
