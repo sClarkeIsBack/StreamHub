@@ -1,61 +1,61 @@
 
 <plugin>
-<title>Fireman Sam</title>
+<title>[COLOR white]Fireman Sam[/COLOR]</title>
 <link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/fireman-sam</link>
 <thumbnail>http://www.toonget.net/images/series/big/3501.jpg</thumbnail>
 </plugin>
 
 <plugin>
-<title>Jake And The Never Land Pirates</title>
+<title>[COLOR white]Jake And The Never Land Pirates[/COLOR]</title>
 <link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/jake-and-the-never-land-pirates</link>
   <thumbnail>http://www.toonget.net/images/series/small/1974.jpg</thumbnail>
 </plugin>
 
 <plugin>
-<title>Paw Patrol</title>
+<title>[COLOR white]Paw Patrol[/COLOR]</title>
 <link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/paw-patrol</link>
   <thumbnail>http://www.toonget.net/images/series/small/3097.jpg</thumbnail>
 </plugin>
 
 <plugin>
-<title>Peppa Pig</title>
+<title>[COLOR white]Peppa Pig[/COLOR]</title>
 <link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/peppa-pig</link>
   <thumbnail>http://www.toonget.net/images/series/small/2807.jpg</thumbnail>
 </plugin>
 
 <plugin>
-<title>Pinky And The Brain</title>
+<title>[COLOR white]Pinky And The Brain[/COLOR]</title>
 <link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/pinky-and-the-brain</link>
   <thumbnail>http://www.toonget.net/images/series/small/1956.jpg</thumbnail>
 </plugin>
 
 <plugin>
-<title>Scooby Doo</title>
+<title>[COLOR white]Scooby Doo[/COLOR]</title>
 <link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/scooby-doo-where-are-you</link>
   <thumbnail>http://www.toonget.net/images/series/small/929.jpg</thumbnail>
 </plugin>
 
 
 <plugin>
-<title>Sofia The First</title>
+<title>[COLOR white]Sofia The First[/COLOR]</title>
 <link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/sofia-the-first</link>
   <thumbnail>http://www.toonget.net/images/series/small/937.jpg</thumbnail>
 </plugin>
 
 <plugin>
-<title>SpongeBob</title>
+<title>[COLOR white]SpongeBob[/COLOR]</title>
 <link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/spongebob-squarepants</link>
   <thumbnail>http://www.toonget.net/spongebob-squarepants</thumbnail>
 </plugin>
 
 <plugin>
-<title>The Looney Toons</title>
+<title>[COLOR white]The Looney Toons[/COLOR]</title>
 <link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/the-looney-tunes-show-2011</link>
   <thumbnail>http://www.toonget.net/images/series/small/990.jpg</thumbnail>
 </plugin>
 
 <plugin>
-<title>The Simpsons</title>
+<title>[COLOR white]The Simpsons[/COLOR]</title>
 <link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/the-simpsons</link>
   <thumbnail>http://www.toonget.net/images/series/small/1001.jpg</thumbnail>
 </plugin>
