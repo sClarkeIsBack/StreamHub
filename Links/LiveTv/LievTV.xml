@@ -30,21 +30,21 @@
 
 <item>
 <title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]BBC One Wales   [/COLOR][COLOR lime]HD[/COLOR]</title>
-<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_wales_hd.m3u8</link>
+<link>http://vs-hls-uk-live.akamaized.net/pool_3/live/bbc_one_wales_hd/bbc_one_wales_hd.isml/bbc_one_wales_hd-pa4%3d128000-video%3d5070016.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
 
 <item>
 <title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]BBC One North Ireland   [/COLOR][COLOR lime]HD[/COLOR]</title>
-<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_northern_ireland_hd.m3u8</link>
+<link>http://vs-hls-uk-live.akamaized.net/pool_4/live/bbc_one_northern_ireland_hd/bbc_one_northern_ireland_hd.isml/bbc_one_northern_ireland_hd-pa4%3d128000-video%3d5070016.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
 
 <item>
 <title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]BBC One Scotland   [/COLOR][COLOR lime]HD[/COLOR]</title>
-<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_scotland_hd.m3u8</link>
+<link>http://vs-hls-uk-live.akamaized.net/pool_5/live/bbc_one_scotland_hd/bbc_one_scotland_hd.isml/bbc_one_scotland_hd-pa4%3d128000-video%3d5070016.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbcone.png</thumbnail>
 </item>
 
@@ -68,7 +68,7 @@
 
 <item>
 <title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]BBC Two   [/COLOR][COLOR lime]HD[/COLOR]</title>
-<link>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_two_hd.m3u8</link>
+<link>http://vs-hls-uk-live.akamaized.net/pool_31/live/bbc_two_hd/bbc_two_hd.isml/bbc_two_hd-pa4%3d128000-video%3d5070016.m3u8</link>
 <thumbnail>http://www.liveonlinetv247.info/images/bbctwo.png</thumbnail>
 </item>
 
@@ -90,7 +90,7 @@
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV 1   [/COLOR][COLOR lime]HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV 1   [/COLOR][COLOR lime]HQ[/COLOR]</title>
 <link>http://itv1liveios-i.akamaihd.net/hls/live/203437/itvlive/ITV1MN/master_Main1800.m3u8</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk.png</thumbnail>
 </item>
@@ -104,7 +104,7 @@
 </item>
 
 <item>
-<title>[COLOR white]     Channel 4   [/COLOR][COLOR red]SD[/COLOR]</title>
+<title>[COLOR white]     Channel 4   [/COLOR][COLOR red]SD2[/COLOR]</title>
 <link>
 <sublink>https://tvcatchup.com/watch/channel4</sublink>
 </link>
@@ -127,7 +127,7 @@
 
 
 <item>
-<title>[COLOR white]     Channel 5   SD 2[/COLOR]</title>
+<title>[COLOR white]     Channel 5   [COLOR red]SD2[/COLOR]</title>
 <link>
 <sublink>http://streams.yo.tv/srv1/ngrp:4.stream_all/playlist.m3u8?DVR</sublink>
 </link>
@@ -135,7 +135,7 @@
 </item>
 
 <item>
-<title>[COLOR white]     Channel 5   SD [/COLOR]</title>
+<title>[COLOR white]     Channel 5   [COLOR red]SD3[/COLOR]</title>
 <link>
 <sublink>https://tvcatchup.com/watch/five</sublink>
 </link>
@@ -207,16 +207,12 @@
 
 
 <item>
-<title>[COLOR white]     Home   [/COLOR][COLOR lime]HD[/COLOR]</title>
+<title>[COLOR white]     Home   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/home</link>
 <thumbnail>https://assets.tvplayer.com/tvos/images/channels/512.png</thumbnail>
 </item>
 
-<item>
-<title>[COLOR white]     Home + 1   [/COLOR][COLOR lime]HD[/COLOR]</title>
-<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/homeplus1</link>
-<thumbnail>https://assets.tvplayer.com/tvos/images/channels/512.png</thumbnail>
-</item>
+
 
 <item>
 <title>[COLOR white]     Horror Channel   [/COLOR][COLOR red]SD[/COLOR]</title>
@@ -232,17 +228,10 @@
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV 2   [/COLOR][COLOR lime]HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV 2   [/COLOR][COLOR lime]HQ[/COLOR]</title>
 <link>http://itv2liveios-i.akamaihd.net/hls/live/203495/itvlive/ITV2MN/master_Main1800.m3u8
 </link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv2.png</thumbnail>
-</item>
-
-<item>
-<title>[COLOR white]     ITV 2 + 1   [/COLOR][COLOR red]SD[/COLOR]</title>
-<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/itv2plus1
-</link>
-<thumbnail>http://uktv.robssatellitetv.com/images/channels/itv2plus1.png</thumbnail>
 </item>
 
 
@@ -254,15 +243,9 @@
 
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV 3   [/COLOR][COLOR lime]HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV 3   [/COLOR][COLOR lime]HQ[/COLOR]</title>
 <link>http://itv3liveios-i.akamaihd.net/hls/live/207262/itvlive/ITV3MN/master_Main1800.m3u8</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv3.png</thumbnail>
-</item>
-
-<item>
-<title>[COLOR white]     ITV 3 + 1   [/COLOR][COLOR red]SD[/COLOR]</title>
-<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/itv3plus1</link>
-<thumbnail>http://uktv.robssatellitetv.com/images/channels/itv3plus1.png</thumbnail>
 </item>
 
 
@@ -273,19 +256,12 @@
 </item>
 
 <item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV 4   [/COLOR][COLOR lime]HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV 4   [/COLOR][COLOR lime]HQ[/COLOR]</title>
 <link>http://itv4liveios-i.akamaihd.net/hls/live/207266/itvlive/ITV4MN/master_Main1800.m3u8</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv4.png</thumbnail>
 </item>
-
 <item>
-<title>[COLOR white]     ITV 4 + 1   [/COLOR][COLOR lime]HD[/COLOR]</title>
-<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/itv4plus1</link>
-<thumbnail>http://uktv.robssatellitetv.com/images/channels/itv4plus1.png</thumbnail>
-</item>
-
-<item>
-<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV Be   [/COLOR][COLOR lime]HD[/COLOR]</title>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]ITV Be   [/COLOR][COLOR lime]HQ[/COLOR]</title>
 <link>http://itvbeliveios-i.akamaihd.net/hls/live/219078/itvlive/ITVBE/master_Main1800.m3u8</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/ii/itv_uk_be.png</thumbnail>
 </item>
@@ -306,11 +282,7 @@
 <thumbnail>http://my.tvguide.co.uk/channel_logos/361.png</thumbnail>
 </item>
 
-<item>
-<title>[COLOR white]     More 4 + 1   [/COLOR][COLOR red]SD[/COLOR]</title>
-<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/more4plus1</link>
-<thumbnail>http://uktv.robssatellitetv.com/images/channels/more4plus1.png</thumbnail>
-</item>
+
 
 <item>
 <title>[COLOR white]     My 5   [/COLOR][COLOR red]SD[/COLOR]</title>
@@ -359,19 +331,13 @@
 </item>
 
 <item>
-<title>[COLOR white]     Yesterday   [/COLOR][COLOR lime]HD[/COLOR]</title>
+<title>[COLOR white]     Yesterday   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/yesterday</link>
 <thumbnail>http://www.lyngsat-logo.com/hires/yy/yesterday_uktv.png</thumbnail>
 </item>
 
 <item>
-<title>[COLOR white]     Yesterday + 1   [/COLOR][COLOR lime]HD[/COLOR]</title>
-<link>http://uktv.robssatellitetv.com/watch-uk-tv-online/yesterdayplus1</link>
-<thumbnail>http://www.lyngsat-logo.com/hires/yy/yesterday_uktv.png</thumbnail>
-</item>
-
-<item>
-<title>[COLOR white]     Your Tv   [/COLOR][COLOR lime]HD[/COLOR]</title>
+<title>[COLOR white]     Your Tv   [/COLOR][COLOR red]SD[/COLOR]</title>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/yourtv</link>
 <thumbnail>http://my.tvguide.co.uk/channel_logos/991.png</thumbnail>
 </item>
@@ -561,7 +527,7 @@
 <item>
 <title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]CBeebies[/COLOR][COLOR lime]   [/COLOR][COLOR lime]HD[/COLOR]</title>
 <link>
-<sublink>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/cbeebies_hd.m3u8</sublink>
+<sublink>http://vs-hls-uk-live.akamaized.net/pool_2/live/cbeebies_hd/cbeebies_hd.isml/cbeebies_hd-pa4%3d128000-video%3d5070016.m3u8</sublink>
 </link>
 <thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_cbeebies_uk.png</thumbnail>
 </item>
