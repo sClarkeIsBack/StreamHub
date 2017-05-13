@@ -384,17 +384,6 @@
 
 
 
-<item>
-<title>[COLOR white]     Nickelodeon   SD[/COLOR]</title>
-<link>https://www.arconaitv.me/nickie/</link>
-<thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
-</item>
-
-
-
-
-
-
 
 <item>
 <title>[COLOR white]     ABC   SD[/COLOR]</title>
@@ -563,6 +552,140 @@
 <thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
 </item>
 
+<item>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]CITV[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>http://citvliveios-i.akamaihd.net/hls/live/207267/itvlive/CITVMN/master_Main1800.m3u8</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_cbeebies_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]CBeebies[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>
+<sublink>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/cbeebies_hd.m3u8</sublink>
+</link>
+<thumbnail>http://www.lyngsat-logo.com/hires/bb/bbc_cbeebies_uk.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Nickelodeon   SD[/COLOR]</title>
+<link>https://www.arconaitv.me/nickie/</link>
+<thumbnail>https://lh3.googleusercontent.com/-StkgniJST5Q/AAAAAAAAAAI/AAAAAAAAEPs/Djzw2ubpycM/s0-c-k-no-ns/photo.jpg</thumbnail>
+</item>
+
+<item>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]The Box[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>https://tvplayer.com/watch/thebox</sublink>
+</link>
+<thumbnail>http://igrewupinthe90s.com/wp-content/uploads/2015/05/the-box.jpg</thumbnail>
+</item>
+
+<item>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Box Hits[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>https://tvplayer.com/watch/smashhits</link>
+<thumbnail>https://pbs.twimg.com/profile_images/744501160028012544/36yv0LOY.jpg</thumbnail>
+</item>
+
+<item>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Box Upfront[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>https://tvplayer.com/watch/heat</sublink>
+</link>
+<thumbnail>https://d24j9r7lck9cin.cloudfront.net/l/f/1/1518.1464128304.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Capital TV[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>https://tvplayer.com/watch/capitaltv</sublink>
+</link>
+<thumbnail>https://images-eu.ssl-images-amazon.com/images/I/41Bdy18PRuL.png</thumbnail>
+</item>
+
+
+
+
+<item>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Channel AKA[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>https://tvplayer.com/watch/channelaka</sublink>
+</link>
+<thumbnail>https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Channel_AKA_2009_logo.png/220px-Channel_AKA_2009_logo.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Chilled[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>
+https://tvplayer.com/watch/nowthatswhaticallmusic
+</sublink>
+</link>
+<thumbnail>https://assets.tvplayer.com/common/logos/150/Inverted/226.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Clubland[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>https://tvplayer.com/watch/clubland</sublink>
+</link>
+<thumbnail>https://assets.tvplayer.com/common/logos/150/Inverted/225.png</thumbnail>
+</item>
+
+
+
+<item>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Heart TV[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>https://tvplayer.com/watch/heart</sublink>
+</link>
+<thumbnail>http://radiotoday.co.uk/wp-content/uploads/2015/02/6heartv.jpg</thumbnail>
+</item>
+
+
+
+
+<item>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Kerrang TV[/COLOR][COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>https://tvplayer.com/watch/kerrang</sublink>
+</link>
+<thumbnail>http://www.userlogos.org/files/logos/Carlos182/kerrang.png</thumbnail>
+</item>
+
+
+
+
+<item>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Kiss TV[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>https://tvplayer.com/watch/kiss</sublink>
+</link>
+<thumbnail>http://static1.squarespace.com/static/5617dc44e4b0577603d6b96f/5617e049e4b0df1370a7d984/5617e062e4b08bd3cec01036/1444405348097/kiss-logo.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]Magic TV[COLOR red]   SD[/COLOR]</title>
+<link>
+<sublink>https://tvplayer.com/watch/magic</sublink>
+</link>
+<thumbnail>http://radiotoday.co.uk/wp-content/uploads/2012/10/magic2012.jpg</thumbnail>
+</item>
+
+<item>
+<title>[COLOR blue]I[/COLOR][COLOR red]P[/COLOR]  [COLOR white]BBC News[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>
+<sublink>http://vs-hls-uk-live.edgesuite.net/pool_34/live/bbc_news_channel_hd/bbc_news_channel_hd.isml/bbc_news_channel_hd-pa4%3d128000-video%3d5070000.m3u8</sublink>
+</link>
+<thumbnail>http://www.userlogos.org/files/logos/macleod.mac/bbcnews.1.o.png</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]     Sky News[/COLOR][COLOR lime]   HD[/COLOR]</title>
+<link>https://www.youtube.com/watch?v=y60wDzZt8yg</link>
+<thumbnail>http://www.felicitygerry.com/wp-content/uploads/2014/11/sky-news-logo.png</thumbnail>
+</item>
 
 
 <plugin>
