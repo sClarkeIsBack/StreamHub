@@ -40,13 +40,13 @@
 <link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/spongebob-squarepants</link>
 </plugin>
 
+<plugin>
+<title>The Looney Toons</title>
+<link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/the-looney-tunes-show-2011</link>
+</plugin>
 
 <plugin>
 <title>The Simpsons</title>
 <link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/the-simpsons</link>
 </plugin>
 
-<plugin>
-<title>Thunderbirds</title>
-<link>plugin://script.module.streamhub/?mode=52&url=http://www.toonget.net/thunderbirds</link>
-</plugin>
