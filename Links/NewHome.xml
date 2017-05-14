@@ -64,9 +64,14 @@
 <thumbnail>http://mkodi.co.uk/streamhub/icons/doc.png</thumbnail>
 </plugin>
 
-
 <plugin>
 <title>[COLOR red][B]X[/COLOR][COLOR white]XX[/B][/COLOR]</title>
 <link>plugin://script.module.streamhub/?mode=31&url=http</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/XXX.png</thumbnail>
 </plugin>
+
+<dir>
+<name>[COLOR red][B]Test Area[/COLOR][/B]</name>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/test.xml</link>
+<thumbnail>http://mkodi.co.uk/streamhub/icons/2/kid.png</thumbnail>
+</dir>
