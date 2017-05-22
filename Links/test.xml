@@ -1,27 +1,5 @@
 <item>
   <title>test</title>
-  <regex>
-<cookiejar></cookiejar>
-<name>getPCODE</name>
-<agent>Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0</agent>
-<expres>pcode:"(.*?)"</expres>
-<referer>http://videos.tva.ca/live/tva</referer>
-<page>https://d18jmrhziuoi7p.cloudfront.net/app/0.4.101/prod/browser/index.js</page>
-<cookiejar></cookiejar>
-<name>getEncodedCode</name>
-<agent>Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0</agent>
-<expres>"hls".*?data":"(.*?)"</expres>
-<referer>http://videos.tva.ca/live/tva</referer>
-<page>http://player.ooyala.com/sas/player_api/v2/authorization/embed_code/$doregex[getPCODE]/$doregex[getCustomID]?device=html5&domain=videos.tva.ca</page>
-<cookiejar></cookiejar>
-<name>getCustomID</name>
-<agent>Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0</agent>
-<expres>CustomId":"(.*?)"</expres>
-<referer>http://videos.tva.ca/live/tva</referer>
-<page>https://d18jmrhziuoi7p.cloudfront.net/isl/api/v1/dataservice/GetLiveStreamDetails?$expand=Images&$format=json</page>
-<expres>$pyFunction:base64.b64decode("$doregex[getEncodedCode]")</expres>
-<name>getDecodedCode</name>
-<page></page>
- </regex>
+  <link>http://videos.tva.ca/live/tva</link>
 </item>
   
