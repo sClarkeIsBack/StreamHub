@@ -1,4 +1,6 @@
 <item>
+  <title>test</title>
+  <regex>
 <cookiejar></cookiejar>
 <name>getPCODE</name>
 <agent>Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0</agent>
@@ -20,5 +22,6 @@
 <expres>$pyFunction:base64.b64decode("$doregex[getEncodedCode]")</expres>
 <name>getDecodedCode</name>
 <page></page>
+ </regex>
 </item>
   
