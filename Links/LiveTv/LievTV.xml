@@ -1,12 +1,5 @@
 
 
-<dir>
-<name>    IPTV TEST</name>
-<link>http://dreamlord.tk:5454/get.php?username=emby&password=plexsucks&type=m3u</link>
-<thumbnail>http://www.liveonlinetv247.infomages/bbcone.png</thumbnail>
-</dir>
-
-
 <plugin>
   <title>[COLOR white][B]Channels Marked[/B][/COLOR] [COLOR blue]I[/COLOR][COLOR red]P[/COLOR][COLOR white][B] Require a UK IP Address[/B][/COLOR]</title>
   <icon>ada</icon>
@@ -17,6 +10,16 @@
   <icon>ada</icon>
 </plugin>
 
+<plugin>
+<title>    [COLOR lime]WORLD IPTV SECTION[/COLOR]</title>
+<link>plugin://script.module.streamhub/?mode=84&url=none</link>
+<thumbnail>http://www.freeiconspng.com/download/39519</thumbnail>
+</plugin>
+
+<plugin>
+  <title>[COLOR white][B][/B][/COLOR]</title>
+  <icon>ada</icon>
+</plugin>
 <item>
 <name>[COLOR white]     BBC One   [/COLOR][COLOR red]SD[/COLOR]</name>
 <link>http://uktv.robssatellitetv.com/watch-uk-tv-online/bbcone</link>
