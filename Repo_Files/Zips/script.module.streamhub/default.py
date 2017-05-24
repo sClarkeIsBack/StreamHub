@@ -31,13 +31,16 @@ def CAT():
 	addDir('DOCS',docurl+'/watch-online/',35,icon,fanart,'')
 	addDir('24/7 TV',tv,48,icon,fanart,'')
 	addDir('MUSIC',tv,64,icon,fanart,'')
-	addDir('WWE',tv,79,icon,fanart,'')
+	addDir('IPTV','url',84,icon,fanart,'')
 
 def MOV2CAT():
-	addDir('[COLOR red]R[/COLOR]ecently Added',mov2,38,icon,fanart,'')
-	addDir('[COLOR red]G[/COLOR]enres',mov2+'/genres/',41,icon,fanart,'')
-	addDir('[COLOR red]Y[/COLOR]ears',mov2+'/years/',41,icon,fanart,'')
-	addDir('[COLOR red]S[/COLOR]earch','url',40,icon,fanart,'')
+	addDir('[COLOR red]L[/COLOR]atest Releases','NEW:http://novamovie.net',79,icon,fanart,'')
+	addDir('[COLOR red]M[/COLOR]ost Popular','http://novamovie.net',79,icon,fanart,'')
+	addDir('[COLOR red]M[/COLOR]ost Viewed','http://novamovie.net/?v_sortby=views&v_orderby=desc',79,icon,fanart,'')
+	addDir('[COLOR red]R[/COLOR]ecommended','http://novamovie.net/tag/recommended/',79,icon,fanart,'')
+	addDir('[COLOR red]G[/COLOR]enres','url',81,icon,fanart,'')
+	addDir('[COLOR red]Y[/COLOR]ears','years',81,icon,fanart,'')
+	addDir('[COLOR red]S[/COLOR]earch','url',82,icon,fanart,'')
 	
 def TVREQUESTCAT():
 	addDir('Everybody Loves Raymond','ELR',50,'http://www.gstatic.com/tv/thumb/tvbanners/184243/p184243_b_v8_ab.jpg','','')
@@ -74,40 +77,83 @@ def MUSICCOL():
 	addDir('Now Thats What I Call Music Collection','NOW',70,icon,fanart,'')
 	
 
-def WWEINDEX(url):
-	open = OPEN_URL(url)
-	all  = regex_get_all(open,'<li class="item-post">','</li>')
-	for a in all:
-		name = regex_from_to(a,'title="','"')
-		url  = regex_from_to(a,'href="','"')
-		icon = regex_from_to(a,'icon src="','"')
-		addDir(name,url,81,icon,fanart,url)
-		
-def WWELINKS(url,description):
-	open = OPEN_URL(url)
-	all  = regex_get_all(open,'<p style="text-align: center; ','</a>')
-	xbmc.log(str(all))
-	if not 'part1' in all:
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+def NOVAMOVIES(url):
+	if url.startswith('NEW:'):
+		url  = str(url).replace('NEW:','')
+		open = OPEN_URL(url)
+		part = regex_from_to(open,'<div id="slider2"','<h1 style="display:none;">')
+		all  = regex_get_all(part,'<div class="item"','</div>')
 		for a in all:
-			name = regex_from_to(a,'">','<')
+			name = regex_from_to(a,'alt="','"')
 			url  = regex_from_to(a,'href="','"')
-			if not url.startswith('http'): url = 'http://educadegree.com/cgi-bin/'+url
-			xbmc.log(str(url))
-			addDir(name,url,82,icon,fanart,description)
-			
-def WWERESOLVE(url,description):
-	if 'Protect' in url:
-		headers = {}
-		headers['Referer'] = description
-		u  = requests.get(url,headers=headers)
-		url= regex_from_to(u,"src='","'")
+			icon = regex_from_to(a,'img src="','"')
+			addDir(name,url,80,icon,fanart,'')
+	else:
+		open = OPEN_URL(url)
+		part = regex_from_to(open,'<h1 style="display:none;">','</html>')
+		if not part == "":
+			all  = regex_get_all(part,'<div class="fixyear">','</a>')
+			for a in all:
+				name = regex_from_to(a,'alt="','"')
+				url  = regex_from_to(a,'href="','"')
+				icon = regex_from_to(a,'img src="','"')
+				addDir(name,url,80,icon,fanart,'')
+		else:
+			all  = regex_get_all(open,'<div class="fixyear">','</a>')
+			for a in all:
+				name = regex_from_to(a,'alt="','"')
+				url  = regex_from_to(a,'href="','"')
+				icon = regex_from_to(a,'img src="','"')
+				addDir(name,url,80,icon,fanart,'')
 		
-	link = urlresolver.HostedMediaFile(url).resolve()
-	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=iconimage)
-	liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': description})
-	liz.setProperty('IsPlayable','true')
-	liz.setPath(str(link))
-	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+		try:
+			np = regex_from_to(open,'<div class="pag_b"><a href="','"')
+			addDir('[COLOR red][B]NEXT PAGE >[/B][/COLOR]',np,79,icon,fanart,'')
+		except:
+			pass
+	
+def NOVAMOVIESGENRE(url):
+	open = OPEN_URL('http://novamovie.net')
+	if not url == 'years':
+		part = regex_from_to(open,'>GENRE</a>','</ul>')
+	else:
+		part = regex_from_to(open,'>YEAR</a>','</ul>')
+	all  = regex_get_all(part,'<li','</li')
+	for a in all:
+		name = regex_from_to(a,'/">','<')
+		url  = regex_from_to(a,' href="','"')
+		addDir(name,url,79,icon,fanart,'')
+	
+	
+def NOVAMOVIESSEARCH():
+
+	kb = xbmc.Keyboard ('', 'Search For a Movie', False)
+	kb.doModal()
+	if (kb.isConfirmed()):
+		query = kb.getText()
+		query = str(query).replace(' ','+')
+
+	open = OPEN_URL('http://novamovie.net/?s='+query)
+	all  = regex_get_all(open,'<div class="fixyear">','</a>')
+	for a in all:
+		name = regex_from_to(a,'alt="','"')
+		url  = regex_from_to(a,'href="','"')
+		icon = regex_from_to(a,'img src="','"')
+		if not name=="":
+			addDir(name,url,80,icon,fanart,'')
+
 	
 def xxxCAT():
 	if control.setting('freshstart')=='true':
@@ -191,10 +237,10 @@ def addDir(name,url,mode,iconimage,fanart,description):
 	liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
 	liz.setInfo( type="Video", infoLabels={"Title": name,"Plot":description})
 	liz.setProperty('fanart_image', fanart)
-	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==62 or mode ==75 or mode==82 or mode==999:
+	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==62 or mode ==75 or mode==80 or mode==999:
 		liz.setProperty("IsPlayable","true")
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
-	elif mode==73:
+	elif mode==73 or mode==1000:
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
 	else:
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
@@ -224,7 +270,41 @@ def OPEN_URL(url):
 	
 	
 	
+def NOVAMOVIERESOLVE(url):
+	open = OPEN_URL(url)
+	url  = re.compile('<iframe.+?src="(.+?)"').findall(open)[0]
+	open = OPEN_URL('http:'+url)
+	res_quality = []
+	stream_url  = []
+	quality     = ''
+
+	match = regex_get_all(open,'file"','type"')
+	try:
+		for a in match:
+			quality = '[B][I][COLOR red]%s[/COLOR][/I][/B]' %regex_from_to(a,'label": "','"')
+			url     =  regex_from_to(a,': "','"')
+			if not '.srt' in url:
+				res_quality.append(quality)
+				stream_url.append(url)
+		if len(match) >1:
+			ret = xbmcgui.Dialog().select('Select Stream Quality',res_quality)
+			if ret == -1:
+				return
+			elif ret > -1:
+				url = stream_url[ret]
+			else:
+				url = regex_from_to(open,'file":"','"')
+	except:
+		url = regex_from_to(open,'file":"','"')
+		
+	liz = xbmcgui.ListItem('', iconImage=iconimage, thumbnailImage=iconimage)
+	liz.setInfo(type='Video', infoLabels='')
+	liz.setProperty("IsPlayable","true")
+	liz.setPath(url)
+	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
 	
+	
+
 	
 	
 	
@@ -1013,7 +1093,70 @@ def UKNowMusic2(url,description):
 		addDir('%s - %s'%(artist,track),'http://woodmp3.com/search/'+url,63,icon,fanart,'')
 		
 
+		
+		
+		
+def WORLDIPTV():
+	open = bypass.get('http://freeworldwideiptv.com').content
+	all  = regex_get_all(open,'<div class="post-date-ribbon">','</header>')
+	for a in all:
+		url  = regex_from_to(a,'href="','"').replace('https://','http://')
+		name = regex_from_to(a,'title="','"')
+		addDir(name,url,83,icon,fanart,'')
+		
+def WORLDIPTVM3U(url):
+	try:
+		open = bypass.get(url).content
+		m3u  = regex_from_to(open,'Link :</strong>','</p>').strip()
+		open = OPEN_URL(str(m3u).replace('&amp;','&'))
+		all  = re.compile('#EXTINF:.+?\,(.+?)\n(.+?)\n', re.MULTILINE|re.DOTALL).findall(open)
+		for name,url in all:
+			addDir(name,url,1000,icon,fanart,'')
+	except:
+		xbmcgui.Dialog().notification('[COLOR red][B]StreamHub[/B][/COLOR]','Oops, This M3U Is Down')
+		return
 	
+
+def playf4m(url, name):
+            try:
+                if not any(i in url for i in ['.f4m', '.ts', '.m3u8']): raise Exception()
+                ext = url.split('?')[0].split('&')[0].split('|')[0].rsplit('.')[-1].replace('/', '').lower()
+                if not ext: ext = url
+                if not ext in ['f4m', 'ts', 'm3u8']: raise Exception()
+
+                params = urlparse.parse_qs(url)
+
+                try: proxy = params['proxy'][0]
+                except: proxy = None
+
+                try: proxy_use_chunks = json.loads(params['proxy_for_chunks'][0])
+                except: proxy_use_chunks = True
+
+                try: maxbitrate = int(params['maxbitrate'][0])
+                except: maxbitrate = 0
+
+                try: simpleDownloader = json.loads(params['simpledownloader'][0])
+                except: simpleDownloader = False
+
+                try: auth_string = params['auth'][0]
+                except: auth_string = ''
+
+
+                try:
+                   streamtype = params['streamtype'][0]
+                except:
+                   if ext =='ts': streamtype = 'TSDOWNLOADER'
+                   elif ext =='m3u8': streamtype = 'HLS'
+                   else: streamtype = 'HDS'
+
+                try: swf = params['swf'][0]
+                except: swf = None
+
+                from F4mProxy import f4mProxyHelper
+                return f4mProxyHelper().playF4mLink(url, name, proxy, proxy_use_chunks, maxbitrate, simpleDownloader, auth_string, streamtype, False, swf)
+            except:
+                pass
+
 
 params=get_params()
 url=None
@@ -1131,6 +1274,9 @@ elif mode==35:
 elif mode==36:
 	resolvedoc(url)
 	
+elif mode==37:
+	MOV2CAT()
+	
 elif mode==43:
 	wweopen(url)
 	
@@ -1232,7 +1378,25 @@ elif mode==77:
 	
 elif mode==78:
 	kisscartoonyear(url)
+	
+elif mode==79:
+	NOVAMOVIES(url)
+	
+elif mode==80:
+	NOVAMOVIERESOLVE(url)
 
+elif mode==81:
+	NOVAMOVIESGENRE(url)
+	
+elif mode==82:
+	NOVAMOVIESSEARCH()
+	
+elif mode==83:
+	WORLDIPTVM3U(url)
+	
+elif mode==84:
+	WORLDIPTV()
+	
 elif mode==98:
 	xxxstars(url)
 	
@@ -1247,7 +1411,11 @@ elif mode==999:
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
 
 
-
-
+elif mode==1000:
+	url = str(url).replace('\t','').replace('\r','').replace('\n','').replace(' ','%20')
+	try:
+		playf4m(url,name)
+	except:
+		pass
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
