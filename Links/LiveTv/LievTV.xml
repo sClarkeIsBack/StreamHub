@@ -1,3 +1,12 @@
+
+
+<dir>
+<name>    IPTV TEST</name>
+<link>http://dreamlord.tk:5454/get.php?username=emby&password=plexsucks&type=m3u</link>
+<thumbnail>http://www.liveonlinetv247.infomages/bbcone.png</thumbnail>
+</dir>
+
+
 <plugin>
   <title>[COLOR white][B]Channels Marked[/B][/COLOR] [COLOR blue]I[/COLOR][COLOR red]P[/COLOR][COLOR white][B] Require a UK IP Address[/B][/COLOR]</title>
   <icon>ada</icon>
