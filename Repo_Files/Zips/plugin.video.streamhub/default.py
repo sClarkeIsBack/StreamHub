@@ -920,8 +920,9 @@ class resolver:
             if not 'arconaitv.me' in url: raise Exception()
             url  = 'http://www.justproxy.co.uk/index.php?q='+base64.b64encode(url)
             open = getUrl(url)
-            u    = re.compile('<source src="(.+?)"').findall(open)[0]
-            return u
+            u    = re.compile('<source src=(.+?)"').findall(open)[0]
+            u    = u.strip()
+            return str(u).replace('\/','/').replace('"','')
         except:
             pass
 			
@@ -978,8 +979,8 @@ class player(xbmc.Player):
 
             if not 'tvplayer' in url:
 				if not 'itv' in url:
-					f4m = resolver().f4m(url, self.name)
-					if not f4m == None: return
+						f4m = resolver().f4m(url, self.name)
+						if not f4m == None: return
 
 
             item = control.item(path=url, iconImage=icon, thumbnailImage=icon)
@@ -1325,7 +1326,10 @@ elif action == 'clearCache':
 
 elif action == 'xxxpass':
 	setxxxpass()
-
+	
+elif action == 'playf4m':
+	indexer.f4m(url,name)
+	
 else:
     if 'search' in action:
         url = action.split('search=')[1]

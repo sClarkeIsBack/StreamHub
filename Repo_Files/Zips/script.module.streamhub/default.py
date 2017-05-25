@@ -24,7 +24,7 @@ proxy      = 'http://www.justproxy.co.uk/index.php?q='
 music      = 'http://woodmp3.com/search/'
 movies_url = 'https://torba.se'
 def CAT():
-	addDir('MOVIES','url',88,icon,fanart,'')
+	addDir('EXABYTE','url',85,icon,fanart,'')
 	addDir('MOVIES2','url',37,icon,fanart,'')
 	addDir('FAMILY SECTION',kidsurl,56,icon,fanart,'')
 	addDir('XXX SECTION','URL',31,icon,fanart,'')
@@ -1115,6 +1115,30 @@ def WORLDIPTVM3U(url):
 	except:
 		xbmcgui.Dialog().notification('[COLOR red][B]StreamHub[/B][/COLOR]','Oops, This M3U Is Down')
 		return
+		
+		
+		
+		
+		
+		
+		
+def EXABYTE():
+	addDir('[COLOR lime][B]==EXABYTE TV[/B]==[/COLOR]','http://www.exabytetv.info/UK.m3u',980898,icon,fanart,'')
+	addDir('UK Server','http://www.exabytetv.info/UK.m3u',86,icon,fanart,'')
+	addDir('US Server','http://www.exabytetv.info/USA.m3u',86,icon,fanart,'')
+	addDir('DE Server','http://www.exabytetv.info/DEU.m3u',86,icon,fanart,'')
+	addDir('ALB Server','http://www.exabytetv.info/ALB.m3u',86,icon,fanart,'')
+	addDir('NLD Server','http://www.exabytetv.info/NLD.m3u',86,icon,fanart,'')
+	addDir('SAU Server','http://www.exabytetv.info/SAU.m3u',86,icon,fanart,'')
+	addDir('TUR Server','http://www.exabytetv.info/TUR.m3u',86,icon,fanart,'')
+		
+		
+def listEXABYTE(url):
+	open   = OPEN_URL(url)
+	all    = re.compile('#EXTINF:.+?\,(.+?)\n(.+?)\n', re.MULTILINE|re.DOTALL).findall(open)
+	for name,url in all:
+		addDir(name,url,1000,icon,fanart,'')
+	
 	
 
 def playf4m(url, name):
@@ -1397,6 +1421,11 @@ elif mode==83:
 elif mode==84:
 	WORLDIPTV()
 	
+elif mode==85:
+	EXABYTE()
+	
+elif mode==86:
+	listEXABYTE(url)
 elif mode==98:
 	xxxstars(url)
 	

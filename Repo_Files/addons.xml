@@ -1,6 +1,6 @@
 <addons>
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.streamhub" name="[COLOR red][B]StreamHub[/COLOR][/B]" version="2.3" provider-name="sClarke">
+<addon id="plugin.video.streamhub" name="[COLOR red][B]StreamHub[/COLOR][/B]" version="2.4" provider-name="sClarke">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="plugin.video.youtube" version="5.2.1" optional="true" />
@@ -45,7 +45,7 @@
 
 
 
-<addon id="script.module.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="3.2" provider-name="sClarke">
+<addon id="script.module.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="3.3" provider-name="sClarke">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.requests" />
