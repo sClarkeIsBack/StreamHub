@@ -11,15 +11,15 @@
 </plugin>
 
 <plugin>
-<title>    [COLOR lime]WORLD IPTV SECTION[/COLOR]</title>
+<title>    [COLOR lime][B]WORLD IPTV SECTION[/B][/COLOR]</title>
 <link>plugin://script.module.streamhub/?mode=84&url=none</link>
 <thumbnail>http://www.freeiconspng.com/download/39519</thumbnail>
 </plugin>
 
 <plugin>
-<title>    [COLOR lime]EXABYTE TV SECTION[/COLOR]</title>
+<title>    [COLOR lime][B]EXABYTE TV SECTION[/B][/COLOR]</title>
 <link>plugin://script.module.streamhub/?mode=85&url=none</link>
-<thumbnail>http://www.freeiconspng.com/download/39519</thumbnail>
+<thumbnail>https://i2.wp.com/blog.exabytetv.info/wp-content/uploads/2016/09/icontex.png?fit=1022%2C1022</thumbnail>
 </plugin>
 
 <plugin>
