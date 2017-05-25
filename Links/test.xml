@@ -1,6 +1,6 @@
 
   
-<item>
+<plugin>
   <title>test</title>
-  <link>https://openload.co/embed/3O62p81nhcE/</link>
-</item>
+  <link>plugin://plugin.video.streamhub/?action=movieNavigator</link>
+</plugin>
