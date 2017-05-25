@@ -17,6 +17,12 @@
 </plugin>
 
 <plugin>
+<title>    [COLOR lime]EXABYTE TV SECTION[/COLOR]</title>
+<link>plugin://script.module.streamhub/?mode=85&url=none</link>
+<thumbnail>http://www.freeiconspng.com/download/39519</thumbnail>
+</plugin>
+
+<plugin>
   <title>[COLOR white][B][/B][/COLOR]</title>
   <icon>ada</icon>
 </plugin>
