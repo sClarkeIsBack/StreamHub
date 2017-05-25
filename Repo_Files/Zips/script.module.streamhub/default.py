@@ -1109,7 +1109,7 @@ def WORLDIPTVM3U(url):
 	try:
 		open = bypass.get(url).content
 		m3u  = regex_from_to(open,'Link :</strong>','</p>').strip()
-		open = OPEN_URL_RAW(str(m3u).replace('&amp;','&'))
+		open = bypass.get(str(m3u).replace('&amp;','&')).content
 		all  = re.compile('#EXTINF:.+?\,(.+?)\n(.+?)\n', re.MULTILINE|re.DOTALL).findall(open)
 		for name,url in all:
 			addDir(name,url,1000,icon,fanart,'')
