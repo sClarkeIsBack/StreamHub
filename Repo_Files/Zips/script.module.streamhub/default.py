@@ -32,6 +32,7 @@ def CAT():
 	addDir('24/7 TV',tv,48,icon,fanart,'')
 	addDir('MUSIC',tv,64,icon,fanart,'')
 	addDir('IPTV','url',84,icon,fanart,'')
+	addDir('IPTV2','url',88,icon,fanart,'')
 
 def MOV2CAT():
 	addDir('[COLOR red]L[/COLOR]atest Releases','NEW:http://novamovie.net',79,icon,fanart,'')
@@ -1108,13 +1109,37 @@ def WORLDIPTVM3U(url):
 	try:
 		open = bypass.get(url).content
 		m3u  = regex_from_to(open,'Link :</strong>','</p>').strip()
-		open = OPEN_URL(str(m3u).replace('&amp;','&'))
+		open = OPEN_URL_RAW(str(m3u).replace('&amp;','&'))
 		all  = re.compile('#EXTINF:.+?\,(.+?)\n(.+?)\n', re.MULTILINE|re.DOTALL).findall(open)
 		for name,url in all:
 			addDir(name,url,1000,icon,fanart,'')
 	except:
 		xbmcgui.Dialog().notification('[COLOR red][B]StreamHub[/B][/COLOR]','Oops, This M3U Is Down')
 		return
+		
+		
+def WORLDIPTV2():
+	open = OPEN_URL_RAW('http://iptvlivestream.com/iptv/')
+	all  = regex_get_all(open,'<div class="post-headline"','</div>')
+	for a in all:
+		name = regex_from_to(a,'title="','"')
+		url  = regex_from_to(a,'href="','"')
+		if not 'FREE M3U' in name:
+			if not 'FREE BEINSPORTS' in name:
+				if not 'FREE SPORTS IPTV' in name:
+					if not 'FREE ARABIC' in name:
+						if not 'FREE GERMANY' in name:
+							addDir(name,url,87,icon,fanart,'')
+		
+def WORLDIPTVM3U2(url):
+		open = OPEN_URL_RAW(url)
+		m3u  = regex_from_to(open,'<pre>','\n').replace('https:','http:')
+		xbmc.log(str(m3u))
+		open = OPEN_URL_RAW(str(m3u).replace('&amp;','&'))
+		all  = re.compile('#EXTINF:.+?\,(.+?)\n(.+?)\n', re.MULTILINE|re.DOTALL).findall(open)
+		for name,url in all:
+			addDir(name,url,1000,icon,fanart,'')
+
 		
 		
 		
@@ -1134,10 +1159,17 @@ def EXABYTE():
 		
 		
 def listEXABYTE(url):
-	open   = OPEN_URL(url)
+	open   = OPEN_URL_RAW(url)
 	all    = re.compile('#EXTINF:.+?\,(.+?)\n(.+?)\n', re.MULTILINE|re.DOTALL).findall(open)
 	for name,url in all:
 		addDir(name,url,1000,icon,fanart,'')
+		
+def OPEN_URL_RAW(url):
+	req = urllib2.Request(url,headers={'User-Agent':'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'})
+	response = urllib2.urlopen(req)
+	html = response.read()
+	response.close()
+	return html
 	
 	
 
@@ -1426,6 +1458,13 @@ elif mode==85:
 	
 elif mode==86:
 	listEXABYTE(url)
+	
+elif mode==87:
+	WORLDIPTVM3U2(url)
+	
+elif mode==88:
+	WORLDIPTV2()
+
 elif mode==98:
 	xxxstars(url)
 	
