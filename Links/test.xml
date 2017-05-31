@@ -1,6 +1,6 @@
 
   
-<item>
+<plugin>
   <title>test</title>
-  <link>https://openload.co/f/TebZRohhTjM/DDLValley.cool_prsn.brk.S05E09.HDTV.x264-KILLERS.mkv</link>
-</item>
+  <link>plugin://plugin.video.streamhub/?action=movieNavigator</link>
+</plugin>
