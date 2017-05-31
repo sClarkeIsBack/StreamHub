@@ -1,21 +1,24 @@
 <addons>
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.streamhub" name="[COLOR red][B]StreamHub[/COLOR][/B]" version="2.4" provider-name="sClarke">
+<addon id="plugin.video.streamhub" name="[COLOR red][B]StreamHub[/B][/COLOR]" version="2.5" provider-name="sClarke">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
-		<import addon="plugin.video.youtube" version="5.2.1" optional="true" />
 		<import addon="script.module.pyxbmct" version="1.1.4" />
 		<import addon="script.module.urlresolver" version="3.0.0"/>
-		<import addon="script.module.liveresolver" version="0.1.24"/>
-		<import addon="script.video.F4mProxy" version="2.2.3"/>
+		<import addon="script.module.metahandler" version="1.0.0" />
+		<import addon="script.video.F4mProxy"/>
+		<import addon="script.module.requests"/>
+		<import addon="script.module.streamhub"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
 		<provides>video</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">StreamHub</summary>
-		<description lang="en">Bringing Movies, TV shows, Kids Content and More!</description>
+		<description lang="en">[COLOR red][B]StreamHub[/B][/COLOR] - Bringing Media Content To Your Devices.</description>
+		<disclaimer lang="en">The author does not own or host any content found within this Addon. The Author is not connected to or in any other way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</disclaimer>
 		<platform>all</platform>
+		<forum>Facebook:   facebook.com/groups/streamhub</forum>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
@@ -23,35 +26,18 @@
 			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
 			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
 		</assets>
-		<news>New Premium Sports Section!</news>
+		<news></news>
 	</extension>
 </addon>
 
-<addon id="plugin.video.torba" name="[B][COLOR yellow]Torba[/COLOR][/B]" version="1.2" provider-name="sClarke">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.requests" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Torba.se</summary>
-    <description lang="en">All content is found at torba.se, we do not host or own any of the content.</description>
-	<disclaimer lang="en">Torba.se</disclaimer>
-    <platform>all</platform>
-  </extension>
-</addon>
 
-
-
-<addon id="script.module.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="3.5" provider-name="sClarke">
+<addon id="script.module.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="3.6" provider-name="sClarke">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.requests" />
 	<import addon="script.module.urlresolver" />
 	<import addon="script.module.liveresolver" version="0.1.24"/>
-        <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.beautifulsoup4" />
 	<import addon="script.video.F4mProxy" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
@@ -63,46 +49,6 @@
 	<disclaimer lang="en">Dependency Addon for StreamHub</disclaimer>
     <platform>all</platform>
   </extension>
-</addon>
-
-
-<addon id="script.streamhub.artwork" version="1.0.0" name="Streamhub Artwork" provider-name="sClarke">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<summary>Themes for the StreamHub Addon</summary>
-		<description>Themes for StreamHub are maintained separately to make distribution of the the addon itself easier/faster.</description>
-		<platform>all</platform>
-	</extension>
-</addon>
-<addon id="script.streamhub.metadata" version="1.0.0" name="StreamHub Metadata" provider-name="sClarke">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<summary>Metadata for the StreamHub Addon</summary>
-		<description>Metadata for StreamHub are maintained separately to make distribution of the the addon itself easier/faster.</description>
-		<platform>all</platform>
-	</extension>
-</addon>
-<addon id="plugin.video.f4mTester" version="2.7.1" name="f4mTester" provider-name="Shani">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.video.F4mProxy" version="2.7.1"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-    
-
-    <extension point="xbmc.addon.metadata">
-        <summary>f4mTester</summary>
-        <description></description>
-        <platform>all</platform>
-    </extension>
 </addon>
 
 

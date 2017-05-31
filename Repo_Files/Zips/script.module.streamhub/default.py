@@ -1108,7 +1108,7 @@ def WORLDIPTV():
 def WORLDIPTVM3U(url):
 	try:
 		open = bypass.get(url).content
-		m3u  = regex_from_to(open,'Link :</strong>','</p>').strip()
+		m3u  = regex_from_to(open,'<strong>Link.+?</strong>','</p>').strip()
 		open = bypass.get(str(m3u).replace('&amp;','&')).content
 		all  = re.compile('#EXTINF:.+?\,(.+?)\n(.+?)\n', re.MULTILINE|re.DOTALL).findall(open)
 		for name,url in all:
@@ -1129,17 +1129,20 @@ def WORLDIPTV2():
 				if not 'FREE SPORTS IPTV' in name:
 					if not 'FREE ARABIC' in name:
 						if not 'FREE GERMANY' in name:
-							addDir(name,url,87,icon,fanart,'')
+							if not 'daily m3u' in name.lower():
+								addDir(name,url,87,icon,fanart,'')
 		
 def WORLDIPTVM3U2(url):
 		open = OPEN_URL_RAW(url)
-		m3u  = regex_from_to(open,'<pre>','\n').replace('https:','http:')
-		xbmc.log(str(m3u))
-		open = OPEN_URL_RAW(str(m3u).replace('&amp;','&'))
-		all  = re.compile('#EXTINF:.+?\,(.+?)\n(.+?)\n', re.MULTILINE|re.DOTALL).findall(open)
-		for name,url in all:
-			addDir(name,url,1000,icon,fanart,'')
-
+		try:
+			url  = re.compile('<blockquote><p><a href="(.+?)"').findall(open)[0]
+			open = OPEN_URL_RAW(str(url).replace('&amp;','&'))
+			all  = re.compile('#EXTINF:.+?\,(.+?)\n(.+?)\n', re.MULTILINE|re.DOTALL).findall(open)
+			for name,url in all:
+				addDir(name,url,1000,icon,fanart,'')
+		except:
+			pass
+	
 		
 		
 		
@@ -1467,6 +1470,9 @@ elif mode==88:
 
 elif mode==98:
 	xxxstars(url)
+	
+elif mode==99:
+	setxxxpass()
 	
 elif mode==100:
 	MovieCAT()
