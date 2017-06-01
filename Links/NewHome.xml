@@ -59,7 +59,7 @@
 
 <plugin>
 <name>[COLOR red][B]24[/COLOR][COLOR white]/7 TV[/COLOR][/B]</name>
-<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=48&name=24%2f7%20TV&url=https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/247/247tv.xml</link>
+<link>plugin://script.module.streamhub/?mode=47&url=None</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/doc.png</thumbnail>
 </plugin>
 
