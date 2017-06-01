@@ -1,6 +1,6 @@
 
   
-<plugin>
+<dir>
   <title>test</title>
-  <link>plugin://plugin.video.streamhub/?action=movieNavigator</link>
-</plugin>
+  <link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Requests/home.xml</link>
+</dir>
