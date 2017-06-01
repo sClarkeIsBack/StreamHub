@@ -29,7 +29,7 @@ def CAT():
 	addDir('FAMILY SECTION',kidsurl,56,icon,fanart,'')
 	addDir('XXX SECTION','URL',31,icon,fanart,'')
 	addDir('DOCS',docurl+'/watch-online/',35,icon,fanart,'')
-	addDir('24/7 TV',tv,48,icon,fanart,'')
+	addDir('24/7 TV',tv,47,icon,fanart,'')
 	addDir('MUSIC',tv,64,icon,fanart,'')
 	addDir('IPTV','url',84,icon,fanart,'')
 	addDir('IPTV2','url',88,icon,fanart,'')
@@ -238,7 +238,7 @@ def addDir(name,url,mode,iconimage,fanart,description):
 	liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
 	liz.setInfo( type="Video", infoLabels={"Title": name,"Plot":description})
 	liz.setProperty('fanart_image', fanart)
-	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==62 or mode ==75 or mode==80 or mode==999:
+	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==46 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==62 or mode ==75 or mode==80 or mode==999:
 		liz.setProperty("IsPlayable","true")
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
 	elif mode==73 or mode==1000:
@@ -647,29 +647,20 @@ def playmov2(url):
 
 	
 def opentwentyfourseven(url):
-	page = proxy+url
-	m3ubase= 'plugin://plugin.video.f4mTester/?streamtype=HLS&amp;url='
-	m3ubase2= '&amp;name='
-	all_vids=re.compile('<li id="menu-item-(.*?)</div> </div></div>').findall(page)
-	xbmc.log(str(all_vids))
-	for a in all_vids:
+	page = 'https://www.arconaitv.me'
+	page = OPEN_URL(page)
+	part = regex_from_to(page,'Channels','Cable Tv')
+	all  = regex_get_all(part,'<li id="menu-item-','</span>')
+	for a in all:
 		url = regex_from_to(a,'<a href="','"')
-		name = regex_from_to(a,'<span class="link_text">\n','\n')
-		xbmc.log(str(url))
-		xbmc.log(str(name))
-		
+		name = regex_from_to(a,'<span class="link_text">\n','\n').replace('&#8211;','-')
+		if not '-' in name:
+			addDir(name,url,46,icon,fanart,'')
 		
 def resolvetwentyfourseven(url,icon):
-	m3ubase= 'plugin://plugin.video.f4mTester/?streamtype=HLS&amp;url='
-	name='24/7'
-	m3ubase2= '&amp;icon='+icon+'&amp;name='+name
-	xbmc.log(str(proxy)+str(url))
-	open = OPEN_URL(proxy+url)
-	m3u  = re.compile('<source.*?src="(.*?)"',re.DOTALL).findall(open)[0]
-	play = m3ubase+m3u+m3ubase2
-	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
-	xbmc.Player().play(play,liz)
-	tvlist(tv)
+	open = OPEN_URL(url)
+	m3u  = re.compile('"src":"(.*?)"',re.DOTALL).findall(open)[0]
+	playf4m((m3u).replace('\/','/'),'24/7 TV')
 	
 def home():
 	home = xbmc.executebuiltin('XBMC.RunAddon(plugin://plugin.video.streamhub/?action=)')
