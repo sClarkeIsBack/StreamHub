@@ -4,3 +4,8 @@
   <title>test</title>
   <link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Requests/home.xml</link>
 </dir>
+
+<plugin>
+  <title>test</title>
+  <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=http://v2.ustreamix.com/stream.php?id=sky-sports-1</link>
+</plugin>
