@@ -83,8 +83,8 @@ def MUSICCOL():
 def mobdro():
 	addDir('Entertainment','Entertainment',93,'http://geekpeaksoftware.com/wp-content/uploads/2016/10/mobdro.png',fanart,'')
 	addDir('Sports','Sports',93,'http://geekpeaksoftware.com/wp-content/uploads/2016/10/mobdro.png',fanart,'')
-	addDir('Music','Music',93,'http://geekpeaksoftware.com/wp-content/uploads/2016/10/mobdro.png',fanart,'')
-	addDir('News','News',93,'http://geekpeaksoftware.com/wp-content/uploads/2016/10/mobdro.png',fanart,'')
+	addDir('Music','CAT=Music',93,'http://geekpeaksoftware.com/wp-content/uploads/2016/10/mobdro.png',fanart,'')
+	addDir('News','CAT=News',93,'http://geekpeaksoftware.com/wp-content/uploads/2016/10/mobdro.png',fanart,'')
 	
 	
 def mobdrolist(url):

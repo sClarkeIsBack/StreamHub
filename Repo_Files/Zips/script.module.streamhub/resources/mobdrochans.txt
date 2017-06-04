@@ -264,7 +264,7 @@ NBC:mpd://3baf7db0d8f1d400816fb6166b297f46.m3u8
 NBC:mpd://89b7abacbe0cefbadf6ad5c5ccb4ae15.m3u8
 Sky News:mpd://3b7dd11b6654dd5f35745285ededdbd9.m3u8
 ------------------------------------------------------
-CAT=Shows
+CAT=247 Shows
 Adult Swim 24/7:mpd://539125fdf85ba9fc38e2550c3c838e4d.m3u8
 Adventure Time:mpd://7d0db380a5b95a8ba1da0bca241abda1.m3u8
 Amercian Horror Story:mpd://9473408d814743efc7c203eb79782f8b.m3u8
@@ -330,7 +330,7 @@ Vampire Diaries:mpd://52b8a5f24dc760714094959c4b5edb0f.m3u8
 Whose Line Is It Anyway?:mpd://9185defbf5f091cd98fe4751b66f91b8.m3u8
 Workaholics:mpd://742523daef59db4b718409f46de05d0c.m3u8
 -----------------------------------------------------------------
-CAT=Movies
+CAT=247 Movies
 Action Movies 24/7:mpd://90ce2364e02379b96643fe4d0f2d7c25.m3u8
 Animation Movies 24/7:mpd://7e18e745bf13ed4e73c5e612599b4cf5.m3u8
 Christmas Movies 24/7:mpd://17d6b59f16d493db84234ade495c6ce6.m3u8
@@ -345,7 +345,7 @@ Romance Movies 24/7:mpd://3248e60a5820cec655cb031cc2662925.m3u8
 Star Trek vs Star Wars:mpd://9a045dead94fad2ceb3c5c808dd964b6.m3u8
 Studio Ghibli Movies 24/7:mpd://57f1a338fcf6edaa3378c10cd5beefd6.m3u8
 ---------------------------------------------------------------------
-CAT=Movies
+CAT=Music
 40TV:mpd://e05e081ee05882d68e7f2683a5f950af.m3u8
 Box Hits:mpd://a118a64979f4dcf9e0970bb59ed129d6.m3u8
 Box Upfront:mpd://54646e56785ba2e2568ceaacaa307979.m3u8
@@ -356,7 +356,6 @@ Kiss:mpd://d61fad2618362cf5c2392d4880e3f4b4.m3u8
 Magic:mpd://02700e454d679f31f27c6f0768986dd1.m3u8
 MTV Classic UK:mpd://10e399b182aa88f1444a2f08a9dffb8b.m3u8
 MTV Dance:mpd://2672617afdf44cdfe0bef6f41856c920.m3u8
---------------------------------------------------------------------------
 MTV Espana:mpd://9bb7afe444e65e818a52988adee673e7.m3u8
 MTV Rocks:mpd://38b937a77d8587999c0e1d1d13d9a37c.m3u8
 MTV UK:mpd://ff68e97b8e401c877284758ae2060cd0.m3u8
@@ -365,4 +364,4 @@ NusicTV:mpd://b3afa5ca6c8dbb3131aa15d340d9eddf.m3u8
 The Box:mpd://119439698dc34ddddd6ce92420985919.m3u8
 The Landscape Channel:mpd://6613c05762f21c12924bce66e5c8efce.m3u8
 VH1 UK:mpd://b255a81385c67a839c15d92b8bad092c.m3u8
-==
+--------------------------------------------------------------------------
