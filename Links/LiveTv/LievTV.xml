@@ -11,21 +11,33 @@
 </plugin>
 
 <plugin>
-<title>    [COLOR lime][B]WORLD IPTV SECTION[/B][/COLOR]</title>
+<title>    [COLOR lime][B]MOBDRO[/B][/COLOR]</title>
+<link>plugin://script.module.streamhub/?mode=91&url=none</link>
+<thumbnail>http://geekpeaksoftware.com/wp-content/uploads/2016/10/mobdro.png</thumbnail>
+</plugin>
+
+<plugin>
+<title>    [COLOR lime][B]LIVEONLINETV247[/B][/COLOR]</title>
+<link>plugin://script.module.streamhub/?mode=89&url=none</link>
+<thumbnail>https://www.auctionnetwork.com/Resources/images/auctions/OnlineOnly/auction-logos/live_online_logo_735x413.jpg?forcescope=download</thumbnail>
+</plugin>
+
+<plugin>
+<title>    [COLOR lime][B]EXABYTE TV[/B][/COLOR]</title>
+<link>plugin://script.module.streamhub/?mode=85&url=none</link>
+<thumbnail>https://i2.wp.com/blog.exabytetv.info/wp-content/uploads/2016/09/icontex.png?fit=1022%2C1022</thumbnail>
+</plugin>
+
+<plugin>
+<title>    [COLOR lime][B]WORLD IPTV[/B][/COLOR]</title>
 <link>plugin://script.module.streamhub/?mode=84&url=none</link>
 <thumbnail>http://www.freeiconspng.com/download/39519</thumbnail>
 </plugin>
 
 <plugin>
-<title>    [COLOR lime][B]WORLD IPTV SECTION 2[/B][/COLOR]</title>
+<title>    [COLOR lime][B]WORLD IPTV[/B][/COLOR]</title>
 <link>plugin://script.module.streamhub/?mode=88&url=none</link>
 <thumbnail>http://www.freeiconspng.com/download/39519</thumbnail>
-</plugin>
-
-<plugin>
-<title>    [COLOR lime][B]EXABYTE TV SECTION[/B][/COLOR]</title>
-<link>plugin://script.module.streamhub/?mode=85&url=none</link>
-<thumbnail>https://i2.wp.com/blog.exabytetv.info/wp-content/uploads/2016/09/icontex.png?fit=1022%2C1022</thumbnail>
 </plugin>
 
 <plugin>
