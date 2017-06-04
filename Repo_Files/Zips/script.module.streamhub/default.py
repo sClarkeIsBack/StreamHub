@@ -105,16 +105,16 @@ def mobdroplay(url):
 	liz = xbmcgui.ListItem('', iconImage=iconimage, thumbnailImage=iconimage)
 	liz.setInfo(type='Video', infoLabels='')
 	liz.setProperty("IsPlayable","true")
-	liz.setPath(play)
+	liz.setPath((play).replace('http//','http://'))
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
 	
 	
 	
 	
 def mobdroresolve(url):
-    import time,random,md5
+    import random,time,md5
     from base64 import b64encode
-    url = (url).replace('mpd://','')
+    url  = (url).replace('mpd://','')
     user_agent = 'Mozilla%2F5.0%20%28Linux%3B%20Android%205.1.1%3B%20Nexus%205%20Build%2FLMY48B%3B%20wv%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Version%2F4.0%20Chrome%2F43.0.2357.65%20Mobile%20Safari%2F537.36'
     token = "65rSw"+"UzRad"
     servers = ['185.152.66.39', '185.102.219.72', '185.59.221.109', '185.152.64.236', '185.59.222.232', '185.102.219.67', '185.102.218.56']
@@ -125,6 +125,7 @@ def mobdroresolve(url):
     
     url = "http://{0}/p2p/{1}?st={2}&e={3}".format(server,url,out_hash,time_stamp)
     return '{url}|User-Agent={user_agent}&referer={referer}'.format(url=url,user_agent=user_agent,referer='6d6f6264726f2e6d65'.decode('hex'))
+
 
 	
 def NOVAMOVIES(url):
