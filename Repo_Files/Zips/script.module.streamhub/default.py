@@ -101,11 +101,11 @@ def mobdrolist(url):
 
 	
 def mobdroplay(url):
-	play = mobdroresolve(url)
+	url = mobdroresolve(url)
 	liz = xbmcgui.ListItem('', iconImage=iconimage, thumbnailImage=iconimage)
 	liz.setInfo(type='Video', infoLabels='')
 	liz.setProperty("IsPlayable","true")
-	liz.setPath((play).replace('http//','http://'))
+	liz.setPath((url).replace('http//','http://'))
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
 	
 	
@@ -1228,9 +1228,11 @@ def playLIVEONLINETV247(url):
 	url  = 'http://www.liveonlinetv247.info/embed/%s.php?width=650&height=480'%url
 	open = OPEN_URL(url)
 	m3u  = regex_from_to(open,'source src="','"')
-	playf4m(m3u,'Liveonlinetv')
-	return
-	
+	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
+	liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
+	liz.setProperty('IsPlayable','true')
+	liz.setPath(m3u+'|User-Agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36')
+	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
 	
 	
 	
