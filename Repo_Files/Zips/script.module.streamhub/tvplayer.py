@@ -86,7 +86,7 @@ def playtvplayer(url):
         channelid=re.findall('data-resource="(.*?)"' ,watchHtml)[0]
         token=re.findall('data-token="(.*?)"' ,watchHtml)[0]
         #token='null'
-        url  = "https://tvplayer.com/watch/context?resource=%s&nonce=%s"%(channelid,token)
+        url  = "https://tvplayer.com/watch/context?resource=%s&gen=%s"%(channelid,token)
         xbmc.log(str(url))
         contextjs=getUrl(url, cookieJar=cj)  
         contextjs=json.loads(contextjs)
