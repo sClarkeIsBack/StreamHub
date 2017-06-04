@@ -105,7 +105,7 @@ def mobdroplay(url):
 	liz = xbmcgui.ListItem('', iconImage=iconimage, thumbnailImage=iconimage)
 	liz.setInfo(type='Video', infoLabels='')
 	liz.setProperty("IsPlayable","true")
-	liz.setPath((url).replace('http//','http://'))
+	liz.setPath((url).replace('http//','http://').replace('\n','').replace('\r','').replace('\t',''))
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
 	
 	
