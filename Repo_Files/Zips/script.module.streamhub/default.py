@@ -153,7 +153,6 @@ def mobdrolist(url):
 def mobdroplay(url):
 	url = mobdroresolve(url)
 	url = (url).replace('http//','http://').replace('\n','').replace('\r','').replace('\t','')
-	url = 'http://127.0.0.1:19000/livestreamer/'+base64.b64encode(url)
 	liz = xbmcgui.ListItem('', iconImage=iconimage, thumbnailImage=iconimage)
 	liz.setInfo(type='Video', infoLabels='')
 	liz.setProperty("IsPlayable","true")
@@ -172,9 +171,10 @@ def mobdroresolve(url):
     time_stamp = str(int(time.time()) + 14400)
     to_hash = "{0}{1}/hls/{2}".format(token,time_stamp,url)
     out_hash = b64encode(md5.new(to_hash).digest()).replace("+", "-").replace("/", "_").replace("=", "")
-    server = '185.152.64.236'
+    servers = ['185.152.66.39', '185.102.219.72', '185.152.64.236', '185.59.222.232', '185.102.219.67', '185.102.218.56']
+    server  = random.choice(servers)
     
-    url = "hls://http://{0}/p2p/{1}?st={2}&e={3}".format(server,url,out_hash,time_stamp)
+    url = "http://{0}/p2p/{1}?st={2}&e={3}".format(server,url,out_hash,time_stamp)
     return '{url}|User-Agent={user_agent}&referer={referer}'.format(url=url,user_agent=user_agent,referer='6d6f6264726f2e6d65'.decode('hex'))
 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="4.7" provider-name="sClarke">
+<addon id="script.module.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="4.8" provider-name="sClarke">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.requests" />
