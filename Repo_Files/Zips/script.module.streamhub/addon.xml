@@ -9,7 +9,7 @@
 	<import addon="script.video.F4mProxy" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
+        <provides>all</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Dependency Addon for StreamHub</summary>
