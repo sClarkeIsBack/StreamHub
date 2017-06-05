@@ -33,7 +33,7 @@ def CAT():
 	addDir('MUSIC',tv,64,icon,fanart,'')
 	addDir('IPTV','url',84,icon,fanart,'')
 	addDir('IPTV2','url',88,icon,fanart,'')
-	addDir('Liveonlinetv','url',95,icon,fanart,'')
+	addDir('Liveonlinetv','url',101,icon,fanart,'')
 	
 
 def MOV2CAT():
@@ -80,6 +80,10 @@ def MUSICCOL():
 	addDir('Now Thats What I Call Music Collection','NOW',70,icon,fanart,'')
 	
 
+	
+	
+	
+	
 	
 	
 	
@@ -342,7 +346,7 @@ def addDir(name,url,mode,iconimage,fanart,description):
 	liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
 	liz.setInfo( type="Video", infoLabels={"Title": name,"Plot":description})
 	liz.setProperty('fanart_image', fanart)
-	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==46 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==62 or mode ==75 or mode==80 or mode==90 or mode==94 or mode==97 or mode==999:
+	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==46 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==62 or mode ==75 or mode==80 or mode==90 or mode==94 or mode==97 or mode==105 or mode==999:
 		liz.setProperty("IsPlayable","true")
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
 	elif mode==73 or mode==1000:
@@ -356,11 +360,8 @@ def addDirPlay(name,url,mode,iconimage,fanart,description):
 	u=sys.argv[0]+"?url="+url+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)+"&iconimage="+urllib.quote_plus(iconimage)+"&description="+urllib.quote_plus(description)
 	ok=True
 	liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
-	if mode==44:
-		liz.setProperty("IsPlayable","true")
-		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
-	else:
-		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
+	liz.setProperty("IsPlayable","true")
+	ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
 	return ok
 	xbmcplugin.endOfDirectory
 
@@ -1302,125 +1303,92 @@ def playLIVEONLINETV247(url):
 	
 	
 	
+def ustreamixchans():
+	open = OPEN_URL('http://v2.ustreamix.com')
+	all  = regex_get_all(open,'<p><a','</a>')
+	for a in sorted(all):
+		name = regex_from_to(a,'target="_blank">','<')
+		url  = regex_from_to(a,'href="','"')
+		live = regex_from_to(a,'class="status_live">','<')
+		if 'live' in live.lower():
+			live = '[COLOR lime]%s[/COLOR]'%live
+		else:
+			live = '[COLOR red]Down![/COLOR]'
+			
+		name = '%s %s'%(name,live)
+		
+		addDir(name,'http://v2.ustreamix.com'+url,102,icon,fanart,'')
+		
+		
+def ustreamixplay(url):
+	url = ustreamixresolve(url)
+	xbmcplay(url,'tset')
+
+def ustreamixresolve(url):
+	html = OPEN_URL(url)
+	ohtm = eval(re.findall('Obfuscator.*?var.*?(\[.*?\])',html,re.DOTALL)[0])
+	oval = int(re.findall('replace.*?- (\d*)',html)[0])
+	phtml = ''
+	for oht in ohtm:
+		phtml += chr(int(re.findall('\D*(\d*)',oht.decode('base64'))[0]) - oval)
+		
+		
+	strurl = re.findall("var stream = '(.*?)'",phtml)[0]
+	tokurl = re.findall('src="(.*?)"',phtml)[0]
+	hdr = {}
+	hdr['Referer'] = url
+	tokpg = requests.get(tokurl,headers=hdr,verify=False).text
+	token = re.findall('jdtk="(.*?)"',tokpg)[0]
+	url   = strurl+token+'|referer=&User-Agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36&&X-Requested-With: ShockwaveFlash/25.0.0.171'
+	
+	return url
 	
 	
-def getUrl(url, cookieJar=None,post=None, timeout=20, headers=None,jsonpost=False):
+def xbmcplay(url,name,pdialogue=None):    
 
-    #ctx = ssl.create_default_context()
-    #ctx.check_hostname = False
-    #ctx.verify_mode = ssl.CERT_NONE
+    liz = xbmcgui.ListItem(name, iconImage=iconimage, thumbnailImage=iconimage)
+    liz.setInfo(type='Video', infoLabels={'Title':name})
+    liz.setProperty("IsPlayable","true")
+    liz.setPath(url)
 
-    cookie_handler = urllib2.HTTPCookieProcessor(cookieJar)
-    #opener = urllib2.build_opener(urllib2.HTTPSHandler(context=ctx),cookie_handler, urllib2.HTTPBasicAuthHandler(), urllib2.HTTPHandler())
-    opener = urllib2.build_opener(cookie_handler, urllib2.HTTPBasicAuthHandler(), urllib2.HTTPHandler())
-    #opener = urllib2.install_opener(opener)
-    header_in_page=None
-    if '|' in url:
-        url,header_in_page=url.split('|')
-    req = urllib2.Request(url)
-
-    req.add_header('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36')
-    req.add_header('Accept-Encoding','gzip')
-
-    if headers:
-        for h,hv in headers:
-            req.add_header(h,hv)
-    if header_in_page:
-        header_in_page=header_in_page.split('&')
-        
-        for h in header_in_page:
-            if len(h.split('='))==2:
-                n,v=h.split('=')
-            else:
-                vals=h.split('=')
-                n=vals[0]
-                v='='.join(vals[1:])
-                #n,v=h.split('=')
-            #print n,v
-            req.add_header(n,v)
-            
-    if jsonpost:
-        req.add_header('Content-Type', 'application/json')
-    response = opener.open(req,post,timeout=timeout)
-    if response.info().get('Content-Encoding') == 'gzip':
-            from StringIO import StringIO
-            import gzip
-            buf = StringIO( response.read())
-            f = gzip.GzipFile(fileobj=buf)
-            link = f.read()
-    else:
-        link=response.read()
-    response.close()
-    return link;
-	
-def PlayCricFree(url):
-    progress = xbmcgui.DialogProgress()
-    progress.create('Progress', 'Fetching Streaming Info')
-    progress.update( 10, "", "Finding links..", "" )
-
-    res=getUrl(url)
-    patt='<iframe frameborder="0" marginheight="0".*?src="(.*?)" id="iframe"'
-    url2=re.findall(patt,res)[0]
-    referer=[('Referer',url)]
-    res=getUrl(url2,headers=referer)
-    urlToPlay=None
-    supported=False
-    if 'theactionlive.com/' in res:
-        supported=True
-        progress.update( 30, "", "Finding links..stage2", "" )
-        patt="id='(.*?)'.*?width='(.*)'.*?height='(.*?)'"
-        gid,wd,ht=re.findall(patt,res)[0]
-        referer=[('Referer',url2)]
-        url3='http://theactionlive.com/livegamecr2.php?id=%s&width=%s&height=%s&stretching='%(gid,wd,ht)
-        res=getUrl(url3,headers=referer)    
-        if 'biggestplayer.me' in res:
-            progress.update( 50, "", "Finding links..stage3", "" )
-            patt="id='(.*?)'.*?width='(.*)'.*?height='(.*?)'"
-            gid,wd,ht=re.findall(patt,res)[0]
-            referer=[('Referer',url3)]
-            
-            patt="src='(.*?)'"
-            jsUrl=re.findall(patt,res)[0]
-            jsData=getUrl(jsUrl)
-            patt="\.me\/(.*?)\?"
-            phpURL=re.findall(patt,jsData)[0]
-            url4='http://biggestplayer.me/%s?id=%s&width=%s&height=%s'%(phpURL,gid,wd,ht)
-            progress.update( 80, "", "Finding links..last stage", "" )
-            res=getUrl(url4,headers=referer)    
-            patt='file: "(.*?)"'
-            urlToPlay=re.findall(patt,res)[0];
-            referer=[('Referer',url4)]
-            urlToPlay+='|Referer='+url4
-    if 'www.reytv.co' in res:
-        supported=True
-        progress.update( 30, "", "Finding links..stage2", "" )
-        patt="fid='(.*?)'.*?v_width=(.*?);.*?v_height=(.*?);"
-        gid,wd,ht=re.findall(patt,res)[0]
-        referer=[('Referer',url2)]
-        url3='http://reytv.co/embedo.php?live=%s&width=%s&height=%s'%(gid,wd,ht)
-        progress.update( 50, "", "Finding links..stage3", "" )
-        res=getUrl(url3,headers=referer)
-        
-        patt='file: "(.*?)"'
-        rtmp=re.findall(patt,res)[0]
-        patt='securetoken: "(.*?)"'
-        token=re.findall(patt,res)[0]           
-        urlToPlay=rtmp + ' token=' + token + ' pageUrl='+url3+ ' swfUrl=http://p.jwpcdn.com/6/12/jwplayer.flash.swf'+' timeout=20'
-    
-    if urlToPlay and len(urlToPlay)>0:
-        playlist = xbmc.PlayList(1)
-        playlist.clear()
-        listitem = xbmcgui.ListItem( label = str(name), iconImage = "DefaultVideo.png", thumbnailImage = xbmc.getInfoImage( "ListItem.Thumb" ) )
-        playlist.add(urlToPlay,listitem)
-        xbmcPlayer = xbmc.Player()
-        xbmcPlayer.play(playlist) 
-    else:
-        dialog = xbmcgui.Dialog()
-        if not supported:
-            ok = dialog.ok('Not Supported','This channel is not supported yet')
-
-def playf4m(url, name):
+    if url.lower().startswith('plugin') and 'youtube' not in  url.lower():
+        xbmc.executebuiltin('XBMC.RunPlugin('+url+')') 
+        for i in range(8):
+            xbmc.sleep(500) ##sleep for 10 seconds, half each time
             try:
+                #print 'condi'
+                if xbmc.getCondVisibility("Player.HasMedia") and xbmc.Player().isPlaying():
+                    return True
+            except: pass
+        print 'returning now'
+        return False
+    import  CustomPlayer,time
+
+    player = CustomPlayer.MyXBMCPlayer()
+    player.pdialogue=pdialogue
+    start = time.time() 
+    #xbmc.Player().play( liveLink,listitem)
+    print 'going to play'
+    import time
+    beforestart=time.time()
+    player.play( url, liz)
+    if (xbmc.Player().isPlaying() == 0):
+		quit()
+    try:
+        while player.is_active:
+            xbmc.sleep(400)
+           
+            if player.urlplayed:
+                print 'yes played'
+                return
+            if time.time()-beforestart>4: return False
+            #xbmc.sleep(1000)
+    except: pass
+    print 'not played',url
+    xbmc.Player().stop()
+    return
+	
+def playf4m(url, name):
                 if not any(i in url for i in ['.f4m', '.ts', '.m3u8']): raise Exception()
                 ext = url.split('?')[0].split('&')[0].split('|')[0].rsplit('.')[-1].replace('/', '').lower()
                 if not ext: ext = url
@@ -1456,9 +1424,7 @@ def playf4m(url, name):
 
                 from F4mProxy import f4mProxyHelper
                 return f4mProxyHelper().playF4mLink(url, name, proxy, proxy_use_chunks, maxbitrate, simpleDownloader, auth_string, streamtype, False, swf)
-            except:
-                pass
-
+	
 
 params=get_params()
 url=None
@@ -1744,6 +1710,13 @@ elif mode==99:
 elif mode==100:
 	MovieCAT()
 	
+elif mode==101:
+	ustreamixchans()
+	
+elif mode==102:
+	ustreamixplay(url)
+	
+
 elif mode==999:
 	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
 	liz.setInfo(type='Music', infoLabels={'Title': name, 'Plot': ''})
