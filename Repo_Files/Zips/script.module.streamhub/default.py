@@ -91,7 +91,7 @@ def shadownet():
 	for a in all:
 		name = regex_from_to(a,'/">','<')
 		url  = regex_from_to(a,'href="','"')
-		addDir(name,url,95,icon,fanart,'')
+		addDir(name,url,96,icon,fanart,'')
 	
 	
 def shadownetchans(url):
@@ -100,14 +100,33 @@ def shadownetchans(url):
 	all  = regex_get_all(part,'<div class="ProductImage">','</li>')
 	for a in all:
 		name = regex_from_to(a,'alt="','"')
-		url  = regex_from_to(a,'href="','"')
+		url1  = regex_from_to(a,'href="','"')
 		icon = regex_from_to(a,'img src="','"')
-		addDir(name,url,97,icon,fanart,'')
+		addDir(name,url1,97,icon,fanart,name)
+	
+def shadownetplay(url,description):
+	try:
+		open  = OPEN_URL(url)
+	
+		iframe= regex_from_to(open,"iframe src='","'")
+		h     = {}
+		h['referer'] = url
+		link = s.get(iframe, headers=h, verify=False).text
+		link = link.encode('ascii', 'ignore')
+		url   = regex_from_to(link,'source: "','"')
+		url   = (url).replace('.m3u8','.ts')
+		f4m = playf4m(url,'')
+	except:
+		pass
+	#liz = xbmcgui.ListItem(description, iconImage=iconimage, thumbnailImage=iconimage)
+	#liz.setInfo(type='Video', infoLabels='')
+	#liz.setProperty("IsPlayable","true")
+	#liz.setPath(url)
+	#xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
 	
 	
 	
-	
-	
+#xbmc.Player().play('plugin.video.f4mtester/?streamtype=HLS&url=http://ipsatpro.info:8000/live/test28/test28/537.m3u8')
 
 	
 
@@ -153,7 +172,7 @@ def mobdroresolve(url):
     time_stamp = str(int(time.time()) + 14400)
     to_hash = "{0}{1}/hls/{2}".format(token,time_stamp,url)
     out_hash = b64encode(md5.new(to_hash).digest()).replace("+", "-").replace("/", "_").replace("=", "")
-    server = '185.102.219.72'
+    server = '185.152.64.236'
     
     url = "hls://http://{0}/p2p/{1}?st={2}&e={3}".format(server,url,out_hash,time_stamp)
     return '{url}|User-Agent={user_agent}&referer={referer}'.format(url=url,user_agent=user_agent,referer='6d6f6264726f2e6d65'.decode('hex'))
@@ -308,7 +327,7 @@ def addDir(name,url,mode,iconimage,fanart,description):
 	liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
 	liz.setInfo( type="Video", infoLabels={"Title": name,"Plot":description})
 	liz.setProperty('fanart_image', fanart)
-	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==46 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==62 or mode ==75 or mode==80 or mode==90 or mode==94 or mode==999:
+	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==46 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==62 or mode ==75 or mode==80 or mode==90 or mode==94 or mode==97 or mode==999:
 		liz.setProperty("IsPlayable","true")
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
 	elif mode==73 or mode==1000:
@@ -1697,6 +1716,9 @@ elif mode==95:
 	
 elif mode==96:
 	shadownetchans(url)
+	
+elif mode==97:
+	shadownetplay(url,description)
 
 elif mode==98:
 	xxxstars(url)
@@ -1721,5 +1743,4 @@ elif mode==1000:
 		playf4m(url,name)
 	except:
 		pass
-
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
