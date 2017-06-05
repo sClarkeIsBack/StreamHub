@@ -33,7 +33,7 @@ def CAT():
 	addDir('MUSIC',tv,64,icon,fanart,'')
 	addDir('IPTV','url',84,icon,fanart,'')
 	addDir('IPTV2','url',88,icon,fanart,'')
-	addDir('Liveonlinetv','url',91,icon,fanart,'')
+	addDir('Liveonlinetv','url',95,icon,fanart,'')
 	
 
 def MOV2CAT():
@@ -80,6 +80,37 @@ def MUSICCOL():
 	addDir('Now Thats What I Call Music Collection','NOW',70,icon,fanart,'')
 	
 
+	
+	
+	
+	
+def shadownet():
+	open = OPEN_URL('http://www.shadownet.me')
+	part = regex_from_to(open,'id="SideCategoryList">','class="afterSideCategoryList">')
+	all  = regex_get_all(part,'<li class="">','</a>')
+	for a in all:
+		name = regex_from_to(a,'/">','<')
+		url  = regex_from_to(a,'href="','"')
+		addDir(name,url,95,icon,fanart,'')
+	
+	
+def shadownetchans(url):
+	open = OPEN_URL(url)
+	part = regex_from_to(open,'id="CategoryContent">','<br class="Clear" />')
+	all  = regex_get_all(part,'<div class="ProductImage">','</li>')
+	#for a in all:
+		
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
 def mobdro():
 	addDir('Entertainment','Entertainment',93,'http://geekpeaksoftware.com/wp-content/uploads/2016/10/mobdro.png',fanart,'')
 	addDir('Sports','Sports',93,'http://geekpeaksoftware.com/wp-content/uploads/2016/10/mobdro.png',fanart,'')
@@ -102,6 +133,7 @@ def mobdrolist(url):
 	
 def mobdroplay(url):
 	url = mobdroresolve(url)
+	url = 'http://127.0.0.1:19000/livestreamer/'+base64.b64encode(url)
 	liz = xbmcgui.ListItem('', iconImage=iconimage, thumbnailImage=iconimage)
 	liz.setInfo(type='Video', infoLabels='')
 	liz.setProperty("IsPlayable","true")
@@ -122,7 +154,7 @@ def mobdroresolve(url):
     out_hash = b64encode(md5.new(to_hash).digest()).replace("+", "-").replace("/", "_").replace("=", "")
     server = '185.102.219.72'
     
-    url = "http://{0}/p2p/{1}?st={2}&e={3}".format(server,url,out_hash,time_stamp)
+    url = "hls://http://{0}/p2p/{1}?st={2}&e={3}".format(server,url,out_hash,time_stamp)
     return '{url}|User-Agent={user_agent}&referer={referer}'.format(url=url,user_agent=user_agent,referer='6d6f6264726f2e6d65'.decode('hex'))
 
 
@@ -1658,6 +1690,9 @@ elif mode==93:
 	
 elif mode==94:
 	mobdroplay(url)
+	
+elif mode==95:
+	shadownet()
 
 elif mode==98:
 	xxxstars(url)
