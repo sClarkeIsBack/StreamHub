@@ -133,11 +133,12 @@ def mobdrolist(url):
 	
 def mobdroplay(url):
 	url = mobdroresolve(url)
+	url = (url).replace('http//','http://').replace('\n','').replace('\r','').replace('\t','')
 	url = 'http://127.0.0.1:19000/livestreamer/'+base64.b64encode(url)
 	liz = xbmcgui.ListItem('', iconImage=iconimage, thumbnailImage=iconimage)
 	liz.setInfo(type='Video', infoLabels='')
 	liz.setProperty("IsPlayable","true")
-	liz.setPath((url).replace('http//','http://').replace('\n','').replace('\r','').replace('\t',''))
+	liz.setPath(url)
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
 	
 	
