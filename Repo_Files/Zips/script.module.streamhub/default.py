@@ -98,11 +98,11 @@ def shadownetchans(url):
 	open = OPEN_URL(url)
 	part = regex_from_to(open,'id="CategoryContent">','<br class="Clear" />')
 	all  = regex_get_all(part,'<div class="ProductImage">','</li>')
-	#for a in all:
-		
-	
-	
-	
+	for a in all:
+		name = regex_from_to(a,'alt="','"')
+		url  = regex_from_to(a,'href="','"')
+		icon = regex_from_to(a,'img src="','"')
+		addDir(name,url,97,icon,fanart,'')
 	
 	
 	
@@ -1694,6 +1694,9 @@ elif mode==94:
 	
 elif mode==95:
 	shadownet()
+	
+elif mode==96:
+	shadownetchans(url)
 
 elif mode==98:
 	xxxstars(url)
