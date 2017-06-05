@@ -152,6 +152,7 @@ def mobdrolist(url):
 	
 def mobdroplay(url):
 	url = mobdroresolve(url)
+	url = 'http://127.0.0.1:19000/livestreamer/'+base64.b64encode(url)
 	url = (url).replace('http//','http://').replace('\n','').replace('\r','').replace('\t','')
 	liz = xbmcgui.ListItem('', iconImage=iconimage, thumbnailImage=iconimage)
 	liz.setInfo(type='Video', infoLabels='')
@@ -173,7 +174,7 @@ def mobdroresolve(url):
     servers = ['185.152.64.236','185.102.219.72','185.102.219.67','185.102.218.56','185.59.222.232']
     server  = random.choice(servers)
     
-    url = "http://{0}/p2p/{1}?st={2}&e={3}".format(server,url,out_hash,time_stamp)
+    url = "hls://http://{0}/p2p/{1}?st={2}&e={3}".format(server,url,out_hash,time_stamp)
     return '{url}|User-Agent={user_agent}&referer={referer}'.format(url=url,user_agent=user_agent,referer='6d6f6264726f2e6d65'.decode('hex'))
 
 
