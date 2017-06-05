@@ -151,6 +151,7 @@ def mobdrolist(url):
 
 	
 def mobdroplay(url):
+	startproxy()
 	url = mobdroresolve(url)
 	url = 'http://127.0.0.1:19000/livestreamer/'+base64.b64encode(url)
 	url = (url).replace('http//','http://').replace('\n','').replace('\r','').replace('\t','')
@@ -177,6 +178,20 @@ def mobdroresolve(url):
     url = "hls://http://{0}/p2p/{1}?st={2}&e={3}".format(server,url,out_hash,time_stamp)
     return '{url}|User-Agent={user_agent}&referer={referer}'.format(url=url,user_agent=user_agent,referer='6d6f6264726f2e6d65'.decode('hex'))
 
+	
+	
+	
+	
+def startproxy():
+                path = xbmc.translatePath('special://home/addons/script.module.streamhub/resources/modules/')
+                serverPath = os.path.join(path, 'livestreamerXBMCLocalProxy.py')
+                try:
+                    requests.get('http://127.0.0.1:19000/version')
+                    proxyIsRunning = True
+                except:
+                    proxyIsRunning = False
+                if not proxyIsRunning:
+                    xbmc.executebuiltin('RunScript(' + serverPath + ')')
 
 	
 def NOVAMOVIES(url):
