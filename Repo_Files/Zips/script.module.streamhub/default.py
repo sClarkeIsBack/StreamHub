@@ -160,8 +160,7 @@ def mobdroplay(url):
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
 	
 	
-	
-	
+
 def mobdroresolve(url):
     import random,time,md5
     from base64 import b64encode
@@ -171,7 +170,7 @@ def mobdroresolve(url):
     time_stamp = str(int(time.time()) + 14400)
     to_hash = "{0}{1}/hls/{2}".format(token,time_stamp,url)
     out_hash = b64encode(md5.new(to_hash).digest()).replace("+", "-").replace("/", "_").replace("=", "")
-    servers = ['185.152.66.39', '185.102.219.72', '185.152.64.236', '185.59.222.232', '185.102.219.67', '185.102.218.56']
+    servers = ['185.152.64.236','185.102.219.72','185.102.219.67','185.102.218.56','185.59.222.232']
     server  = random.choice(servers)
     
     url = "http://{0}/p2p/{1}?st={2}&e={3}".format(server,url,out_hash,time_stamp)
