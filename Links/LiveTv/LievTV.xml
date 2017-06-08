@@ -17,6 +17,13 @@
 </plugin>
 
 <plugin>
+<title>    [COLOR lime][B]FLUXUS TV[/B][/COLOR]</title>
+<link>https://raw.githubusercontent.com/fluxustv/IPTV/master/list.m3u</link>
+<thumbnail>https://pbs.twimg.com/profile_images/858019601820467200/FWi_rtsG.jpg</thumbnail>
+</plugin>
+
+
+<plugin>
 <title>    [COLOR lime][B]USTREAMIX[/B][/COLOR]</title>
 <link>plugin://script.module.streamhub/?mode=101&url=none</link>
 <thumbnail>http://www.freeiconspng.com/download/39519</thumbnail>
