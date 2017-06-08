@@ -11,7 +11,7 @@
 
 <plugin>
   <title>[COLOR white]Animation Movies[/COLOR]</title>
-  <link>plugin://plugin.video.torba/?description&iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.video.torba%5cicon.png&mode=3&name=%5bB%5d%5bCOLOR%20white%5dAnimation%5b%2fCOLOR%5d%5b%2fB%5d&url=https%3a%2f%2ftorba.se%2fsearch%3forder%3dviews%26genre%3dAnimation</link>
+  <link>plugin://plugin.video.streamhub/?action=movies&url=http%3a%2f%2fwww.imdb.com%2fsearch%2ftitle%3ftitle_type%3dfeature%2ctv_movie%2cdocumentary%26num_votes%3d100%2c%26release_date%3d%2cdate%5b0%5d%26genres%3danimation%26sort%3dmoviemeter%2casc%26count%3d40%26start%3d1</link>
 </plugin>
 
 <plugin>
@@ -21,16 +21,10 @@
 
 <plugin>
   <title>[COLOR white]Family Movies[/COLOR]</title>
-  <link>plugin://plugin.video.torba/?description&iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.video.torba%5cicon.png&mode=3&name=%5bB%5d%5bCOLOR%20white%5dFamily%5b%2fCOLOR%5d%5b%2fB%5d&url=https%3a%2f%2ftorba.se%2fsearch%3forder%3dviews%26genre%3dFamily</link>
+  <link>plugin://plugin.video.streamhub/?action=movies&url=http%3a%2f%2fwww.imdb.com%2fsearch%2ftitle%3ftitle_type%3dfeature%2ctv_movie%2cdocumentary%26num_votes%3d100%2c%26release_date%3d%2cdate%5b0%5d%26genres%3dfamily%26sort%3dmoviemeter%2casc%26count%3d40%26start%3d1</link>
 </plugin>
 
 <dir>
   <title>[COLOR white]Youtube Gaming[/COLOR]</title>
   <link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Kids/Minecraft.xml</link>
 </dir>
-
-<item>
-  <title>[COLOR white]test[/COLOR]</title>
-  <link>http://178.63.80.145:8000/Safe%20House?u=mediahubiptv:p=mediahubiptv</link>
-</item>
-
