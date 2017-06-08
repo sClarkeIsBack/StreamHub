@@ -1,5 +1,4 @@
 <addons>
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.streamhub" name="[COLOR red][B]StreamHub[/B][/COLOR]" version="2.8" provider-name="sClarke">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
@@ -30,8 +29,7 @@
 	</extension>
 </addon>
 
-
-<addon id="script.module.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="5.3" provider-name="sClarke">
+<addon id="script.module.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="5.2" provider-name="sClarke">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.requests" />
@@ -50,6 +48,5 @@
     <platform>all</platform>
   </extension>
 </addon>
-
 
 </addons>
