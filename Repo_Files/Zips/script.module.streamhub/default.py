@@ -1071,21 +1071,21 @@ def musicsearch(url):
 			if (kb.isConfirmed()):
 				query = kb.getText()
 				query = (query.translate(None, '\/:*?"\'<>|!,')).replace(' ', '-').replace('--', '-').lower()
-				open  = OPEN_URL(music+query)
-				all   = regex_get_all(open,'<li><div class="song-list"','</li>')
+				open  = OPEN_URL('http://free-mp3song.com/search/'+query)
+				all   = regex_get_all(open,'<div class="square-box">','<div class="col-md-10 col-xs-9"')
 				for a in all:
 					name = regex_from_to(a,'title="','"').replace('Free','').replace('mp3','')
 					icon = regex_from_to(a,'data-original="','"')
-					url  = regex_from_to(a,'http://woodmp3.com/download/','/')
+					url  = regex_from_to(icon,'vi/','/')
 					addDir(name,url,62,icon,fanart,'')
 		else:
 				xbmc.log(str(url))
 				open  = OPEN_URL(url)
-				all   = regex_get_all(open,'<li><div class="song-list"','</li>')
+				all   = regex_get_all(open,'<div class="square-box">','<div class="col-md-10 col-xs-9"')
 				for a in all:
 					name = regex_from_to(a,'title="','"').replace('Free','').replace('mp3','')
 					icon = regex_from_to(a,'data-original="','"')
-					url  = regex_from_to(a,'http://woodmp3.com/download/','/')
+					url  = regex_from_to(icon,'vi/','/')
 					addDir(name,url,62,icon,fanart,'')
 			
 def musicindex(url):
