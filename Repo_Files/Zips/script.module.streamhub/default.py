@@ -665,12 +665,14 @@ def documentary(url):
 def resolvedoc(url):
 	open = OPEN_URL(url)
 	xbmc.log(str(open))
-	url = regex_from_to(open,'height=".*?" src="','"')
-	link = urlresolver.HostedMediaFile(url).resolve()
+	url = regex_from_to(open,'iframe.+?src="','"')
+	url = regex_from_to(url,'/embed/','$')
+	url = 'plugin://plugin.video.youtube/play/?video_id='+url
+	
 	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=iconimage)
 	liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': description})
 	liz.setProperty('IsPlayable','true')
-	liz.setPath(str(link))
+	liz.setPath(url)
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
 	
 '''def openmov2(url):
