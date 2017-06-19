@@ -35,7 +35,7 @@ theme="http://"
 icon="http://vignette4.wikia.nocookie.net/helmet-heroes/images/f/f9/Red_Wizard_Hat.png/revision/latest?cb=20131008025650" #build icon
 fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
-name="- Sky Touch HD" #name of build
+name="- Sky TV box HD" #name of build
 version="0.1" #version of build - change this when you update and users will auto get the latest update.
 url="http://archive.org/download/SkytouchHD/SkytouchHD.zip"#url of build
 gui="http://"
