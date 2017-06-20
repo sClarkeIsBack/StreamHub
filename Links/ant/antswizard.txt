@@ -46,7 +46,7 @@ fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
 name="- Mediahub Skyptv Box HD" #name of build
 version="0.1" #version of build - change this when you update and users will auto get the latest update.
-url="https://archive.org/download/mediadkyhubmod/mediaskyhubmod.zip"#url of build
+url="https://archive.org/download/mediaskyhubmod/mediaskyhubmod.zip"#url of build
 gui="http://"
 kodi="17.3"
 theme="http://"
