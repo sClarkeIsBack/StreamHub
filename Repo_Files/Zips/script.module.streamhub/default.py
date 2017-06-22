@@ -33,7 +33,7 @@ def CAT():
 	addDir('MUSIC',tv,64,icon,fanart,'')
 	addDir('IPTV','url',84,icon,fanart,'')
 	addDir('IPTV2','url',88,icon,fanart,'')
-	addDir('Liveonlinetv','url',101,icon,fanart,'')
+	addDir('Liveonlinetv','url',95,icon,fanart,'')
 	
 
 def MOV2CAT():
@@ -84,8 +84,21 @@ def MUSICCOL():
 	
 	
 	
-	
-	
+def arconaitv():
+	url = 'https://www.arconaitv.me'
+	page = OPEN_URL(url)
+	part = regex_from_to(page,'Cable Tv','Donate')
+	all_vids=regex_get_all(part,'<li id="menu-item-','</a>')
+	for a in all_vids:
+		url = regex_from_to(a,'<a href="','"')
+		name = regex_from_to(a,'<span class="link_text">\n','\n').replace('#038;','')
+		if not url=='https://www.arconaitv.me/':
+			if not name == 'A-E':
+				if not name == 'F-J':
+					if not name == 'K-O':
+						if not name == 'P-T':
+							if not name == 'U-Z':
+								addDir(name,url,46,icon,fanart,'')
 	
 	
 def shadownet():
@@ -107,9 +120,13 @@ def shadownetchans(url):
 		url1  = regex_from_to(a,'href="','"')
 		icon = regex_from_to(a,'img src="','"')
 		addDir(name,url1,97,icon,fanart,name)
+	try:
+		np = regex_from_to(open,'<div class="FloatRight"><a href="','"')
+		addDir('[COLOR red][B]Next Page >[/COLOR][/B]',urllib.quote_plus(np),96,icon,fanart,'')
+	except:
+		pass
 	
 def shadownetplay(url,description):
-	try:
 		open  = OPEN_URL(url)
 	
 		iframe= regex_from_to(open,"iframe src='","'")
@@ -117,11 +134,13 @@ def shadownetplay(url,description):
 		h['referer'] = url
 		link = s.get(iframe, headers=h, verify=False).text
 		link = link.encode('ascii', 'ignore')
-		url   = regex_from_to(link,'source: "','"')
-		url   = (url).replace('.m3u8','.ts')
-		f4m = playf4m(url,'')
-	except:
-		pass
+		url  = regex_from_to(link,'source: "','"')
+		#url  = url+'|User-Agent=Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3'
+		#xbmc.Player().play(url)
+		try:
+			playf4m(url,'shadownet')
+		except:
+			return
 	#liz = xbmcgui.ListItem(description, iconImage=iconimage, thumbnailImage=iconimage)
 	#liz.setInfo(type='Video', infoLabels='')
 	#liz.setProperty("IsPlayable","true")
@@ -344,7 +363,7 @@ def addDir(name,url,mode,iconimage,fanart,description):
 	liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
 	liz.setInfo( type="Video", infoLabels={"Title": name,"Plot":description})
 	liz.setProperty('fanart_image', fanart)
-	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==46 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==62 or mode ==75 or mode==80 or mode==90 or mode==94 or mode==97 or mode==105 or mode==999:
+	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==46 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==62 or mode ==75 or mode==80 or mode==90 or mode==94 or mode==105 or mode==999:
 		liz.setProperty("IsPlayable","true")
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
 	elif mode==73 or mode==1000:
@@ -754,8 +773,8 @@ def playmov2(url):
 def opentwentyfourseven(url):
 	url = 'https://www.arconaitv.me'
 	page = OPEN_URL(url)
-	all_vids=regex_get_all(page,'<li id="menu-item-','</a>')
-	xbmc.log(str(all_vids))
+	part = regex_from_to(page,'Channels','Cable Tv')
+	all_vids=regex_get_all(part,'<li id="menu-item-','</a>')
 	for a in all_vids:
 		url = regex_from_to(a,'<a href="','"')
 		name = regex_from_to(a,'<span class="link_text">\n','\n')
@@ -1715,6 +1734,9 @@ elif mode==101:
 	
 elif mode==102:
 	ustreamixplay(url)
+	
+elif mode==103:
+	arconaitv()
 	
 
 elif mode==999:
