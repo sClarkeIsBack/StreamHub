@@ -11,16 +11,22 @@
 </plugin>
 
 <plugin>
-<title>    [COLOR lime][B]MOBDRO[/B][/COLOR] **WINDOWS ONLY WORKING ON FIX**</title>
-<link>plugin://script.module.streamhub/?mode=91&url=none</link>
-<thumbnail>http://geekpeaksoftware.com/wp-content/uploads/2016/10/mobdro.png</thumbnail>
+<title>    [COLOR lime][B]ARCONAI TV[/B][/COLOR]</title>
+<link>plugin://script.module.streamhub/?mode=103&url=none</link>
+<thumbnail>https://s4.postimg.org/ng7p4w8cd/logo-white-1.png</thumbnail>
 </plugin>
 
 <plugin>
+<title>    [COLOR lime][B]SHADOWNET[/B][/COLOR]</title>
+2<link>plugin://script.module.streamhub/?mode=95&url=none</link>
+<thumbnail>https://s4.postimg.org/iy7lkmw8d/logon.png</thumbnail>
+</plugin>
+
+<dir>
 <title>    [COLOR lime][B]FLUXUS TV[/B][/COLOR]</title>
 <link>https://raw.githubusercontent.com/fluxustv/IPTV/master/list.m3u</link>
 <thumbnail>https://pbs.twimg.com/profile_images/858019601820467200/FWi_rtsG.jpg</thumbnail>
-</plugin>
+</dir>
 
 
 <plugin>
@@ -48,7 +54,7 @@
 </plugin>
 
 <plugin>
-<title>    [COLOR lime][B]WORLD IPTV[/B][/COLOR]</title>
+<title>    [COLOR lime][B]WORLD IPTV 2[/B][/COLOR]</title>
 <link>plugin://script.module.streamhub/?mode=88&url=none</link>
 <thumbnail>http://www.freeiconspng.com/download/39519</thumbnail>
 </plugin>
