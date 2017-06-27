@@ -11,7 +11,9 @@ def cat():
 	addDir('[COLOR white][B]Iptvfilmover.com[/COLOR][/B]','iptvfilmmover',3,'https://cdn6.aptoide.com/imgs/a/7/8/a78c34966c4e443e7235d839b5856c0d_icon.png?w=256',fanart,'')
 	addDir('[COLOR white][B]Iptvsatlinks.com[/COLOR][/B]','iptvsattlinks',3,'https://cdn6.aptoide.com/imgs/a/7/8/a78c34966c4e443e7235d839b5856c0d_icon.png?w=256',fanart,'')
 	addDir('[COLOR white][B]Sourcetv.info[/COLOR][/B]','sourceetv',3,'https://cdn6.aptoide.com/imgs/a/7/8/a78c34966c4e443e7235d839b5856c0d_icon.png?w=256',fanart,'')
+	addDir('[COLOR white][B]Stalker IPTV[/COLOR][/B]','https://pastebin.com/raw/bzFe1C6Q',3,'https://cdn6.aptoide.com/imgs/a/7/8/a78c34966c4e443e7235d839b5856c0d_icon.png?w=256',fanart,'')
 
+	
 def get(url):
 	if url == 'sourceetv':
 		sourcetv()

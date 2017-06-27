@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.livehub" name="[B][COLOR ghostwhite]Live[/COLOR][COLOR red] Hub[/COLOR][/B]" version="1.0" provider-name="sClarke">
+<addon id="plugin.video.livehub" name="[B][COLOR ghostwhite]Live[/COLOR][COLOR red] Hub[/COLOR][/B]" version="1.1" provider-name="sClarke">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.requests" />
