@@ -29,6 +29,24 @@
 	</extension>
 </addon>
 
+<addon id="plugin.video.livehub" name="[B][COLOR ghostwhite]Live[/COLOR][COLOR red] Hub[/COLOR][/B]" version="1.0" provider-name="sClarke">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.requests" />
+	<import addon="script.video.F4mProxy" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Live Hub - Bringing Live TV To Your Media Device</summary>
+    <description lang="en">Live Hub - Bringing Live TV To Your Media Device. Kodi 17+ is Recommended.</description>
+	<disclaimer lang="en"></disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+
 <addon id="script.module.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="6.0" provider-name="sClarke">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>

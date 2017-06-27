@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="http://static.aka.yupp.yuppcdn.net/staticstorage/jwplayer/jw_6_10/jwplayer.js">"></script><script type="text/javascript"> jwplayer.key = "oXVXJ6z2ubxW+bJe3O4afUg+5aNjAL1l41oXzw==";</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Sony Tv</title>
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+<meta name="copyright" content="Newtvworld.com">
+<link rel="shortcut icon" href="../favicon.ico" />
+
+
+</head>
+<div id="playerVh1hF1z5roh2"></div>
+<script type="text/javascript">
+if( navigator.userAgent.match(/android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ) {
+            var stream = "http://stream.ssh101.com:1935/live/loveislife/chunklist.m3u8";
+        }else{
+            var stream = "http://stream.ssh101.com:1935/live/loveislife/chunklist.m3u8";
+        }
+  jwplayer("playerVh1hF1z5roh2").setup({
+  "title": 'Newtvworld.com',
+        "stretching":"exactfit",
+        "width": "600",
+        "height": "400",
+        "autostart": "true",
+
+ " ga": "{}",
+    "sharing": "{}",
+
+"abouttext":"Newtvworld.com",
+"aboutlink":"http://www.newtvworld.com/",
+"target":"_blank",
+"allownetworking":"internal",
+"androidhls": true,
+  "file": stream
+   
+    });
+</script>
+
+
+<style> 
+ 
+#vad
+ 
+{
+ 
+width:450px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; font-weight:bold;  visibility:hidden;
+ 
+}
+ 
+#adcode
+ 
+{
+ 
+height:300px; width:300px; margin-top:-400px; margin-left:180px; border: #99FF00 solid 1px; position:relative; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70); opacity:0.7; background-color:#fff;
+ 
+}
+ 
+#cbut
+ 
+{
+ 
+line-height:10px; width:40px;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80); opacity:0.8; margin-left:180px; margin-top: -200px; border: #000000 solid 1px; position:relative; background-color:#ffff00; text-align:center; cursor:pointer; visibility:hidden;
+ 
+}
+ 
+#adcd
+ 
+{
+ 
+border: #99FF00 solid 1px; position:relative; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70); opacity:0.7; background-color:#fff;
+ 
+}
+ 
+</style>
+ 
+
+<div id="vad">
+
+<div id="adcode">
+<!--
+<iframe scrolling="no" height="300" style="" width=300 frameborder=0 name="iframecbl" id="iframecbl" src="../add/add.html" >Your Browser not supports
+IFRAMES.</iframe> 
+-->
+ 
+<iframe scrolling="no" height="300"  width=300 frameborder=0 name="iframecbl" id="iframecbl" src="../add/add.html" >
+Your Browser not supports
+IFRAMES.</iframe> 
+ 
+<div id="cbut" onmousemove="runn()" onclick="document.getElementById('vad').style.display='none'">CLOSE X</div>
+
+ </div>
+
+ 
+<script> 
+ 
+k=setInterval('document.getElementById("vad").style.visibility="visible"',10000);
+ 
+v=setInterval('document.getElementById("cbut").style.visibility="visible"',20000)</script></div>
+
+
+<div>
+
+
+<script type="text/javascript">// <![CDATA[
+
+ 
+
+ 
+
+flag = 1;
+
+ 
+
+function runn()
+
+ 
+
+{
+
+ 
+
+if(flag==1)
+
+ 
+
+{
+
+ 
+
+document.getElementById("dropin").style.marginLeft=50+'px';
+
+ 
+
+flag=0;
+
+ 
+
+}
+
+ 
+
+}
+
+
+
+function runnx()
+
+ 
+
+{
+
+ 
+
+if(flag==1)
+
+ 
+
+{
+
+ 
+
+document.getElementById("bannerfloat2").style.marginLeft=50+'px';
+
+ 
+
+flag=0;
+
+ 
+
+}
+
+ 
+
+}
+
+// ]]></script>
+
+
+
+<div id="bannerfloat2" style="position: absolute; top: 100px; left:120px; height: 60px; width: 445px;">
+<iframe scrolling="no" height="300" style="" width=300 frameborder=0 name="iframecbl" id="iframecbl" src="../add/add2.html" >Your Browser not supports
+IFRAMES.</iframe> 
+
+
+<div style="position: absolute; left: 200px; top: 50px; width: 120px; height: 15px;"><span onmouseup="document.getElementById('bannerfloat2').style.display='none'" onmousemove="runnx()"> <img src="http://www.martindale.com/images/buttons/close.gif" border="0" width="35" height="10" /></span></div>
+
+<div>
+
+<script language="JavaScript">function click(){if (event.button==2||event.button==3){oncontextmenu='return false';}}; document.onmousedown=click; document.oncontextmenu = new Function("return false;")</script>
+<script language="javascript" type="text/javascript"> if(self==top) { top.location.href="http://www.newtvworld.com/"; } </script>
+
+
+
+<td><a href="http://whos.amung.us/stats/aoodwzzsx5oo/"><img border="0" width="1" src="http://whos.amung.us/widget/aoodwzzsx5oo.png" height="1" title="Click to see how many people are online" /></a></td>
+
+<script language=javascript>{  }
+var message="";
+///////////////////////////////////
+function clickIE() {if; if}}
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) {
+if (e.which==2||e.which==3) {(message);return}}}
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS}
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+
+document.oncontextmenu=new Function("return false")
+// --> 
+{  }
+{  }
+  </script>
+</html>
