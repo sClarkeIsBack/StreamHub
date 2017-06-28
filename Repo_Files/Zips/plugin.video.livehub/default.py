@@ -21,9 +21,7 @@ def play(url,name,pdialogue=None):
 		url = url.strip()
 
 		url = resolvers.resolve(url)
-		if url == 'False':
-			xbmcgui.Dialog().notification('[COLOR ghostwhite]Live[/COLOR] [COLOR red]Hub[/COLOR]','This Link is Down, Try Another')
-			return False
+
 		if url.endswith('m3u8'):
 			from resources.root import iptv
 			iptv.listm3u(url)

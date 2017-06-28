@@ -7,8 +7,7 @@ import base64
 
 
 def resolve(url):
-	import requests
-	try:
+		import requests
 		if 'tvcatchup' in url:
 			open = OPEN_URL(url)
 			url  = re.compile("file: '(.+?)'").findall(open)[0]
@@ -47,11 +46,13 @@ def resolve(url):
 			url  = url + '|User-Agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
 		elif 'snappystreams:' in url:
 			url = (url).replace('snappystreams:','')
-			xbmc.Player().play(url)
 			headers = {'Authorization': 'Basic QFN3aWZ0MTQjOkBTd2lmdDE0Iw==',
 				'User-Agent': 'Dalvik/1.6.0 (Linux; U; Android 4.4.4; SM-G900F Build/KTU84Q)'}
 			
-			open = requests.session().get('http://173.212.202.101/token10304.php',headers=headers).text
+			try:
+				open = requests.session().get('http://173.212.202.101/token304.php',headers=headers).text
+			except:	
+				open = requests.session().get('http://173.212.202.101/token10304.php',headers=headers).text
 			link = url+open
 			url  = link+'|User-Agent=Dalvik/1.6.0 (Linux; U; Android 4.4.4; SM-G900F Build/KTU84Q'
 			
@@ -65,10 +66,9 @@ def resolve(url):
 			url = mamahdresolve(url)
 		elif 'cricfree' in url:
 			url = cricfreeresolve(url)
-			
+		else:
+			url = url
 		return (url).replace('<p>','')
-	except:
-		return 'False'
 	
 logfile    = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.livehub', 'log.txt'))
 

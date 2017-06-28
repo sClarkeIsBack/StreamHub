@@ -6,6 +6,7 @@ icon       = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id
 fanart     = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 
 def cat():
+	addDir('[COLOR white][B]Geo TV[/COLOR][/B]','geotv',4,'https://image.winudf.com/v2/image/Y29tLnNuci5lbnRfaWNvbl8wX2I0N2VlYjZi/icon.png?w=170&fakeurl=1&type=.png',fanart,'')
 	addDir('[COLOR white][B]Mobdro[/COLOR][/B]','mobdro',4,'http://apk.co/images/mobdro-2014-freemium.png',fanart,'')
 	addDir('[COLOR white][B]Swift Streams[/COLOR][/B]','snappystreams',4,'https://image.winudf.com/v2/image/Y29tLnN3aWZ0LnN0cmVhbV9zcmNqdHBicg/icon.png?w=170&fakeurl=1&type=.png',fanart,'')
 
@@ -20,7 +21,37 @@ def get(url):
 		mobdro()
 	elif url == 'livetv':
 		livetv()
+	elif url == 'geotv':
+		geotv()
+	elif '217.182.192.199:25461' in url:
+		geotvchans(url)
 		
+def geotv():
+	import base64,requests,urllib
+	open = requests.get('http://217.182.192.199:25461/enigma2.php?username=final&password=iccpak&type=get_live_categories',headers={'User-Agent':'Dalvik/1.6.0 (Linux; U; Android 4.3.1; WT19M-FI Build/JLS36I)'}).text
+	all_cats = regex_get_all(open,'<channel>','</channel>')
+	for a in all_cats:
+		name = regex_from_to(a,'<title>','</title>')
+		name = base64.b64decode(name)
+		url1  = regex_from_to(a,'<playlist_url>','</playlist_url>').replace('<![CDATA[','').replace(']]>','')
+		if not 'UK/USA/CAN' in name:
+			if not 'MALAY/THAI' in name:
+				if not 'NEPALI' in name:
+					addDir(name,urllib.quote_plus(url1),4,'https://image.winudf.com/v2/image/Y29tLnNuci5lbnRfaWNvbl8wX2I0N2VlYjZi/icon.png?w=170&fakeurl=1&type=.png',fanart,'')
+		
+def geotvchans(url):
+	import re,requests,base64,urllib
+	open = requests.get(url,headers={'User-Agent':'Dalvik/1.6.0 (Linux; U; Android 4.3.1; WT19M-FI Build/JLS36I)'}).text
+	all_cats = regex_get_all(open,'<channel>','</channel>')
+	for a in all_cats:
+		name = regex_from_to(a,'<title>','</title>')
+		name = base64.b64decode(name)
+		name = re.sub('\[.*?min ','-',name)
+		thumb= regex_from_to(a,'<desc_image>','</desc_image>').replace('<![CDATA[','').replace(']]>','')
+		url1  = regex_from_to(a,'<stream_url>','</stream_url>').replace('<![CDATA[','').replace(']]>','')
+		log(url)
+		desc = regex_from_to(a,'<description>','</description>')
+		addDir(name,urllib.quote_plus(url1+'|User-Agent=iccind'),9999,thumb,fanart,base64.b64decode(desc))
 		
 def livetv():
 	import re
@@ -123,7 +154,7 @@ def addDir(name,url,mode,iconimage,fanart,description):
 	liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
 	liz.setInfo( type="Video", infoLabels={"Title": name,"Plot":description})
 	liz.setProperty('fanart_image', fanart)
-	if mode==102:
+	if mode==102 or mode==9999:
 		liz.setProperty("IsPlayable","true")
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
 	else:
