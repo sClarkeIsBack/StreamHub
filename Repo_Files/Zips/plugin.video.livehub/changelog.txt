@@ -1,0 +1,3 @@
+v 1.2 - Replaced F4mProxy with F4mTester. Fixing Playback Bugs & Errors.
+
+v 1.1 - Added Stalker IPTV to IPTV Scrapers

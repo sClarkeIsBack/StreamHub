@@ -21,7 +21,9 @@ def play(url,name,pdialogue=None):
 		url = url.strip()
 
 		url = resolvers.resolve(url)
-		if url == 'False':xbmcgui.Dialog().notification('A','This Link is Down, Try Another')
+		if url == 'False':
+			xbmcgui.Dialog().notification('[COLOR ghostwhite]Live[/COLOR] [COLOR red]Hub[/COLOR]','This Link is Down, Try Another')
+			return False
 		if url.endswith('m3u8'):
 			from resources.root import iptv
 			iptv.listm3u(url)
@@ -31,23 +33,17 @@ def play(url,name,pdialogue=None):
 			liz.setInfo(type='Video', infoLabels={'Title':name})
 			liz.setProperty("IsPlayable","true")
 			liz.setPath(url)
+			
+			if url.endswith('.ts'):
+				url = 'plugin://plugin.video.f4mTester/?url='+urllib.quote_plus(url)+'&amp;streamtype=SIMPLE'
+			elif url.endswith('.m3u8'):
+				url = 'plugin://plugin.video.f4mTester/?url='+urllib.quote_plus(url)+'&amp;streamtype=HLS'
+			elif url.endswith('.f4m'):
+				url = 'plugin://plugin.video.f4mTester/?url='+urllib.quote_plus(url)
 
 			if url.lower().startswith('plugin') and 'youtube' not in  url.lower():
+				from resources.modules import CustomPlayer
 				xbmc.executebuiltin('XBMC.PlayMedia('+url+')') 
-				for i in range(8):
-					xbmc.sleep(500) ##sleep for 10 seconds, half each time
-					try:
-						#print 'condi'
-						if xbmc.getCondVisibility("Player.HasMedia") and xbmc.Player().isPlaying():
-							return True
-					except: pass
-				print 'returning now'
-				return False
-			elif url.endswith('.ts'):
-				playf4m(url,name)
-				from resources.modules import  CustomPlayer
-				import time
-
 				player = CustomPlayer.MyXBMCPlayer()
 				if (xbmc.Player().isPlaying() == 0):
 					quit()
@@ -62,6 +58,7 @@ def play(url,name,pdialogue=None):
 
 				print 'returning now'
 				return False
+
 			from resources.modules import  CustomPlayer
 			import time
 
@@ -89,44 +86,6 @@ def play(url,name,pdialogue=None):
 			xbmc.Player().stop()
 			return
 		
-		
-def playf4m(url, name):
-                import urlparse,json
-                if not any(i in url for i in ['.f4m', '.ts', '.m3u8']): raise Exception()
-                ext = url.split('?')[0].split('&')[0].split('|')[0].rsplit('.')[-1].replace('/', '').lower()
-                if not ext: ext = url
-                if not ext in ['f4m', 'ts', 'm3u8']: raise Exception()
-
-                params = urlparse.parse_qs(url)
-
-                try: proxy = params['proxy'][0]
-                except: proxy = None
-
-                try: proxy_use_chunks = json.loads(params['proxy_for_chunks'][0])
-                except: proxy_use_chunks = True
-
-                try: maxbitrate = int(params['maxbitrate'][0])
-                except: maxbitrate = 0
-
-                try: simpleDownloader = json.loads(params['simpledownloader'][0])
-                except: simpleDownloader = False
-
-                try: auth_string = params['auth'][0]
-                except: auth_string = ''
-
-
-                try:
-                   streamtype = params['streamtype'][0]
-                except:
-                   if ext =='ts': streamtype = 'TSDOWNLOADER'
-                   elif ext =='m3u8': streamtype = 'HLS'
-                   else: streamtype = 'HDS'
-
-                try: swf = params['swf'][0]
-                except: swf = None
-
-                from F4mProxy import f4mProxyHelper
-                return f4mProxyHelper().playF4mLink(url, name, proxy, proxy_use_chunks, maxbitrate, simpleDownloader, auth_string, streamtype, False, swf)
 		
 def log(text):
 	file = open(logfile,"w+")

@@ -65,7 +65,8 @@ def resolve(url):
 			url = mamahdresolve(url)
 		elif 'cricfree' in url:
 			url = cricfreeresolve(url)
-		return url
+			
+		return (url).replace('<p>','')
 	except:
 		return 'False'
 	
