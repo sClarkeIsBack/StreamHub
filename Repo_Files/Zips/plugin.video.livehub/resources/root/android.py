@@ -51,7 +51,7 @@ def geotvchans(url):
 		url1  = regex_from_to(a,'<stream_url>','</stream_url>').replace('<![CDATA[','').replace(']]>','')
 		log(url)
 		desc = regex_from_to(a,'<description>','</description>')
-		addDir(name,urllib.quote_plus(url1+'|User-Agent=iccind'),9999,thumb,fanart,base64.b64decode(desc))
+		addDir(name,urllib.quote_plus(url1+'|User-Agent=iccind'),10,thumb,fanart,base64.b64decode(desc))
 		
 def livetv():
 	import re
