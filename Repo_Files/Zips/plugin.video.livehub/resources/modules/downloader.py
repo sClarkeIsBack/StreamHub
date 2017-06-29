@@ -46,3 +46,24 @@ def unzip(zip,dest):
 	zip_ref = zipfile.ZipFile(zip, 'r')
 	zip_ref.extractall(dest)
 	zip_ref.close()
+	
+	
+def getmodules():
+	import os,re,xbmc
+	
+
+	zip     = 'https://github.com/sClarkeIsBack/LiveHub/raw/master/rootdownloads.zip'
+	
+	root    = xbmc.translatePath('special://home/addons/plugin.video.livehub/resources/root/')
+	dest    = xbmc.translatePath(os.path.join('special://home/userdata/addon_data/plugin.video.livehub/downloads/', 'root.zip'))
+
+	try:
+		download(zip,dest)
+		unzip(dest,root)
+	except:
+		xbmcgui.Dialog().ok('[COLOR white]Live[/COLOR][COLOR red]Hub[/COLOR]','Oops..Something went wrong with our auto update feature, Please Inform us at','http://facebook.com/groups/streamh')
+	
+	try:
+		os.remove(dest)
+	except:
+		pass

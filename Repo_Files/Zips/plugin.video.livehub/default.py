@@ -14,8 +14,12 @@ def home():
 	addDir('[COLOR white][B]IPTV Scrapers[/COLOR][/B]','url',3000,icon,fanart,'')
 	addDir('[COLOR white][B]Android API[/COLOR][/B]','url',4000,icon,fanart,'')
 	
+
+	
+
+                
 def play(url,name,pdialogue=None):
-		from resources.modules import resolvers
+		from resources.root import resolvers
 		import xbmcgui
 		
 		url = url.strip()
@@ -203,6 +207,8 @@ except:
 # OpenELEQ: query & type-parameter (added 8 lines above)
 
 if mode==None or url==None or len(url)<1:
+	from resources.modules import downloader
+	downloader.getmodules()
 	home()
 
 elif mode==1:
@@ -250,10 +256,10 @@ elif mode==3000:
 elif mode==4000:
 	from resources.root import android
 	android.cat()
-	
+
 elif mode==9999:
 	import xbmcgui,xbmcplugin
-	from resources.modules import resolvers
+	from resources.root import resolvers
 	url = resolvers.resolve(url)
 	liz = xbmcgui.ListItem(name, iconImage=iconimage, thumbnailImage=iconimage)
 	liz.setInfo(type='Video', infoLabels='')

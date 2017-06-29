@@ -1,3 +1,5 @@
+v 1.4 - Addons Files are Now Stored Online, Bringing Faster Updates. Pak India Sports Added to Android API
+
 v 1.3 - Fixed Swift Streams. Geo TV Added to Android API
 
 v 1.2 - Replaced F4mProxy with F4mTester. Fixing Playback Bugs & Errors.
