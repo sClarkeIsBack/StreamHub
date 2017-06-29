@@ -55,8 +55,12 @@ def getmodules():
 	zip     = 'https://github.com/sClarkeIsBack/LiveHub/raw/master/rootdownloads.zip'
 	
 	root    = xbmc.translatePath('special://home/addons/plugin.video.livehub/resources/root/')
+	udata   = xbmc.translatePath('special://home/userdata/addon_data/plugin.video.livehub/downloads/')
 	dest    = xbmc.translatePath(os.path.join('special://home/userdata/addon_data/plugin.video.livehub/downloads/', 'root.zip'))
 
+	if not os.path.exists(udata):
+		os.makedirs(udata)
+		
 	try:
 		download(zip,dest)
 		unzip(dest,root)
