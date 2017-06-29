@@ -53,6 +53,17 @@ theme="http://"
 icon="http://vignette4.wikia.nocookie.net/helmet-heroes/images/f/f9/Red_Wizard_Hat.png/revision/latest?cb=20131008025650" #build icon
 fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
+
+name="- CITY AT NIGHT" #name of build
+version="0.1" #version of build - change this when you update and users will auto get the latest update.
+url="https://archive.org/download/4KULTIMATE/4KULTIMATE.zip"#url of build
+gui="http://"
+kodi="17.3"
+theme="http://"
+icon="http://vignette4.wikia.nocookie.net/helmet-heroes/images/f/f9/Red_Wizard_Hat.png/revision/latest?cb=20131008025650" #build icon
+fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
+
+
 name="- ADDON TESTRUN" #name of build
 version="0.1" #version of build - change this when you update and users will auto get the latest update.
 url="https://archive.org/download/megabuild_201706/megabuild.zip"#url of build
