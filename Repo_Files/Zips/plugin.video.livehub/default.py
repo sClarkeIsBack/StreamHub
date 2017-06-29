@@ -7,8 +7,6 @@ fanart     = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id
 logfile    = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'log.txt'))
 
 def home():
-	addDir('[COLOR red][B]BETA - Please Report All Problems To facebook.com/groups/streamh[/COLOR][/B]','url',0,icon,fanart,'')
-	addDir('[COLOR white][B][/COLOR][/B]','url',0,icon,fanart,'')
 	addDir('[COLOR white][B]UK Geo Locked[/COLOR][/B]','url',1000,icon,fanart,'')
 	addDir('[COLOR white][B]Web Scrapers[/COLOR][/B]','url',2000,icon,fanart,'')
 	addDir('[COLOR white][B]IPTV Scrapers[/COLOR][/B]','url',3000,icon,fanart,'')
@@ -143,7 +141,26 @@ def OPEN_URL(url):
 	
 	
 
-	
+def popupd(announce):
+	import time,xbmcgui
+	class TextBox():
+		WINDOW=10147
+		CONTROL_LABEL=1
+		CONTROL_TEXTBOX=5
+		def __init__(self,*args,**kwargs):
+			xbmc.executebuiltin("ActivateWindow(%d)" % (self.WINDOW, )) # activate the text viewer window
+			self.win=xbmcgui.Window(self.WINDOW) # get window
+			xbmc.sleep(500) # give window time to initialize
+			self.setControls()
+		def setControls(self):
+			self.win.getControl(self.CONTROL_LABEL).setLabel('[COLOR ghostwhite][B]Live[/COLOR][COLOR red] Hub[/COLOR][/B]') # set heading
+			try: f=open(announce); text=f.read()
+			except: text=announce
+			self.win.getControl(self.CONTROL_TEXTBOX).setText(str(text))
+			return
+	TextBox()
+	while xbmc.getCondVisibility('Window.IsVisible(10147)'):
+		time.sleep(.5)
 	
 	
 
@@ -209,6 +226,12 @@ except:
 if mode==None or url==None or len(url)<1:
 	from resources.modules import downloader
 	downloader.getmodules()
+	try:
+		msg = OPEN_URL('https://github.com/sClarkeIsBack/LiveHub/raw/master/startupmsg.txt')
+		txt = msg%(float(xbmc.getInfoLabel("System.BuildVersion")[:4]),'1.6')
+		popupd(txt)
+	except:
+		pass
 	home()
 
 elif mode==1:

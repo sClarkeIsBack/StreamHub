@@ -1,3 +1,5 @@
+v 1.6 - Passed Beta Phase. Pop up Dialog Added.
+
 v 1.5 - Fixed Error Created in v1.4
 
 v 1.4 - Addons Files are Now Stored Online, Bringing Faster Updates. Pak India Sports Added to Android API
