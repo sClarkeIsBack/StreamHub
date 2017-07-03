@@ -12,10 +12,7 @@ def home():
 	addDir('[COLOR white][B]IPTV Scrapers[/COLOR][/B]','url',3000,icon,fanart,'')
 	addDir('[COLOR white][B]Android API[/COLOR][/B]','url',4000,icon,fanart,'')
 	
-
-	
-
-                
+   
 def play(url,name,pdialogue=None):
 		from resources.root import resolvers
 		import xbmcgui
@@ -24,67 +21,62 @@ def play(url,name,pdialogue=None):
 
 		url = resolvers.resolve(url)
 
-		if url.endswith('m3u8'):
-			from resources.root import iptv
-			iptv.listm3u(url)
-		else:
-				
-			liz = xbmcgui.ListItem(name, iconImage=iconimage, thumbnailImage=iconimage)
-			liz.setInfo(type='Video', infoLabels={'Title':name})
-			liz.setProperty("IsPlayable","true")
-			liz.setPath(url)
+		liz = xbmcgui.ListItem(name, iconImage=iconimage, thumbnailImage=iconimage)
+		liz.setInfo(type='Video', infoLabels={'Title':name})
+		liz.setProperty("IsPlayable","true")
+		liz.setPath(url)
 			
-			if url.endswith('.ts'):
-				url = 'plugin://plugin.video.f4mTester/?url='+urllib.quote_plus(url)+'&amp;streamtype=SIMPLE'
-			elif url.endswith('.m3u8'):
-				url = 'plugin://plugin.video.f4mTester/?url='+urllib.quote_plus(url)+'&amp;streamtype=HLS'
-			elif url.endswith('.f4m'):
-				url = 'plugin://plugin.video.f4mTester/?url='+urllib.quote_plus(url)
+		if url.endswith('.ts'):
+			url = 'plugin://plugin.video.f4mTester/?url='+urllib.quote_plus(url)+'&amp;streamtype=SIMPLE'
+		elif url.endswith('.m3u8'):
+			url = 'plugin://plugin.video.f4mTester/?url='+urllib.quote_plus(url)+'&amp;streamtype=HLS'
+		elif url.endswith('.f4m'):
+			url = 'plugin://plugin.video.f4mTester/?url='+urllib.quote_plus(url)
 
-			if url.lower().startswith('plugin') and 'youtube' not in  url.lower():
-				from resources.modules import CustomPlayer
-				xbmc.executebuiltin('XBMC.PlayMedia('+url+')') 
-				player = CustomPlayer.MyXBMCPlayer()
-				if (xbmc.Player().isPlaying() == 0):
-					quit()
-				try:
-				   
-						if player.urlplayed:
-							print 'yes played'
-							return
-						if time.time()-beforestart>4: return False
-					#xbmc.sleep(1000)
-				except: pass
-
-				print 'returning now'
-				return False
-
-			from resources.modules import  CustomPlayer
-			import time
-
+		if url.lower().startswith('plugin') and 'youtube' not in  url.lower():
+			from resources.modules import CustomPlayer
+			xbmc.executebuiltin('XBMC.PlayMedia('+url+')') 
 			player = CustomPlayer.MyXBMCPlayer()
-			player.pdialogue=pdialogue
-			start = time.time() 
-			#xbmc.Player().play( liveLink,listitem)
-			print 'going to play'
-			import time
-			beforestart=time.time()
-			player.play( url, liz)
 			if (xbmc.Player().isPlaying() == 0):
 				quit()
 			try:
-				while player.is_active:
-					xbmc.sleep(400)
-				   
+			   
 					if player.urlplayed:
 						print 'yes played'
 						return
-					if time.time()-beforestart>4: return False
+						if time.time()-beforestart>4: return False
 					#xbmc.sleep(1000)
 			except: pass
-			print 'not played',url
-			xbmc.Player().stop()
-			return
+
+			print 'returning now'
+			return False
+
+		from resources.modules import  CustomPlayer
+		import time
+
+		player = CustomPlayer.MyXBMCPlayer()
+		player.pdialogue=pdialogue
+		start = time.time() 
+			#xbmc.Player().play( liveLink,listitem)
+		print 'going to play'
+		import time
+		beforestart=time.time()
+		player.play( url, liz)
+		if (xbmc.Player().isPlaying() == 0):
+			quit()
+		try:
+			while player.is_active:
+				xbmc.sleep(400)
+				   
+				if player.urlplayed:
+					print 'yes played'
+					return
+				if time.time()-beforestart>4: return False
+				#xbmc.sleep(1000)
+		except: pass
+		print 'not played',url
+		xbmc.Player().stop()
+		return
 		
 		
 def log(text):
@@ -163,8 +155,6 @@ def popupd(announce):
 		time.sleep(.5)
 	
 	
-
-	
 def get_params():
 	param=[]
 	paramstring=sys.argv[2]
@@ -226,12 +216,11 @@ except:
 if mode==None or url==None or len(url)<1:
 	from resources.modules import downloader
 	downloader.getmodules()
-	try:
-		msg = OPEN_URL('https://github.com/sClarkeIsBack/LiveHub/raw/master/startupmsg.txt')
-		txt = msg%(float(xbmc.getInfoLabel("System.BuildVersion")[:4]),'1.6')
-		popupd(txt)
-	except:
-		pass
+	#try:
+	#	msg = OPEN_URL('https://github.com/sClarkeIsBack/LiveHub/raw/master/startupmsg.txt')
+	#	txt = msg%(float(xbmc.getInfoLabel("System.BuildVersion")[:4]),'1.6')
+	#	popupd(txt)
+	#pass
 	home()
 
 elif mode==1:
@@ -290,6 +279,5 @@ elif mode==9999:
 	liz.setPath(url)
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
 	
-
 import xbmcplugin
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
