@@ -773,23 +773,42 @@ def playmov2(url):
 def opentwentyfourseven(url):
 	url = 'https://www.arconaitv.me'
 	page = OPEN_URL(url)
-	part = regex_from_to(page,'Channels','Cable Tv')
-	all_vids=regex_get_all(part,'<li id="menu-item-','</a>')
+	part = regex_from_to(page,'id="shows">','id="cable">')
+	all_vids=regex_get_all(part,"div class='box-content'",'</a>')
 	for a in all_vids:
-		url = regex_from_to(a,'<a href="','"')
-		name = regex_from_to(a,'<span class="link_text">\n','\n')
+		url = regex_from_to(a,"href='","'")
+		name = regex_from_to(a,"title='","'").replace('#038;','')
 		if not url=='https://www.arconaitv.me/':
-			addDir(name,url,46,icon,fanart,'')
+			if not name == 'A-E':
+				if not name == 'F-J':
+					if not name == 'K-O':
+						if not name == 'P-T':
+							if not name == 'U-Z':
+								addDir(name,urllib.quote_plus('https://www.arconaitv.me/'+url),46,icon,fanart,'')
+								
+	part = regex_from_to(page,'id="movies">','id="donate">')
+	all_vids=regex_get_all(part,"div class='box-content'",'</a>')
+	for a in all_vids:
+		url = regex_from_to(a,"href='","'")
+		name = regex_from_to(a,"title='","'").replace('#038;','')
+		if not url=='https://www.arconaitv.me/':
+			if not name == 'A-E':
+				if not name == 'F-J':
+					if not name == 'K-O':
+						if not name == 'P-T':
+							if not name == 'U-Z':
+								addDir(name,urllib.quote_plus('https://www.arconaitv.me/'+url),46,icon,fanart,'')
 		
 		
 def resolvetwentyfourseven(url,name):
+	ref  = url
 	open = OPEN_URL(url)
-	m3u  = re.compile('"src":"(.*?)"',re.DOTALL).findall(open)[0]
+	m3u  = re.compile('source src="(.*?)"',re.DOTALL).findall(open)[0]
 	m3u  = (m3u).replace('\/','/')
 	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
 	liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': description})
 	liz.setProperty('IsPlayable','true')
-	liz.setPath(m3u+'|User-Agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36')
+	liz.setPath(m3u+'|User-Agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36&Referer='+ref)
 	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
 	
 def home():
