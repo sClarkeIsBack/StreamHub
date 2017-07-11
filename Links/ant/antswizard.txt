@@ -9,7 +9,7 @@ zip="https://github.com/sClarkeIsBack/StreamHub/raw/master/Links/ant/plugin.prog
 
 name="- SOFAFLIX TV" #name of build
 version="1.0" #version of build - change this when you update and users will auto get the latest update.
-url="https://archive.org/download/build_20170711/build.zip" #url of build
+url="https://archive.org/download/assofadone/assofadone.zip" #url of build
 gui="http://"
 kodi="17.3"
 theme="http://"
