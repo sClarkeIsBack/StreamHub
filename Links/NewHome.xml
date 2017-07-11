@@ -10,8 +10,19 @@
 <link>hh</link>
 <thumbnail>http://thumbnail>
 </plugin>
-
  
+<item>
+ <title>[COLOR lime][B]Mayweather vs. McGregor: Los Angeles Press Conference 10PM GMT[/COLOR][/B]</title>
+ <link>https://www.youtube.com/watch?v=DRpITDL-vcA</link>
+ <thumbnail>http://cdn.mmaweekly.com/wp-content/uploads/2017/07/Mayweather-vs-McGregor-World-Tour-Los-Angeles-Poster.jpg</thumbnail>
+</item>
+ 
+<plugin>
+<title>[COLOR white][B][/COLOR][/B]</title>
+<link>hh</link>
+<thumbnail>http://thumbnail>
+</plugin>
+
 <plugin>
 <title>[COLOR red][B]M[/COLOR][COLOR white]ovies[/COLOR][/B]</title>
 <link>plugin://plugin.video.streamhub/?action=movieNavigator</link>
