@@ -1,1 +1,0 @@
-<channel><title>UlRFIDItVUsg</title><description/><desc_image><![CDATA[http://logosforapp.ddns.net:25461/images/logo/rte_2_ie.jpg]]></desc_image><category_id>1</category_id><stream_url><![CDATA[http://78.129.237.5:25461/live/geoapco/apkgeoco/642.ts]]></stream_url></channel>

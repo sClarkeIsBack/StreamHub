@@ -12,8 +12,11 @@ def home():
 	addDir('[COLOR white][B]IPTV Scrapers[/COLOR][/B]','url',3000,icon,fanart,'')
 	addDir('[COLOR white][B]Android API[/COLOR][/B]','url',4000,icon,fanart,'')
 	
+def log(text):
+	file = open(logfile,"w+")
+	file.write(str(text))
    
-def play(url,name,pdialogue=None):
+def play(url,name,icon,pdialogue=None):
 		from resources.root import resolvers
 		import xbmcgui
 		
@@ -25,60 +28,66 @@ def play(url,name,pdialogue=None):
 		liz.setInfo(type='Video', infoLabels={'Title':name})
 		liz.setProperty("IsPlayable","true")
 		liz.setPath(url)
-			
-		if url.endswith('.ts'):
-			url = 'plugin://plugin.video.f4mTester/?url='+urllib.quote_plus(url)+'&amp;streamtype=SIMPLE'
-		elif url.endswith('.m3u8'):
-			url = 'plugin://plugin.video.f4mTester/?url='+urllib.quote_plus(url)+'&amp;streamtype=HLS'
-		elif url.endswith('.f4m'):
-			url = 'plugin://plugin.video.f4mTester/?url='+urllib.quote_plus(url)
 
-		if url.lower().startswith('plugin') and 'youtube' not in  url.lower():
-			from resources.modules import CustomPlayer
-			xbmc.executebuiltin('XBMC.PlayMedia('+url+')') 
-			player = CustomPlayer.MyXBMCPlayer()
-			if (xbmc.Player().isPlaying() == 0):
-				quit()
-			try:
-			   
-					if player.urlplayed:
-						print 'yes played'
-						return
-						if time.time()-beforestart>4: return False
-					#xbmc.sleep(1000)
+		from resources.modules import control
+
+		if url.endswith('.ts') or url.endswith('.f4m'):
+			playf4m(url,'TEST')
+		else:
+			item = control.item(path=url, iconImage=icon, thumbnailImage=icon)
+			try: item.setArt({'icon': icon})
 			except: pass
+			item.setInfo(type='Video', infoLabels = '')
+			control.player.play(url, item)
+			control.resolve(int(sys.argv[1]), True, item)
 
-			print 'returning now'
-			return False
-
-		from resources.modules import  CustomPlayer
-		import time
-
-		player = CustomPlayer.MyXBMCPlayer()
-		player.pdialogue=pdialogue
-		start = time.time() 
-			#xbmc.Player().play( liveLink,listitem)
-		print 'going to play'
-		import time
-		beforestart=time.time()
-		player.play( url, liz)
-		if (xbmc.Player().isPlaying() == 0):
-			quit()
-		try:
-			while player.is_active:
-				xbmc.sleep(400)
-				   
-				if player.urlplayed:
-					print 'yes played'
-					return
-				if time.time()-beforestart>4: return False
-				#xbmc.sleep(1000)
-		except: pass
-		print 'not played',url
-		xbmc.Player().stop()
-		return
+			for i in range(0, 240):
+				if xbmc.Player().isPlayingVideo(): break
+				control.sleep(1000)
+			while xbmc.Player().isPlayingVideo():
+					control.sleep(2000)
+			control.sleep(5000)
 		
-		
+def playf4m(url, name):
+            try:
+                import urlparse,json
+                if not any(i in url for i in ['.f4m', '.ts', '.m3u8']): raise Exception()
+                ext = url.split('?')[0].split('&')[0].split('|')[0].rsplit('.')[-1].replace('/', '').lower()
+                if not ext: ext = url
+                if not ext in ['f4m', 'ts', 'm3u8']: raise Exception()
+
+                params = urlparse.parse_qs(url)
+
+                try: proxy = params['proxy'][0]
+                except: proxy = None
+
+                try: proxy_use_chunks = json.loads(params['proxy_for_chunks'][0])
+                except: proxy_use_chunks = True
+
+                try: maxbitrate = int(params['maxbitrate'][0])
+                except: maxbitrate = 0
+
+                try: simpleDownloader = json.loads(params['simpledownloader'][0])
+                except: simpleDownloader = False
+
+                try: auth_string = params['auth'][0]
+                except: auth_string = ''
+
+
+                try:
+                   streamtype = params['streamtype'][0]
+                except:
+                   if ext =='ts': streamtype = 'TSDOWNLOADER'
+                   elif ext =='m3u8': streamtype = 'HLS'
+                   else: streamtype = 'HDS'
+
+                try: swf = params['swf'][0]
+                except: swf = None
+
+                from F4mProxy import f4mProxyHelper
+                return f4mProxyHelper().playF4mLink(url, name, proxy, proxy_use_chunks, maxbitrate, simpleDownloader, auth_string, streamtype, False, swf)
+            except:
+                pass
 def log(text):
 	file = open(logfile,"w+")
 	file.write(str(text))
@@ -249,7 +258,7 @@ elif mode==50:
 
 	
 elif mode==10:
-	play(url,name)
+	play(url,name,icon)
 	
 
 

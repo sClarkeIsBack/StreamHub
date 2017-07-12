@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.livehub" name="[B][COLOR ghostwhite]Live[/COLOR][COLOR red] Hub[/COLOR][/B]" version="1.7" provider-name="sClarke">
+<addon id="plugin.video.livehub" name="[B][COLOR ghostwhite]Live[/COLOR][COLOR red] Hub[/COLOR][/B]" version="1.8" provider-name="sClarke">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.requests" />
+	<import addon="script.video.F4mProxy" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
