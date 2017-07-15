@@ -11,11 +11,11 @@
 <thumbnail>http://thumbnail>
 </plugin>
  
-<item>
- <title>[COLOR lime][B]Mayweather vs. McGregor: Los Angeles Press Conference 10PM GMT[/COLOR][/B]</title>
- <link>https://www.youtube.com/watch?v=DRpITDL-vcA</link>
+<dir>
+ <title>[COLOR lime][B]ITV BOX OFFICE - Chris Eubank JR vs Arthur Abraham[/COLOR][/B]</title>
+ <link>http://denpals.co.uk/event.m3u</link>
  <thumbnail>http://cdn.mmaweekly.com/wp-content/uploads/2017/07/Mayweather-vs-McGregor-World-Tour-Los-Angeles-Poster.jpg</thumbnail>
-</item>
+</dir>
  
 <plugin>
 <title>[COLOR white][B][/COLOR][/B]</title>
