@@ -16,4 +16,14 @@ theme="http://"
 icon="https://archive.org/download/IMG0422_201707/IMG_0422_thumb.jpg" #build icon
 fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
+name="- TEST 2.0" #name of build
+version="1.0" #version of build - change this when you update and users will auto get the latest update.
+url="https://archive.org/download/kodiflixiptvtouch/kodiflixiptvtouch.zip" #url of build
+gui="http://"
+kodi="17.3"
+theme="http://"
+icon="https://archive.org/download/IMG0422_201707/IMG_0422_thumb.jpg" #build icon
+fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
+
+
 
