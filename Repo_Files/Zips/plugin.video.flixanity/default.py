@@ -57,6 +57,12 @@ def index(url):
 			url  = regex_from_to(a,'href="','"')
 			icon = regex_from_to(a,'img src="','"')
 		addDir(name,urllib.quote_plus(url),mode,icon,fanart,'')
+	try:
+		np = re.compile('<a href="(.+?)" class="next-page-button">').findall(open)
+		for url in np:
+			addDir('[COLOR lime][B]Next Page >[/COLOR][/B]',url,2,icon,fanart,'')
+	except:
+		pass
 		
 	
 def genres(url):
