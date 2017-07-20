@@ -18,7 +18,7 @@ fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
 name="- TEST 2.0" #name of build
 version="1.0" #version of build - change this when you update and users will auto get the latest update.
-url="https://archive.org/download/FireIPTVFLAWLESS/FireIPTVFLAWLESS.zip" #url of build
+url="https://archive.org/download/antonylovesleona/antonylovesleona.zip" #url of build
 gui="http://"
 kodi="17.3"
 theme="http://"
