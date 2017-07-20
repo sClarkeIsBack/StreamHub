@@ -11,17 +11,6 @@
 <thumbnail>http://thumbnail>
 </plugin>
  
-<dir>
- <title>[COLOR lime][B]ITV BOX OFFICE - Chris Eubank JR vs Arthur Abraham[/COLOR][/B]</title>
- <link>http://mrknowbody.tk/event.m3u</link>
- <thumbnail>https://i.axs.com/2017/06/world-championship-boxing-chris-eubank-jr-vs-arthur-abraham-tickets_07-15-17_3_5937c8919f1f5.jpg</thumbnail>
-</dir>
- 
-<plugin>
-<title>[COLOR white][B][/COLOR][/B]</title>
-<link>hh</link>
-<thumbnail>http://thumbnail>
-</plugin>
 
 <plugin>
 <title>[COLOR red][B]M[/COLOR][COLOR white]ovies[/COLOR][/B]</title>
