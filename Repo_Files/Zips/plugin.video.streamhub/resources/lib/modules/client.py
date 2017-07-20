@@ -433,7 +433,50 @@ class bfcookie:
         f = hexlify(plain_text)
         return f
 
+def googletag(url):
+    quality = re.compile('itag=(\d*)').findall(url)
+    quality += re.compile('=m(\d*)$').findall(url)
+    try:
+        quality = quality[0]
+    except:
+        return []
 
+    if quality in ['266', '272', '313']:
+        return [{'quality': '4K', 'url': url}]
+    if quality in ['264', '271']:
+        return [{'quality': '1440p', 'url': url}]
+    if quality in ['37', '137', '299', '96', '248', '303', '46']:
+        return [{'quality': '1080p', 'url': url}]
+    elif quality in ['15', '22', '84', '136', '298', '120', '95', '247', '302', '45', '102']:
+        return [{'quality': 'HD', 'url': url}]
+    elif quality in ['35', '44', '59', '135', '244', '94']:
+        return [{'quality': 'SD', 'url': url}]
+    elif quality in ['18', '34', '43', '82', '100', '101', '134', '243', '93']:
+        return [{'quality': 'SD', 'url': url}]
+    elif quality in ['5', '6', '36', '83', '133', '242', '92', '132']:
+        return [{'quality': 'SD', 'url': url}]
+    else:
+        return []
+
+
+def googlepass(url):
+    try:
+        try:
+            headers = dict(urlparse.parse_qsl(url.rsplit('|', 1)[1]))
+        except:
+            headers = None
+        url = url.split('|')[0].replace('\\', '')
+        url = client.request(url, headers=headers, output='geturl')
+        if 'requiressl=yes' in url:
+            url = url.replace('http://', 'https://')
+        else:
+            url = url.replace('https://', 'http://')
+        if headers: url += '|%s' % urllib.urlencode(headers)
+        return url
+    except:
+        return
+
+		
 class sucuri:
     def __init__(self):
         self.cookie = None

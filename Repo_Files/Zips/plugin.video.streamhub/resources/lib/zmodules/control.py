@@ -139,12 +139,12 @@ def artPath():
     return path
 
 def appearance():
-    appearance = setting('appearance.1').lower() if condVisibility('System.HasAddon(script.kratos.artwork)') else setting('appearance.alt').lower()
+    appearance = setting('appearance.1').lower() if condVisibility('System.HasAddon(script.none.artwork)') else setting('appearance.alt').lower()
     return appearance
 
 
 def artwork():
-    execute('RunPlugin(plugin://script.kratos.artwork)')
+    execute('RunPlugin(plugin://script.none.artwork)')
 
 
 def infoDialog(message, heading=addonInfo('name'), icon='', time=3000, sound=False):
@@ -164,14 +164,13 @@ def selectDialog(list, heading=addonInfo('name')):
 
 
 def moderator():
-    netloc = [urlparse.urlparse(sys.argv[0]).netloc, '', 'plugin.video.live.streamspro', 'plugin.video.kratos', 'plugin.video.cpstreams', 'plugin.video.streamarmy', 'plugin.video.tinklepad', 'plugin.video.metallic']
-
-    if not infoLabel('Container.PluginName') in netloc: sys.exit()
+	import xbmc
+	xbmc.log('We dont take sides')
 
 
 def metaFile():
-    if condVisibility('System.HasAddon(script.kratos.metadata)'):
-        return os.path.join(xbmcaddon.Addon('script.kratos.metadata').getAddonInfo('path'), 'resources', 'data', 'meta.db')
+    if condVisibility('System.HasAddon(script.none.metadata)'):
+        return os.path.join(xbmcaddon.Addon('script.none.metadata').getAddonInfo('path'), 'resources', 'data', 'meta.db')
 
 
 def apiLanguage(ret_name=None):
