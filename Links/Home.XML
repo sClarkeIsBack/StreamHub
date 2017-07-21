@@ -2,27 +2,27 @@
 <plugin>
 <title>[COLOR ffff0000][B]StreamHub[/B][/COLOR]</title>
 <link>hh</link>
-<thumbnail>http://thumbnail>
+<thumbnail>https://s23.postimg.org/65w4d25l7/icon.png</thumbnail>
 </plugin>
 
 <plugin>
 <title>[COLOR white][B][/COLOR][/B]</title>
 <link>hh</link>
-<thumbnail>http://thumbnail>
+<thumbnail>https://s23.postimg.org/m5erwm1mz/template.png</thumbnail>
 </plugin>
  
 
 <plugin>
 <title>[COLOR ffff0000][B]M[/COLOR][COLOR white]ovies[/COLOR][/B]</title>
 <link>plugin://plugin.video.streamhub/?action=movieNavigator</link>
-<thumbnail>https://s12.postimg.org/s2xzraxql/movies.png<thumbnail>
+<thumbnail>https://s12.postimg.org/s2xzraxql/movies.png</thumbnail>
 </plugin>
  
   
 <plugin>
 <title>[COLOR ffff0000][B]TV[/COLOR][COLOR white] Shows[/COLOR][/B]</title>
 <link>plugin://plugin.video.streamhub/?action=tvNavigator</link>
-<thumbnail>https://s12.postimg.org/ozx9nxirx/tvshows.png<thumbnail>
+<thumbnail>https://s12.postimg.org/ozx9nxirx/tvshows.png</thumbnail>
 </plugin>
  
 
@@ -66,5 +66,5 @@
 <dir>
 <name>[COLOR lime][B]Test Area[/COLOR][/B]</name>
 <link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/test.xml</link>
-<thumbnail>http://mkodi.co.uk/streamhub/icons/2/kid.png</thumbnail>
+<thumbnail>https://s2.postimg.org/l0fl10mg9/test.png</thumbnail>
 </dir>
