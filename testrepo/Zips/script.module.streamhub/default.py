@@ -1,4 +1,4 @@
-import base64,hashlib,os,random,re,requests,shutil,string,sys,urllib,urllib2,json,urlresolver,ssl,liveresolver,zipfile,urlparse
+import base64,hashlib,os,random,re,requests,shutil,string,sys,urllib,urllib2,json,urlresolver,ssl,zipfile,urlparse
 import xbmc,xbmcaddon,xbmcgui,xbmcplugin,xbmcvfs
 
 
