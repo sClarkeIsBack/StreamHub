@@ -31,6 +31,7 @@
 		<setting id="provider.dizigold" type="bool" label="DIZIGOLD" default="true" />
 		<setting id="provider.dltube" type="bool" label="DLTUBE" default="true" />
 		<setting id="provider.einthusan" type="bool" label="EINTHUSAN" default="true" />
+		<setting id="provider.flenix" type="bool" label="FLENIX" default="true" />
 		<setting id="provider.flixanity" type="bool" label="FLIXANITY" default="true" />
 		<setting id="provider.genvideo" type="bool" label="GENVIDEO" default="true" />
 		<setting id="provider.gogoanime" type="bool" label="GOGOANIME" default="true" />
