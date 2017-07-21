@@ -1,5 +1,0 @@
-<settings>
-	<category label="Settings">
-        <setting id="quality" label="Prefered Quality:" type="labelenum" default="1080p" values="1080p|720p|360p|222p" />
-	</category>
-</settings>

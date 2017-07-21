@@ -1,12 +1,11 @@
 <addons>
-<addon id="plugin.video.streamhub" name="[COLOR red][B]StreamHub[/B][/COLOR]" version="3.0.3" provider-name="sClarke">
+<addon id="plugin.video.streamhub" name="[COLOR red][B]StreamHub[/B][/COLOR]" version="3.0.4" provider-name="sClarke">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="script.module.pyxbmct" version="1.1.4" />
 		<import addon="script.module.urlresolver" version="3.0.0"/>
 		<import addon="script.module.metahandler" version="1.0.0" />
 		<import addon="script.video.F4mProxy"/>
-		<import addon="script.module.requests"/>
 		<import addon="script.module.streamhub"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
@@ -62,34 +61,13 @@
   </extension>
 </addon>
 
-
-<addon id="plugin.video.f4mTester" version="2.7.1" name="f4mTester" provider-name="Shani">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.video.F4mProxy" version="2.7.1"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-    
-
-    <extension point="xbmc.addon.metadata">
-        <summary>f4mTester</summary>
-        <description></description>
-        <platform>all</platform>
-    </extension>
-</addon>
-
-
-<addon id="script.module.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="6.2" provider-name="sClarke">
+<addon id="script.module.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="6.3" provider-name="sClarke">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.requests" />
 	<import addon="script.module.urlresolver" />
-	<import addon="script.module.liveresolver"/>
     <import addon="script.module.beautifulsoup4" />
 	<import addon="script.video.F4mProxy" />
-	<import addon="script.module.livestreamer" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>all</provides>
@@ -101,6 +79,7 @@
     <platform>all</platform>
   </extension>
 </addon>
+
 
 
 
@@ -126,24 +105,6 @@
   </extension>
 </addon>
 
-<addon id="script.module.liveresolver" 
-     name="LiveResolver" 
-     version="0.1.49" 
-     provider-name="natko1412">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.requests"/>
-    <import addon="script.module.addon.common" version="2.0.0" />
-
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary lang="en">Resolve common live video host URL's to be playable in XBMC/Kodi + find links embeded in sites.</summary>
-    <description lang="en"></description>    
-  </extension>
-</addon>
 
 <addon id="script.module.urlresolver" name="URLResolver" version="3.0.31" provider-name="tvaddons.ag, Eldorado">
 	<requires>
@@ -160,32 +121,5 @@
 	</extension>
 </addon>
 
-<addon id="script.module.livestreamer"
-       name="livestreamer"
-       version="1.12.0"
-       provider-name="Christopher Rosell">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.requests"
-                      version="1.1.0"
-                     optional="false"/>
-    <import addon="script.module.singledispatch"
-                      version="3.4.0.3"
-                     optional="false"/>
-    <import addon="script.module.futures"
-                      version="2.2.0"
-                     optional="false"/>
-  </requires>
-  <extension point="xbmc.python.module"
-             library="lib"/>
-  <extension point="xbmc.addon.metadata">
-    <summary>Livestreamer extracts streams from various services</summary>
-    <description>Livestreamer is a command-line utility that pipes video streams from various services into a video player, such as VLC. The main purpose of Livestreamer is to allow the user to avoid buggy and CPU heavy flash plugins but still be able to enjoy various streamed content. There is also an API available for developers who want access to the video stream data.</description>
-    <platform>all</platform>
-    <license>Simplified BSD</license>
-    <source>https://github.com/chrippa/livestreamer.git</source>
-    <website>http://livestreamer.io</website>
-  </extension>
-</addon>
 
 </addons>

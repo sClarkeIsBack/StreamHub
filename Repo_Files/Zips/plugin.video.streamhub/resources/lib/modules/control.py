@@ -128,7 +128,7 @@ def addonNext():
 
 
 def artPath():
-    path = xbmc.translatePath('special://home/addons/plugin.video.streamhub/resources/art')
+    path = xbmc.translatePath('special://home/addons/plugin.video.streamhub/')
     return path
 
 
