@@ -1125,7 +1125,7 @@ class tvshows:
             url = items[0]['next']
             if url == '': raise Exception()
 
-            icon = control.addonNext()
+            icon = 'https://s14.postimg.org/88p9woka9/nextpage.png'
             url = '%s?action=tvshowPage&url=%s' % (sysaddon, urllib.quote_plus(url))
 
             item = control.item(label=nextMenu)

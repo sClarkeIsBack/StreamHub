@@ -49,24 +49,24 @@ class navigator:
 
 
     def movies(self, lite=False):
-        self.addDirectoryItem('New Movies', 'movieWidget', 'latest-movies.png', 'DefaultRecentlyAddedMovies.png')
-        self.addDirectoryItem(32017, 'movies&url=trending', 'people-watching.png', 'DefaultRecentlyAddedMovies.png')
-        self.addDirectoryItem(32018, 'movies&url=popular', 'most-popular.png', 'DefaultMovies.png')
-        self.addDirectoryItem(32019, 'movies&url=views', 'most-voted.png', 'DefaultMovies.png')
-        self.addDirectoryItem(32020, 'movies&url=boxoffice', 'box-office.png', 'DefaultMovies.png')
-        self.addDirectoryItem(32021, 'movies&url=oscars', 'oscar-winners.png', 'DefaultMovies.png')
-        self.addDirectoryItem(32022, 'movies&url=theaters', 'in-theaters.png', 'DefaultRecentlyAddedMovies.png')
-        self.addDirectoryItem(32011, 'movieGenres', 'genres.png', 'DefaultMovies.png')
-        self.addDirectoryItem(32012, 'movieYears', 'years.png', 'DefaultMovies.png')
-        self.addDirectoryItem(32013, 'moviePersons', 'people.png', 'DefaultMovies.png')
-        self.addDirectoryItem(32015, 'movieCertificates', 'certificates.png', 'DefaultMovies.png')
+        self.addDirectoryItem('New Movies', 'movieWidget', 'https://s2.postimg.org/jejp2qn3t/new.png', 'DefaultRecentlyAddedMovies.png')
+        self.addDirectoryItem(32017, 'movies&url=trending', 'https://s2.postimg.org/i60euukjd/trending.png', 'DefaultRecentlyAddedMovies.png')
+        self.addDirectoryItem(32018, 'movies&url=popular', 'https://s2.postimg.org/5tsx3m7ax/popular.png', 'DefaultMovies.png')
+        self.addDirectoryItem(32019, 'movies&url=views', 'https://s2.postimg.org/3nym943uh/mostviewed.png', 'DefaultMovies.png')
+        self.addDirectoryItem(32020, 'movies&url=boxoffice', 'https://s2.postimg.org/6pkt5brll/boxoffice.png', 'DefaultMovies.png')
+        self.addDirectoryItem(32021, 'movies&url=oscars', 'https://s2.postimg.org/oh5mb9lrt/oscars.png', 'DefaultMovies.png')
+        self.addDirectoryItem('In Cinema', 'movies&url=theaters', 'https://s2.postimg.org/pkl59hh15/incinema.png', 'DefaultRecentlyAddedMovies.png')
+        self.addDirectoryItem(32011, 'movieGenres', 'https://s2.postimg.org/axfle2t15/genres.png', 'DefaultMovies.png')
+        self.addDirectoryItem(32012, 'movieYears', 'https://s2.postimg.org/9qaudcho9/years.png', 'DefaultMovies.png')
+        self.addDirectoryItem(32013, 'moviePersons', 'https://s2.postimg.org/l3o6x2dfd/actors.png', 'DefaultMovies.png')
+        self.addDirectoryItem(32015, 'movieCertificates', 'https://s2.postimg.org/r4qh7vpfd/ratings.png', 'DefaultMovies.png')
 
         if lite == False:
             if not control.setting('lists.widget') == '0':
-                self.addDirectoryItem(32003, 'mymovieliteNavigator', 'mymovies.png', 'DefaultVideoPlaylists.png')
+                self.addDirectoryItem(32003, 'mymovieliteNavigator', 'https://s2.postimg.org/l1di1pojd/traktmovies.png', 'DefaultVideoPlaylists.png')
 
-            self.addDirectoryItem(32028, 'moviePerson', 'people-search.png', 'DefaultMovies.png')
-            self.addDirectoryItem(32010, 'movieSearch', 'search.png', 'DefaultMovies.png')
+            self.addDirectoryItem(32028, 'moviePerson', 'https://s2.postimg.org/irksd7q7t/searchactors.png', 'DefaultMovies.png')
+            self.addDirectoryItem(32010, 'movieSearch', 'https://s2.postimg.org/80x5rjcl5/search.png', 'DefaultMovies.png')
 
         self.endDirectory()
 
@@ -75,28 +75,28 @@ class navigator:
         self.accountCheck()
 
         if traktCredentials == True and imdbCredentials == True:
-            self.addDirectoryItem(32032, 'movies&url=traktcollection', 'trakt.png', 'DefaultMovies.png', queue=True)
-            self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'trakt.png', 'DefaultMovies.png', queue=True)
+            self.addDirectoryItem(32032, 'movies&url=traktcollection', 'https://s2.postimg.org/l1di1pojd/traktmovies.png', 'DefaultMovies.png', queue=True)
+            self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'https://s2.postimg.org/l1di1pojd/traktmovies.png', 'DefaultMovies.png', queue=True)
             self.addDirectoryItem(32034, 'movies&url=imdbwatchlist', 'imdb.png', 'DefaultMovies.png', queue=True)
 
         elif traktCredentials == True:
-            self.addDirectoryItem(32032, 'movies&url=traktcollection', 'trakt.png', 'DefaultMovies.png', queue=True)
-            self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'trakt.png', 'DefaultMovies.png', queue=True)
+            self.addDirectoryItem(32032, 'movies&url=traktcollection', 'https://s2.postimg.org/l1di1pojd/traktmovies.png', 'DefaultMovies.png', queue=True)
+            self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'https://s2.postimg.org/l1di1pojd/traktmovies.png', 'DefaultMovies.png', queue=True)
 
         elif imdbCredentials == True:
             self.addDirectoryItem(32032, 'movies&url=imdbwatchlist', 'imdb.png', 'DefaultMovies.png', queue=True)
             self.addDirectoryItem(32033, 'movies&url=imdbwatchlist2', 'imdb.png', 'DefaultMovies.png', queue=True)
 
         if traktCredentials == True:
-            self.addDirectoryItem(32035, 'movies&url=traktfeatured', 'trakt.png', 'DefaultMovies.png', queue=True)
+            self.addDirectoryItem(32035, 'movies&url=traktfeatured', 'https://s2.postimg.org/l1di1pojd/traktmovies.png', 'DefaultMovies.png', queue=True)
 
         elif imdbCredentials == True:
             self.addDirectoryItem(32035, 'movies&url=featured', 'imdb.png', 'DefaultMovies.png', queue=True)
 
         if traktIndicators == True:
-            self.addDirectoryItem(32036, 'movies&url=trakthistory', 'trakt.png', 'DefaultMovies.png', queue=True)
+            self.addDirectoryItem(32036, 'movies&url=trakthistory', 'https://s2.postimg.org/l1di1pojd/traktmovies.png', 'DefaultMovies.png', queue=True)
 
-        self.addDirectoryItem(32039, 'movieUserlists', 'userlists.png', 'DefaultMovies.png')
+        self.addDirectoryItem(32039, 'movieUserlists', 'https://s2.postimg.org/l1di1pojd/traktmovies.png', 'DefaultMovies.png')
 
         if lite == False:
             self.addDirectoryItem(32031, 'movieliteNavigator', 'movies.png', 'DefaultMovies.png')
@@ -108,23 +108,23 @@ class navigator:
 
     def tvshows(self, lite=False):
 
-        self.addDirectoryItem(32023, 'tvshows&url=rating', 'highly-rated.png', 'DefaultTVShows.png')
-        self.addDirectoryItem(32019, 'tvshows&url=views', 'most-voted.png', 'DefaultTVShows.png')
-        self.addDirectoryItem(32017, 'tvshows&url=trending', 'people-watching.png', 'DefaultRecentlyAddedEpisodes.png')
-        self.addDirectoryItem(32018, 'tvshows&url=popular', 'most-popular.png', 'DefaultTVShows.png')
-        self.addDirectoryItem(32011, 'tvGenres', 'genres.png', 'DefaultTVShows.png')
-        self.addDirectoryItem(32016, 'tvNetworks', 'networks.png', 'DefaultTVShows.png')
-        self.addDirectoryItem(32015, 'tvCertificates', 'certificates.png', 'DefaultTVShows.png')
-        self.addDirectoryItem(32024, 'tvshows&url=airing', 'airing-today.png', 'DefaultTVShows.png')
-        self.addDirectoryItem(32006, 'calendar&url=added', 'latest-episodes.png', 'DefaultRecentlyAddedEpisodes.png', queue=True)
-        self.addDirectoryItem(32027, 'calendars', 'calendar.png', 'DefaultRecentlyAddedEpisodes.png')
+        self.addDirectoryItem(32023, 'tvshows&url=rating', 'https://s2.postimg.org/xc1v81l6h/highlyrated.png', 'DefaultTVShows.png')
+        self.addDirectoryItem(32019, 'tvshows&url=views', 'https://s2.postimg.org/3nym943uh/mostviewed.png', 'DefaultTVShows.png')
+        self.addDirectoryItem(32017, 'tvshows&url=trending', 'https://s2.postimg.org/i60euukjd/trending.png', 'DefaultRecentlyAddedEpisodes.png')
+        self.addDirectoryItem(32018, 'tvshows&url=popular', 'https://s2.postimg.org/5tsx3m7ax/popular.png', 'DefaultTVShows.png')
+        self.addDirectoryItem(32011, 'tvGenres', 'https://s2.postimg.org/axfle2t15/genres.png', 'DefaultTVShows.png')
+        self.addDirectoryItem(32016, 'tvNetworks', 'https://s2.postimg.org/z1ayg40vt/networks.png', 'DefaultTVShows.png')
+        self.addDirectoryItem(32015, 'tvCertificates', 'https://s2.postimg.org/r4qh7vpfd/ratings.png', 'DefaultTVShows.png')
+        self.addDirectoryItem(32024, 'tvshows&url=airing', 'https://s2.postimg.org/ai4bl273t/airingtoday.png', 'DefaultTVShows.png')
+        self.addDirectoryItem('New Episodes', 'calendar&url=added', 'https://s2.postimg.org/jejp2qn3t/new.png', 'DefaultRecentlyAddedEpisodes.png', queue=True)
+        self.addDirectoryItem(32027, 'calendars', 'https://s2.postimg.org/4v7ynl4l5/calender.png', 'DefaultRecentlyAddedEpisodes.png')
 
         if lite == False:
             if not control.setting('lists.widget') == '0':
-                self.addDirectoryItem(32004, 'mytvliteNavigator', 'mytvshows.png', 'DefaultVideoPlaylists.png')
+                self.addDirectoryItem(32004, 'mytvliteNavigator', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultVideoPlaylists.png')
 
-            self.addDirectoryItem(32028, 'tvPerson', 'people-search.png', 'DefaultTVShows.png')
-            self.addDirectoryItem(32010, 'tvSearch', 'search.png', 'DefaultTVShows.png')
+            self.addDirectoryItem(32028, 'tvPerson', 'https://s2.postimg.org/irksd7q7t/searchactors.png', 'DefaultTVShows.png')
+            self.addDirectoryItem(32010, 'tvSearch', 'https://s2.postimg.org/80x5rjcl5/search.png', 'DefaultTVShows.png')
 
         self.endDirectory()
 
@@ -133,33 +133,33 @@ class navigator:
         self.accountCheck()
 
         if traktCredentials == True and imdbCredentials == True:
-            self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'trakt.png', 'DefaultTVShows.png')
-            self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'trakt.png', 'DefaultTVShows.png')
+            self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png')
+            self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png')
             self.addDirectoryItem(32034, 'tvshows&url=imdbwatchlist', 'imdb.png', 'DefaultTVShows.png')
 
         elif traktCredentials == True:
-            self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'trakt.png', 'DefaultTVShows.png')
-            self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'trakt.png', 'DefaultTVShows.png')
+            self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png')
+            self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png')
 
         elif imdbCredentials == True:
             self.addDirectoryItem(32032, 'tvshows&url=imdbwatchlist', 'imdb.png', 'DefaultTVShows.png')
             self.addDirectoryItem(32033, 'tvshows&url=imdbwatchlist2', 'imdb.png', 'DefaultTVShows.png')
 
         if traktCredentials == True:
-            self.addDirectoryItem(32035, 'tvshows&url=traktfeatured', 'trakt.png', 'DefaultTVShows.png')
+            self.addDirectoryItem(32035, 'tvshows&url=traktfeatured', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png')
 
         elif imdbCredentials == True:
             self.addDirectoryItem(32035, 'tvshows&url=trending', 'imdb.png', 'DefaultMovies.png', queue=True)
 
         if traktIndicators == True:
-            self.addDirectoryItem(32036, 'calendar&url=trakthistory', 'trakt.png', 'DefaultTVShows.png', queue=True)
-            self.addDirectoryItem(32037, 'calendar&url=progress', 'trakt.png', 'DefaultRecentlyAddedEpisodes.png', queue=True)
-            self.addDirectoryItem(32038, 'calendar&url=mycalendar', 'trakt.png', 'DefaultRecentlyAddedEpisodes.png', queue=True)
+            self.addDirectoryItem(32036, 'calendar&url=trakthistory', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png', queue=True)
+            self.addDirectoryItem(32037, 'calendar&url=progress', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultRecentlyAddedEpisodes.png', queue=True)
+            self.addDirectoryItem(32038, 'calendar&url=mycalendar', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultRecentlyAddedEpisodes.png', queue=True)
 
-        self.addDirectoryItem(32040, 'tvUserlists', 'userlists.png', 'DefaultTVShows.png')
+        self.addDirectoryItem(32040, 'tvUserlists', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png')
 
         if traktCredentials == True:
-            self.addDirectoryItem(32041, 'episodeUserlists', 'userlists.png', 'DefaultTVShows.png')
+            self.addDirectoryItem(32041, 'episodeUserlists', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png')
 
         if lite == False:
             self.addDirectoryItem(32031, 'tvliteNavigator', 'tvshows.png', 'DefaultTVShows.png')
@@ -265,7 +265,6 @@ class navigator:
         try: name = control.lang(name).encode('utf-8')
         except: pass
         url = '%s?action=%s' % (sysaddon, query) if isAction == True else query
-        thumb = os.path.join(artPath, thumb) if not artPath == None else icon
         cm = []
         if queue == True: cm.append((queueMenu, 'RunPlugin(%s?action=queueItem)' % sysaddon))
         item = control.item(label=name)

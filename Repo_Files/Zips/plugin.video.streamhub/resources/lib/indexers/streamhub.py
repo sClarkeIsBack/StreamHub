@@ -27,7 +27,7 @@ class indexer:
     def root(self):
         try:
             regex.clear()
-            url = 'https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/NewHome.xml'
+            url = 'https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Home.XML'
             self.list = self.streamhub_list(url)
             for i in self.list: i.update({'content': 'addons'})
             self.addDirectory(self.list)

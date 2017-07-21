@@ -1,5 +1,5 @@
 <addons>
-<addon id="plugin.video.streamhub" name="[COLOR red][B]StreamHub[/B][/COLOR]" version="3.0.4" provider-name="sClarke">
+<addon id="plugin.video.streamhub" name="[COLOR ffff0000][B]StreamHub[/B][/COLOR]" version="3.0.5" provider-name="sClarke">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 		<import addon="script.module.pyxbmct" version="1.1.4" />
@@ -7,16 +7,17 @@
 		<import addon="script.module.metahandler" version="1.0.0" />
 		<import addon="script.video.F4mProxy"/>
 		<import addon="script.module.streamhub"/>
+		<import addon="script.module.streamhublive"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
 		<provides>video</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">StreamHub</summary>
-		<description lang="en">[COLOR red][B]StreamHub[/B][/COLOR] - Bringing Media Content To Your Devices.</description>
-		<disclaimer lang="en">The author does not own or host any content found within this Addon. The Author is not connected to or in any other way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</disclaimer>
+		<description lang="en">[COLOR ffff0000][B]StreamHub[/B][/COLOR] - Bringing Media Content To Your Devices. Including Movies, TV Shows and More!</description>
+		<disclaimer lang="en">[COLOR ffff0000][B]The author does not own or host any content found within this Addon. The Author is not connected to or in any other way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[/B][/COLOR]</disclaimer>
 		<platform>all</platform>
-		<forum>Facebook:   facebook.com/groups/streamhub</forum>
+		<forum>Facebook:   [COLOR ffff0000][B]facebook.com/groups/streamhub[/COLOR]</forum>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
@@ -26,23 +27,6 @@
 		</assets>
 		<news></news>
 	</extension>
-</addon>
-
-<addon id="plugin.video.livehub" name="[B][COLOR ghostwhite]Live[/COLOR][COLOR red] Hub[/COLOR][/B]" version="1.8" provider-name="sClarke">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.requests" />
-	<import addon="script.video.F4mProxy" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Live Hub - Bringing Live TV To Your Media Device</summary>
-    <description lang="en">Live Hub - Bringing Live TV To Your Media Device. Kodi 17+ is Recommended.</description>
-	<disclaimer lang="en">The author does not host or own any content found within this Addon. The Author is not connected to or in any other way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</disclaimer>
-    <platform>all</platform>
-  </extension>
 </addon>
 
 <addon id="plugin.video.flixanity" name="[B][COLOR ghostwhite]Flixanity[/COLOR][/B]" version="2.0" provider-name="sClarke">
@@ -61,7 +45,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.streamhub" name="[B][COLOR red]Stream Hub[/COLOR][/B]" version="6.3" provider-name="sClarke">
+<addon id="script.module.streamhub" name="[COLOR ffff0000][B]StreamHub Scrapers[/B][/COLOR]" version="6.0.5" provider-name="sClarke">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.requests" />
@@ -80,8 +64,37 @@
   </extension>
 </addon>
 
+<addon id="script.module.streamhublive" name="[COLOR ffff0000][B]StreamHub Live[/B][/COLOR]" version="1.0.0" provider-name="sClarke">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.requests" />
+	<import addon="script.video.F4mProxy" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>all</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">[COLOR ffff0000][B]StreamHub Live[/B][/COLOR]</summary>
+    <description lang="en">[COLOR ffff0000][B]StreamHub Live[/B][/COLOR]</description>
+	<disclaimer lang="en">The author does not host or own any content found within this Addon. The Author is not connected to or in any other way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
 
-
+<addon id="script.module.urlresolver" name="URLResolver" version="3.0.31" provider-name="tvaddons.ag, Eldorado">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="plugin.video.youtube" optional="true" />
+		<import addon="script.module.python.twitch" optional="true" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.python.pluginsource" library="lib/default.py" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
+		<description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
+	</extension>
+</addon>
 
 <addon id="script.video.F4mProxy" 
 	     name="F4mProxy" 
@@ -103,22 +116,6 @@
     <summary lang="en">Proxy for f4m</summary>
     <description lang="en">Use this addon to play F4m v1 and v2 streams</description>
   </extension>
-</addon>
-
-
-<addon id="script.module.urlresolver" name="URLResolver" version="3.0.31" provider-name="tvaddons.ag, Eldorado">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0" />
-		<import addon="plugin.video.youtube" optional="true" />
-		<import addon="script.module.python.twitch" optional="true" />
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.python.pluginsource" library="lib/default.py" />
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<summary lang="en">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
-		<description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
-	</extension>
 </addon>
 
 
