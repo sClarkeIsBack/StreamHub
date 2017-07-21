@@ -1,90 +1,70 @@
 
 <plugin>
-<title>[COLOR red][B]StreamHub[/COLOR][/B]</title>
+<title>[COLOR ffff0000][B]StreamHub[/B][/COLOR]</title>
 <link>hh</link>
 <thumbnail>http://thumbnail>
 </plugin>
-
 
 <plugin>
 <title>[COLOR white][B][/COLOR][/B]</title>
 <link>hh</link>
 <thumbnail>http://thumbnail>
 </plugin>
-
-<item>
-<title>[COLOR lime][B]Prison Break Live![/B][/COLOR]</title>
-<link>plugin://plugin.video.f4mTester/?streamtype=HLS&url=http://144.217.68.106/live/Hdl2CwyEXzNs8nboFb3nSw/1494388626/c2f52b70c2324ba134b2cba2962bedae.m3u8</link>
-<thumbnail>ttps:/images-na.ssl-images-amazon.com/images/M/MV5BMjMxODI2NDM5Nl5BMl5BanBnXkFtZTgwNjgzOTk1MTI@._V1_SY1000_CR0,0,631,1000_AL_.jpg</thumbnail>
-</item>
+ 
 
 <plugin>
-<name>[COLOR red][B]M[/COLOR][COLOR white]ovies[/COLOR][/B]</name>
+<title>[COLOR ffff0000][B]M[/COLOR][COLOR white]ovies[/COLOR][/B]</title>
 <link>plugin://plugin.video.streamhub/?action=movieNavigator</link>
-<thumbnail>http://mkodi.co.uk/streamhub/icons/2/MOVIES.png</thumbnail>
+<thumbnail>https://s12.postimg.org/s2xzraxql/movies.png<thumbnail>
 </plugin>
-
+ 
+  
+<plugin>
+<title>[COLOR ffff0000][B]TV[/COLOR][COLOR white] Shows[/COLOR][/B]</title>
+<link>plugin://plugin.video.streamhub/?action=tvNavigator</link>
+<thumbnail>https://s12.postimg.org/ozx9nxirx/tvshows.png<thumbnail>
+</plugin>
+ 
 
 <plugin>
-<name>[COLOR red][B]T[/COLOR][COLOR white]V Shows[/COLOR][/B]</name>
-<link>plugin://plugin.video.streamhub/?action=tvNavigator</link>
-<thumbnail>http://mkodi.co.uk/streamhub/icons/2/TVShows.png</thumbnail>
+<name>[COLOR ffff0000][B]L[/COLOR][COLOR white]ive Tv[/COLOR][/B]</name>
+<link>plugin://script.module.streamhublive</link>
+<thumbnail>https://s12.postimg.org/pznkjmxxp/livetv.png</thumbnail>
 </plugin>
 
 <dir>
-<name>[COLOR red][B]L[/COLOR][COLOR white]ive Tv[/COLOR][/B]</name>
-<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/LiveTv/LievTV.xml</link>
-<thumbnail>http://mkodi.co.uk/streamhub/icons/2/LiveTV.png</thumbnail>
+<name>[COLOR ffff0000][B]K[/COLOR][COLOR white]ids Corner[/COLOR][/B]</name>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Kids/kidscorner.xml</link>
+<thumbnail>https://s12.postimg.org/4eihw1171/kidscorner.png</thumbnail>
 </dir>
 
+<plugin>
+<name>[COLOR ffff0000][B]M[/COLOR][COLOR white]usic[/COLOR][/B]</name>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=64&name=MUSIC&url=https%3a%2f%2fraw.githubusercontent.com%2fsClarkeIsBack%2fStreamHub%2fmaster%2fLinks%2f247%2f247tv.xml</link>
+<thumbnail>https://s12.postimg.org/4ttrp1n4d/music.png</thumbnail>
+</plugin>
+
+
+<plugin>
+<name>[COLOR ffff0000][B]D[/COLOR][COLOR white]ocumentary's[/COLOR][/B]</name>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=35&name=DOCS&url=http%3a%2f%2fdocumentaryheaven.com%2fwatch-online%2f</link>
+<thumbnail>https://s12.postimg.org/oppr4l45p/Untitled-4.png</thumbnail>
+</plugin>
+ 
+ <plugin>
+<name>[COLOR ffff0000][B]A[/COLOR][COLOR white]nime[/COLOR][/B]</name>
+<link>plugin://script.module.streamhub/?mode=51&url=http://www.toonget.net/dubbed-anime</link>
+<thumbnail>https://s12.postimg.org/exihl73v1/anime.png</thumbnail>
+</plugin>
+
+<plugin>
+<name>[COLOR ffff0000][B]24[/COLOR][COLOR white]/7 TV[/COLOR][/B]</name>
+<link>plugin://script.module.streamhub/?mode=47&url=None</link>
+<thumbnail>https://s12.postimg.org/kkeuio6dp/247_TV.png</thumbnail>
+</plugin>
+
 <dir>
-<name>[COLOR red][B]F[/COLOR][COLOR white]amily Corner[/COLOR][/B]</name>
-<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Family/home.xml</link>
+<name>[COLOR lime][B]Test Area[/COLOR][/B]</name>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/test.xml</link>
 <thumbnail>http://mkodi.co.uk/streamhub/icons/2/kid.png</thumbnail>
 </dir>
-
-<plugin>
-<name>[COLOR red][B]M[/COLOR][COLOR white]usic[/COLOR][/B]</name>
-<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=64&name=MUSIC&url=https%3a%2f%2fraw.githubusercontent.com%2fsClarkeIsBack%2fStreamHub%2fmaster%2fLinks%2f247%2f247tv.xml</link>
-<thumbnail>http://mkodi.co.uk/streamhub/icons/2/Radio.png</thumbnail>
-</plugin>
-
-
-<plugin>
-<name>[COLOR red][B]D[/COLOR][COLOR white]ocumentary's[/COLOR][/B]</name>
-<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=35&name=DOCS&url=http%3a%2f%2fdocumentaryheaven.com%2fwatch-online%2f</link>
-<thumbnail>http://mkodi.co.uk/streamhub/icons/2/doc.png</thumbnail>
-</plugin>
-
-<plugin>
-<name>[COLOR red][B]24[/COLOR][COLOR white]/7 TV[/COLOR][/B]</name>
-<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=48&name=24%2f7%20TV&url=https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/247/247tv.xml</link>
-<thumbnail>http://mkodi.co.uk/streamhub/icons/doc.png</thumbnail>
-</plugin>
-
-
-
-<plugin>
-<name>[COLOR red][B]A[/COLOR][COLOR white]nime[/COLOR][/B]</name>
-<link>plugin://plugin.video.streamhub/?action=cartoon</link>
-<thumbnail>http://mkodi.co.uk/streamhub/icons/2/Anime.png</thumbnail>
-</plugin>
-
-<plugin>
-<title>[COLOR red][B]X[/COLOR][COLOR white]XX[/B][/COLOR]</title>
-<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=99&name=%5bCOLOR%20orange%5dG%5b%2fCOLOR%5d%5bCOLOR%20white%5denre%27s%5b%2fCOLOR%5d&url=http%3a%2f%2fwww.xvideos.com%2ftags</link>
-<thumbnail>http://mkodi.co.uk/streamhub/icons/2/XXX.png</thumbnail>
-</plugin>
-  
-<dir>
-<title>[COLOR red][B]s[/COLOR][COLOR white]Clarke's Favourites[/B][/COLOR]</title>
-<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/sClarke/home.xml</link>
-<thumbnail>http://mkodi.co.uk/streamhub/ics/2/XXX.png</thumbnail>
-</dir>
-
-<plugin>
-<title>[COLOR red][B]Created by sClarke[/B][/COLOR]</title>
-<link>plugin://</link>
-<thumbnail>http://mkodi.co.uk/streamhub/icons/2/png</thumbnail>
-</plugin>
-
