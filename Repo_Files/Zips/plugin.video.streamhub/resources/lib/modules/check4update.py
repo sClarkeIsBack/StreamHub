@@ -10,11 +10,13 @@ def check4update():
 	file.close()
 
 	c_version = re.compile('" version="(.+?)"').findall(data)[0]
+	c_version2= (c_version).replace('.','')
 
 	html = client.request('https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Repo_Files/addons.xml')
 
 	o_version = re.compile('script.module.streamhub.+?version="(.+?)"').findall(html)[0]
-	if c_version < o_version:
+	o_version2= (o_version).replace('.','')
+	if c_version2 < o_version2:
 		update = 'https://github.com/sClarkeIsBack/StreamHub/raw/master/Repo_Files/Zips/script.module.streamhub/script.module.streamhub-%s.zip'%o_version
 		install(o_version,update)
 		xbmc.executebuiltin("UpdateAddonRepos")
