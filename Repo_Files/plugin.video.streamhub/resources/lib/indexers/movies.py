@@ -56,7 +56,7 @@ class movies:
         self.boxoffice_link = 'http://www.imdb.com/search/title?title_type=feature,tv_movie&production_status=released&sort=boxoffice_gross_us,desc&count=40&start=1'
         self.oscars_link = 'http://www.imdb.com/search/title?title_type=feature,tv_movie&production_status=released&groups=oscar_best_picture_winners&sort=year,desc&count=40&start=1'
         self.theaters_link = 'http://www.imdb.com/search/title?title_type=feature&num_votes=1000,&release_date=date[365],date[0]&sort=release_date_us,desc&count=40&start=1'
-        self.trending_link = 'http://api.trakt.tv/movies/trending?limit=40&page=1'
+        self.trending_link = 'http://www.imdb.com/search/title?languages=en&num_votes=5000,&production_status=released&release_date=,2017&title_type=feature'
 
         self.traktlists_link = 'http://api.trakt.tv/users/me/lists'
         self.traktlikedlists_link = 'http://api.trakt.tv/users/likes/lists?limit=1000000'
@@ -932,7 +932,7 @@ class movies:
             url = items[0]['next']
             if url == '': raise Exception()
 
-            icon = control.addonNext()
+            icon = 'https://s14.postimg.org/88p9woka9/nextpage.png'
             url = '%s?action=moviePage&url=%s' % (sysaddon, urllib.quote_plus(url))
 
             item = control.item(label=nextMenu)

@@ -199,24 +199,24 @@ msgid "[B]SETTINGS[/B] : Providers"
 msgstr "[B]SETTINGS[/B] : Providers"
 
 msgctxt "#32048"
-msgid "[B]KRATOS[/B] : Downloads"
-msgstr "[B]KRATOS[/B] : Downloads"
+msgid "STREAMHUB : Downloads"
+msgstr "STREAMHUB : Downloads"
 
 msgctxt "#32049"
-msgid "[B]KRATOS[/B] : Viewtypes"
-msgstr "[B]KRATOS[/B] : Viewtypes"
+msgid "STREAMHUB : Viewtypes"
+msgstr "STREAMHUB : Viewtypes"
 
 msgctxt "#32050"
-msgid "[B]KRATOS[/B] : Clear providers..."
-msgstr "[B]KRATOS[/B] : Clear providers..."
+msgid "STREAMHUB : Clear providers..."
+msgstr "STREAMHUB : Clear providers..."
 
 msgctxt "#32051"
-msgid "[B]KRATOS[/B] : Clear metadata..."
-msgstr "[B]KRATOS[/B] : Clear metadata..."
+msgid "STREAMHUB : Clear metadata..."
+msgstr "STREAMHUB : Clear metadata..."
 
 msgctxt "#32052"
-msgid "[B]KRATOS[/B] : Clear cache..."
-msgstr "[B]KRATOS[/B] : Clear cache..."
+msgid "STREAMHUB : Clear cache..."
+msgstr "STREAMHUB : Clear cache..."
 
 msgctxt "#32053"
 msgid "[I]Next Page[/I]"
@@ -272,12 +272,12 @@ msgid "Queue item"
 msgstr "Queue Item"
 
 msgctxt "#32066"
-msgid "Watched in Kratos"
-msgstr "Watched in Kratos"
+msgid "Watched in StreamHub"
+msgstr "Watched in StreamHub"
 
 msgctxt "#32067"
-msgid "Unwatched in Kratos"
-msgstr "Unwatched in Kratos"
+msgid "Unwatched in StreamHub"
+msgstr "Unwatched in StreamHub"
 
 msgctxt "#32068"
 msgid "Watched in Trakt"
@@ -552,8 +552,8 @@ msgid "No stream available"
 msgstr "No stream available"
 
 msgctxt "#32402"
-msgid "Playback outside Kratos is not allowed"
-msgstr "Playback outside Kratos is not allowed"
+msgid "Playback outside StreamHub is not allowed"
+msgstr "Playback outside StreamHub is not allowed"
 
 msgctxt "#32403"
 msgid "Download"
@@ -681,12 +681,12 @@ msgstr "URLResolver Settings"
 
 ########################################################################################################################################
 
-# Addon Name: Kratos
-# Addon id: plugin.video.kratos
+# Addon Name: StreamHub
+# Addon id: plugin.video.StreamHub
 # Addon Provider: KISAKUL
 msgid ""
 msgstr ""
-"Project-Id-Version: Kratos\n"
+"Project-Id-Version: StreamHub\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: English\n"

@@ -58,7 +58,7 @@ class tvshows:
         self.keyword_link = 'http://www.imdb.com/search/title?title_type=tv_series,mini_series&release_date=,date[0]&keywords=%s&sort=moviemeter,asc&count=40&start=1'
         self.language_link = 'http://www.imdb.com/search/title?title_type=tv_series,mini_series&num_votes=100,&production_status=released&primary_language=%s&sort=moviemeter,asc&count=40&start=1'
         self.certification_link = 'http://www.imdb.com/search/title?title_type=tv_series,mini_series&release_date=,date[0]&certificates=us:%s&sort=moviemeter,asc&count=40&start=1'
-        self.trending_link = 'http://api.trakt.tv/shows/trending?limit=40&page=1'
+        self.trending_link = 'http://www.imdb.com/search/title?languages=en&num_votes=1000,&production_status=released&release_date=,2017&title_type=tv_series'
 
         self.traktlists_link = 'http://api.trakt.tv/users/me/lists'
         self.traktlikedlists_link = 'http://api.trakt.tv/users/likes/lists?limit=1000000'
@@ -1125,7 +1125,7 @@ class tvshows:
             url = items[0]['next']
             if url == '': raise Exception()
 
-            icon = control.addonNext()
+            icon = 'https://s14.postimg.org/88p9woka9/nextpage.png'
             url = '%s?action=tvshowPage&url=%s' % (sysaddon, urllib.quote_plus(url))
 
             item = control.item(label=nextMenu)

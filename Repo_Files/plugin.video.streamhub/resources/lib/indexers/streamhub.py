@@ -7,15 +7,15 @@ import xbmc
 try: from sqlite3 import dbapi2 as database
 except: from pysqlite2 import dbapi2 as database
 
-from resources.lib.zmodules import cache
-from resources.lib.zmodules import metacache
-from resources.lib.zmodules import client
-from resources.lib.zmodules import control
-from resources.lib.zmodules import regex
-from resources.lib.zmodules import trailer
-from resources.lib.zmodules import workers
-from resources.lib.zmodules import youtube
-from resources.lib.zmodules import views
+from resources.lib.modules import cache
+from resources.lib.modules import metacache
+from resources.lib.modules import client
+from resources.lib.modules import control
+from resources.lib.modules import regex
+from resources.lib.modules import trailer
+from resources.lib.modules import workers
+from resources.lib.modules import youtube
+from resources.lib.modules import views
 
 
 
@@ -27,7 +27,7 @@ class indexer:
     def root(self):
         try:
             regex.clear()
-            url = 'https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/NewHome.xml'
+            url = 'https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Home.XML'
             self.list = self.streamhub_list(url)
             for i in self.list: i.update({'content': 'addons'})
             self.addDirectory(self.list)
