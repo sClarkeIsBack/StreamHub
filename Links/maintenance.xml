@@ -8,7 +8,7 @@
 <link>plugin://plugin.video.streamhub/?action=clearSources</link>
 </item>
 
-<item>
+<plugin>
 <title>System Information</title>
-<link>plugin://plugin.video.streamhub/?action=sysinfo</link>
-</item>
+<link>plugin://script.module.streamhub/?mode=105&url=none</link>
+</plugin>
