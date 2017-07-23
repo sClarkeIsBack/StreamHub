@@ -45,8 +45,33 @@ def get(function, duration, *args):
         return ast.literal_eval(fresh_result.encode('utf-8'))
     except Exception:
         return None
+		
+def clear(table=None):
+    try:
+        control.idle()
 
+        if table == None: table = ['rel_list', 'rel_lib']
+        elif not type(table) == list: table = [table]
 
+        yes = control.yesnoDialog(control.lang(30401).encode('utf-8'), '', '')
+        if not yes: return
+
+        dbcon = database.connect(control.cacheFile)
+        dbcur = dbcon.cursor()
+
+        for t in table:
+            try:
+                dbcur.execute("DROP TABLE IF EXISTS %s" % t)
+                dbcur.execute("VACUUM")
+                dbcon.commit()
+            except:
+                pass
+    except:
+        pass
+
+    import xbmcgui
+    xbmcgui.Dialog().notification('[COLOR ffff0000]StreamHub[/COLOR]','Process Complete')
+	
 def timeout(function, *args):
     try:
         key = _hash_function(function, args)

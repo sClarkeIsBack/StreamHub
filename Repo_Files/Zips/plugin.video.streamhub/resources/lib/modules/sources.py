@@ -349,7 +349,7 @@ class sources:
                 except:
                     pass
                 try:
-                    string4 = "We are searching multiple scrapers and gathering links for: [COLOR red][B]%s (%s)[/COLOR][/B] - Time Elapsed: [COLOR ghostwhite]%s Seconds[/COLOR]"  % (title,year,str(timerange))
+                    string4 = "We are searching multiple websites and gathering links for: [COLOR red][B]%s (%s)[/COLOR][/B] - Time Elapsed: [COLOR ghostwhite]%s Seconds[/COLOR]"  % (title,year,str(timerange))
                     string5 = ''
                     progressDialog.update(int((100 / float(len(threads))) * len([x for x in threads if x.is_alive() == False])), str(string4), str(string5))
                 except:

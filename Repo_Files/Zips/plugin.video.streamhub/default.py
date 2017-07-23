@@ -431,3 +431,7 @@ elif action == 'random':
         control.execute('RunPlugin(%s)' % r)
     except:
         control.infoDialog(control.lang(32537).encode('utf-8'), time=8000)
+
+elif action=='sysinfo':
+	from resources.lib.indexers import streamhub
+	streamhub.sysinfo()
