@@ -10,5 +10,5 @@
 
 <item>
 <title>System Information</title>
-<link>plugin://script.module.streamhub/?mode=105&url=none</link>
+<link>plugin://plugin.video.streamhub/?action=sysinfo</link>
 </item>
