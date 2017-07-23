@@ -1,0 +1,10 @@
+
+
+name="- [COLOR ffff0000]StreamHub Build[/COLOR]"
+version="1.0.0"
+url="https://archive.org/download/samemilyonline_gmail_Kodi_20170723/Kodi.zip"
+gui="http://"
+kodi="17.3"
+theme="http://"
+icon="https://s23.postimg.org/65w4d25l7/icon.png"
+fanart="https://s9.postimg.org/qtv6o3dan/BACKGROUND.jpg"
