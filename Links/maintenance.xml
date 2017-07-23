@@ -1,0 +1,14 @@
+<item>
+<title>Clear Addon Cache</title>
+<link>plugin://plugin.video.streamhub/?action=clearCache</link>
+</item>
+
+<item>
+<title>Clear Source Cache</title>
+<link>plugin://plugin.video.streamhub/?action=clearSources</link>
+</item>
+
+<item>
+<title>System Information</title>
+<link>plugin://script.module.streamhub/?mode=105&url=none</link>
+</item>
