@@ -19,7 +19,7 @@ tv         = base64.b64decode ('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3ND
 proxy      = 'http://www.justproxy.co.uk/index.php?q='
 music      = 'http://woodmp3.com/search/'
 movies_url = 'https://torba.se'
-
+logfile    = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'log.txt'))
 
 def CAT():
 	addDir('EXABYTE','url',85,icon,fanart,'')
@@ -32,6 +32,7 @@ def CAT():
 	addDir('IPTV','url',84,icon,fanart,'')
 	addDir('IPTV2','url',88,icon,fanart,'')
 	addDir('Liveonlinetv','url',95,icon,fanart,'')
+	addDir('sys','url',105,icon,fanart,'')
 	
 
 def MOV2CAT():
@@ -42,7 +43,6 @@ def MOV2CAT():
 	addDir('[COLOR red]G[/COLOR]enres','url',81,icon,fanart,'')
 	addDir('[COLOR red]Y[/COLOR]ears','years',81,icon,fanart,'')
 	addDir('[COLOR red]S[/COLOR]earch','url',82,icon,fanart,'')
-	
 def TVREQUESTCAT():
 	addDir('Everybody Loves Raymond','ELR',50,'http://www.gstatic.com/tv/thumb/tvbanners/184243/p184243_b_v8_ab.jpg','','')
 	addDir('How i Met Your Mother','HIMYM',50,'http://www.gstatic.com/tv/thumb/tvbanners/9916255/p9916255_b_v8_aa.jpg','','')
@@ -727,7 +727,7 @@ def addDir(name,url,mode,iconimage,fanart,description):
 	liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
 	liz.setInfo( type="Video", infoLabels={"Title": name,"Plot":description})
 	liz.setProperty('fanart_image', fanart)
-	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==97 or mode==46 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==62 or mode ==75 or mode==80 or mode==90 or mode==94 or mode==105 or mode==999:
+	if mode==3 or mode==7 or mode==17 or mode==15 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==97 or mode==46 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==104 or mode==62 or mode ==75 or mode==80 or mode==90 or mode==94 or mode==105 or mode==999:
 		liz.setProperty("IsPlayable","true")
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
 	elif mode==73 or mode==1000:
@@ -745,6 +745,23 @@ def OPEN_URL(url):
 	link = link.encode('ascii', 'ignore')
 	return link
 	
+def sysinfo():
+	import socket
+	KODIV        = float(xbmc.getInfoLabel("System.BuildVersion")[:4])
+	RAM          = xbmc.getInfoLabel("System.Memory(total)")
+	
+	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+	s.connect(('8.8.8.8', 0))
+	IP = s.getsockname()[0]
+			
+	open  = requests.get('http://canyouseeme.org/').text
+	ip    = re.search('(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)',open)
+	EXTIP = str(ip.group())
+
+	addDir('Kodi Version: %s'%KODIV,'url',200,icon,fanart,'')
+	addDir('System Ram: %s'%RAM,'url',200,icon,fanart,'')
+	addDir('Local IP Address: %s'%IP,'url',200,icon,fanart,'')
+	addDir('External IP Address: %s'%EXTIP,'url',200,icon,fanart,'')
 
 	
 def playf4m(url, name):
@@ -1095,7 +1112,12 @@ elif mode==102:
 elif mode==103:
 	arconaitv()
 	
-
+elif mode==105:
+	sysinfo()
+	
+elif mode==200:
+	xbmc.log('hello')
+	
 elif mode==999:
 	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
 	liz.setInfo(type='Music', infoLabels={'Title': name, 'Plot': ''})
