@@ -45,7 +45,7 @@
   </extension>
 </addon>
 
-<addon id="script.module.streamhub" name="[COLOR ffff0000][B]StreamHub Scrapers[/B][/COLOR]" version="6.0.6" provider-name="sClarke">
+<addon id="script.module.streamhub" name="[COLOR ffff0000][B]StreamHub Scrapers[/B][/COLOR]" version="6.7" provider-name="sClarke">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.requests" />
