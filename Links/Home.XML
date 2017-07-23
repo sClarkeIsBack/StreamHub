@@ -63,6 +63,12 @@
 <thumbnail>https://s12.postimg.org/kkeuio6dp/247_TV.png</thumbnail>
 </plugin>
 
+<dir>[COLOR ffff0000][B]M[/COLOR][COLOR white]aintenance[/COLOR][/B]</name>
+ <name>
+  <link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/maintenance.xml</link>
+  <thumbnail>https://s9.postimg.org/tt3m7cr0v/settings.png</thumbnail>
+</dir>
+
 <dir>
 <name>[COLOR lime][B]Test Area[/COLOR][/B]</name>
 <link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/test.xml</link>
