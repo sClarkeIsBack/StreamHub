@@ -1,10 +1,10 @@
 <item>
-<title>Clear Addon Cache</title>
+<title>Clear Kodi Cache</title>
 <link>plugin://plugin.video.streamhub/?action=clearCache</link>
 </item>
 
 <item>
-<title>Clear Source Cache</title>
+<title>Clear Sources Cache</title>
 <link>plugin://plugin.video.streamhub/?action=clearSources</link>
 </item>
 
