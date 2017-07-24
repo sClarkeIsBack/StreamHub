@@ -17,7 +17,7 @@ mov2       = 'http://zmovies.to'
 wwe        = 'http://watchwrestling.in'
 tv         = base64.b64decode ('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3NDbGFya2VJc0JhY2svU3RyZWFtSHViL21hc3Rlci9MaW5rcy8yNDcvMjQ3dHYueG1s')
 proxy      = 'http://www.justproxy.co.uk/index.php?q='
-music      = 'http://woodmp3.com/search/'
+music      = 'http://woodmp3.net/mp3.php?q='
 movies_url = 'https://torba.se'
 logfile    = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'log.txt'))
 
@@ -32,7 +32,7 @@ def CAT():
 	addDir('IPTV','url',84,icon,fanart,'')
 	addDir('IPTV2','url',88,icon,fanart,'')
 	addDir('Liveonlinetv','url',95,icon,fanart,'')
-	addDir('sys','url',105,icon,fanart,'')
+	addDir('jango','url',106,icon,fanart,'')
 	
 
 def MOV2CAT():
@@ -61,6 +61,7 @@ def FAMILYMOVIESCAT():
 	addDir('By Genre','http://kisscartoon.so/cartoon-movies/',76,icon,fanart,'')
 
 def MUSICCAT():
+	addDir('Popular Artists','http://',107,icon,fanart,'')
 	addDir('Top Music','http://',68,icon,fanart,'')
 	addDir('Collections','url',72,icon,fanart,'')
 	addDir('Radio','http://',69,icon,fanart,'')
@@ -76,11 +77,65 @@ def TOPMUSICAT():
 def MUSICCOL():
 	addDir('BBC Radio 1 Live Lounge Collection','https://www.discogs.com/label/804379-Radio-1s-Live-Lounge',70,icon,fanart,'')
 	addDir('Now Thats What I Call Music Collection','NOW',70,icon,fanart,'')
-	
 
+def jango():
+	addDir('Popular Artists','url',107,icon,fanart,'')
+	addDir('Genres','url',109,icon,fanart,'')
+	
+def jangopopular():
+	open = OPEN_URL('http://www.jango.com')
+	
+	part = regex_from_to(open,'Popular Choices','class="station_module_bottom" >')
+	
+	all  = regex_get_all(part,'<a class="station_anchor"','</a>')
+	for a in all:
+		name = regex_from_to(a,'<span class="sp_tgname">','</span>').strip()
+		icon = 'http:' + regex_from_to(a,'data-original="','"').strip()
+		url  = 'http://www.jango.com'+regex_from_to(a,'href="','"').strip()
+		addDir(name,url,108,icon,fanart,'')
+		
+		
+def jangogenres(url):
+	if url == 'url':
+		open = OPEN_URL('https://www.jango.com/browse_music')
+		
+		part = regex_from_to(open,'<ul id="genres">','</ul>')
+		all  = regex_get_all(part,'<li id','</li>')
+		for a in all:
+			name = regex_from_to(a,'title="','"')
+			url  = 'https://www.jango.com'+regex_from_to(a,'href="','"')
+			addDir(name,url,108,icon,fanart,'')
+	else:
+		open = OPEN_URL(url)
+		all  = regex_get_all(open,'<div class="left left_body">','</div>')
+		for a in all:
+			name = regex_from_to(a,'</span></span>','</a>')
+			url  = regex_from_to(a,'href="','"')
+			addDir(name,url,2,icon,fanart,'')
+		
+def jangosongs(url):
+	if not 'gcid=' in url:
+		url  = url+'/_more_songs?limit=250&np=all'
+		open = OPEN_URL(url)
+		
+	#open = requests.session().get(url,headers={'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8','Accept-Encoding':'gzip, deflate','Accept-Language':'en-GB,en-US;q=0.8,en;q=0.6','User-Agent':'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'},verify=False).text
+	all  = regex_get_all(open,'<li class="song_li artist_song_li','</div>')
+	for a in all:
+		name = regex_from_to(a,'title="','"').replace('Play','').replace('Now!','')
+		url  = regex_from_to(a,'video_id&quot;:&quot;','&')
+		icon = regex_from_to(a,'data-original="','"')
+		addDir(replaceHTMLCodes(name),url,62,icon,fanart,'')
+		
 	
 	
-	
+def replaceHTMLCodes(txt):
+    import HTMLParser
+    txt = re.sub("(&#[0-9]+)([^;^0-9]+)", "\\1;\\2", txt)
+    txt = HTMLParser.HTMLParser().unescape(txt)
+    txt = txt.replace("&quot;", "\"")
+    txt = txt.replace("&amp;", "&")
+    txt = txt.strip()
+    return txt
 	
 def NOVAMOVIES(url):
 	if url.startswith('NEW:'):
@@ -587,21 +642,21 @@ def musicsearch(url):
 			if (kb.isConfirmed()):
 				query = kb.getText()
 				query = (query.translate(None, '\/:*?"\'<>|!,')).replace(' ', '-').replace('--', '-').lower()
-				open  = OPEN_URL('http://free-mp3song.com/search/'+query)
-				all   = regex_get_all(open,'<div class="square-box">','<div class="col-md-10 col-xs-9"')
+				open  = OPEN_URL('http://woodmp3.net/mp3.php?q='+query)
+				all   = regex_get_all(open,'<form action="" method="post">','</form>')
 				for a in all:
-					name = regex_from_to(a,'title="','"').replace('Free','').replace('mp3','')
-					icon = regex_from_to(a,'data-original="','"')
-					url  = regex_from_to(icon,'vi/','/')
+					name = regex_from_to(a,'title.+?value="','"').replace('Free','').replace('mp3','')
+					icon = regex_from_to(a,'image.+?value="','"')
+					url  = regex_from_to(a,'link.+?value="','"')
 					addDir(name,url,62,icon,fanart,'')
 		else:
 				xbmc.log(str(url))
 				open  = OPEN_URL(url)
-				all   = regex_get_all(open,'<div class="square-box">','<div class="col-md-10 col-xs-9"')
+				all   = regex_get_all(open,'<form action="" method="post">','</form>')
 				for a in all:
-					name = regex_from_to(a,'title="','"').replace('Free','').replace('mp3','')
-					icon = regex_from_to(a,'data-original="','"')
-					url  = regex_from_to(icon,'vi/','/')
+					name = regex_from_to(a,'title.+?value="','"').replace('Free','').replace('mp3','')
+					icon = regex_from_to(a,'image.+?value="','"')
+					url  = regex_from_to(a,'link.+?value="','"')
 					addDir(name,url,62,icon,fanart,'')
 			
 def musicindex(url):
@@ -632,10 +687,10 @@ def bbcmusicindex(url):
 			name = regex_from_to(a,'data-title="','"').replace('||','-').replace('&amp;','')
 			name = '[COLOR red]%s[/COLOR] | %s'%(num,name)
 			icon = regex_from_to(a,'         src="','"')
-			url  = 'http://woodmp3.com/search/'+(name.translate(None, '\/:*?"\'<>|!,')).replace(' ', '-').replace('--', '-').lower()
+			url  = 'http://woodmp3.net/mp3.php?q='+(name.translate(None, '\/:*?"\'<>|!,')).replace(' ', '-').replace('--', '-').lower()
 			url  = regex_from_to(url,']-','$').replace('(','ABCD')
 			url  = re.sub(r'ABCD(.*?)$','',url)
-			addDir(name,'http://woodmp3.com/search/'+re.sub('-$','',url),63,icon,fanart,'')
+			addDir(name,'http://woodmp3.net/mp3.php?q='+re.sub('-$','',url),63,icon,fanart,'')
 			
 			
 def top40(url):
@@ -698,8 +753,16 @@ def UKNowMusic2(url,description):
 		else:
 			url    = '%s %s'%(artist,track)
 		url    = str(url).replace(' ','-').replace(':','').lower()
-		addDir('%s - %s'%(artist,track),'http://woodmp3.com/search/'+url,63,icon,fanart,'')
+		addDir('%s - %s'%(artist,track),'http://woodmp3.net/mp3.php?q='+url,63,icon,fanart,'')
 		
+
+   
+def discogindex(url):
+	open = OPEN_URL(url)
+	log(open)
+	all  = re.compile('"description".+?title".+?"(.+?)".+?thumbnail".+?"(.+?)".+?file.+?id".+?"(.+?)"',re.DOTALL|re.MULTILINE).findall(open)
+	for name,icon,url in all:
+		addDir(name,url,63,icon,fanart,'')
 
 	
 	
@@ -1114,6 +1177,21 @@ elif mode==103:
 	
 elif mode==105:
 	sysinfo()
+	
+elif mode==106:
+	jango()
+	
+elif mode==107:
+	jangopopular()
+	
+elif mode==108:
+	jangosongs(url)
+	
+elif mode==109:
+	jangogenres(url)
+	
+elif mode==111:
+	discogindex(url)
 	
 elif mode==200:
 	xbmc.log('hello')
