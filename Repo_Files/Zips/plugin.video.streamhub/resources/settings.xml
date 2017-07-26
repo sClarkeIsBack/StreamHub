@@ -17,6 +17,8 @@
 	<category label="32345">
 		<setting id="scrapers.timeout.1" type="slider" label="32312" default="10" range="04,60" option="int" />
 		<setting id="trakt.user" type="text" default="" visible="false" />
+		<setting id="indicators.alt" type="enum" label="32313" lvalues="32314|32315" default="1" visible="!eq(-1,)" />
+		<setting id="indicators" type="enum" label="32313" lvalues="32314" default="0" visible="eq(-2,)" />
 		<setting id="provider.1movies" type="bool" label="1MOVIES" default="true" />
 		<setting id="provider.afdah" type="bool" label="AFDAH" default="true" />
 		<setting id="provider.animeultima" type="bool" label="ANIMEULTIMA" default="true" />
