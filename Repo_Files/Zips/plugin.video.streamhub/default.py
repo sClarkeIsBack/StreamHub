@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+
+
 import urlparse,sys,urllib
 
 params = dict(urlparse.parse_qsl(sys.argv[2].replace('?','')))

@@ -9,9 +9,7 @@ from resources.lib.modules import trakt
 
 sysaddon = sys.argv[0] ; syshandle = int(sys.argv[1]) ; control.moderator()
 
-artPath = control.artPath() ; addonFanart = control.addonFanart()
-
-imdbCredentials = False if control.setting('imdb.user') == '' else True
+addonFanart = control.addonFanart()
 
 traktCredentials = trakt.getTraktCredentialsInfo()
 
@@ -21,33 +19,6 @@ queueMenu = control.lang(32065).encode('utf-8')
 
 
 class navigator:
-    def root(self):
-        self.addDirectoryItem(32001, 'movieNavigator', 'movies.png', 'DefaultMovies.png')
-        self.addDirectoryItem(32002, 'tvNavigator', 'tvshows.png', 'DefaultTVShows.png')
-
-        if not control.setting('lists.widget') == '0':
-            self.addDirectoryItem(32003, 'mymovieNavigator', 'mymovies.png', 'DefaultVideoPlaylists.png')
-            self.addDirectoryItem(32004, 'mytvNavigator', 'mytvshows.png', 'DefaultVideoPlaylists.png')
-
-        if not control.setting('movie.widget') == '0':
-            self.addDirectoryItem(32005, 'movieWidget', 'latest-movies.png', 'DefaultRecentlyAddedMovies.png')
-
-        if (traktIndicators == True and not control.setting('tv.widget.alt') == '0') or (traktIndicators == False and not control.setting('tv.widget') == '0'):
-            self.addDirectoryItem(32006, 'tvWidget', 'latest-episodes.png', 'DefaultRecentlyAddedEpisodes.png')
-
-        self.addDirectoryItem(32007, 'channels', 'channels.png', 'DefaultMovies.png')
-
-        self.addDirectoryItem(32008, 'toolNavigator', 'tools.png', 'DefaultAddonProgram.png')
-
-        downloads = True if control.setting('downloads') == 'true' and (len(control.listDir(control.setting('movie.download.path'))[0]) > 0 or len(control.listDir(control.setting('tv.download.path'))[0]) > 0) else False
-        if downloads == True:
-            self.addDirectoryItem(32009, 'downloadNavigator', 'downloads.png', 'DefaultFolder.png')
-
-        self.addDirectoryItem(32010, 'searchNavigator', 'search.png', 'DefaultFolder.png')
-
-        self.endDirectory()
-
-
     def movies(self, lite=False):
         self.addDirectoryItem('New Movies', 'movieWidget', 'https://s2.postimg.org/jejp2qn3t/new.png', 'DefaultRecentlyAddedMovies.png')
         self.addDirectoryItem(32017, 'movies&url=trending', 'https://s2.postimg.org/i60euukjd/trending.png', 'DefaultRecentlyAddedMovies.png')
@@ -56,6 +27,7 @@ class navigator:
         self.addDirectoryItem(32020, 'movies&url=boxoffice', 'https://s2.postimg.org/6pkt5brll/boxoffice.png', 'DefaultMovies.png')
         self.addDirectoryItem(32021, 'movies&url=oscars', 'https://s2.postimg.org/oh5mb9lrt/oscars.png', 'DefaultMovies.png')
         self.addDirectoryItem('In Cinema', 'movies&url=theaters', 'https://s2.postimg.org/pkl59hh15/incinema.png', 'DefaultRecentlyAddedMovies.png')
+        self.addDirectoryItem('Channels', 'channels', 'https://s2.postimg.org/pkl59hh15/incinema.png', 'DefaultRecentlyAddedMovies.png')
         self.addDirectoryItem(32011, 'movieGenres', 'https://s2.postimg.org/axfle2t15/genres.png', 'DefaultMovies.png')
         self.addDirectoryItem(32012, 'movieYears', 'https://s2.postimg.org/9qaudcho9/years.png', 'DefaultMovies.png')
         self.addDirectoryItem(32013, 'moviePersons', 'https://s2.postimg.org/l3o6x2dfd/actors.png', 'DefaultMovies.png')
@@ -74,24 +46,10 @@ class navigator:
     def mymovies(self, lite=False):
         self.accountCheck()
 
-        if traktCredentials == True and imdbCredentials == True:
-            self.addDirectoryItem(32032, 'movies&url=traktcollection', 'https://s2.postimg.org/l1di1pojd/traktmovies.png', 'DefaultMovies.png', queue=True)
-            self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'https://s2.postimg.org/l1di1pojd/traktmovies.png', 'DefaultMovies.png', queue=True)
-            self.addDirectoryItem(32034, 'movies&url=imdbwatchlist', 'imdb.png', 'DefaultMovies.png', queue=True)
-
-        elif traktCredentials == True:
-            self.addDirectoryItem(32032, 'movies&url=traktcollection', 'https://s2.postimg.org/l1di1pojd/traktmovies.png', 'DefaultMovies.png', queue=True)
-            self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'https://s2.postimg.org/l1di1pojd/traktmovies.png', 'DefaultMovies.png', queue=True)
-
-        elif imdbCredentials == True:
-            self.addDirectoryItem(32032, 'movies&url=imdbwatchlist', 'imdb.png', 'DefaultMovies.png', queue=True)
-            self.addDirectoryItem(32033, 'movies&url=imdbwatchlist2', 'imdb.png', 'DefaultMovies.png', queue=True)
-
         if traktCredentials == True:
+            self.addDirectoryItem(32032, 'movies&url=traktcollection', 'https://s2.postimg.org/l1di1pojd/traktmovies.png', 'DefaultMovies.png', queue=True)
+            self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'https://s2.postimg.org/l1di1pojd/traktmovies.png', 'DefaultMovies.png', queue=True)
             self.addDirectoryItem(32035, 'movies&url=traktfeatured', 'https://s2.postimg.org/l1di1pojd/traktmovies.png', 'DefaultMovies.png', queue=True)
-
-        elif imdbCredentials == True:
-            self.addDirectoryItem(32035, 'movies&url=featured', 'imdb.png', 'DefaultMovies.png', queue=True)
 
         if traktIndicators == True:
             self.addDirectoryItem(32036, 'movies&url=trakthistory', 'https://s2.postimg.org/l1di1pojd/traktmovies.png', 'DefaultMovies.png', queue=True)
@@ -132,25 +90,12 @@ class navigator:
     def mytvshows(self, lite=False):
         self.accountCheck()
 
-        if traktCredentials == True and imdbCredentials == True:
-            self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png')
-            self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png')
-            self.addDirectoryItem(32034, 'tvshows&url=imdbwatchlist', 'imdb.png', 'DefaultTVShows.png')
-
-        elif traktCredentials == True:
-            self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png')
-            self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png')
-
-        elif imdbCredentials == True:
-            self.addDirectoryItem(32032, 'tvshows&url=imdbwatchlist', 'imdb.png', 'DefaultTVShows.png')
-            self.addDirectoryItem(32033, 'tvshows&url=imdbwatchlist2', 'imdb.png', 'DefaultTVShows.png')
-
         if traktCredentials == True:
+            self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png')
+            self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png')
             self.addDirectoryItem(32035, 'tvshows&url=traktfeatured', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png')
-
-        elif imdbCredentials == True:
-            self.addDirectoryItem(32035, 'tvshows&url=trending', 'imdb.png', 'DefaultMovies.png', queue=True)
-
+            self.addDirectoryItem(32041, 'episodeUserlists', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png')
+			
         if traktIndicators == True:
             self.addDirectoryItem(32036, 'calendar&url=trakthistory', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png', queue=True)
             self.addDirectoryItem(32037, 'calendar&url=progress', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultRecentlyAddedEpisodes.png', queue=True)
@@ -158,31 +103,12 @@ class navigator:
 
         self.addDirectoryItem(32040, 'tvUserlists', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png')
 
-        if traktCredentials == True:
-            self.addDirectoryItem(32041, 'episodeUserlists', 'https://s2.postimg.org/z59da3vqx/traktshows.png', 'DefaultTVShows.png')
-
         if lite == False:
             self.addDirectoryItem(32031, 'tvliteNavigator', 'tvshows.png', 'DefaultTVShows.png')
             self.addDirectoryItem(32028, 'tvPerson', 'people-search.png', 'DefaultTVShows.png')
             self.addDirectoryItem(32010, 'tvSearch', 'search.png', 'DefaultTVShows.png')
 
         self.endDirectory()
-
-
-    def tools(self):
-        self.addDirectoryItem(32043, 'openSettings&query=0.0', 'tools.png', 'DefaultAddonProgram.png')
-        self.addDirectoryItem(32044, 'openSettings&query=3.1', 'tools.png', 'DefaultAddonProgram.png')
-        self.addDirectoryItem(32045, 'openSettings&query=1.0', 'tools.png', 'DefaultAddonProgram.png')
-        self.addDirectoryItem(32046, 'openSettings&query=5.0', 'tools.png', 'DefaultAddonProgram.png')
-        self.addDirectoryItem(32047, 'openSettings&query=2.0', 'tools.png', 'DefaultAddonProgram.png')
-        self.addDirectoryItem(32048, 'openSettings&query=4.0', 'tools.png', 'DefaultAddonProgram.png')
-        self.addDirectoryItem(32049, 'viewsNavigator', 'tools.png', 'DefaultAddonProgram.png')
-        self.addDirectoryItem(32050, 'clearSources', 'tools.png', 'DefaultAddonProgram.png')
-        self.addDirectoryItem(32052, 'clearCache', 'tools.png', 'DefaultAddonProgram.png')
-        self.addDirectoryItem(32073, 'infoCheck', 'tools.png', 'DefaultAddonProgram.png', isFolder=False)
-
-        self.endDirectory()
-
 
     def downloads(self):
         movie_downloads = control.setting('movie.download.path')
@@ -194,16 +120,6 @@ class navigator:
             self.addDirectoryItem(32002, tv_downloads, 'tvshows.png', 'DefaultTVShows.png', isAction=False)
 
         self.endDirectory()
-
-
-    def search(self):
-        self.addDirectoryItem(32001, 'movieSearch', 'search.png', 'DefaultMovies.png')
-        self.addDirectoryItem(32002, 'tvSearch', 'search.png', 'DefaultTVShows.png')
-        self.addDirectoryItem(32029, 'moviePerson', 'people-search.png', 'DefaultMovies.png')
-        self.addDirectoryItem(32030, 'tvPerson', 'people-search.png', 'DefaultTVShows.png')
-
-        self.endDirectory()
-
 
     def views(self):
         try:
@@ -238,18 +154,10 @@ class navigator:
 
 
     def accountCheck(self):
-        if traktCredentials == False and imdbCredentials == False:
+        if traktCredentials == False:
             control.idle()
             control.infoDialog(control.lang(32042).encode('utf-8'), sound=True, icon='WARNING')
             sys.exit()
-
-
-    def infoCheck(self, version):
-        try:
-            control.infoDialog('www.tvaddons.ag', control.lang(32074).encode('utf-8'), time=5000, sound=False)
-            return '1'
-        except:
-            return '1'
 
 
     def clearCache(self):

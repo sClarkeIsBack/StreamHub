@@ -19,7 +19,11 @@ params = dict(urlparse.parse_qsl(sys.argv[2].replace('?',''))) if len(sys.argv) 
 action = params.get('action')
 
 control.moderator()
-
+import xbmc
+logfile    = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.streamhub', 'log.txt'))
+def log(text):
+	file = open(logfile,"w+")
+	file.write(str(text))
 
 class movies:
     def __init__(self):
@@ -468,11 +472,13 @@ class movies:
                 title = client.replaceHTMLCodes(title)
                 title = title.encode('utf-8')
 
-                year = client.parseDOM(item, 'span', attrs = {'class': 'lister-item-year.+?'})
-                year += client.parseDOM(item, 'span', attrs = {'class': 'year_type'})
-                try: year = re.compile('(\d{4})').findall(year)[0]
-                except: year = '0'
-                year = year.encode('utf-8')
+                years = re.compile('lister-item-year.+?">(.+?)<').findall(item)
+                for year in years:
+					year = (year).replace('(','').replace(')','')
+					year = year.encode('utf-8')
+					if year == "":
+						year = '0'
+
 
                 if int(year) > int((self.datetime).strftime('%Y')): raise Exception()
 
@@ -628,15 +634,6 @@ class movies:
 
         self.list = metacache.fetch(self.list, self.lang, self.user)
 
-        for r in range(0, total, 40):
-            threads = []
-            for i in range(r, r+40):
-                if i <= total: threads.append(workers.Thread(self.super_info, i))
-            [i.start() for i in threads]
-            [i.join() for i in threads]
-
-            if self.meta: metacache.insert(self.meta)
-
         self.list = [i for i in self.list if not i['imdb'] == '0']
 
         self.list = metacache.local(self.list, self.tm_img_link, 'poster3', 'fanart2')
@@ -715,10 +712,7 @@ class movies:
             except:
                 pass
 
-            artmeta = True
-            art = client.request(self.fanart_tv_art_link % imdb, headers=self.fanart_tv_headers, timeout='10', error=True)
-            try: art = json.loads(art)
-            except: artmeta = False
+            artmeta = False
 
             try:
                 poster2 = art['movieposter']

@@ -638,6 +638,7 @@ class sources:
             else: label += '%s | %s | [I]%s [/I]' % (s, f, q)
             label = label.replace('| 0 |', '|').replace(' | [I]0 [/I]', '')
             label = label.replace('[I]HEVC [/I]', 'HEVC')
+            label = label.replace('[B][I]HD [/I][/B]','[B][I]720p [/I][/B]')
             label = re.sub('\[I\]\s+\[/I\]', ' ', label)
             label = re.sub('\|\s+\|', '|', label)
             label = re.sub('\|(?:\s+|)$', '', label)

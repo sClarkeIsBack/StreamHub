@@ -105,7 +105,7 @@ class source:
             search = '%s Season %01d' % (title, int(season))
             url = urlparse.urljoin(self.base_link, self.search_link % urllib.quote_plus(cleantitle.getsearch(search)))
             r = client.request(url, headers=headers, timeout='15')
-            r = client.parseDOM(r, 'div', attrs={'class': 'ml-item'})
+            r = client.parseDOM(r, 'div', attrs={'class': 'item-detail'})
             r = zip(client.parseDOM(r, 'a', ret='href'), client.parseDOM(r, 'a', ret='title'))
             r = [(i[0], i[1], re.findall('(.*?)\s+-\s+Season\s+(\d)', i[1])) for i in r]
             r = [(i[0], i[1], i[2][0]) for i in r if len(i[2]) > 0]
