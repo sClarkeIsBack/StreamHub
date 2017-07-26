@@ -1,0 +1,82 @@
+
+<plugin>
+<title>[COLOR ffff0000][B]StreamHub[/B][/COLOR]</title>
+<link>hh</link>
+<thumbnail>https://s23.postimg.org/65w4d25l7/icon.png</thumbnail>
+</plugin>
+
+<plugin>
+<title>[COLOR white][B][/COLOR][/B]</title>
+<link>hh</link>
+<thumbnail>https://s23.postimg.org/m5erwm1mz/template.png</thumbnail>
+</plugin>
+
+<plugin>
+<title>[COLOR ffff0000][B]StreamHub[/COLOR][COLOR gold] Premium[/COLOR][/B]</title>
+<link>plugin://script.module.streamhub/?mode=99999&url=none</link>
+<thumbnail>https://s23.postimg.org/m5erwm1mz/template.png</thumbnail>
+</plugin>
+
+<plugin>
+<title>[COLOR white][B][/COLOR][/B]</title>
+<link>hh</link>
+<thumbnail>https://s23.postimg.org/m5erwm1mz/template.png</thumbnail>
+</plugin>
+ 
+
+<plugin>
+<title>[COLOR ffff0000][B]M[/COLOR][COLOR white]ovies[/COLOR][/B]</title>
+<link>plugin://plugin.video.streamhub/?action=movieNavigator</link>
+<thumbnail>https://s12.postimg.org/s2xzraxql/movies.png</thumbnail>
+</plugin>
+ 
+  
+<plugin>
+<title>[COLOR ffff0000][B]TV[/COLOR][COLOR white] Shows[/COLOR][/B]</title>
+<link>plugin://plugin.video.streamhub/?action=tvNavigator</link>
+<thumbnail>https://s12.postimg.org/ozx9nxirx/tvshows.png</thumbnail>
+</plugin>
+ 
+
+<plugin>
+<name>[COLOR ffff0000][B]L[/COLOR][COLOR white]ive Tv[/COLOR][/B]</name>
+<link>plugin://script.module.streamhublive</link>
+<thumbnail>https://s12.postimg.org/pznkjmxxp/livetv.png</thumbnail>
+</plugin>
+
+<dir>
+<name>[COLOR ffff0000][B]K[/COLOR][COLOR white]ids Corner[/COLOR][/B]</name>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/Kids/kidscorner.xml</link>
+<thumbnail>https://s12.postimg.org/4eihw1171/kidscorner.png</thumbnail>
+</dir>
+
+<plugin>
+<name>[COLOR ffff0000][B]M[/COLOR][COLOR white]usic[/COLOR][/B]</name>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=64&name=MUSIC&url=https%3a%2f%2fraw.githubusercontent.com%2fsClarkeIsBack%2fStreamHub%2fmaster%2fLinks%2f247%2f247tv.xml</link>
+<thumbnail>https://s12.postimg.org/4ttrp1n4d/music.png</thumbnail>
+</plugin>
+
+
+<plugin>
+<name>[COLOR ffff0000][B]D[/COLOR][COLOR white]ocumentary's[/COLOR][/B]</name>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cpc%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=35&name=DOCS&url=http%3a%2f%2fdocumentaryheaven.com%2fwatch-online%2f</link>
+<thumbnail>https://s12.postimg.org/oppr4l45p/Untitled-4.png</thumbnail>
+</plugin>
+ 
+ <plugin>
+<name>[COLOR ffff0000][B]A[/COLOR][COLOR white]nime[/COLOR][/B]</name>
+<link>plugin://script.module.streamhub/?mode=51&url=http://www.toonget.net/dubbed-anime</link>
+<thumbnail>https://s12.postimg.org/exihl73v1/anime.png</thumbnail>
+</plugin>
+
+<plugin>
+<name>[COLOR ffff0000][B]24[/COLOR][COLOR white]/7 TV[/COLOR][/B]</name>
+<link>plugin://script.module.streamhub/?mode=47&url=None</link>
+<thumbnail>https://s12.postimg.org/kkeuio6dp/247_TV.png</thumbnail>
+</plugin>
+
+<dir>
+<name>[COLOR lime][B]Test Area[/COLOR][/B]</name>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/test.xml</link>
+<thumbnail>https://s2.postimg.org/l0fl10mg9/test.png</thumbnail>
+</dir>
