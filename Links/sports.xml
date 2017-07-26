@@ -1,0 +1,13 @@
+<plugin>
+<title>Football Replays</title>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cUnknown%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=112&name=football&url=url</link>
+<thumbnail>http://www.pngmart.com/files/1/Football-Ball-PNG.png</thumbnail>
+</plugin>
+ 
+
+<plugin>
+<title>Football Highlights</title>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cUnknown%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=115&name=football&url=url</link>
+<thumbnail>http://www.pngmart.com/files/1/Football-Ball-PNG.png</thumbnail>
+</plugin>
+ 

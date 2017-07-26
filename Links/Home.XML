@@ -44,6 +44,11 @@
 <thumbnail>https://s12.postimg.org/4ttrp1n4d/music.png</thumbnail>
 </plugin>
 
+<dir>
+<name>[COLOR ffff0000][B]S[/COLOR][COLOR white]ports[/COLOR][/B]</name>
+<link>https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/sports.xml</link>
+<thumbnail>https://s22.postimg.org/51ycuid4x/SPORTS.png</thumbnail>
+</dir>
 
 <plugin>
 <name>[COLOR ffff0000][B]D[/COLOR][COLOR white]ocumentary's[/COLOR][/B]</name>
