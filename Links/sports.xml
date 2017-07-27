@@ -11,3 +11,29 @@
 <thumbnail>http://www.pngmart.com/files/1/Football-Ball-PNG.png</thumbnail>
 </plugin>
  
+<plugin>
+<title>MLB Replays</title>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cUnknown%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=116&name=MLB&url=http%3a%2f%2ffullmatchtv.com%2fmlb</link>
+<thumbnail>https://www.mlbstatic.com/mlb.com/builds/site-core/cc2eecf029d24dcd749b743e7ac10f83f54a0249_1500477853/images/favicon.png</thumbnail>
+</plugin>
+
+<plugin>
+<title>NBA Replays</title>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cUnknown%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=116&name=NBA&url=http%3a%2f%2ffullmatchtv.com%2fbasketball</link>
+<thumbnail>http://i.cdn.turner.com/nba/nba/assets/icons/apple-touch-icon.png</thumbnail>
+</plugin>
+<plugin>
+<title>NFL Replays</title>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cUnknown%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=116&name=NFL&url=http%3a%2f%2ffullmatchtv.com%2fnfl</link>
+<thumbnail>http://cdn.bleacherreport.net/images/team_logos/328x328/nfl.png</thumbnail>
+</plugin>
+<plugin>
+<title>NHL Replays</title>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cUnknown%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=116&name=NHL&url=http%3a%2f%2ffullmatchtv.com%2fnhl</link>
+<thumbnail>https://pbs.twimg.com/profile_images/879421933431009280/p2PdAaah_400x400.jpg</thumbnail>
+</plugin>
+<plugin>
+<title>Rugby Replays</title>
+<link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cUnknown%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=116&name=Rugby&url=http%3a%2f%2ffullmatchtv.com%2frugby</link>
+<thumbnail>http://www.pngall.com/wp-content/uploads/2016/03/Rugby-Ball-PNG-Picture.png</thumbnail>
+</plugin>
