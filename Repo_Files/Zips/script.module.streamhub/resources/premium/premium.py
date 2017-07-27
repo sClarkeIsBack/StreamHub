@@ -454,6 +454,8 @@ def accountinfo():
 	
 def correctPVR():
 	addon = xbmcaddon.Addon(user.id)
+	username     = xbmcaddon.Addon('plugin.video.streamhub').getSetting('Username')
+	password     = xbmcaddon.Addon('plugin.video.streamhub').getSetting('Password')
 	jsonSetPVR = '{"jsonrpc":"2.0", "method":"Settings.SetSettingValue", "params":{"setting":"pvrmanager.enabled", "value":true},"id":1}'
 	IPTVon 	   = '{"jsonrpc":"2.0","method":"Addons.SetAddonEnabled","params":{"addonid":"pvr.iptvsimple","enabled":true},"id":1}'
 	nulldemo   = '{"jsonrpc":"2.0","method":"Addons.SetAddonEnabled","params":{"addonid":"pvr.demo","enabled":false},"id":1}'
