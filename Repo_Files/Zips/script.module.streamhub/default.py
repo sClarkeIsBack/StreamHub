@@ -120,6 +120,7 @@ def CAT():
 	addDir('NFL','http://fullmatchtv.com/nfl',116,icon,fanart,'')
 	addDir('NHL','http://fullmatchtv.com/nhl',116,icon,fanart,'')
 	addDir('Rugby','http://fullmatchtv.com/rugby',116,icon,fanart,'')
+	addDir('jango','url',99999,icon,fanart,'')
 	
 	
 
@@ -951,8 +952,11 @@ def playf4m(url, name):
 
                 from F4mProxy import f4mProxyHelper
                 f4mProxyHelper().playF4mLink(url, name, proxy, proxy_use_chunks, maxbitrate, simpleDownloader, auth_string, streamtype, False, swf)
-	
-	
+				
+def showpremiumimage():
+	premium_jpg = xbmc.translatePath(os.path.join('special://home/addons/script.module.streamhub/resources/premium', 'premium_image.jpg'))
+	xbmc.executebuiltin('ShowPicture('+premium_jpg+')')
+	return False
 def get_params():
 	param=[]
 	paramstring=sys.argv[2]
@@ -1316,4 +1320,75 @@ elif mode==1000:
 		playf4m(url,name)
 	except:
 		pass
+		
+elif mode==99999:
+	if xbmcaddon.Addon('plugin.video.streamhub').getSetting('Username') == "":
+		d = xbmcgui.Dialog().yesno('[COLOR ffff0000][B]StreamHub Premium[/B][/COLOR]','Have You Donated And Would Like To Log-In?')
+		if not d:
+			showpremiumimage()
+		else:
+			from resources.premium import premium
+			try:premium.startupd()
+			except:pass
+			premium.start()
+	else:
+		from resources.premium import premium
+		try:premium.startupd()
+		except:pass
+		premium.start()
+	
+elif mode==999991:
+	from resources.premium import premium
+	premium.livecategory(url)
+	
+elif mode==999992:
+	from resources.premium import premium
+	premium.Livelist(url)
+	
+elif mode==999993:
+	from resources.premium import premium
+	premium.vod(url)
+	
+elif mode==999994:
+	from resources.premium import premium
+	premium.stream_video(url)
+	
+elif mode==999995:
+	from resources.premium import premium
+	premium.search()
+	
+elif mode==999996:
+	from resources.premium import premium
+	premium.accountinfo()
+	
+elif mode==999997:
+	xbmc.executebuiltin('ActivateWindow(TVGuide)')
+	
+elif mode==9999910:
+	from resources.premium import premium
+	premium.addonsettings(url,description)
+	
+elif mode==9999912:
+	from resources.premium import premium
+	premium.catchup()
+	
+elif mode==9999913:
+	from resources.premium import premium
+	premium.tvarchive(name,description)
+	
+elif mode==9999914:
+	from resources.premium import premium
+	premium.footballguide()
+	
+elif mode==9999915:
+	from resources.premium import premium
+	premium.footballguidesearch(description)
+	
+elif mode==9999916:
+	from resources.premium import premium
+	premium.extras()
+
+elif mode==9999917:
+	from resources.premium import premium
+	premium.tvguidesetup()
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
+	<category label="Premium">
+		<setting id="Username" type="text" label="Username" default=""/>
+		<setting id="Password" type="text" label="Password" default=""/>
+		<setting type="lsep" label="" />
+		<setting id="startupd" type="enum" label="Startup Dialog" lvalues="None|Dialog|Notification" default="2" />
+	</category>
 	<category label="General">
 		<setting id="xxxx" type="action" label="Setup XXX Password" action="RunPlugin(plugin://script.module.streamhub/?mode=61&url=none)" />
 	</category>
