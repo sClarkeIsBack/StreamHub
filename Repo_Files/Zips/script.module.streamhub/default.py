@@ -24,6 +24,24 @@ def log(text):
 	file = open(logfile,"w+")
 	file.write(str(text))
 	
+def fullmatchtv(url):
+	open = OPEN_URL(url)
+	part = regex_from_to(open,'<span>Latest.+?</span>','</div></div></div>')
+	all  = re.compile('<div class="td-module-thumb">.+?href="(.+?)".+?title="(.+?)".+?src="(.+?)"',re.DOTALL).findall(part)
+	for url,name,icon in all:
+		addDir(name.replace('&#8211;','-'),url,117,icon,fanart,'')
+		
+def rugbyget(url):
+	open = OPEN_URL(url)
+	url  = regex_from_to(open,'iframe src="','"')
+	
+	play=urlresolver.HostedMediaFile(url).resolve()
+	liz = xbmcgui.ListItem(name, iconImage='DefaultVideo.png', thumbnailImage=icon)
+	liz.setInfo(type='Video', infoLabels={'Title': name, 'Plot': ''})
+	liz.setProperty('IsPlayable','true')
+	liz.setPath(str(play))
+	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+	
 def footballhighlight():
 	open = OPEN_URL('http://livefootballvideo.com/highlights')
 	all  = regex_get_all(open,'class="date_time','class="play_btn')
@@ -97,8 +115,12 @@ def CAT():
 	addDir('IPTV2','url',88,icon,fanart,'')
 	addDir('Liveonlinetv','url',95,icon,fanart,'')
 	addDir('jango','url',106,icon,fanart,'')
-	addDir('football','url',112,icon,fanart,'')
-	addDir('football','url',115,icon,fanart,'')
+	addDir('MLB','http://fullmatchtv.com/mlb',116,icon,fanart,'')
+	addDir('NBA','http://fullmatchtv.com/basketball',116,icon,fanart,'')
+	addDir('NFL','http://fullmatchtv.com/nfl',116,icon,fanart,'')
+	addDir('NHL','http://fullmatchtv.com/nhl',116,icon,fanart,'')
+	addDir('Rugby','http://fullmatchtv.com/rugby',116,icon,fanart,'')
+	
 	
 
 def MOV2CAT():
@@ -856,7 +878,7 @@ def addDir(name,url,mode,iconimage,fanart,description):
 	liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
 	liz.setInfo( type="Video", infoLabels={"Title": name,"Plot":description})
 	liz.setProperty('fanart_image', fanart)
-	if mode==3 or mode==7 or mode==17 or mode==15 or mode==113 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==97 or mode==46 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==104 or mode==62 or mode ==75 or mode==80 or mode==90 or mode==94 or mode==105 or mode==999:
+	if mode==3 or mode==7 or mode==117 or mode==17 or mode==15 or mode==113 or mode==23 or mode==30 or mode==27 or mode ==36 or mode==39 or mode==97 or mode==46 or mode==50 or mode==53 or mode==55 or mode==57 or mode==60 or mode==104 or mode==62 or mode ==75 or mode==80 or mode==90 or mode==94 or mode==105 or mode==999:
 		liz.setProperty("IsPlayable","true")
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
 	elif mode==73 or mode==1000:
@@ -1270,6 +1292,12 @@ elif mode==114:
 	
 elif mode==115:
 	footballhighlight()
+	
+elif mode==116:
+	fullmatchtv(url)
+	
+elif mode==117:
+	rugbyget(url)
 	
 elif mode==200:
 	xbmc.log('hello')
