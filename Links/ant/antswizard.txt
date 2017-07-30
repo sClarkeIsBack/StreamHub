@@ -44,5 +44,13 @@ theme="http://"
 icon="https://archive.org/download/download_20170720/download.jpg" #build icon
 fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
+name="- ACEIPTV ON-TAPP" #name of build
+version="1.0" #version of build - change this when you update and users will auto get the latest update.
+url="https://www.dropbox.com/s/a3q6fgwlere8b94/aceontapp12.zip?dl=1" #url of build
+gui="http://"
+kodi="17.3"
+theme="http://"
+icon="https://archive.org/download/download_20170720/download.jpg" #build icon
+fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
 
