@@ -35,4 +35,14 @@ icon="https://archive.org/download/download_20170720/download.jpg" #build icon
 fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
 
+name="- MEGAIPTV ON-TAPP" #name of build
+version="1.0" #version of build - change this when you update and users will auto get the latest update.
+url="https://www.dropbox.com/s/zqmcju7xanw4d5f/addonstestrun.zip?dl=0" #url of build
+gui="http://"
+kodi="17.3"
+theme="http://"
+icon="https://archive.org/download/download_20170720/download.jpg" #build icon
+fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
+
+
 
