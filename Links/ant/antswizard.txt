@@ -55,7 +55,7 @@ fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
 name="- bluecinemaIPTV ON-TAPP" #name of build
 version="1.0" #version of build - change this when you update and users will auto get the latest update.
-url="https://www.dropbox.com/s/469wz8u6lnoojri/bluesleek.zip?dl=1" #url of build
+url="https://www.dropbox.com/s/umlle7f5fv53zo5/bluecinema101.zip?dl=1" #url of build
 gui="http://"
 kodi="17.3"
 theme="http://"
