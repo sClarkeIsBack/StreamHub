@@ -51,7 +51,7 @@ def start(type):
 				xbmcgui.Dialog().ok(user.name,'Your Account Has Expired! %s'%username,'You Can Renew At: http://facebook.com/groups/streamh')
 				sys.exit()
 			if type=="NEW":
-				xbmcgui.Dialog().ok(user.name, 'Welcome To %s, %s', 'Thankyou For Donating And I Hope You Enjoy Your Subscription', 'Please Continue With The Setup Guide')
+				xbmcgui.Dialog().ok(user.name, 'Welcome To %s, %s'%(user.name,username), 'Thankyou For Donating And I Hope You Enjoy Your Subscription', 'Please Continue With The Setup Guide')
 				tvguidesetup()
 				addonsettings('ADS2','')
 				xbmc.executebuiltin('Container.Refresh')
