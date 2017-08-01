@@ -1326,16 +1326,20 @@ elif mode==99999:
 		d = xbmcgui.Dialog().yesno('[COLOR ffff0000][B]StreamHub Premium[/B][/COLOR]','Have You Donated And Would Like To Log-In?')
 		if not d:
 			showpremiumimage()
+			sys.exit()
 		else:
 			from resources.premium import premium
-			try:premium.startupd()
-			except:pass
-			premium.start()
+			d = xbmcgui.Dialog().yesno('[COLOR ffff0000][B]StreamHub Premium[/B][/COLOR]','Great! You will need to enter your Login details in the Addons Settings','Would you like us to open the settings for you now?')
+			if d:
+				xbmcaddon.Addon('plugin.video.streamhub').openSettings()
+				premium.start('NEW')
+			else:
+				sys.exit()
 	else:
 		from resources.premium import premium
 		try:premium.startupd()
 		except:pass
-		premium.start()
+		premium.start('NONE')
 	
 elif mode==999991:
 	from resources.premium import premium
@@ -1391,4 +1395,12 @@ elif mode==9999916:
 elif mode==9999917:
 	from resources.premium import premium
 	premium.tvguidesetup()
+	
+elif mode==9999918:
+	from resources.premium import premium
+	premium.editas()
+	
+elif mode==9999919:
+	from resources.premium import premium
+	premium.apkdownloads()
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

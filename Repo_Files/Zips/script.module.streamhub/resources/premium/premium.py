@@ -40,45 +40,41 @@ def buildcleanurl(url):
 	url = str(url).replace('USERNAME',username).replace('PASSWORD',password)
 	return url
 	
-def start():
-	if username=="":
-		usern = userpopup()
-		passw= passpopup()
-		xbmcaddon.Addon('plugin.video.streamhub').setSetting('Username',usern)
-		xbmcaddon.Addon('plugin.video.streamhub').setSetting('Password',passw)
-		xbmc.executebuiltin('Container.Refresh')
-		auth = '%s:%s/enigma2.php?username=%s&password=%s&type=get_vod_categories'%(user.host,user.port,usern,passw)
-		auth = tools.OPEN_URL(auth)
-		if auth == "":
-			line1 = "Incorrect Login Details"
-			line2 = "Please Re-enter" 
-			line3 = "" 
-			xbmcgui.Dialog().ok('Attention', line1, line2, line3)
-			start()
-		else:
-			line1 = "Login Sucsessfull"
-			line2 = "Welcome to "+user.name 
-			line3 = ('[B][COLOR white]%s[/COLOR][/B]'%usern)
-			xbmcgui.Dialog().ok(user.name, line1, line2, line3)
-			tvguidesetup()
-			addonsettings('ADS2','')
-			xbmc.executebuiltin('Container.Refresh')
-			home()
-	else:
-		auth = '%s:%s/enigma2.php?username=%s&password=%s&type=get_vod_categories'%(user.host,user.port,username,password)
+def start(type):
+		username     = xbmcaddon.Addon('plugin.video.streamhub').getSetting('Username')
+		password     = xbmcaddon.Addon('plugin.video.streamhub').getSetting('Password')
+		auth = '%s:%s/panel_api.php?username=%s&password=%s'%(user.host,user.port,username,password)
 		auth = tools.OPEN_URL(auth)
 		if not auth=="":
-			tools.addDir('[COLOR ffff0000][B]M[/COLOR][COLOR white]y Premium Information[/COLOR][/B]','url',999996,'https://s18.postimg.org/rhnmrvxp5/myinfo.png',fanart,'')
-			tools.addDir('[COLOR ffff0000][B]L[/COLOR][COLOR white]ive Tv[/COLOR][/B]','live',999991,'https://s18.postimg.org/ggshmv5g9/livetv.png',fanart,'')
-			tools.addDir('[COLOR ffff0000][B]C[/COLOR][COLOR white]atchup Tv[/COLOR][/B]','url',9999912,'https://s18.postimg.org/wp8pwceah/CATCHUP.png',fanart,'')
+			exp = tools.regex_from_to(auth,'"status":"','"')
+			if exp == 'Expired':
+				xbmcgui.Dialog().ok(user.name,'Your Account Has Expired! %s'%username,'You Can Renew At: http://facebook.com/groups/streamh')
+				sys.exit()
+			if type=="NEW":
+				xbmcgui.Dialog().ok(user.name, 'Welcome To %s, %s', 'Thankyou For Donating And I Hope You Enjoy Your Subscription', 'Please Continue With The Setup Guide')
+				tvguidesetup()
+				addonsettings('ADS2','')
+				xbmc.executebuiltin('Container.Refresh')
+			tools.addDir('[COLOR ffff0000][B]M[/COLOR][COLOR white]y Premium Information[/COLOR][/B]','url',999996,'https://s18.postimg.org/rhnmrvxp5/myinfo.png',fanart,"Access Your Account Information, Inlcuding Username, Password and More")
+			tools.addDir('[COLOR ffff0000][B]L[/COLOR][COLOR white]ive Tv[/COLOR][/B]','url',999991,'https://s18.postimg.org/ggshmv5g9/livetv.png',fanart,"Get Access to All of Your Favourite Channels, In Stunning HD")
+			tools.addDir('[COLOR ffff0000][B]L[/COLOR][COLOR white]ive Events[/COLOR][/B]','LIVE',999991,'https://s18.postimg.org/ggshmv5g9/livetv.png',fanart,"Containing Live Events, Including: NBA, NFL, NHL, MLB, English Premier League and PPV!")
+			tools.addDir('[COLOR ffff0000][B]C[/COLOR][COLOR white]atchup Tv[/COLOR][/B]','url',9999912,'https://s18.postimg.org/wp8pwceah/CATCHUP.png',fanart,"Get Access To Full 7 Days Catchup Tv On A Whole Bunch Of Channels!")
 			if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
-				tools.addDir('[COLOR ffff0000][B]T[/COLOR][COLOR white]V Guide[/COLOR][/B]','pvr',999997,'https://s18.postimg.org/479gw7l95/TVGUIDE.png',fanart,'')
+				tools.addDir('[COLOR ffff0000][B]T[/COLOR][COLOR white]V Guide[/COLOR][/B]','pvr',999997,'https://s18.postimg.org/479gw7l95/TVGUIDE.png',fanart,"Open Kodi's Inbuilt Tv Guide")
 			#tools.addDir('[COLOR ffff0000][B]O[/COLOR][COLOR white]n Demand[/COLOR][/B]','vod',999993,'https://s18.postimg.org/82cuys4ex/VOD.png',fanart,'')
-			tools.addDir('[COLOR ffff0000][B]S[/COLOR][COLOR white]earch[/COLOR][/B]','url',999995,'https://s2.postimg.org/oeceg5ort/search.png',fanart,'')
-			tools.addDir('[COLOR ffff0000][B]E[/COLOR][COLOR white]xtras[/COLOR][/B]','url',9999916,'https://s18.postimg.org/i7biocmzd/extras.png',fanart,'')	
+			tools.addDir('[COLOR ffff0000][B]S[/COLOR][COLOR white]earch[/COLOR][/B]','url',999995,'https://s2.postimg.org/oeceg5ort/search.png',fanart,"Search Through StreamHub's Premium Content")
+			tools.addDir('[COLOR ffff0000][B]E[/COLOR][COLOR white]xtras[/COLOR][/B]','url',9999916,'https://s18.postimg.org/i7biocmzd/extras.png',fanart,"Some Extra Features, Inlcuding Football Guides. Setting Tweaks and More")
+		else:
+			d = xbmcgui.Dialog().yesno(user.name, 'Your Login Details Are Incorrect, Would You Like To Re-Enter?')
+			if not d:
+				sys.exit()
+			else:
+				xbmcaddon.Addon('plugin.video.streamhub').openSettings()
+				start('NONE')
 def home():
 			tools.addDir('[COLOR ffff0000][B]M[/COLOR][COLOR white]y Premium Information[/COLOR][/B]','url',999996,'https://s18.postimg.org/rhnmrvxp5/myinfo.png',fanart,'')
 			tools.addDir('[COLOR ffff0000][B]L[/COLOR][COLOR white]ive Tv[/COLOR][/B]','live',999991,'https://s18.postimg.org/ggshmv5g9/livetv.png',fanart,'')
+			tools.addDir('[COLOR ffff0000][B]L[/COLOR][COLOR white]ive Events[/COLOR][/B]','live',999991,'https://s18.postimg.org/ggshmv5g9/livetv.png',fanart,'')
 			tools.addDir('[COLOR ffff0000][B]C[/COLOR][COLOR white]atchup Tv[/COLOR][/B]','url',9999912,'https://s18.postimg.org/wp8pwceah/CATCHUP.png',fanart,'')
 			if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
 				tools.addDir('[COLOR ffff0000][B]T[/COLOR][COLOR white]V Guide[/COLOR][/B]','pvr',999997,'https://s18.postimg.org/479gw7l95/TVGUIDE.png',fanart,'')
@@ -96,8 +92,12 @@ def livecategory(url):
 		if not 'Install Videos' in name:
 			if not 'TEST CHANNELS' in name:
 				if not 'TEST' in name:
-					tools.addDir(name.replace('UK:','[COLOR ffff0000][B]UK:[/COLOR][/B]').replace('USA/CA:','[COLOR ffff0000][B]USA/CA:[/COLOR][/B]').replace('All','[COLOR ffff0000][B]All[/COLOR][/B]').replace('International Sport','[COLOR ffff0000][B]INT: [/COLOR][/B]International Sport').replace('Live:','[COLOR ffff0000][B]Live:[/COLOR][/B]').replace('TEST','[COLOR ffff0000][B]TEST[/COLOR][/B]').replace('Install','[COLOR ffff0000][B]Install[/COLOR][/B]').replace('24/7','[COLOR ffff0000][B]24/7: [/COLOR][/B]Channels').replace('DE:','[COLOR ffff0000][B]DE:[/COLOR][/B]').replace('FR:','[COLOR ffff0000][B]FR:[/COLOR][/B]').replace('PL:','[COLOR ffff0000][B]PL:[/COLOR][/B]').replace('AR:','[COLOR ffff0000][B]AR:[/COLOR][/B]').replace('LIVE:','[COLOR ffff0000][B]LIVE:[/COLOR][/B]').replace('ES:','[COLOR ffff0000][B]ES:[/COLOR][/B]').replace('IN:','[COLOR ffff0000][B]IN:[/COLOR][/B]').replace('PK:','[COLOR ffff0000][B]PK:[/COLOR][/B]').replace('NBC Extra Time','[COLOR ffff0000][B]NBC:[/COLOR][/B] NBC Extra Time'),url1,999992,icon,fanart,'')
-		
+					if url == 'LIVE':
+						if 'Live:' in name:	
+							tools.addDir(name.replace('UK:','[COLOR ffff0000][B]UK:[/COLOR][/B]').replace('USA/CA:','[COLOR ffff0000][B]USA/CA:[/COLOR][/B]').replace('All','[COLOR ffff0000][B]All[/COLOR][/B]').replace('International Sport','[COLOR ffff0000][B]INT: [/COLOR][/B]International Sport').replace('Live:','[COLOR ffff0000][B]Live:[/COLOR][/B]').replace('TEST','[COLOR ffff0000][B]TEST[/COLOR][/B]').replace('Install','[COLOR ffff0000][B]Install[/COLOR][/B]').replace('24/7','[COLOR ffff0000][B]24/7: [/COLOR][/B]Channels').replace('DE:','[COLOR ffff0000][B]DE:[/COLOR][/B]').replace('FR:','[COLOR ffff0000][B]FR:[/COLOR][/B]').replace('PL:','[COLOR ffff0000][B]PL:[/COLOR][/B]').replace('AR:','[COLOR ffff0000][B]AR:[/COLOR][/B]').replace('LIVE:','[COLOR ffff0000][B]LIVE:[/COLOR][/B]').replace('ES:','[COLOR ffff0000][B]ES:[/COLOR][/B]').replace('IN:','[COLOR ffff0000][B]IN:[/COLOR][/B]').replace('PK:','[COLOR ffff0000][B]PK:[/COLOR][/B]').replace('NBC Extra Time','[COLOR ffff0000][B]NBC:[/COLOR][/B] NBC Extra Time'),url1,999992,icon,fanart,'')
+					else:
+						if not 'Live:' in name:	
+							tools.addDir(name.replace('UK:','[COLOR ffff0000][B]UK:[/COLOR][/B]').replace('USA/CA:','[COLOR ffff0000][B]USA/CA:[/COLOR][/B]').replace('All','[COLOR ffff0000][B]All[/COLOR][/B]').replace('International Sport','[COLOR ffff0000][B]INT: [/COLOR][/B]International Sport').replace('Live:','[COLOR ffff0000][B]Live:[/COLOR][/B]').replace('TEST','[COLOR ffff0000][B]TEST[/COLOR][/B]').replace('Install','[COLOR ffff0000][B]Install[/COLOR][/B]').replace('24/7','[COLOR ffff0000][B]24/7: [/COLOR][/B]Channels').replace('DE:','[COLOR ffff0000][B]DE:[/COLOR][/B]').replace('FR:','[COLOR ffff0000][B]FR:[/COLOR][/B]').replace('PL:','[COLOR ffff0000][B]PL:[/COLOR][/B]').replace('AR:','[COLOR ffff0000][B]AR:[/COLOR][/B]').replace('LIVE:','[COLOR ffff0000][B]LIVE:[/COLOR][/B]').replace('ES:','[COLOR ffff0000][B]ES:[/COLOR][/B]').replace('IN:','[COLOR ffff0000][B]IN:[/COLOR][/B]').replace('PK:','[COLOR ffff0000][B]PK:[/COLOR][/B]').replace('NBC Extra Time','[COLOR ffff0000][B]NBC:[/COLOR][/B] NBC Extra Time'),url1,999992,icon,fanart,'')
 def Livelist(url):
 	url  = buildcleanurl(url)
 	open = tools.OPEN_URL(url)
@@ -301,6 +301,27 @@ def settingsmenu():
 	tools.addDir('META for VOD is %s'%META,'META',10,icon,fanart,META)
 	tools.addDir('Log Out','LO',10,icon,fanart,'')
 	
+def editas():
+
+		dialog = xbmcgui.Dialog().select('Edit Advanced Settings', ['Enable Fire TV Stick AS','Enable Fire TV AS','Enable 1GB Ram or Lower AS','Enable 2GB Ram or Higher AS','Enable Nvidia Shield AS','Disable AS'])
+		if dialog==0:
+			advancedsettings('stick')
+			xbmcgui.Dialog().ok(user.name, 'Set Advanced Settings')
+		elif dialog==1:
+			advancedsettings('firetv')
+			xbmcgui.Dialog().ok(user.name, 'Set Advanced Settings')
+		elif dialog==2:
+			advancedsettings('lessthan')
+			xbmcgui.Dialog().ok(user.name, 'Set Advanced Settings')
+		elif dialog==3:
+			advancedsettings('morethan')
+			xbmcgui.Dialog().ok(user.name, 'Set Advanced Settings')
+		elif dialog==4:
+			advancedsettings('shield')
+			xbmcgui.Dialog().ok(user.name, 'Set Advanced Settings')
+		elif dialog==5:
+			advancedsettings('remove')
+			xbmcgui.Dialog().ok(user.name, 'Advanced Settings Removed')
 
 def addonsettings(url,description):
 	url  = buildcleanurl(url)
@@ -373,6 +394,10 @@ def addonsettings(url,description):
 		else:
 			xbmcaddon.Addon().setSetting('update','true')
 			xbmc.executebuiltin('Container.Refresh')
+			
+	elif url.endswith('.apk'):
+		from resources.premium.modules import apkinstaller
+		apkinstaller.install(description,url)
 	
 		
 def advancedsettings(device):
@@ -497,9 +522,11 @@ def num2day(num):
 	return day
 	
 def extras():
-	tools.addDir('Football Guide','tv',9999914,icon,fanart,'')
-	tools.addDir('Integrate With PVR TV Guide','tv',9999917,icon,fanart,'')
-	tools.addDir('M3U & EPG Url Generator','m3unepg',9999910,icon,fanart,'')
+	tools.addDir('APK Installer','tv',9999919,icon,fanart,"Install Various Android Applications.[CR][CR]For Android Devices Only.")
+	tools.addDir('Football Guide','tv',9999914,icon,fanart,"Find out who's playing football, then be taken straight to the stream!")
+	tools.addDir('Edit Advanced Settings','url',9999918,icon,fanart,"This setting enables you to edit the Advanced Settings in Kodi[CR][CR]In most cases allowing a smoother stream.")
+	tools.addDir('M3U & EPG Url Generator','m3unepg',9999910,icon,fanart,"Create a M3U and EPG URL and then run it through TinyUrl.com[CR][CR]Making the URL's up to 100+ characters smaller")
+	tools.addDir('Integrate With PVR TV Guide','tv',9999917,icon,fanart,"Integrate StreamHub Premium Live Streams and EPG with Kodi's inbuilt TV Guide.[CR][CR]Allowing A Full, Sleek Looking TV Guide!")
 	if xbmcaddon.Addon('plugin.video.streamhub').getSetting('vodsource')=='true':
 		VOD = '[B][COLOR lime]ON[/COLOR][/B]'
 	else:
@@ -630,3 +657,10 @@ def popupd(announce):
 	TextBox()
 	while xbmc.getCondVisibility('Window.IsVisible(10147)'):
 		time.sleep(.5)
+		
+		
+def apkdownloads():
+	open = requests.get('https://raw.githubusercontent.com/sClarkeIsBack/StreamHub/master/Links/apks.txt').text
+	all  = re.compile('<item>.+?title>(.+?)<.+?link>(.+?)<.+?thumbnail>(.+?)<',re.DOTALL|re.MULTILINE).findall(open)
+	for name,url,icon in all:
+		tools.addDir(name,url,9999910,icon,fanart,name)

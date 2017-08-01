@@ -24,7 +24,7 @@ def addDir(name,url,mode,iconimage,fanart,description):
 	if mode==999994:
 		liz.setProperty("IsPlayable","true")
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
-	elif mode==999997 or mode==9999910 or mode==9999917 or mode==21:
+	elif mode==999997 or mode==9999910 or mode==9999917 or mode==9999918 or mode==21:
 		liz.setInfo( type="Video", infoLabels={"Title": name,"Plot":description})
 		ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
 	else:
