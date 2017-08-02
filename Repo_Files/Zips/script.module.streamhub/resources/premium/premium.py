@@ -45,7 +45,7 @@ def start(type):
 		password     = xbmcaddon.Addon('plugin.video.streamhub').getSetting('Password')
 		auth = '%s:%s/panel_api.php?username=%s&password=%s'%(user.host,user.port,username,password)
 		auth = tools.OPEN_URL(auth)
-		if not auth=="":
+		if "username" in auth:
 			exp = tools.regex_from_to(auth,'"status":"','"')
 			if exp == 'Expired':
 				xbmcgui.Dialog().ok(user.name,'Your Account Has Expired! %s'%username,'You Can Renew At: http://facebook.com/groups/streamh')
@@ -70,7 +70,11 @@ def start(type):
 				sys.exit()
 			else:
 				xbmcaddon.Addon('plugin.video.streamhub').openSettings()
-				start('NONE')
+				if type == "NEW":
+					type = 'NEW'
+				else:
+					type = 'NONE'
+				start(type)
 def home():
 			tools.addDir('[COLOR ffff0000][B]M[/COLOR][COLOR white]y Premium Information[/COLOR][/B]','url',999996,'https://s18.postimg.org/rhnmrvxp5/myinfo.png',fanart,'')
 			tools.addDir('[COLOR ffff0000][B]L[/COLOR][COLOR white]ive Tv[/COLOR][/B]','live',999991,'https://s18.postimg.org/ggshmv5g9/livetv.png',fanart,'')
