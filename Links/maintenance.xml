@@ -12,3 +12,8 @@
 <title>System Information</title>
 <link>plugin://script.module.streamhub/?mode=105&url=none</link>
 </plugin>
+
+<plugin>
+<title>Open Addon Settings</title>
+<link>plugin://script.module.streamhub/?mode=118&url=none</link>
+</plugin>
