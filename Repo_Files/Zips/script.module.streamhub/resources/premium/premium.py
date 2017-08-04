@@ -61,7 +61,7 @@ def start(type):
 			tools.addDir('[COLOR ffff0000][B]C[/COLOR][COLOR white]atchup Tv[/COLOR][/B]','url',9999912,'https://s18.postimg.org/wp8pwceah/CATCHUP.png',fanart,"Get Access To Full 7 Days Catchup Tv On A Whole Bunch Of Channels!")
 			if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
 				tools.addDir('[COLOR ffff0000][B]T[/COLOR][COLOR white]V Guide[/COLOR][/B]','pvr',999997,'https://s18.postimg.org/479gw7l95/TVGUIDE.png',fanart,"Open Kodi's Inbuilt Tv Guide")
-			#tools.addDir('[COLOR ffff0000][B]O[/COLOR][COLOR white]n Demand[/COLOR][/B]','vod',999993,'https://s18.postimg.org/82cuys4ex/VOD.png',fanart,'')
+			tools.addDir('[COLOR ffff0000][B]O[/COLOR][COLOR white]n Demand[/COLOR][/B]','vod',999993,'https://s18.postimg.org/82cuys4ex/VOD.png',fanart,'')
 			tools.addDir('[COLOR ffff0000][B]S[/COLOR][COLOR white]earch[/COLOR][/B]','url',999995,'https://s2.postimg.org/oeceg5ort/search.png',fanart,"Search Through StreamHub's Premium Content")
 			tools.addDir('[COLOR ffff0000][B]E[/COLOR][COLOR white]xtras[/COLOR][/B]','url',9999916,'https://s18.postimg.org/i7biocmzd/extras.png',fanart,"Some Extra Features, Inlcuding Football Guides. Setting Tweaks and More")
 		else:
@@ -82,7 +82,7 @@ def home():
 			tools.addDir('[COLOR ffff0000][B]C[/COLOR][COLOR white]atchup Tv[/COLOR][/B]','url',9999912,'https://s18.postimg.org/wp8pwceah/CATCHUP.png',fanart,'')
 			if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
 				tools.addDir('[COLOR ffff0000][B]T[/COLOR][COLOR white]V Guide[/COLOR][/B]','pvr',999997,'https://s18.postimg.org/479gw7l95/TVGUIDE.png',fanart,'')
-			#tools.addDir('[COLOR ffff0000][B]O[/COLOR][COLOR white]n Demand[/COLOR][/B]','vod',999993,'https://s18.postimg.org/82cuys4ex/VOD.png',fanart,'')
+			tools.addDir('[COLOR ffff0000][B]O[/COLOR][COLOR white]n Demand[/COLOR][/B]','vod',999993,'https://s18.postimg.org/82cuys4ex/VOD.png',fanart,'')
 			tools.addDir('[COLOR ffff0000][B]S[/COLOR][COLOR white]earch[/COLOR][/B]','url',999995,'https://s2.postimg.org/oeceg5ort/search.png',fanart,'')
 			tools.addDir('[COLOR ffff0000][B]E[/COLOR][COLOR white]xtras[/COLOR][/B]','url',9999916,'https://s18.postimg.org/i7biocmzd/extras.png',fanart,'')			
 def livecategory(url):
