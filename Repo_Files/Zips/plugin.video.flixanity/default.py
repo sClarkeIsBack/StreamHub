@@ -132,7 +132,7 @@ def getLinks(url):
             headers['Referer'] = url
 
 
-            u = '/ajax/jne.php'
+            u = '/ajax/ine.php'
             u = urlparse.urljoin(base_url, u)
 
             action = 'getEpisodeEmb' if '/episode/' in url else 'getMovieEmb'
