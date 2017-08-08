@@ -587,10 +587,10 @@ def opentwentyfourseven(url):
 	url = 'https://www.arconaitv.me'
 	page = OPEN_URL(url)
 	part = regex_from_to(page,'id="shows">','id="cable">')
-	all_vids=regex_get_all(part,"div class='box-content'",'</a>')
+	all_vids=regex_get_all(part,'div class="box-content"','</a>')
 	for a in all_vids:
-		url = regex_from_to(a,"href='","'")
-		name = regex_from_to(a,"title='","'").replace('#038;','')
+		url = regex_from_to(a,'href="','"')
+		name = regex_from_to(a,'title="','"').replace('#038;','')
 		if not url=='https://www.arconaitv.me/':
 			if not name == 'A-E':
 				if not name == 'F-J':
@@ -600,10 +600,10 @@ def opentwentyfourseven(url):
 								addDir(name,urllib.quote_plus('https://www.arconaitv.me/'+url),46,icon,fanart,'')
 								
 	part = regex_from_to(page,'id="movies">','id="donate">')
-	all_vids=regex_get_all(part,"div class='box-content'",'</a>')
+	all_vids=regex_get_all(part,'div class="box-content"','</a>')
 	for a in all_vids:
-		url = regex_from_to(a,"href='","'")
-		name = regex_from_to(a,"title='","'").replace('#038;','')
+		url = regex_from_to(a,'href="','"')
+		name = regex_from_to(a,'title="','"').replace('#038;','')
 		if not url=='https://www.arconaitv.me/':
 			if not name == 'A-E':
 				if not name == 'F-J':
