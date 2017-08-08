@@ -1,4 +1,4 @@
-import os,xbmc
+import re,os,xbmc
 
 addon_id   = 'script.module.streamhublive'
 
@@ -16,13 +16,13 @@ def log(text):
 	file = open(logfile,"w+")
 	file.write(str(text))
    
-def play(url,name,icon,pdialogue=None):
+def play(url,name,icon,description,pdialogue=None):
 		from resources.root import resolvers
 		import xbmcgui
 		
 		url = url.strip()
 
-		url = resolvers.resolve(url)
+		url = resolvers.resolve(url,description)
 
 		liz = xbmcgui.ListItem(name, iconImage=iconimage, thumbnailImage=iconimage)
 		liz.setInfo(type='Video', infoLabels={'Title':name})
@@ -250,7 +250,6 @@ elif mode==4:
 	from resources.root import android
 	android.get(url)
 	
-	
 elif mode==50:
 	from resources.root import iptv
 	iptv.listm3u(url)
@@ -258,7 +257,7 @@ elif mode==50:
 
 	
 elif mode==10:
-	play(url,name,icon)
+	play(url,name,icon,description)
 	
 
 
@@ -281,7 +280,7 @@ elif mode==4000:
 elif mode==9999:
 	import xbmcgui,xbmcplugin
 	from resources.root import resolvers
-	url = resolvers.resolve(url)
+	url = resolvers.resolve(url,description)
 	liz = xbmcgui.ListItem(name, iconImage=iconimage, thumbnailImage=iconimage)
 	liz.setInfo(type='Video', infoLabels='')
 	liz.setProperty("IsPlayable","true")
