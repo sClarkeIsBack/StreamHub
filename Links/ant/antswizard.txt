@@ -7,70 +7,11 @@ zip="https://github.com/sClarkeIsBack/StreamHub/raw/master/Links/ant/plugin.prog
 #################################################################################
 
 
-name="- TEST" #name of build
-version="1.0" #version of build - change this when you update and users will auto get the latest update.
-url="https://archive.org/download/asnewnetflix/asnewnetflix.zip" #url of build
-gui="http://"
-kodi="17.3"
-theme="http://"
-icon="https://archive.org/download/IMG0422_201707/IMG_0422_thumb.jpg" #build icon
-fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
-
-name="- TEST 2.0" #name of build
-version="1.0" #version of build - change this when you update and users will auto get the latest update.
-url="https://archive.org/download/antonylovesleona/antonylovesleona.zip" #url of build
-gui="http://"
-kodi="17.3"
-theme="http://"
-icon="https://archive.org/download/download_20170720/download.jpg" #build icon
-fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
-
 name="- STREAMHUB BUILD" #name of build
 version="1.0" #version of build - change this when you update and users will auto get the latest update.
-url="https://www.dropbox.com/s/63hw1tqxopfjflg/antonyscopystreambuild.zip?dl=1" #url of build
+url="https://www.dropbox.com/s/diueccu58leqd0f/test11111.zip?dl=1" #url of build
 gui="http://"
 kodi="17.3"
 theme="http://"
 icon="https://archive.org/download/download_20170720/download.jpg" #build icon
 fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
-
-
-name="- MEGAIPTV ON-TAPP" #name of build
-version="1.0" #version of build - change this when you update and users will auto get the latest update.
-url="https://www.dropbox.com/s/xjnnjnvd8cm6xjx/megaontapp1001.zip?dl=1" #url of build
-gui="http://"
-kodi="17.3"
-theme="http://"
-icon="https://archive.org/download/download_20170720/download.jpg" #build icon
-fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
-
-name="- ACEIPTV ON-TAPP" #name of build
-version="1.0" #version of build - change this when you update and users will auto get the latest update.
-url="https://www.dropbox.com/s/a3q6fgwlere8b94/aceontapp12.zip?dl=1" #url of build
-gui="http://"
-kodi="17.3"
-theme="http://"
-icon="https://archive.org/download/download_20170720/download.jpg" #build icon
-fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
-
-name="- bluecinemaIPTV ON-TAPP" #name of build
-version="1.0" #version of build - change this when you update and users will auto get the latest update.
-url="https://www.dropbox.com/s/umlle7f5fv53zo5/bluecinema101.zip?dl=1" #url of build
-gui="http://"
-kodi="17.3"
-theme="http://"
-icon="https://archive.org/download/download_20170720/download.jpg" #build icon
-fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
-
-name="- Simple Phone Build" #name of build
-version="1.0" #version of build - change this when you update and users will auto get the latest update.
-url="https://www.dropbox.com/s/xxqhw5bej0jqhyr/deddd.zip?dl=1" #url of build
-gui="http://"
-kodi="17.3"
-theme="http://"
-icon="https://archive.org/download/download_20170720/download.jpg" #build icon
-fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
-
-
-
-
