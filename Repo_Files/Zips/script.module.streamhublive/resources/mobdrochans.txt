@@ -42,14 +42,16 @@ NFL TV:mpd://877ad69c810ccc693b207cf11badc04a.m3u8
 Premier Sports:mpd://2d18f483dbcf20bf0cc41b916f026d6b.m3u8
 Racing UK:mpd://7e8c4145e3a4119dbe243813d877aca8.m3u8
 Real Madrid TV:mpd://866d51e7a75778917f01a4602a41964b.m3u8
+Sky Sport Main Event:mpd://09e05360bef651699a48ee86801c0dfd.m3u8
+Sky Sports Action:mpd://189b62e7b9f4fb247a03007de1f6b056.m3u8
+Sky Sports Cricket:mpd://914f7a4613e5d940ada57e8d33d8ee48.m3u8
+Sky Sports Golf:mpd://bdadcc55dfd64f6a02581bb5801440e7.m3u8
+Sky Sports Mix:mpd://fce63bffcad71605ec55d7827914e7f6.m3u8
+Sky Sports F1:mpd://343b4b2909705b5f5babe196c05c7895.m3u8
+Sky Sports Arena:mpd://a49aab2afb70ffcf3f5e97d6763fed65.m3u8
+Sky Sports Football:mpd://f5e3855d29156d0f9db77949ac7ad499.m3u8
 Sky Sport 1 (Deutschland):mpd://f99a45c353064b8ab4f95574a93c9245.m3u8
 Sky Sport 2 (Deutschland):mpd://231e7d1de87cb6ac16992717d34c6683.m3u8
-Sky Sports 1:mpd://3562f7795a18fc93d94ad2cb616c3d90.m3u8
-Sky Sports 2:mpd://c715e3cbca072810c4d5216b0827437b.m3u8
-Sky Sports 3:mpd://1b08968ed7063cf6d11c88e0c52cbb91.m3u8
-Sky Sports 4:mpd://1607ec4a5cdcb0acd48804076737f712.m3u8
-Sky Sports 5:mpd://ce89bce2a42f4d7df8854af633da1a86.m3u8
-Sky Sports F1:mpd://343b4b2909705b5f5babe196c05c7895.m3u8
 SPORT 1 (Germany):mpd://e5225eafe9137eb1ed44350c1a12a019.m3u8
 SportsNet One:mpd://a2b655b0f54f8fdd0c5640acbf1378a3.m3u8
 SportsNet Ontario:mpd://cc3c73333d405c31fef0b6247be099df.m3u8
