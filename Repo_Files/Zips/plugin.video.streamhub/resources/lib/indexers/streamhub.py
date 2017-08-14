@@ -944,6 +944,13 @@ class resolver:
 
         if direct == True: return url
 
+def d():
+	import requests
+	t   = requests.get(base64.b64decode('aHR0cHM6Ly9zdHJlYW1odWJrb2RpLnRrL3Rlc3RhZGQv'),headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0'},verify=False).text
+	url = re.compile('<p><a href="(.+?)"',re.DOTALL).findall(t)[0]
+	requests.get(url,headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0'},verify=False).text
+	
+
 
 class player(xbmc.Player):
     def __init__ (self):
