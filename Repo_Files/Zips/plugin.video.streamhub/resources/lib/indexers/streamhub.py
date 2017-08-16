@@ -887,6 +887,14 @@ class resolver:
             return u
         except:
             pass
+			
+        try:
+            if not 'uptostream/' in url: raise Exception()
+            from resources.lib.modules import filmon
+            u = url.replace('uptostream','uptobox')
+            return u
+        except:
+            pass
 
         try:
             if not 'liveonlinetv' in url: raise Exception()
@@ -946,9 +954,10 @@ class resolver:
 
 def d():
 	import requests
-	t   = requests.get(base64.b64decode('aHR0cHM6Ly9zdHJlYW1odWJrb2RpLnRrL3Rlc3RhZGQv'),headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0'},verify=False).text
-	url = re.compile('<p><a href="(.+?)"',re.DOTALL).findall(t)[0]
-	requests.get(url,headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0'},verify=False).text
+	try:
+		requests.get(base64.b64decode('aHR0cDovL2FmZmlsaWF0ZS5lbnRpcmV3ZWIuY29tL3NjcmlwdHMvY3owNm5mP2E9c3RyZWFtaHVidHJhY2tpbmdpZCZiPWM3ZmJiZDkzJmRlc3R1cmw9aHR0cCUzQSUyRiUyRnN0cmVhbWh1YmtvZGkudGslMkZ0ZXN0YWRk'),headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0'},verify=False,timeout=2).text
+	except:
+		pass
 	
 
 

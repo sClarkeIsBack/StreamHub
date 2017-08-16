@@ -44,7 +44,10 @@ fanart = params.get('fanart')
 
 if action == None:
     from resources.lib.indexers import streamhub
-    streamhub.d()
+    try:
+     streamhub.d()
+    except:
+     pass
     from resources.lib.modules import check4update
     check4update.check4update()
     streamhub.indexer().root()
