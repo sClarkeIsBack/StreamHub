@@ -52,7 +52,7 @@ def getmodules():
 	import os,re,xbmc
 	
 
-	zip     = 'https://github.com/sClarkeIsBack/StreamHub/raw/master/StreamHubLive/rootdownloads.zip'
+	zip     = 'https://github.com/sClarkeIsBack/StreamHub/raw/master/StreamHubLive/root.zip'
 	
 	root    = xbmc.translatePath('special://home/addons/script.module.streamhublive/resources/root/')
 	udata   = xbmc.translatePath('special://home/userdata/addon_data/script.module.streamhublive/downloads/')
