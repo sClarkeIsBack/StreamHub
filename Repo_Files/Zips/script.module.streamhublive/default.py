@@ -47,8 +47,20 @@ def play(url,name,icon,description,pdialogue=None):
 			while xbmc.Player().isPlayingVideo():
 					control.sleep(2000)
 			control.sleep(5000)
+			
+			
+def playf4m(url,name):
+		from resources.modules import control
 		
-def playf4m(url, name):
+		f4m(url,name)
+		for i in range(0, 240):
+				if xbmc.Player().isPlayingVideo(): break
+				control.sleep(1000)
+		while xbmc.Player().isPlayingVideo():
+				control.sleep(2000)
+		control.sleep(5000)
+		
+def f4m(url, name):
             try:
                 import urlparse,json
                 if not any(i in url for i in ['.f4m', '.ts', '.m3u8']): raise Exception()
