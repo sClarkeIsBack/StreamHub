@@ -45,7 +45,7 @@ fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
 
 name="- MY FLAWLESS BLACKGLASS MOD ON-TAPP BUILD" #name of build
 version="1.0" #version of build - change this when you update and users will auto get the latest update.
-url="https://www.dropbox.com/s/7k8arha1v2fy1rp/FLAWLESSTEST.zip?dl=1" #url of build
+url="https://www.dropbox.com/s/phi50mpp9zzsf7z/FLAWDDR.zip?dl=1" #url of build
 gui="http://"
 kodi="17.3"
 theme="http://"
