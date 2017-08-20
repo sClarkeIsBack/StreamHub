@@ -5,7 +5,7 @@ zip="https://raw.githubusercontent.com/sClarkeIsBack/MediaH/master/wizard/plugin
 
 name="StreamHub Build - sClarke"
 version="1.0"
-url="https://archive.org/download/streamhubbuildsamv1/Kodi.zip"
+url="https://archive.org/download/samemilyonline_gmail_Kodi_20170820/kodi.zip"
 gui="http://"
 kodi="17.3"
 theme="http://"
