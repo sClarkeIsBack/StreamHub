@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="Build Options">
+		<setting type="lsep" label="Current Build:"/>
+		<setting id="buildname" type="text" label="Installed Build: " enable="false" default=""/>
+		<setting id="defaultskin" type="text" label="Default Skin: " enable="false" default="" visible="false"/>
+		<setting id="defaultskinname" type="text" label="Default Skin Name: " enable="false" default="" visible="false"/>
+		<setting id="defaultskinignore" type="bool" label="Ignore default skin check:" enable="false" default="false" visible="false"/>
+		<setting id="buildversion" type="text" label="Installed Version: " enable="false" default=""/>
+		<setting id="buildtheme" type="text" label="Current Theme: " enable="false" default=""/>
+		<setting id="latestversion" type="text" label="Latest Version: " enable="false" default=""/>
+		<setting id="lastbuildcheck" type="text" label="Next check for build update: " enable="false" default=""/>
+		<setting type="lsep" label="Show Builds:"/>
+		<setting id="show15" type="bool" label="Show Kodi v15.0 and Below Builds" default="true"/>
+		<setting id="show16" type="bool" label="Show Kodi v16.0 and Above Builds" default="true"/>
+		<setting id="seperate" type="bool" label="Do not seperate based off version" default="false"/>
+		<setting id="installed" type="bool" label="Build Installed" visible="false" default="false" />
+		<setting id="extract" type="text" label="Extract Build %" visible="false" default="100" />
+		<setting id="errors" type="text" label="Extract Error" visible="false" default="" />
+	</category>
+	
+    <category label="Auto Clean Up">
+		<setting id="autoclean" type="bool" label="Enable Auto Clean" default="true"/>
+		<setting id="clearcache" type="bool" label="Clear Cache on Startup" default="true" enable="!eq(-1,false)"/>
+		<setting id="clearpackages" type="bool" label="Clear Packages on Startup" default="true" enable="!eq(-2,false)"/>
+   	</category>  	
+	
+	<category label="Install Settings">
+		<setting type="lsep" label="Keep Settings When Installing Build:"/>
+		<setting id="keepfavourites" type="bool" label="Keep My Favourites" default="false"/>
+		<setting id="keepsources" type="bool" label="Keep My Sources" default="false"/>
+		<setting id="keepprofiles" type="bool" label="Keep My Profiles" default="false"/>
+		<setting id="keepadvanced" type="bool" label="Keep My AdvancedSettings.xml" default="false"/>
+		<setting id="notify" type="bool" label="Disable Notification on Startup" />
+		<setting id="noteid" type="text" label="Latest Notification" visible="false" />
+		<setting id="notedismiss" type="bool" label="Dismiss or Remind me later" visible="false" />
+		<setting type="lsep" label="Upload Log: "/>
+		<setting id="email" type="text" label="E-Mail Address" />
+	</category>
+	
+	<category label="Trakt Settings">
+		<setting type="lsep" label="Save Trakt Data:"/>
+		<setting id="keeptrakt" type="bool" label="Keep My Trakt Data" default="false"/>
+		<setting id="exodus" type="text" label="Exodus: " enable="false" default=""/>
+		<setting id="metalliq" type="text" label="Metalliq: " enable="false" default=""/>
+		<setting id="meta" type="text" label="Meta: " enable="false" default=""/>
+		<setting id="salts" type="text" label="Salts: " enable="false" default=""/>
+		<setting id="saltshd" type="text" label="Salts HD: " enable="false" default=""/>
+		<setting id="velocity" type="text" label="Velocity: " enable="false" default=""/>
+		<setting id="royalwe" type="text" label="The Royal We: " enable="false" default=""/>
+		<setting id="velocitykids" type="text" label="Velocity Kids: " enable="false" default=""/>
+		<setting id="specto" type="text" label="Specto: " enable="false" default=""/>
+		<setting id="trakt" type="text" label="Trakt: " enable="false" default=""/>
+		<setting id="traktlastsave" type="text" label="Last Time Trakt Saved: " enable="false" default=""/>
+	</category>
+	
+	<category label="Real Debrid Settings">
+		<setting type="lsep" label="Save Real Debrid Data:"/>
+		<setting id="keepdebrid" type="bool" label="Keep My Real Debrid Data" default="false"/>
+		<setting id="realexodus" type="text" label="Exodus: " enable="false" default=""/>
+		<setting id="realspecto" type="text" label="Specto: " enable="false" default=""/>
+		<setting id="urlresolver" type="text" label="Url Resolver: " enable="false" default=""/>
+		<setting id="debridlastsave" type="text" label="Last Time Real Debrid Saved: " enable="false" default=""/>
+	</category>
+	
+	<category label="Login Settings">
+		<setting type="lsep" label="Save Login Data:"/>
+		<setting id="keeplogin" type="bool" label="Keep My Login Data" default="false"/>
+		<setting id="loginsportsaccess" type="text" label="SportsAccess: " enable="false" default=""/>
+		<setting id="logintotalinstaller" type="text" label="Community Portal: " enable="false" default=""/>
+		<setting id="logintvportal" type="text" label="TV Portal: " enable="false" default=""/>
+		<setting id="loginsportsmania" type="text" label="SportsMania: " enable="false" default=""/>
+		<setting id="loginsportsnationhd" type="text" label="SportsNationHD: " enable="false" default=""/>
+		<setting id="loginultimatemania" type="text" label="UltimateMania: " enable="false" default=""/>
+		<setting id="logindexter" type="text" label="Dexter: " enable="false" default=""/>
+		<setting id="loginreboot" type="text" label="Reboot: " enable="false" default=""/>
+		<setting id="loginvpnicity" type="text" label="VPNicity: " enable="false" default=""/>
+		<setting id="loginivue" type="text" label="Ivue TV Guide: " enable="false" default=""/>
+		<setting id="loginontapptv" type="text" label="On-Tapp TV Guide: " enable="false" default=""/>
+		<setting id="loginoverlord" type="text" label="Overlord TV: " enable="false" default=""/>
+		<setting id="loginxtreamcodes" type="text" label="Xtream-Codes: " enable="false" default=""/>
+		<setting id="loginlastsave" type="text" label="Last Time Login Saved: " enable="false" default=""/>
+	</category>
+	
+    <category label="Auto-View">
+		<setting id="developer" type="bool" label="Show Developer Menu: " enable="true" default=""/>
+		<setting id="auto-view" type="bool" label="Enable Auto View" default="true"/>
+		<setting id="MAIN" type="number" label="MAIN" default="50" enable="!eq(-1,false)"/>
+   	</category>  	
+  </settings>

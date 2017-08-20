@@ -1,0 +1,7 @@
+Credits to all developers that some of the code came from
+WHUFCLEE       :  killxbmc() & base code for a few other functions
+tknorris       :  part of the code for uploadLog to work again.
+][NT3L][G3NC][ :  for apk install code and force close fix
+TVAddons.ag    :  Splash Code
+OpenEleq       :  skinSwitch.py
+Surfacingx     :  Creator of the Wizard
