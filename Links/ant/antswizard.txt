@@ -7,7 +7,16 @@ zip="https://github.com/sClarkeIsBack/StreamHub/raw/master/Links/ant/plugin.prog
 #################################################################################
 
 
-name="- STREAMHUB DRAGON BUILD" #name of build
+name="- STREAMHUB DRAGON BUILD  SERVER 1" #name of build
+version="1.0" #version of build - change this when you update and users will auto get the latest update.
+url="https://www.dropbox.com/s/wt1nhnv0cp6ptpt/asstreamhubv0.1rc.zip?dl=1" #url of build
+gui="http://"
+kodi="17.3"
+theme="http://"
+icon="https://archive.org/download/download_20170720/download.jpg" #build icon
+fanart="http://wallpapercave.com/wp/sQR7xTw.jpg" # build fanart
+
+name="- STREAMHUB DRAGON BUILD   SERVER 2" #name of build
 version="1.0" #version of build - change this when you update and users will auto get the latest update.
 url="https://archive.org/download/asstreamhubv0.1rc/asstreamhubv0.1rc.zip" #url of build
 gui="http://"
