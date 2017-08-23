@@ -12,7 +12,7 @@ theme="http://"
 icon="https://s3.postimg.org/f8vosormb/screenshot012.png"
 fanart="https://s3.postimg.org/f8vosormb/screenshot012.png"
 
-name="StreamHub Build - aStorey"
+name="AsToReY Streamhub Build"
 version="1.0"
 url="https://www.dropbox.com/s/xs6bdxcojw6ajsk/hjhjhjhllol.zip?dl=1"
 gui="http://"
