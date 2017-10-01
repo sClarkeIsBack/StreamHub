@@ -23,13 +23,6 @@
 <thumbnail>https://s23.postimg.org/m5erwm1mz/template.png</thumbnail>
 </plugin>
 
-
-<plugin>
-<title>[COLOR white][B]Updates will be soon..Priorites are with my children[/COLOR][/B]</title>
-<link>hh</link>
-<thumbnail>https://s23.postimg.org/m5erwm1mz/template.png</thumbnail>
-</plugin>
- 
  
 
 <plugin>
@@ -59,7 +52,7 @@
 </dir>
 
 <plugin>
-<name>[COLOR ffff0000][B]M[/COLOR][COLOR white]usic[/COLOR][/B]</name>
+<name>[COLOR ffff0000][B]M[/COLOR][COLOR white]usic **Needs a full revamp, coming in the next few days**[/COLOR][/B]</name>
 <link>plugin://script.module.streamhub/?description&iconimage=C%3a%5cUsers%5cmedia%5cAppData%5cRoaming%5cKodi%5caddons%5cscript.module.streamhub%5cicon.png&mode=64&name=MUSIC&url=https%3a%2f%2fraw.githubusercontent.com%2fsClarkeIsBack%2fStreamHub%2fmaster%2fLinks%2f247%2f247tv.xml</link>
 <thumbnail>https://s12.postimg.org/4ttrp1n4d/music.png</thumbnail>
 </plugin>
@@ -81,12 +74,6 @@
 <name>[COLOR ffff0000][B]A[/COLOR][COLOR white]nime[/COLOR][/B]</name>
 <link>plugin://script.module.streamhub/?mode=51&url=http://www.toonget.net/dubbed-anime</link>
 <thumbnail>https://s12.postimg.org/exihl73v1/anime.png</thumbnail>
-</plugin>
-
-<plugin>
-<name>[COLOR ffff0000][B]24[/COLOR][COLOR white]/7 TV[/COLOR][/B]</name>
-<link>plugin://script.module.streamhub/?mode=47&url=None</link>
-<thumbnail>https://s12.postimg.org/kkeuio6dp/247_TV.png</thumbnail>
 </plugin>
 
 <dir>
