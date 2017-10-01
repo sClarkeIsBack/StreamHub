@@ -1,8 +1,9 @@
+# NEEDS FIXING
+
 # -*- coding: utf-8 -*-
 
 '''
-    Exodus Add-on
-    Copyright (C) 2016 Exodus
+    Covenant Add-on
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -31,9 +32,9 @@ class source:
     def __init__(self):
         self.priority = 1
         self.language = ['en']
-        self.domains = ['dizigold.net', 'dizigold.org']
-        self.base_link = 'http://www.dizigold.org'
-        self.player_link = 'http://player.dizigold.org/?id=%s&s=1&dil=%s'
+        self.domains = ['dizigold.net', 'dizigold1.com']
+        self.base_link = 'http://www.dizigold2.com'
+        self.player_link = 'http://player.dizigold2.com/?id=%s&s=1&dil=%s'
 
 
     def tvshow(self, imdb, tvdb, tvshowtitle, localtvshowtitle, aliases, year):
@@ -87,7 +88,7 @@ class source:
             id = re.compile('var\s*view_id\s*=\s*"(\d*)"').findall(result)[0]
 
 
-            for dil in ['tr', 'or']:
+            for dil in ['tr', 'or', 'en']:
                 query = self.player_link % (id, dil)
 
                 result = client.request(query, referer=base_url)

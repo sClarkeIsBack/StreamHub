@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
 '''
-    Exodus Add-on
-    Copyright (C) 2016 Exodus
+    Covenant Add-on
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -28,7 +27,7 @@ from resources.lib.modules import cleantitle
 class source:
     def __init__(self):
         self.priority = 1
-        self.language = ['en', 'de', 'fr', 'ko', 'pl', 'pt']
+        self.language = ['en', 'de', 'fr', 'ko', 'pl', 'pt', 'ru']
         self.domains = []
 
     def movie(self, imdb, title, localtitle, aliases, year):

@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
 '''
-    Exodus Add-on
-    Copyright (C) 2016 Exodus
+    Covenant Add-on
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -31,7 +30,7 @@ class source:
         self.priority = 0
         self.language = ['en']
         self.domains = ['project-free-tv.ch']
-        self.base_link = 'http://project-free-tv.ch'
+        self.base_link = 'http://project-free-tv.ag'
         self.search_link = '/movies/%s-%s/'
         self.search_link_2 = '/movies/search-form/?free=%s'
 

@@ -151,6 +151,10 @@
 		<setting id="trakt.user" type="action" label="32306" option="close" action="RunPlugin(plugin://plugin.video.streamhub/?action=authTrakt)" />
 		<setting id="trakt.token" type="text" option="hidden" visible="false" label="" default="" />
 		<setting id="trakt.refresh" type="text" option="hidden" visible="false" label="" default="" />
+		<setting type="lsep" label="Alluc" />
+        <setting id="alluc.api" type="text" label="Alluc API" default="" />
+        <setting id="alluc.limit" type="labelenum" label="Limit Alluc Results" default="100" values="10|20|30|40|50|60|70|80|90|100|150|200" />
+        <setting id="alluc.download" visible="false" type="bool" label="32009" default="false" />       
 		<setting type="sep" />
 		<setting type="lsep" label="More Accounts Can Be Configured in URL Resolver" />
 		<setting id="open_smu_settings" type="action" label="32540" enable="true" option="close" action="RunPlugin(plugin://plugin.video.streamhub/?action=smuSettings)" />
@@ -175,4 +179,5 @@
 		<setting type="lsep" label="32358" />
 		<setting type="lsep" label="32359" />
 	</category>
+	
 </settings>

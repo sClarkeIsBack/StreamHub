@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
 '''
-    Exodus Add-on
-    Copyright (C) 2016 Exodus
+    Covenant Add-on
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -93,47 +92,16 @@ class source:
 
 
             try:
-                feed = True
-
-                url = self.search_link % urllib.quote_plus(query)
-                url = urlparse.urljoin(self.base_link, url)
-
-                r = client.request(url)
-                if r == None: feed = False
-
-                posts = client.parseDOM(r, 'item')
-                if not posts: feed = False
-
-                items = []
-
-                for post in posts:
-                    try:
-                        t = client.parseDOM(post, 'title')[0]
-
-                        u = client.parseDOM(post, 'enclosure', ret='url', attrs={'type': 'video.+?'})
-                        if not u: raise Exception()
-
-                        c = client.parseDOM(post, 'content.+?')[0]
-
-                        s = re.findall('((?:\d+\.\d+|\d+\,\d+|\d+) (?:GB|GiB|MB|MiB))', c)
-                        s = s[0] if s else '0'
-
-                        u = client.parseDOM(c, 'a', ret='href')
-
-                        items += [(t, i, s) for i in u]
-                    except:
-                        pass
-            except:
-                pass
-
-
-            try:
-                if feed == True: raise Exception()
+                #if feed == True: raise Exception()
 
                 url = self.search_link_2 % urllib.quote_plus(query)
                 url = urlparse.urljoin(self.base_link, url)
-
-                r = client.request(url)
+                myheaders = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0',
+                   'Host': 'scenedown.in',
+                   'Connection': 'keep-alive',
+                   'Accept-Encoding': 'gzip, deflate, sdch'
+                }
+                r = client.request(url, headers=myheaders)
 
                 posts = client.parseDOM(r, 'div', attrs={'class': 'post'})
 
@@ -147,7 +115,7 @@ class source:
                             x = re.findall('/(tt\d+)', post)[0]
                             if not x == imdb: raise Exception()
                             q = re.findall('<strong>\s*Video\s*:\s*</strong>.+?\s(\d+)', post)[0]
-                            if not int(q) == 1280: raise Exception()
+                            if not int(q) >= 720: raise Exception()
                             if len(dupes) > 3: raise Exception()
                             dupes += [x]
 
@@ -160,7 +128,8 @@ class source:
                             dupes += [x]
 
                         u = client.parseDOM(post, 'a', ret='href')[0]
-                        r = client.request(u).replace('\n', '')
+                        myheaders['Referer'] = url
+                        r = client.request(u, headers=myheaders).replace('\n', '')
 
                         u = client.parseDOM(r, 'div', attrs={'class': 'postContent'})[0]
                         u = re.split('id\s*=\s*"more-\d+"', u)[-1]
@@ -253,5 +222,3 @@ class source:
 
     def resolve(self, url):
         return url
-
-

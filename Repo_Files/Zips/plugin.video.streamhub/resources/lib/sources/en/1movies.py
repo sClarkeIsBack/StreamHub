@@ -1,8 +1,9 @@
+# NEEDS FIXING
+
 # -*- coding: utf-8 -*-
 
 """
-    Exodus Add-on
-    Copyright (C) 2016 Exodus
+    Covenant Add-on
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -96,11 +97,18 @@ class source:
 
             if '1movies.' in link:
                 r = client.request(link, XHR=True, referer=ref)
-                js = json.loads(r)
-                j  = js['playlist']
-                for a in j:
-                    url = a['file'] 
-                    sources.append({'source': 'HLS', 'quality': 'HD', 'language': 'en', 'url': url, 'direct': True, 'debridonly': False})
+                r = [(match[1], match[0]) for match in re.findall('''['"]?file['"]?\s*:\s*['"]([^'"]+)['"][^}]*['"]?label['"]?\s*:\s*['"]([^'"]*)''', r, re.DOTALL)]
+                r = [(re.sub('[^\d]+', '', x[0]), x[1].replace('\/', '/')) for x in r]
+                r = [x for x in r if x[0]]
+
+                links = [(x[1], '4K') for x in r if int(x[0]) >= 2160]
+                links += [(x[1], '1440p') for x in r if int(x[0]) >= 1440]
+                links += [(x[1], '1080p') for x in r if int(x[0]) >= 1080]
+                links += [(x[1], 'HD') for x in r if 720 <= int(x[0]) < 1080]
+                links += [(x[1], 'SD') for x in r if int(x[0]) < 720]
+
+                for url, quality in links:
+                    sources.append({'source': 'gvideo', 'quality': quality, 'language': 'en', 'url': url, 'direct': True, 'debridonly': False})
             else:
                 valid, host = source_utils.is_host_valid(link, hostDict)
                 if not valid: return
