@@ -8,8 +8,6 @@ logfile    = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id
 
 def home():
 	addDir('[COLOR white][B]UK Geo Locked[/COLOR][/B]','url',1000,'https://s22.postimg.org/nboqvr74h/ukgeolocked.png',fanart,'')
-	addDir('[COLOR white][B]Web Scrapers[/COLOR][/B]','url',2000,'https://s22.postimg.org/o2hh1j9ht/template.png',fanart,'')
-	addDir('[COLOR white][B]IPTV Scrapers[/COLOR][/B]','url',3000,'https://s22.postimg.org/je1h6ckb5/IPTV.png',fanart,'')
 	addDir('[COLOR white][B]Android API[/COLOR][/B]','url',4000,'https://s22.postimg.org/in8r0khxt/androidapi.png',fanart,'')
 	
 def log(text):

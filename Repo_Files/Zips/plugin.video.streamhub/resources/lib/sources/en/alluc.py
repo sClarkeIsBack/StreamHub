@@ -162,7 +162,7 @@ class source:
                             info.append(jsonName)
                             info = '|'.join(info)
 
-                            sources.append({'source' : jsonHoster, 'quality':  quality, 'language' : jsonLanguage, 'url' : jsonLink, 'info': info, 'direct' : False, 'debridonly' : False})
+                            sources.append({'source' : jsonHoster, 'quality':  quality, 'language' : jsonLanguage, 'url' : jsonLink, 'info': '', 'direct' : False, 'debridonly' : False})
                             added = True
                         except:
                             pass
