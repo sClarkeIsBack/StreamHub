@@ -1,0 +1,13 @@
+
+id="plugin.program.RobWizard"
+version="1.0"
+zip="https://raw.githubusercontent.com/sClarkeIsBack/MediaH/master/wizard.zip"
+
+name="RobIPTV Build"
+version="1.0"
+url="https://www.dropbox.com/s/zgt9xt36hca5577/RobiptvbuildaeonnoxV0.0.1.zip?dl=1"
+gui="http://"
+kodi="17.3"
+theme="http://"
+icon="https://s1.postimg.org/894qa1bif3/temporary.png"
+fanart="https://s1.postimg.org/894qa1bif3/temporary.png"
