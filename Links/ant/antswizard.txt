@@ -7,8 +7,8 @@ zip="https://github.com/sClarkeIsBack/StreamHub/raw/master/Links/ant/plugin.prog
 #################################################################################
 
 name="-  SkyQ On Nox" #name of build
-version="1.1" #version of build - change this when you update and users will auto get the latest update.
-url="https://www.dropbox.com/s/3is1odhjv3j75to/antonyshomeskybuild.zip?dl=1" #url of build
+version="1.2" #version of build - change this when you update and users will auto get the latest update.
+url="https://www.dropbox.com/s/9kt2kprx5gb900i/myhomeskyuild11.zip?dl=1" #url of build
 gui="http://"
 kodi="17.4"
 theme="http://"
