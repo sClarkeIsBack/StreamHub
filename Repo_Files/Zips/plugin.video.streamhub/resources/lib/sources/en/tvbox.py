@@ -29,7 +29,7 @@ from resources.lib.modules import dom_parser
 
 class source:
     def __init__(self):       
-        self.priority = 0
+        self.priority = 1
         self.language = ['en']
         self.domains = ['tvbox.ag']
         self.base_link = 'https://tvbox.ag'

@@ -28,7 +28,7 @@ from resources.lib.modules import directstream
 
 class source:
     def __init__(self):
-        self.priority = 0
+        self.priority = 1
         self.language = ['en']
         self.domains = ['imdark.com']
         self.base_link = 'http://imdark.com'

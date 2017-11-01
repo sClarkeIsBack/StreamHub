@@ -30,10 +30,9 @@ class source:
     def __init__(self):
         self.priority = 1
         self.language = ['en']
-        self.domains = ['rlsbb.online', 'rlsbb.co']
-        self.base_link = 'http://rlsbb.co/'
+        self.domains = ['2dll.unblocked.pro']
+        self.base_link = 'https://2ddl.unblocked.pro'
         self.search_link = '/search/%s/feed/rss2/'
-        self.search_link2 = '/?s=%s&submit=Find'
 
 
     def movie(self, imdb, title, localtitle, aliases, year):
@@ -99,9 +98,13 @@ class source:
             for post in posts:
                 try:
                     t = client.parseDOM(post, 'title')[0]
-                    u = client.parseDOM(post, 'enclosure', ret='url', attrs={'type': 'video.+?'})
 
-                    s = re.findall('((?:\d+\.\d+|\d+\,\d+|\d+) (?:GiB|MiB|GB|MB))', post)
+                    c = client.parseDOM(post, 'content.+?')[0]
+
+                    u = re.findall('<singlelink>(.+?)(?:<download>|$)', c.replace('\n', ''))[0]
+                    u = client.parseDOM(u, 'a', ret='href')
+
+                    s = re.findall('((?:\d+\.\d+|\d+\,\d+|\d+)\s*(?:GB|GiB|MB|MiB))', c)
                     s = s[0] if s else '0'
 
                     items += [(t, i, s) for i in u]
@@ -125,9 +128,8 @@ class source:
                     quality, info = source_utils.get_release_quality(name, item[1])
 
                     try:
-                        size = re.sub('i', '', item[2])
-                        print size
-                        div = 1 if size.endswith('GB') else 1024
+                        size = re.findall('((?:\d+\.\d+|\d+\,\d+|\d+)\s*(?:GB|GiB|MB|MiB))', item[2])[-1]
+                        div = 1 if size.endswith(('GB', 'GiB')) else 1024
                         size = float(re.sub('[^0-9|/.|/,]', '', size))/div
                         size = '%.2f GB' % size
                         info.append(size)
@@ -142,7 +144,7 @@ class source:
                     url = url.encode('utf-8')
 
                     valid, host = source_utils.is_host_valid(url, hostDict)
-                    if not valid: continue
+                    if not valid: raise Exception()
                     host = client.replaceHTMLCodes(host)
                     host = host.encode('utf-8')
 

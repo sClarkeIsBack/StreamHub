@@ -1,7 +1,6 @@
-# NEEDS FIXING
-
 '''
     Covenant Add-on
+    Copyright (C) 2016 Covenant
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -23,7 +22,7 @@ import urlparse
 import json
 
 from resources.lib.modules import client, cleantitle, directstream
-
+from resources.lib.modules import source_utils
 
 class source:
     def __init__(self):
@@ -31,12 +30,11 @@ class source:
         Constructor defines instances variables
 
         '''
-        self.priority = 1
+        self.priority = 0
         self.language = ['en']
         self.domains = ['putlocker.rs']
-        self.base_link = 'https://putlocker.rs'
-        self.movie_search_path = ('/filter?keyword=%s&sort=post_date:Adesc'
-                                  '&type[]=movie&release[]=%s')
+        self.base_link = 'https://putlocker.sk'
+        self.movie_search_path = ('search?keyword=%s')
         self.episode_search_path = ('/filter?keyword=%s&sort=post_date:Adesc'
                                     '&type[]=series')
         self.film_path = '/watch/%s'
@@ -63,7 +61,7 @@ class source:
         '''
         try:
             clean_title = cleantitle.geturl(title)
-            query = (self.movie_search_path % (clean_title, year))
+            query = (self.movie_search_path % (clean_title))
             url = urlparse.urljoin(self.base_link, query)
 
             search_response = client.request(url)
@@ -159,7 +157,7 @@ class source:
             data = dict((i, data[i][0]) for i in data)
 
             clean_title = cleantitle.geturl(data['tvshowtitle'])
-            query = (self.episode_search_path % clean_title)
+            query = (self.movie_search_path % clean_title)
             url = urlparse.urljoin(self.base_link, query)
 
             search_response = client.request(url)
@@ -241,38 +239,64 @@ class source:
             data = urlparse.parse_qs(url)
             data = dict((i, data[i][0]) for i in data)
             data['sources'] = re.findall("[^', u\]\[]+", data['sources'])
-
+                        
             for i in data['sources']:
                 token = str(self.__token(
                     {'id': i, 'update': 0, 'ts': data['ts']}))
                 query = (self.info_path % (data['ts'], token, i))
                 url = urlparse.urljoin(self.base_link, query)
-
                 info_response = client.request(url, XHR=True)
-
                 grabber_dict = json.loads(info_response)
 
-                if grabber_dict['type'] == 'direct':
-                    token64 = grabber_dict['params']['token']
-                    query = (self.grabber_path % (data['ts'], i, token64))
-                    url = urlparse.urljoin(self.base_link, query)
+                try:
+                    if grabber_dict['type'] == 'direct':
+                        token64 = grabber_dict['params']['token']
+                        query = (self.grabber_path % (data['ts'], i, token64))
+                        url = urlparse.urljoin(self.base_link, query)
 
-                    response = client.request(url, XHR=True)
+                        response = client.request(url, XHR=True)
 
-                    sources_list = json.loads(response)['data']
+                        sources_list = json.loads(response)['data']
+                        
+                        for j in sources_list:
+                            
+                            quality = j['label'] if not j['label'] == '' else 'SD'
+                            #quality = 'HD' if quality in ['720p','1080p'] else 'SD'
+                            quality = source_utils.label_to_quality(quality)
 
-                    for j in sources_list:
-                        source = directstream.googletag(j['file'])[0]
+                            if 'googleapis' in j['file']:
+                                sources.append({'source': 'GVIDEO', 'quality': quality, 'language': 'en', 'url': j['file'], 'direct': True, 'debridonly': False})
+                                continue
 
+                            #source = directstream.googlepass(j['file'])
+                            valid, hoster = source_utils.is_host_valid(j['file'], hostDict)
+                            urls, host, direct = source_utils.check_directstreams(j['file'], hoster)
+                            for x in urls:
+                                sources.append({
+                                    'source': 'gvideo',
+                                    'quality': quality,
+                                    'language': 'en',
+                                    'url': x['url'],
+                                    'direct': True,
+                                    'debridonly': False
+                                })
+
+                    elif not grabber_dict['target'] == '':
+                        url = 'https:' + grabber_dict['target'] if not grabber_dict['target'].startswith('http') else grabber_dict['target']
+                        #host = re.findall('([\w]+[.][\w]+)$', urlparse.urlparse(url.strip().lower()).netloc)[0]
+                        valid, hoster = source_utils.is_host_valid(url, hostDict)
+                        if not valid: continue
+                        urls, host, direct = source_utils.check_directstreams(url, hoster)
                         sources.append({
-                            'source': 'gvideo',
-                            'quality': source['quality'],
+                            'source': hoster,
+                            'quality': urls[0]['quality'],
                             'language': 'en',
-                            'url': source['url'],
-                            'direct': True,
+                            'url': urls[0]['url'], #url.replace('\/','/'),
+                            'direct': False,
                             'debridonly': False
                         })
-
+                except: pass
+                    
             return sources
 
         except Exception:
@@ -296,7 +320,8 @@ class source:
                 url = 'http:' + url
 
             for i in range(3):
-                url = directstream.googlepass(url)
+                if 'google' in url and not 'googleapis' in url:
+                    url = directstream.googlepass(url)
 
                 if url:
                     break

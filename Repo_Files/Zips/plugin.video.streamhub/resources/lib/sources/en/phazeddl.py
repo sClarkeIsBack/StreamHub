@@ -30,37 +30,14 @@ class source:
     def __init__(self):
         self.priority = 1
         self.language = ['en']
-        self.domains = ['rlsbb.online', 'rlsbb.co']
-        self.base_link = 'http://rlsbb.co/'
+        self.domains = ['tinydl.com', 'phazeddl.me']
+        self.base_link = 'http://phazeddl.me/'
         self.search_link = '/search/%s/feed/rss2/'
-        self.search_link2 = '/?s=%s&submit=Find'
 
 
     def movie(self, imdb, title, localtitle, aliases, year):
         try:
             url = {'imdb': imdb, 'title': title, 'year': year}
-            url = urllib.urlencode(url)
-            return url
-        except:
-            return
-
-
-    def tvshow(self, imdb, tvdb, tvshowtitle, localtvshowtitle, aliases, year):
-        try:
-            url = {'imdb': imdb, 'tvdb': tvdb, 'tvshowtitle': tvshowtitle, 'year': year}
-            url = urllib.urlencode(url)
-            return url
-        except:
-            return
-
-
-    def episode(self, url, imdb, tvdb, title, premiered, season, episode):
-        try:
-            if url == None: return
-
-            url = urlparse.parse_qs(url)
-            url = dict([(i, url[i][0]) if url[i] else (i, '') for i in url])
-            url['title'], url['premiered'], url['season'], url['episode'] = title, premiered, season, episode
             url = urllib.urlencode(url)
             return url
         except:
@@ -73,7 +50,7 @@ class source:
 
             if url == None: return sources
 
-            if debrid.status() is False: raise Exception()
+            if debrid.status() == False: raise Exception()
 
             data = urlparse.parse_qs(url)
             data = dict([(i, data[i][0]) if data[i] else (i, '') for i in data])
@@ -99,13 +76,17 @@ class source:
             for post in posts:
                 try:
                     t = client.parseDOM(post, 'title')[0]
-                    u = client.parseDOM(post, 'enclosure', ret='url', attrs={'type': 'video.+?'})
 
-                    s = re.findall('((?:\d+\.\d+|\d+\,\d+|\d+) (?:GiB|MiB|GB|MB))', post)
+                    c = client.parseDOM(post, 'content.+?')[0]
+
+                    u = re.findall('>Single Link(.+?)p>\s*<span', c.replace('\n', ''))[0]
+
+                    u = client.parseDOM(u, 'a', ret='href')
+
+                    s = re.findall('((?:\d+\.\d+|\d+\,\d+|\d+) (?:GB|GiB|MB|MiB))', c)
                     s = s[0] if s else '0'
 
                     items += [(t, i, s) for i in u]
-
                 except:
                     pass
 
@@ -121,13 +102,11 @@ class source:
                     y = re.findall('[\.|\(|\[|\s](\d{4}|S\d*E\d*|S\d*)[\.|\)|\]|\s]', name)[-1].upper()
 
                     if not y == hdlr: raise Exception()
-
                     quality, info = source_utils.get_release_quality(name, item[1])
 
                     try:
-                        size = re.sub('i', '', item[2])
-                        print size
-                        div = 1 if size.endswith('GB') else 1024
+                        size = re.findall('((?:\d+\.\d+|\d+\,\d+|\d+) (?:GB|GiB|MB|MiB))', item[2])[-1]
+                        div = 1 if size.endswith(('GB', 'GiB')) else 1024
                         size = float(re.sub('[^0-9|/.|/,]', '', size))/div
                         size = '%.2f GB' % size
                         info.append(size)
@@ -141,8 +120,7 @@ class source:
                     url = client.replaceHTMLCodes(url)
                     url = url.encode('utf-8')
 
-                    valid, host = source_utils.is_host_valid(url, hostDict)
-                    if not valid: continue
+                    valid, host = source_utils.is_host_valid(url,hostDict)
                     host = client.replaceHTMLCodes(host)
                     host = host.encode('utf-8')
 
@@ -160,5 +138,3 @@ class source:
 
     def resolve(self, url):
         return url
-
-

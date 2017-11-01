@@ -29,13 +29,11 @@ class source:
     def __init__(self):
         self.priority = 0
         self.language = ['en']
-        self.domains = ['watchfree.to']
-        self.base_link = 'http://www.watchfree.ac'
-        self.base_link = 'https://watchfree.unblockall.xyz'
-        self.base_link = 'https://watchfree.unblocker.win'
+        self.domains = ['watchfree.to','watchfree.unblockall.org','www6-watchfree6-to.unblocked.lol']
+        self.base_link = 'http://watchfree.unblockall.org'
+        self.base_link = 'http://www6-watchfree6-to.unblocked.lol'
         self.moviesearch_link = '/?keyword=%s&search_section=1'
         self.tvsearch_link = '/?keyword=%s&search_section=2'
-
 
     def movie(self, imdb, title, localtitle, aliases, year):
         try:
