@@ -7,7 +7,7 @@ zip="https://github.com/sClarkeIsBack/StreamHub/raw/master/Links/ant/plugin.prog
 #################################################################################
 
 name="-  Base build Large" #name of build
-version="1.2" #version of build - change this when you update and users will auto get the latest update.
+version="1.3" #version of build - change this when you update and users will auto get the latest update.
 url="https://www.dropbox.com/s/d1m0ixoaskp10ow/saturnfullupdate99991.zip?dl=1" #url of build
 gui="http://"
 kodi="17.4"
