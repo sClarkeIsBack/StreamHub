@@ -1,6 +1,6 @@
 
   
-<item>
+<plugin>
   <title>test</title>
-  <link>http://entervideo.net/watch/43562e9276bac5e</link>
-</item>
+  <link>plugin://script.module.interstellerscrapers/?mode=1&url=none</link>
+</plugin>
