@@ -29,6 +29,30 @@
 	</extension>
 </addon>
 
+<addon id="plugin.video.streamhubp"
+       name="[COLOR ffff0000][B]StreamHub[/COLOR][COLOR gold] Premium[/COLOR][/B]"
+       version="1.0.0"
+       provider-name="sClarke">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.requests" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">StreamHub Premium - Bringing Stable and Solid Streams To You!</summary>
+    <language>en</language>
+    <description lang="en">[COLOR ffff0000][B]StreamHub[/COLOR][COLOR gold] Premium[/COLOR][/B] - Only Bringing The Best in Live IPTV and VOD[CR]http://streamhubkodi.tk</description>
+     <platform>all</platform>
+	 <assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+	</assets>
+  </extension>
+</addon>
+
 <addon id="plugin.program.streamhubwiz" name="[COLOR ffff0000]StreamHub Wiz[/COLOR]" version="1.0" provider-name="sClarke">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
