@@ -13,7 +13,7 @@
 
 <plugin>
 <title>[COLOR gold][B]StreamHub Premium[/COLOR][/B]</title>
-<link>plugin://script.module.streamhub/?mode=99999&url=none</link>
+<link>plugin://plugin.video.streamhubp</link>
 <thumbnail>https://s21.postimg.org/ji5hrxm9z/STREAMHUB_PREMIUM.png</thumbnail>
 </plugin>
 
