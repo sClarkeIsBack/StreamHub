@@ -1,0 +1,3 @@
+v1.0.1 - Updates to URL allowing user to define which URL is used.
+
+v1.0.0 - Inital Release

@@ -14,10 +14,10 @@ fanart       = xbmc.translatePath(os.path.join('special://home/addons/' + user.i
 username     = control.setting('Username')
 password     = control.setting('Password')
 
-live_url     = '%s:%s/enigma2.php?username=%s&password=%s&type=get_live_categories'%(user.host,user.port,username,password)
-vod_url      = '%s:%s/enigma2.php?username=%s&password=%s&type=get_vod_categories'%(user.host,user.port,username,password)
-panel_api    = '%s:%s/panel_api.php?username=%s&password=%s'%(user.host,user.port,username,password)
-play_url     = '%s:%s/live/%s/%s/'%(user.host,user.port,username,password)
+live_url     = '%s:%s/enigma2.php?username=%s&password=%s&type=get_live_categories'%(user.host(),user.port,username,password)
+vod_url      = '%s:%s/enigma2.php?username=%s&password=%s&type=get_vod_categories'%(user.host(),user.port,username,password)
+panel_api    = '%s:%s/panel_api.php?username=%s&password=%s'%(user.host(),user.port,username,password)
+play_url     = '%s:%s/live/%s/%s/'%(user.host(),user.port,username,password)
 
 
 Guide = xbmc.translatePath(os.path.join('special://home/addons/addons/'+user.id+'/resources/catchup', 'guide.xml'))
@@ -39,7 +39,7 @@ def start():
 		control.setSetting('Username',usern)
 		control.setSetting('Password',passw)
 		xbmc.executebuiltin('Container.Refresh')
-		auth = '%s:%s/enigma2.php?username=%s&password=%s&type=get_vod_categories'%(user.host,user.port,usern,passw)
+		auth = '%s:%s/enigma2.php?username=%s&password=%s&type=get_vod_categories'%(user.host(),user.port,usern,passw)
 		auth = tools.OPEN_URL(auth)
 		if auth == "":
 			line1 = "Incorrect Login Details"
@@ -57,7 +57,7 @@ def start():
 			xbmc.executebuiltin('Container.Refresh')
 			home()
 	else:
-		auth = '%s:%s/enigma2.php?username=%s&password=%s&type=get_vod_categories'%(user.host,user.port,username,password)
+		auth = '%s:%s/enigma2.php?username=%s&password=%s&type=get_vod_categories'%(user.host(),user.port,username,password)
 		auth = tools.OPEN_URL(auth)
 		if not auth=="":
 			tools.addDir('Account Information','url',6,icon,fanart,'')
@@ -177,7 +177,7 @@ def tvarchive(name,description):
     date3 = datetime.datetime.now() - datetime.timedelta(days)
     date = str(date3)
     date = str(date).replace('-','').replace(':','').replace(' ','')
-    APIv2 = base64.b64decode("JXM6JXMvcGxheWVyX2FwaS5waHA/dXNlcm5hbWU9JXMmcGFzc3dvcmQ9JXMmYWN0aW9uPWdldF9zaW1wbGVfZGF0YV90YWJsZSZzdHJlYW1faWQ9JXM=")%(user.host,user.port,username,password,description)
+    APIv2 = base64.b64decode("JXM6JXMvcGxheWVyX2FwaS5waHA/dXNlcm5hbWU9JXMmcGFzc3dvcmQ9JXMmYWN0aW9uPWdldF9zaW1wbGVfZGF0YV90YWJsZSZzdHJlYW1faWQ9JXM=")%(user.host(),user.port,username,password,description)
     link=tools.OPEN_URL(APIv2)
     match = re.compile('"title":"(.+?)".+?"start":"(.+?)","end":"(.+?)","description":"(.+?)"').findall(link)
     for ShowTitle,start,end,DesC in match:
@@ -204,7 +204,7 @@ def tvarchive(name,description):
         Finalstart = Editstart.replace('-:','-')
         if Realstart > date:
             if Realstart < now:
-                catchupURL = base64.b64decode("JXM6JXMvc3RyZWFtaW5nL3RpbWVzaGlmdC5waHA/dXNlcm5hbWU9JXMmcGFzc3dvcmQ9JXMmc3RyZWFtPSVzJnN0YXJ0PQ==")%(user.host,user.port,username,password,description)
+                catchupURL = base64.b64decode("JXM6JXMvc3RyZWFtaW5nL3RpbWVzaGlmdC5waHA/dXNlcm5hbWU9JXMmcGFzc3dvcmQ9JXMmc3RyZWFtPSVzJnN0YXJ0PQ==")%(user.host(),user.port,username,password,description)
                 ResultURL = catchupURL + str(Finalstart) + "&duration=%s"%(FinalDuration)
                 kanalinimi = "[COLOR white]%s[/COLOR] - %s"%(start2,ShowTitle)
                 tools.addDir(kanalinimi,ResultURL,4,icon,fanart,DesC)
@@ -289,11 +289,14 @@ def settingsmenu():
 		META = '[COLOR lime]ON[/COLOR]'
 	else:
 		META = '[COLOR red]OFF[/COLOR]'
-	if xbmcaddon.Addon().getSetting('update')=='true':
-		UPDATE = '[COLOR lime]ON[/COLOR]'
+		
+	if xbmcaddon.Addon().getSetting('direct')=='true':
+		DIRECT = '[COLOR lime]ON[/COLOR]'
 	else:
-		UPDATE = '[COLOR red]OFF[/COLOR]'
+		DIRECT = '[COLOR red]OFF[/COLOR]'
+		
 	tools.addDir('Edit Advanced Settings','ADS',10,icon,fanart,'')
+	tools.addDir('Use Protected URL is %s'%DIRECT,'DIRECT',10,icon,fanart,DIRECT)
 	tools.addDir('META for VOD is %s'%META,'META',10,icon,fanart,META)
 	tools.addDir('Log Out','LO',10,icon,fanart,'')
 	
@@ -354,6 +357,13 @@ def addonsettings(url,description):
 			xbmc.executebuiltin('Container.Refresh')
 		else:
 			xbmcaddon.Addon().setSetting('meta','true')
+			xbmc.executebuiltin('Container.Refresh')
+	elif url =="DIRECT":
+		if 'ON' in description:
+			xbmcaddon.Addon().setSetting('direct','false')
+			xbmc.executebuiltin('Container.Refresh')
+		else:
+			xbmcaddon.Addon().setSetting('direct','true')
 			xbmc.executebuiltin('Container.Refresh')
 	elif url =="LO":
 		xbmcaddon.Addon().setSetting('Username','')
@@ -483,8 +493,8 @@ def correctPVR():
 	jsonSetPVR = '{"jsonrpc":"2.0", "method":"Settings.SetSettingValue", "params":{"setting":"pvrmanager.enabled", "value":true},"id":1}'
 	IPTVon 	   = '{"jsonrpc":"2.0","method":"Addons.SetAddonEnabled","params":{"addonid":"pvr.iptvsimple","enabled":true},"id":1}'
 	nulldemo   = '{"jsonrpc":"2.0","method":"Addons.SetAddonEnabled","params":{"addonid":"pvr.demo","enabled":false},"id":1}'
-	loginurl   = user.host+':'+user.port+"/get.php?username=" + username_text + "&password=" + password_text + "&type=m3u_plus&output=ts"
-	EPGurl     = user.host+':'+user.port+"/xmltv.php?username=" + username_text + "&password=" + password_text
+	loginurl   = user.host()+':'+user.port+"/get.php?username=" + username_text + "&password=" + password_text + "&type=m3u_plus&output=ts"
+	EPGurl     = user.host()+':'+user.port+"/xmltv.php?username=" + username_text + "&password=" + password_text
 
 	xbmc.executeJSONRPC(jsonSetPVR)
 	xbmc.executeJSONRPC(IPTVon)
@@ -525,6 +535,7 @@ def extras():
 	tools.addDir('Integrate With TV Guide','tv',10,icon,fanart,'')
 	tools.addDir('Run a Speed Test','ST',10,icon,fanart,'')
 	tools.addDir('Clear Cache','CC',10,icon,fanart,'')
+	
 	
 
 params=tools.get_params()

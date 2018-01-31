@@ -2,6 +2,8 @@
 <category label="General">
      <setting id="Username" type="text" label="Username" default=""/>
      <setting id="Password" type="text" label="Password" default=""/>
+	 <setting label="Use Protected URL - Mainly For UK Customers Effected By The Blocks." type="lsep" />
+	 <setting id="direct" type="bool" label="Use Protected URL" default="true"/>
 	 <setting id="meta" type="bool" label="VOD meta" visible="false" default="true"/>
 </category>
 </settings>
