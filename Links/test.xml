@@ -1,6 +1,6 @@
 
   
-<plugin>
+<item>
   <title>test</title>
-  <link>plugin://script.module.interstellerscrapers/?mode=1&url=none</link>
-</plugin>
+  <url>http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/abr_hdtv/ak/bbc_one_hd.m3u8</url>
+</item>
