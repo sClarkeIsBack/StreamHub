@@ -1,19 +1,7 @@
-#################################################################################
 
-id="plugin.program.AntonysWizard"
-version="1.1"
-zip="https://github.com/sClarkeIsBack/StreamHub/raw/master/Links/ant/plugin.program.AntonysWizard.zip"
-
-#################################################################################
-
-name="-  Sofaflix Simpsons Build" #name of build
-version="0.1" #version of build - change this when you update and users will auto get the latest update.
-url="https://www.dropbox.com/s/qcor08c2a8xkfl8/sofaflixnewV1.zip?dl=1" #url of build
-gui="http://"
-kodi="17.6"
-theme="http://"
-icon="" #build icon
-fanart=" # build fanart
+id="plugin.program.MediaHubIPTVWizard"
+version="1.4"
+zip="https://raw.githubusercontent.com/sClarkeIsBack/MediaH/master/wizard/plugin.program.MediaHubWizard.zip"
 
 name="StreamHub Build - sClarke"
 version="1.1"
@@ -22,4 +10,31 @@ gui="http://"
 kodi="17.3"
 theme="http://"
 icon="https://s3.postimg.org/f8vosormb/screenshot012.png"
-fanart="https://s3.postimg.org/f8vosormb/screenshot012.png
+fanart="https://s3.postimg.org/f8vosormb/screenshot012.png"
+
+name="testt"
+version="1.1"
+url="https://archive.org/download/samemilyonline_gmail_Kodi_201802/Kodi.zip"
+gui="http://"
+kodi="17.3"
+theme="http://"
+icon="https://s3.postimg.org/f8vosormb/screenshot012.png"
+fanart="https://s3.postimg.org/f8vosormb/screenshot012.png"
+
+name="AsToReY Streamhub Build"
+version="1.0"
+url="https://www.dropbox.com/s/f4m7vqx9panfx2b/shnewbuild195mb.zip?dl=1"
+gui="http://"
+kodi="17.3"
+theme="http://"
+icon="https://www.dropbox.com/s/6bou7yv7tuf00q4/Screenshot_20171214-040116.png?dl=1"
+fanart="https://www.dropbox.com/s/6bou7yv7tuf00q4/Screenshot_20171214-040116.png?dl=1"
+
+name="test"
+version="1.0"
+url="https://archive.org/download/samemilyonline_gmail_Kodi_201802/Kodi.zip"
+gui="http://"
+kodi="17.3"
+theme="http://"
+icon="https://www.dropbox.com/s/6boutuf00q4/Screenshot_20171214-040116.png?dl=1"
+fanart="https://www.dropbox.coyv7tuf00q4/Screenshot_20171214-040116.png?dl=1"
