@@ -12,5 +12,14 @@ theme="http://"
 icon=".png"
 fanart=".png"
 
+name="Test Build 2"
+version="1.1"
+url="https://archive.org/download/asbuild18rc/asbuild18rc.zip"
+gui="http://"
+kodi="18 RC"
+theme="http://"
+icon=".png"
+fanart=".png"
+
  
 
