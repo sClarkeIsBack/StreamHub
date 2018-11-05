@@ -5,15 +5,6 @@ zip="https://raw.githubusercontent.com/sClarkeIsBack/MediaH/master/wizard/plugin
 
 name="Test Build"
 version="1.1"
-url="https://archive.org/download/antoppal111_gmail_Def/def.zip"
-gui="http://"
-kodi="18 RC"
-theme="http://"
-icon=".png"
-fanart=".png"
-
-name="Test Build 2"
-version="1.1"
 url="https://archive.org/download/asbuild18rc/asbuild18rc.zip"
 gui="http://"
 kodi="18 RC"
