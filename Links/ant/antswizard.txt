@@ -3,14 +3,14 @@ id="plugin.program.MediaHubIPTVWizard"
 version="1.4"
 zip="https://raw.githubusercontent.com/sClarkeIsBack/MediaH/master/wizard/plugin.program.MediaHubWizard.zip"
 
-name="Test Build"
+name="Fire Tv Build"
 version="1.1"
-url="https://archive.org/download/asbuild18rc/asbuild18rc.zip"
+url="https://www.dropbox.com/s/ws64ajnny873opt/test1.zip?dl=1"
 gui="http://"
-kodi="18 RC"
-theme="http://"
+kodi="18.2"
+theme="https://www.dropbox.com/s/psi505thax4qtdk/Photo_1556179503601.png?dl=1"
 icon=".png"
-fanart=".png"
+fanart="https://www.dropbox.com/s/psi505thax4qtdk/Photo_1556179503601.png?dl=1"
 
  
 
