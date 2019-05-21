@@ -15,7 +15,7 @@ fanart="https://www.dropbox.com/s/psi505thax4qtdk/Photo_1556179503601.png?dl=1"
 
  name="X-X-X-X"
 version="1.1"
-url="https://www.dropbox.com/s/gdnsy9ds5fix2us/gggy8.zip?dl=1"
+url="https://www.dropbox.com/s/i22gu4x2pvargkn/ttttfswsz.zip?dl=1"
 gui="http://"
 kodi="17.6"
 theme="https://www.dropbox.com/s/psi505thax4qtdk/Photo_1556179503601.png?dl=1"
