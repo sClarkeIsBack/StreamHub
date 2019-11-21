@@ -4,9 +4,9 @@ version="1.4"
 zip="https://raw.githubusercontent.com/sClarkeIsBack/MediaH/master/wizard/plugin.program.MediaHubWizard.zip"
 
 
- name="Eiré Hosting My Sky Q Plex & Live Tv Build"
+ name="Test"
 version="1.1"
-url="https://www.dropbox.com/s/feu1abc74t3oziy/qkoditest1.zip?dl=1"
+url="https://mega.nz/#!BAF3wQiT!obKOMa4q-wCInssgJupiUaTKaMhvLkyW2p8_GsKHYV0"
 gui="http://"
 kodi="17.6"
 theme="https://www.dropbox.com/s/psi505thax4qtdk/Photo_1556179503601.png?dl=1"
