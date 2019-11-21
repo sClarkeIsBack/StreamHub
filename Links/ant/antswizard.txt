@@ -6,7 +6,7 @@ zip="https://raw.githubusercontent.com/sClarkeIsBack/MediaH/master/wizard/plugin
 
  name="Test"
 version="1.1"
-url="https://mega.nz/#!BAF3wQiT!obKOMa4q-wCInssgJupiUaTKaMhvLkyW2p8_GsKHYV0"
+url="https://www.dropbox.com/s/otk7jbdue1tcjnw/stage1netflixiptv.zip?dl=1"
 gui="http://"
 kodi="17.6"
 theme="https://www.dropbox.com/s/psi505thax4qtdk/Photo_1556179503601.png?dl=1"
