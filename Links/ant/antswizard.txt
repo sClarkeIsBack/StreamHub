@@ -6,7 +6,7 @@ zip="https://raw.githubusercontent.com/sClarkeIsBack/MediaH/master/wizard/plugin
 
  name="Test"
 version="1.1"
-url="https://www.dropbox.com/s/6p7s4cqpnixa0y8/supremeflixbeta1.zip?dl=1"
+url="https://www.dropbox.com/s/5e9at59d5ewpag6/fjj.zip?dl=1"
 gui="http://"
 kodi="18.5"
 theme="https://www.dropbox.com/s/psi505thax4qtdk/Photo_1556179503601.png?dl=1"
