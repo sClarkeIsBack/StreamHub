@@ -6,7 +6,7 @@ zip="https://raw.githubusercontent.com/sClarkeIsBack/MediaH/master/wizard/plugin
 
  name="Test1"
 version="1.0"
-url="https://www.dropbox.com/s/3v2ad7am5zxvumc/ee2.zip?dl=1"
+url="https://www.dropbox.com/s/lnxvohturvsn3iq/kodibuildv1.0.zip?dl=1"
 gui="http://"
 kodi="18.5"
 theme="https://www.dropbox.com/s/psi505thax4qtdk/Photo_1556179503601.png?dl=1"
