@@ -13,4 +13,13 @@ theme="https://www.dropbox.com/s/psi505thax4qtdk/Photo_1556179503601.png?dl=1"
 icon="https://www.dropbox.com/s/fq5zwccg36q6lcd/Screenshot_20191129-145430_SRU%20XEN%20185.jpg?dl=1"
 fanart="https://www.dropbox.com/s/r0n42wbugx71zzt/Screenshot_20191129-145505_SRU%20XEN%20185.jpg?dl=1"
 
+name="Test2"
+version="1.0"
+url="https://www.dropbox.com/s/uscs0n9le2lyj3h/myplexflix.zip?dl=1"
+gui="http://"
+kodi="18.5"
+theme="https://www.dropbox.com/s/psi505thax4qtdk/Photo_1556179503601.png?dl=1"
+icon="https://www.dropbox.com/s/fq5zwccg36q6lcd/Screenshot_20191129-145430_SRU%20XEN%20185.jpg?dl=1"
+fanart="https://www.dropbox.com/s/r0n42wbugx71zzt/Screenshot_20191129-145505_SRU%20XEN%20185.jpg?dl=1"
+
 
